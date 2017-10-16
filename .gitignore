@@ -6,3 +6,5 @@
 *.blg
 *.bbl
 *.swp
+*.fmt
+*.mtc*

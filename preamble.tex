@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper,twoside,ngerman, bibliography=totocnumbered]{scrreprt}
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\automark{chapter}
+%\automark{section}
+\clearpairofpagestyles
+\ohead{\headmark}
+\ofoot{\pagemark}
+%\clearscrheadfoot
+%\ohead{\includegraphics[width=0.2\linewidth]{./images/luh_logo.png}}
+%\ohead{\includegraphics[width=0.2\linewidth]{./images/schaeffler_logo_klein.png}}
+%\ohead{\headmark}
+
+% packages for creating tables
+% ----------------------------------------
+\usepackage[table,dvipsnames]{xcolor} % add color support for text
+\usepackage{colortbl} % fill color for table
+\usepackage{rotating} % rotate the cell in table
+\usepackage{pdflscape} % rotate the table, landscape environment
+\usepackage{multirow} % merge cells
+\usepackage{booktabs} % table for latex
+\usepackage{longtable} % long table for latex
+\usepackage[labelfont=bf]{caption} % customize the caption
+\usepackage[labelfont=bf]{subcaption} % customize the caption
+
+% packages for unicode inputs and new german
+% ----------------------------------------
+\usepackage[utf8]{inputenc} % unicode typing
+\usepackage[ngerman]{babel} % neue detusche rechtschreibung
+\usepackage[T1]{fontenc} % fonts encoding
+\usepackage[]{newtxtext} % arial base font
+\usepackage[activate={true,nocompatibility}]{microtype} % better text formating
+
+\usepackage{xargs} % use argument in new command
+
+% TODO notes
+\usepackage[colorinlistoftodos,prependcaption,textsize=footnotesize]{todonotes} % write TODO
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red, backgroundcolor=red!25, bordercolor=red, #1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue, backgroundcolor=blue!25, bordercolor=blue, #1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen, backgroundcolor=OliveGreen!25, bordercolor=OliveGreen, #1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum, backgroundcolor=Plum!25, bordercolor=Plum, #1]{#2}}
+
+
+\usepackage{amsmath} % math symbols
+\usepackage{siunitx} % scientific units
+
+\usepackage{listing} % programming code
+\usepackage{minitoc} % mini table of contents
+
+\usepackage{graphicx} % figure, graphics in to document
+\usepackage{pdfpages} % import pdf
+\usepackage{standalone} % for import tikz pictures separats
+\usepackage{tikz} % Tikz picture for drawing
+\usepackage{pgfplots} % plot library
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,
+                backgrounds,positioning,fit,petri,
+                intersections,through,calc}
+
+\usepackage[outer=1.5cm, inner=2.5cm, top=2cm, bottom=2cm]{geometry} % define the layout
+\usepackage{hyperref} % hyperlinks
+
+% packages for formating header and footer
+% ----------------------------------------
+%\usepackage{fancyhdr} % add style to the header or footer
+%\pagestyle{fancy} % fancy style for all pages beside chapter
+%\fancyhf{} % clear all the header and footer
+%\fancyhead[L]{\includegraphics[width=0.2\linewidth]{./images/luh_logo.png}}
+%\fancyhead[R]{\includegraphics[width=0.2\linewidth]{./images/schaeffler_logo_klein.png}}
+
+\setlength{\parskip}{1em} % set space between paragraphs set the indent space of paragrah
+\setlength{\parindent}{0pt} % set the indent space of paragraph
