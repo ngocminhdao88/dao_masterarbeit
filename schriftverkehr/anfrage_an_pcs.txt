@@ -1,0 +1,8 @@
+Dear Madams and Gentlemen,
+
+Minh Dao is my name and i am a student from Hanover, Germany. For my master thesis i want to study the EHD film thickness using your test rig. While the test rig from your company uses the optical measurement, which is very accurate, but for the study purpose i need to make some change or some extra parts for the rig to be able to use the capacitive testing method.
+
+My goal here is to be able to perform optical and capacitive measurements at the same time, which i think, that i need a special coated disc. After reading the page about EHD Film Thickness Discs (http://pcs-instruments.com/product/ehd-specimens/) i still don't understand the different between Plain Chromium Coated Disc (part code: EHDPCD) and Standard Spacer Layer Disc (part code: EHDSLDOI). Does the 1.st disc only have the chromium layer and not the silica layer like the 2.nd? Can i still perform the film thickness measurement using the white light interference method with the 1.st disc?
+
+Best regard,
+Ngoc Minh Dao
