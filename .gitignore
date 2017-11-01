@@ -4,6 +4,7 @@
 *.log
 *.blg
 *.bbl
+*.maf
 *.swp
 *.fmt
 *.mtc*
