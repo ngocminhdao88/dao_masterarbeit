@@ -1,13 +1,92 @@
-Logo von LUH und IMKT
+\thispagestyle{empty}
 
-Title der Masterarbeit
+% ----------------------------------------
+% LUH Logo                      IMKT Logo
+% ----------------------------------------
+\begin{tikzpicture}
+    \node[anchor=south west, inner sep=0] (imkt) at (0, 0) {
+        \includegraphics[width=\textwidth]{./images/imkt_logo.jpg}
+    };
 
-Bild des Themas
+        \begin{scope}[x={(imkt.south east)}, y={(imkt.north west)}]
+            %\draw[help lines, xstep=0.1, ystep=0.1] (0, 0) grid (1, 1);
+            %\foreach \x in {0, 1, ..., 9} {
+            %    \node [anchor=north] at (\x/10,0) {0.\x};
+            %}
+            %\foreach \y in {0, 1, ..., 9} {
+            %    \node [anchor=east] at (0, \y/10,0) {0.\y};
+            %}
 
-Name des Verfassers             Name des Betreuers
+            \node[anchor=south west, inner sep=0] (luh) at (0.1, 0.5) {
+                \includegraphics[width=4cm]{./images/luh_logo.png}
+            };
+        \end{scope}
+\end{tikzpicture}
 
-Erster Prüfer
-Zweiter Prüfer
+% ----------------------------------------
+% Titel der Arbeit
+% ----------------------------------------
+\vspace{1cm}
 
-Hannover, Datum
+\begin{center}
+    {\Huge Titel der Arbeit}
+\end{center}
+
+% ----------------------------------------
+% Bild für diese Arbeit
+% ----------------------------------------
+
+% ----------------------------------------
+% Masterarbeit und VW Logo
+% ----------------------------------------
+\vspace{10cm}
+
+\begin{center}
+    {\textbf{\Large Masterarbeit}}\\[1cm]
+
+    {\large Durchgeführt bei der}
+
+    {\Large Volkswagen AG, Wolfsburg}
+
+    \includegraphics[width=2cm]{./images/vw_logo.png}
+\end{center}
+
+% ----------------------------------------
+% Verfasser                     Betreuer
+% ----------------------------------------
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{flushleft}
+        Verfasser:
+
+        cand. mach. Ngoc Minh \textsc{Dao}
+    \end{flushleft}
+\end{minipage}
+%
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{flushright}
+        Betreuer:
+
+        Dipl.-Ing. Norbert \textsc{Bader}
+    \end{flushright}
+\end{minipage}
+
+% ----------------------------------------
+% Seperate line
+% ----------------------------------------
+\rule{\textwidth}{1pt}
+
+% ----------------------------------------
+% Bericht Nr                    Ort, Datum
+% ----------------------------------------
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{flushleft}
+        \textbf{Bericht Nr. 1234}
+    \end{flushleft}
+\end{minipage}
+%
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{flushright}
+        \textbf{Hannover, \today}
+    \end{flushright}
+\end{minipage}
 
