@@ -1,6 +1,6 @@
 PDFLATEX=pdflatex.exe
 LATEXMK=latexmk.exe
-PDF_VIEWER=start "C:\Program Files\SumatraPDF\SumatraPDF.exe"
+PDF_VIEWER=start "SumatraPDF.exe"
 
 # name of the main tex file
 MAIN=main
