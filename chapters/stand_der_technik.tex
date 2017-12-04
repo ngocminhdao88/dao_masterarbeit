@@ -11,7 +11,6 @@ Ein geschmierter Reibungskontakt kann auf vier Elemente des tribologischen Syste
     \item Zischenstoff
     \item Umgebungsmedium
 \end{itemize}
-
 % ----------------------------------------
 % Fig: Das tribologische System
 % ----------------------------------------
@@ -30,8 +29,73 @@ Danach wird der Mechanismus der EHD-Schmierung beleuchtet und am Ende wird die A
 % ----------------------------------------
 \section{Eigenschaften des Schmiermittels}
 \label{sec:eigenschaften_des_schmiermittels}
+
 Viskosität, die auch als innere Reibung bezeichnet wird, ist die wichtigste Kenngröße eines Schmierstoffes.
-Sie beschreibt die Fließfähigkeit und dann reversibele Verformung eines Stoffes unter die Wirkung einer Scherspannung.
+Sie beschreibt die Zähigkeit von Flüssigkeiten und Gasen.
+Je größer die Viskosität ist, desto dickflüssiger ist das Fluid und je niedriger die Viskosität, desto dünnflüssiger ist es.
+Ein Modell des Parallelplattenversuchs veranschaulicht das FließVerhalten des Schmierstoffes, Abbildung \ref{fig:geschwindigkeitsprofil_parallelplattenversuch}.
+% ----------------------------------------
+% Fig: Geschwindigkeitsprofil in einem Parallelplattenversuch
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{Geschwindigkeitsprofil in einem Parallelplattenversuch}
+    \label{fig:geschwindigkeitsprofil_parallelplattenversuch}
+\end{figure}
+
+Für eine Newtonsche Flüssigkeit ist das Schergefälle $G = du/dz$ direkt proportional zur der Schubspannung $\tau$
+% ----------------------------------------
+% Eq: Schergefälle
+% ----------------------------------------
+\begin{equation}
+    G = k \cdot \tau
+    \label{eq:schergefaelle}
+\end{equation}
+
+Die dynamische Viskosität (oder Viskosität) ist das Verhältnis von Schubspannung und Geschwindigkeitsgradient und ist der Kehrwert der Fluidität $k$ im Newtonschen Schubspannungsgesetz (\ref{eq:schergefaelle}).
+% ----------------------------------------
+% Eq: Dynamische Viskosität
+% ----------------------------------------
+\begin{equation}
+    \eta = \frac{1}{k} = \frac{\tau}{G} = \frac{\tau}{du/dz}
+    \label{eq:dynamische_viskositaet}
+\end{equation}
+
+Die kinematische Viskosität ergibt sich aus der dynamischen Viskosität durch die Division mit der Dichte des Fluids.
+% ----------------------------------------
+% Eq: Dynamische Viskosität
+% ----------------------------------------
+\begin{equation}
+    \nu = \frac{\eta}{\rho}
+    \label{eq:kinematische_viskotitaet}
+\end{equation}
+
+Im Si-Einheitensystem hat die dynamische Viskosität als Einheit $N \cdot s/m^2$ oder $Pa \cdot s$ und die kinematische Viskosität als Einheit $m^2/s$.
+Ein Stoff hat die Viskosität $1~N \cdot s/m^2$, wenn er in zwischen zwei Platten, die Größe von $1~m^2$ und einen Abstand von $1~m$ haben, befindet und man braucht $1~N$, um die zwei Platten gegeneinander mit einer Geschwindigkeit von $1~m/s$ zu verschieben.
+
+Die Temperatur hat eine große Effekt auf der Viskosität aller fließfähigen Stoffe.
+Mit steigender Temperatur sinkt die Viskosität der Flüssigkeiten ab.
+Diese Effekt kann experimentell mittel eines Viskosimeters und rechnerisch nach Cameron bestimmt werden.
+
+Die einfachste Gleichung nach Reynold lautet:
+% ----------------------------------------
+% Eq: Dynamische Viskosität nach Reynold
+% ----------------------------------------
+\begin{equation}
+    \eta = \eta_{s} \cdot exp (-\beta \cdot \Delta\phi)
+    \label{eq:dynamische_viskositaet_reynold}
+\end{equation}
+%
+wobei $\eta_{s}$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi_{s}$, $\eta$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi$, $\Delta{\phi}$ ist die Temperaturdifferenz ($\eta = \eta_{s} + \Delta{\phi}$) und $\beta$ ist die thermoviskose Konstante.\improvement{check the formel}
+% ----------------------------------------
+% Eq: Dynamische Viskosität nach Cameron
+% ----------------------------------------
+\begin{equation}
+    \eta(\phi) = k_1 \cdot exp \left( \frac{k_2}{\phi + 95} \right)
+    \label{eq:dynamische_viskositaet_cameron}
+\end{equation}
+%
 
 \begin{itemize}
     \item Viskosität

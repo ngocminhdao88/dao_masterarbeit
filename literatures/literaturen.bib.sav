@@ -23,7 +23,7 @@
   year        = {1976},
 }
 
-@TechReport{hamrock_dowson_1976_b,
+@TechReport{hamrock_dowson_1976_,
   author      = {Bernard J. Hamrock and Duncan Dowson},
   title       = {Isothermal elastohydrodynamic lubrication of point contacts. III - Fully flooded results},
   institution = {Lewis research center},
