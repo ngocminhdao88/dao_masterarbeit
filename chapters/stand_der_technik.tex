@@ -4,7 +4,7 @@
 \chapter{Stand der Technik}
 \label{chap:stand_der_technik}
 
-Ein geschmierter Reibungskontakt kann auf vier Elemente des tribologischen Systems nach Czichos \cite{czihos} reduziert werden:
+Ein geschmierter Reibungskontakt kann auf vier Elemente des tribologischen Systems nach Czichos\cite{czichos} reduziert werden:
 \begin{itemize}
     \item Grundkörper
     \item Gegenkörper
@@ -30,6 +30,7 @@ Danach wird der Mechanismus der EHD-Schmierung beleuchtet und am Ende wird die A
 \section{Eigenschaften des Schmiermittels}
 \label{sec:eigenschaften_des_schmiermittels}
 
+\info[inline]{Viskosität}
 Viskosität, die auch als innere Reibung bezeichnet wird, ist die wichtigste Kenngröße eines Schmierstoffes.
 Sie beschreibt die Zähigkeit von Flüssigkeiten und Gasen.
 Je größer die Viskosität ist, desto dickflüssiger ist das Fluid und je niedriger die Viskosität, desto dünnflüssiger ist es.
@@ -74,6 +75,7 @@ Die kinematische Viskosität ergibt sich aus der dynamischen Viskosität durch d
 Im Si-Einheitensystem hat die dynamische Viskosität als Einheit $N \cdot s/m^2$ oder $Pa \cdot s$ und die kinematische Viskosität als Einheit $m^2/s$.
 Ein Stoff hat die Viskosität $1~N \cdot s/m^2$, wenn er in zwischen zwei Platten, die Größe von $1~m^2$ und einen Abstand von $1~m$ haben, befindet und man braucht $1~N$, um die zwei Platten gegeneinander mit einer Geschwindigkeit von $1~m/s$ zu verschieben.
 
+\info[inline]{Temperatureffekt}
 Die Temperatur hat eine große Effekt auf der Viskosität aller fließfähigen Stoffe.
 Mit steigender Temperatur sinkt die Viskosität der Flüssigkeiten ab.
 Diese Effekt kann experimentell mittel eines Viskosimeters und rechnerisch nach Cameron bestimmt werden.
@@ -95,19 +97,39 @@ wobei $\eta_{s}$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi
     \eta(\phi) = k_1 \cdot exp \left( \frac{k_2}{\phi + 95} \right)
     \label{eq:dynamische_viskositaet_cameron}
 \end{equation}
-%
 
-\begin{itemize}
-    \item Viskosität
-    \item Kinematische Viskosität
-    \item Temperatureffekt
-    \item Einfluss von Druck auf Viskosität
-    \item Dichte
-    \item Brechungsindex
-    \item Wärmeleitfähigkeit
-    \item Nichtnewtonsches Verhalten
-    \item Verfestigung der Schmierung bei hohem Druck
-\end{itemize}
+\info[inline]{Viskositätsindex}
+Die Temperaturabhängigkeit der kinematischen Viskosität eines Schmieröls wird auch von einem Viskositätsindex (VI oder KVI) beschreibt.
+Der Viskositätsindex basiert auf einer Skalar, in der zwei unterschiedlichen Öltypen mit deutlich abweichenden Viskosität-Temperaturverhalten zugeordnet wurden.
+Das Öl, das starke Veränderung der Viskosität ist, wird mit 0 oder LVI (low viscosity index) indiziert.
+Das andere Öl wird mit 100 oder HVI (high viscosity index) gekennzeichnet.
+Aus dem Vergleich der kinematischen Viskosität eines zu beschreibenden Öls mit diesen beiden Referenzölen bei $100^\circ$  ergibt sich dessen Viskositätsindex, Formel \ref{eq:viskositaetsindex}.
+% ----------------------------------------
+% Eq: Viskositätsindex
+% ----------------------------------------
+\begin{equation}
+    VI (oder KVI) = \frac{\nu_0 - \nu}{\nu_0 - \nu_{100}}
+    \label{eq:viskositaetsindex}
+\end{equation}
+%
+In der VI-Definition ist es angenommen, dass die Veränderung der Viskosität mit Temperatur von drei Ölen linear ist.
+Die Linearisierung ist nach Walther\cite{walther} und wird in der Abbildung~\ref{fig:variation_der_viskositaet_mit_temperatur} für das Mineralöle dargestellt.
+% ----------------------------------------
+% Fig: Naeherungsgleichung der Viskosität-Temperatur nach Walther
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{Variation der Viskosität mit Temperatur}
+    \label{fig:variation_der_viskositaet_mit_temperatur}
+\end{figure}
+
+\info[inline]{Einfluss von Druck auf Viskosität}
+
+\info[inline]{Dichte}
+\info[inline]{Brechungsindex}
+\info[inline]{Wärmeleitfähigkeit}
+\info[inline]{Verfestigung der Schmierung bei hohem Druck}
 
 % ----------------------------------------
 % Sec: Betrachtung des EHD-Kontaktes
