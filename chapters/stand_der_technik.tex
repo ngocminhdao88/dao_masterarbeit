@@ -125,11 +125,48 @@ Die Linearisierung ist nach Walther\cite{walther} und wird in der Abbildung~\ref
 \end{figure}
 
 \info[inline]{Einfluss von Druck auf Viskosität}
+Mit steigendem Druck nimmt die Viskosität aller Schmieröle zu.
+% ----------------------------------------
+% Fig: Viskosität - Druck - Verhalte
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{Dynamische Viskosität in Abhängigkeit vom Druck}
+    \label{fig:dynamische_viskositaet_in_abhaengigkeit_vom_druck}
+\end{figure}
+%
+Allerdings verändert sich das Schmiermittel unter dem für die EHD-Kontakte ernormen Druck schlagartig.
+Die Viskosität nimt rapide zu und der Schmierstoff erreicht einem festen Zustand.
+Nach Barus kann die Viskosität mit der unteren Formel berechnet werden
+% ----------------------------------------
+% Eq: Viskositätsindex
+% ----------------------------------------
+\begin{equation}
+    \eta = \eta_0 \cdot exp(\alpha_p \cdot p)
+    \label{eq:dynamische_viskositaet_druck_barus}
+\end{equation}
+%
+wobei $\eta_0$ die Viskosität beim Atmosphärendruck und $\alpha_p$ der Druckkoeffizient der Viskosität ist.
+
+Der Druckkoeffizient der Viskosität $\alpha_p$ ist nicht eine Konstante, sodern eine Funktion der Temperatur.
+Diese Abhängigkeit wird in Abbildung~\ref{fig:druckkoeffizient_temperatur} für die Referenzöle der FVA gezeigt.
+% ----------------------------------------
+% Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{Verhalten des Druckkoeffizienten in Abhängigkeit von der Temperatur}
+    \label{fig:druckkoeffizient_temperatur}
+\end{figure}
+%
 
 \info[inline]{Dichte}
 \info[inline]{Brechungsindex}
 \info[inline]{Wärmeleitfähigkeit}
 \info[inline]{Verfestigung der Schmierung bei hohem Druck}
+\info[inline]{Newtonsche Fluide}
 
 % ----------------------------------------
 % Sec: Betrachtung des EHD-Kontaktes
