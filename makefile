@@ -1,6 +1,5 @@
-PDFLATEX=pdflatex.exe
-LATEXMK=latexmk.exe
-PDF_VIEWER=start "SumatraPDF.exe"
+PDFLATEX=pdflatex
+LATEXMK=latexmk
 
 # name of the main tex file
 MAIN=main
@@ -11,7 +10,7 @@ FIGURES=$(wildcard ./images/*.*)
 BIBTEX=$(wildcard ./literatures/*.bib)
 ALL=$(MAIN).tex $(PREAMBLE).fmt $(TEXS) $(FIGURES) $(TABLES) $(BIBTEX)
 
-.PHONY: all clean view debug
+.PHONY: all clean debug
 
 all: $(MAIN).pdf
 
@@ -26,10 +25,6 @@ $(PREAMBLE).fmt : $(PREAMBLE).tex
 # clean all the file
 clean:
 	$(LATEXMK) -C
-
-# view the pdf file
-view: $(MAIN).pdf
-	$(PDF_VIEWER) -reuse-instance $<
 
 debug: $(MAIN).tex $(PREAMBLE).fmt $(TEXS) $(FIGURES)
 	$(PDFLATEX) -fmt=$(PREAMBLE) -file-line-error $<
