@@ -163,10 +163,73 @@ Diese Abhängigkeit wird in Abbildung~\ref{fig:druckkoeffizient_temperatur} für
 %
 
 \info[inline]{Dichte}
+Für eine numerische Schmierfilmdickenmessung ist es notwendig zu wissen, wie die Dichte des Schmierstoffes unter verschiedenen Druck verhält.
+Die Form des Schmierfilms kann nicht richtig berechnet werden, wenn diese Eigenschaft vernachlässigt wird.
+Die Kompressibilität eines Schmierstoffes C ist nach Chu und Cameron mit folgender Fomel zu berechnen:
+% ----------------------------------------
+% Eq: Die Kompressibilität eines Schmierstoffes
+% ----------------------------------------
+\begin{equation}
+    \label{eq:kompressibilitaet}
+    C = \left( \frac{1}{\rho} \right) \frac{d\rho}{dp} = \left( \frac{1}{V} \right) \frac{dV}{dp}
+\end{equation}
+%
+wobei V das Volumen und $dV$ die Änderungs des Volumens ist.
+
+Die Dichte der Mineralöle ist nach Hirano\cite{hirano} mit folgender Formel zu berechnen
+% ----------------------------------------
+% Eq: Dichte nach Hirano
+% ----------------------------------------
+\begin{equation}
+    \label{eq:dichte_hirano}
+    \rho = \rho_0 \left( 1 + \frac{0,6p}{1 + 1,7p} \right)
+\end{equation}
+%
+wobei $p$ in GPa und $\rho_0$ die Dichte beim normalen Luftdruck ($0,87 kg/m^3$ bei $20^\circ C$) ist.
+% ----------------------------------------
+% Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{Variation der Dichte bei verschiedenen Drücke}
+    \label{fig:variation_der_dichte_bei_verschiedenen_druecke}
+\end{figure}
+
 \info[inline]{Brechungsindex}
+Für die Messverfahren, die auf optischen Interferometrie basieren, brauch man die Abhängigkeit zwischen der Dichte und dem Brechungsindex des Schmierstoffes.
+Nach Gohar wird das Verhältnis mit der Formel\ref{eq:dichte_brechnungsindex} beschrieben.
+% ----------------------------------------
+% Eq: Dichte und Brechungsindex
+% ----------------------------------------
+\begin{equation}
+    \label{eq:dichte_brechnungsindex}
+    cp = \frac{n^2 - 1}{n^2 + 2}
+\end{equation}
+%
+wobei $c$ ein Ölkonstante ist (zB: SAE30, c = 0,33).
+Der Brechungsindex für meist Mineralöle bei normalen Luftdruck ist c.a 1,51.
+
+
 \info[inline]{Wärmeleitfähigkeit}
+Um die Temperaturerhöhung des Schmierstoffes unter Schubspannung zu schätzen, ist dessen Wärmeleitfähigkeit $k$ nötig.
+Nach Cameron\cite{cameron} kann diese Größe beim normalen Luftdruck mit folgender Formel berechnet werden.
+% ----------------------------------------
+% Eq: Wärmeleitfähigkeit
+% ----------------------------------------
+\begin{equation}
+    \label{eq:waermeleitfaehigkeit}
+    k = \frac{0,1173 - 6,33 \times 10^{-5} \theta}{\rho_0}
+\end{equation}
+%
+wobei $\theta$ die absolute Temperatur in $K$ und $\rho_0$ die Dichte in $kg/m^3$ ist.
+
 \info[inline]{Verfestigung der Schmierung bei hohem Druck}
+
 \info[inline]{Newtonsche Fluide}
+Wenn die Viskosität eines Fluids von der Schubspannung abhängig ist, wird das Fluid als newtonsches Fluid bezeichnet.
+Wenn diese Bedingung nicht mehr gilt, ist das Fluid nicht newtonsch.
+Für die Bestimmung der Schmierfilmdicke werden alle Fluide in Rahmen dieser Arbeit als newtonsche Fluide angenommen.
 
 % ----------------------------------------
 % Sec: Betrachtung des EHD-Kontaktes
@@ -198,4 +261,3 @@ Erklärung, wie EHD funktioniert
 \section{Schmierfilmdicke nach Hamrock und Dowson}
 \label{sec:schmierfilmdicke_nach_hamrock_und_dowson}
 Erklärung, wie mann die Schmierfilmdicke berechnen kann
-
