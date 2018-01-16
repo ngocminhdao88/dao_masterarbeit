@@ -30,7 +30,8 @@ Danach wird der Mechanismus der EHD-Schmierung beleuchtet und am Ende wird die A
 \section{Eigenschaften des Schmiermittels}
 \label{sec:eigenschaften_des_schmiermittels}
 
-\info[inline]{Viskosität}
+\subsection*{Viskosität}
+\label{sub:viskositaet}
 Viskosität, die auch als innere Reibung bezeichnet wird, ist die wichtigste Kenngröße eines Schmierstoffes.
 Sie beschreibt die Zähigkeit von Flüssigkeiten und Gasen.
 Je größer die Viskosität ist, desto dickflüssiger ist das Fluid und je niedriger die Viskosität, desto dünnflüssiger ist es.
@@ -75,7 +76,8 @@ Die kinematische Viskosität ergibt sich aus der dynamischen Viskosität durch d
 Im Si-Einheitensystem hat die dynamische Viskosität als Einheit $N \cdot s/m^2$ oder $Pa \cdot s$ und die kinematische Viskosität als Einheit $m^2/s$.
 Ein Stoff hat die Viskosität $1~N \cdot s/m^2$, wenn er in zwischen zwei Platten, die Größe von $1~m^2$ und einen Abstand von $1~m$ haben, befindet und man braucht $1~N$, um die zwei Platten gegeneinander mit einer Geschwindigkeit von $1~m/s$ zu verschieben.
 
-\info[inline]{Temperatureffekt}
+\subsection*{Temperatureffekt}
+\label{sub:temperatureffekt}
 Die Temperatur hat eine große Effekt auf der Viskosität aller fließfähigen Stoffe.
 Mit steigender Temperatur sinkt die Viskosität der Flüssigkeiten ab.
 Diese Effekt kann experimentell mittel eines Viskosimeters und rechnerisch nach Cameron bestimmt werden.
@@ -98,7 +100,8 @@ wobei $\eta_{s}$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi
     \label{eq:dynamische_viskositaet_cameron}
 \end{equation}
 
-\info[inline]{Viskositätsindex}
+\subsection*{Viskositätsindex}
+\label{sub:Viskositaetsindex}
 Die Temperaturabhängigkeit der kinematischen Viskosität eines Schmieröls wird auch von einem Viskositätsindex (VI oder KVI) beschreibt.
 Der Viskositätsindex basiert auf einer Skalar, in der zwei unterschiedlichen Öltypen mit deutlich abweichenden Viskosität-Temperaturverhalten zugeordnet wurden.
 Das Öl, das starke Veränderung der Viskosität ist, wird mit 0 oder LVI (low viscosity index) indiziert.
@@ -124,7 +127,8 @@ Die Linearisierung ist nach Walther\cite{walther} und wird in der Abbildung~\ref
     \label{fig:variation_der_viskositaet_mit_temperatur}
 \end{figure}
 
-\info[inline]{Einfluss von Druck auf Viskosität}
+\subsection*{Einfluss von Druck auf Viskosität}
+\label{sub:einfluss_von_druck_auf_viskositaet}
 Mit steigendem Druck nimmt die Viskosität aller Schmieröle zu.
 % ----------------------------------------
 % Fig: Viskosität - Druck - Verhalte
@@ -162,7 +166,9 @@ Diese Abhängigkeit wird in Abbildung~\ref{fig:druckkoeffizient_temperatur} für
 \end{figure}
 %
 
-\info[inline]{Dichte}
+\subsection*{Dichte}
+\label{sub:dichte}
+
 Für eine numerische Schmierfilmdickenmessung ist es notwendig zu wissen, wie die Dichte des Schmierstoffes unter verschiedenen Druck verhält.
 Die Form des Schmierfilms kann nicht richtig berechnet werden, wenn diese Eigenschaft vernachlässigt wird.
 Die Kompressibilität eines Schmierstoffes C ist nach Chu und Cameron mit folgender Fomel zu berechnen:
@@ -196,7 +202,9 @@ wobei $p$ in GPa und $\rho_0$ die Dichte beim normalen Luftdruck ($0,87 kg/m^3$ 
     \label{fig:variation_der_dichte_bei_verschiedenen_druecke}
 \end{figure}
 
-\info[inline]{Brechungsindex}
+\subsection*{Brechungsindex}
+\label{sub:brechungsindex}
+
 Für die Messverfahren, die auf optischen Interferometrie basieren, brauch man die Abhängigkeit zwischen der Dichte und dem Brechungsindex des Schmierstoffes.
 Nach Gohar wird das Verhältnis mit der Formel\ref{eq:dichte_brechnungsindex} beschrieben.
 % ----------------------------------------
@@ -211,7 +219,9 @@ wobei $c$ ein Ölkonstante ist (zB: SAE30, c = 0,33).
 Der Brechungsindex für meist Mineralöle bei normalen Luftdruck ist c.a 1,51.
 
 
-\info[inline]{Wärmeleitfähigkeit}
+\subsection*{Wärmeleitfähigkeit}
+\label{waermeleitfaehigkeit}
+
 Um die Temperaturerhöhung des Schmierstoffes unter Schubspannung zu schätzen, ist dessen Wärmeleitfähigkeit $k$ nötig.
 Nach Cameron\cite{cameron} kann diese Größe beim normalen Luftdruck mit folgender Formel berechnet werden.
 % ----------------------------------------
@@ -224,9 +234,9 @@ Nach Cameron\cite{cameron} kann diese Größe beim normalen Luftdruck mit folgen
 %
 wobei $\theta$ die absolute Temperatur in $K$ und $\rho_0$ die Dichte in $kg/m^3$ ist.
 
-\info[inline]{Verfestigung der Schmierung bei hohem Druck}
+\subsection*{Newtonsche Fluide}
+\label{sub:newtonsche_fluide}
 
-\info[inline]{Newtonsche Fluide}
 Wenn die Viskosität eines Fluids von der Schubspannung abhängig ist, wird das Fluid als newtonsches Fluid bezeichnet.
 Wenn diese Bedingung nicht mehr gilt, ist das Fluid nicht newtonsch.
 Für die Bestimmung der Schmierfilmdicke werden alle Fluide in Rahmen dieser Arbeit als newtonsche Fluide angenommen.
@@ -236,6 +246,25 @@ Für die Bestimmung der Schmierfilmdicke werden alle Fluide in Rahmen dieser Arb
 % ----------------------------------------
 \section{Betrachtung des EHD-Kontaktes}
 \label{sec:betrachtung_des_ehd_kontaktes}
+
+Die Kontaktflächen von Maschinenelementen werden in zwei Grundformen eingeteilt.
+Dies sind konforme (z.B. Gleitlager) und nichtkonforme Paarungen (z.B. Zahnrad, Reibrad, Nocken-Stößel).
+Gegenteil zu den konformen Kontakten, wo die Pressungen in der Großenordnung von 10 MPa auftreten, können in zwischen den Laufflächen nichtkonformer Kontakt die Druckspannungen 0,5 GPa und höher betragen.
+Diese enorme Belastung auf konzentrierten Flächen ist im Maschinenbau nicht erwünscht und hat einen großen Einfluss auf die Materialbelastbarkeit.
+% ----------------------------------------
+% Fig: Nichtkonforme Paarungen
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{Nichtkonforme Kontakte}
+    \label{fig:nichtkonforme_kontakte}
+\end{figure}
+%
+
+
+\subsection*{Brechungsindex}
+\label{sub:brechungsindex}
 
 \begin{itemize}
     \item Nichtkonformer Kontakt

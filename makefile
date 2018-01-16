@@ -16,7 +16,7 @@ all: $(MAIN).pdf
 
 # rule for create the main file using latexmk and pdflatex
 $(MAIN).pdf : $(ALL)
-	$(LATEXMK) -bibtex -pdf -pdflatex="$(PDFLATEX) -fmt=$(PREAMBLE) -synctex=-1 -interaction=nonstopmode" $<
+	$(LATEXMK) -bibtex -pdf -pdflatex="$(PDFLATEX) -shell-escape -fmt=$(PREAMBLE) -interaction=nonstopmode -synctex=1" $<
 
 # rule for create compiled preamble file
 $(PREAMBLE).fmt : $(PREAMBLE).tex
