@@ -51,7 +51,7 @@ Für eine Newtonsche Flüssigkeit ist das Schergefälle $G = du/dz$ direkt propo
 % Eq: Schergefälle
 % ----------------------------------------
 \begin{equation}
-    G = k \cdot \tau
+    G = k  \tau
     \label{eq:schergefaelle}
 \end{equation}
 
@@ -73,8 +73,8 @@ Die kinematische Viskosität ergibt sich aus der dynamischen Viskosität durch d
     \label{eq:kinematische_viskotitaet}
 \end{equation}
 
-Im Si-Einheitensystem hat die dynamische Viskosität als Einheit $N \cdot s/m^2$ oder $Pa \cdot s$ und die kinematische Viskosität als Einheit $m^2/s$.
-Ein Stoff hat die Viskosität $1~N \cdot s/m^2$, wenn er in zwischen zwei Platten, die Größe von $1~m^2$ und einen Abstand von $1~m$ haben, befindet und man braucht $1~N$, um die zwei Platten gegeneinander mit einer Geschwindigkeit von $1~m/s$ zu verschieben.
+Im Si-Einheitensystem hat die dynamische Viskosität als Einheit $N  s/m^2$ oder $Pa  s$ und die kinematische Viskosität als Einheit $m^2/s$.
+Ein Stoff hat die Viskosität $1~N  s/m^2$, wenn er in zwischen zwei Platten, die Größe von $1~m^2$ und einen Abstand von $1~m$ haben, befindet und man braucht $1~N$, um die zwei Platten gegeneinander mit einer Geschwindigkeit von $1~m/s$ zu verschieben.
 
 \subsection*{Temperatureffekt}
 \label{sub:temperatureffekt}
@@ -87,7 +87,7 @@ Die einfachste Gleichung nach Reynold lautet:
 % Eq: Dynamische Viskosität nach Reynold
 % ----------------------------------------
 \begin{equation}
-    \eta = \eta_{s} \cdot exp (-\beta \cdot \Delta\phi)
+    \eta = \eta_{s}  exp (-\beta  \Delta\phi)
     \label{eq:dynamische_viskositaet_reynold}
 \end{equation}
 %
@@ -96,7 +96,7 @@ wobei $\eta_{s}$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi
 % Eq: Dynamische Viskosität nach Cameron
 % ----------------------------------------
 \begin{equation}
-    \eta(\phi) = k_1 \cdot exp \left( \frac{k_2}{\phi + 95} \right)
+    \eta(\phi) = k_1  exp \left( \frac{k_2}{\phi + 95} \right)
     \label{eq:dynamische_viskositaet_cameron}
 \end{equation}
 
@@ -111,7 +111,7 @@ Aus dem Vergleich der kinematischen Viskosität eines zu beschreibenden Öls mit
 % Eq: Viskositätsindex
 % ----------------------------------------
 \begin{equation}
-    VI (oder KVI) = \frac{\nu_0 - \nu}{\nu_0 - \nu_{100}}
+    VI~(oder KVI) = \frac{\nu_0 - \nu}{\nu_0 - \nu_{100}}
     \label{eq:viskositaetsindex}
 \end{equation}
 %
@@ -147,7 +147,7 @@ Nach Barus kann die Viskosität mit der unteren Formel berechnet werden
 % Eq: Viskositätsindex
 % ----------------------------------------
 \begin{equation}
-    \eta = \eta_0 \cdot exp(\alpha_p \cdot p)
+    \eta = \eta_0  exp(\alpha_p  p)
     \label{eq:dynamische_viskositaet_druck_barus}
 \end{equation}
 %
@@ -188,10 +188,10 @@ Die Dichte der Mineralöle ist nach Hirano\cite{hirano} mit folgender Formel zu 
 % ----------------------------------------
 \begin{equation}
     \label{eq:dichte_hirano}
-    \rho = \rho_0 \left( 1 + \frac{0,6p}{1 + 1,7p} \right)
+    \rho = \rho_0 \left( 1 + \frac{0,6  p}{1 + 1,7  p} \right)
 \end{equation}
 %
-wobei $p$ in GPa und $\rho_0$ die Dichte beim normalen Luftdruck ($0,87 kg/m^3$ bei $20^\circ C$) ist.
+wobei $p$ in GPa und $\rho_0$ die Dichte beim normalen Luftdruck ($0,87~kg/m^3$ bei $20^\circ C$) ist.
 % ----------------------------------------
 % Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
 % ----------------------------------------
@@ -212,10 +212,10 @@ Nach Gohar wird das Verhältnis mit der Formel\ref{eq:dichte_brechnungsindex} be
 % ----------------------------------------
 \begin{equation}
     \label{eq:dichte_brechnungsindex}
-    cp = \frac{n^2 - 1}{n^2 + 2}
+    c  p = \frac{n^2 - 1}{n^2 + 2}
 \end{equation}
 %
-wobei $c$ ein Ölkonstante ist (zB: SAE30, c = 0,33).
+wobei $c$ ein Ölkonstante ist (zB: SAE30, $c = 0,33$).
 Der Brechungsindex für meist Mineralöle bei normalen Luftdruck ist c.a 1,51.
 
 
@@ -229,7 +229,7 @@ Nach Cameron\cite{cameron} kann diese Größe beim normalen Luftdruck mit folgen
 % ----------------------------------------
 \begin{equation}
     \label{eq:waermeleitfaehigkeit}
-    k = \frac{0,1173 - 6,33 \times 10^{-5} \theta}{\rho_0}
+    k = \frac{0,1173 - 6,33 \times 10^{-5}  \theta}{\rho_0}
 \end{equation}
 %
 wobei $\theta$ die absolute Temperatur in $K$ und $\rho_0$ die Dichte in $kg/m^3$ ist.
@@ -249,8 +249,7 @@ Für die Bestimmung der Schmierfilmdicke werden alle Fluide in Rahmen dieser Arb
 
 Die Kontaktflächen von Maschinenelementen werden in zwei Grundformen eingeteilt.
 Dies sind konforme (z.B. Gleitlager) und nichtkonforme Paarungen (z.B. Zahnrad, Reibrad, Nocken-Stößel).
-Gegenteil zu den konformen Kontakten, wo die Pressungen in der Großenordnung von 10 MPa auftreten, können in zwischen den Laufflächen nichtkonformer Kontakt die Druckspannungen 0,5 GPa und höher betragen.
-Diese enorme Belastung auf konzentrierten Flächen ist im Maschinenbau nicht erwünscht und hat einen großen Einfluss auf die Materialbelastbarkeit.
+Abbildung~\ref{fig:nichtkonforme_kontakte} zeigt die Beispiele konforme und nichtkonforme Kontakte.
 % ----------------------------------------
 % Fig: Nichtkonforme Paarungen
 % ----------------------------------------
@@ -261,6 +260,121 @@ Diese enorme Belastung auf konzentrierten Flächen ist im Maschinenbau nicht erw
     \label{fig:nichtkonforme_kontakte}
 \end{figure}
 %
+
+Gegenteil zu den konformen Kontakten, wo die Pressungen in der Großenordnung von 10 MPa auftreten, können in zwischen den Laufflächen nichtkonformer Kontakt die Druckspannungen 0,5 GPa und höher betragen.
+Durch die enorme, konzentrierte Belastung werden die Flächen an dem Kontaktpunkt elastisch verformt und vergrößert.
+Im Folgenden soll der Wälzkontakt nach Wisniewski\cite{wisniewski} näher betrachtet werden.
+Bei der Betrachtung des konzentrischen Kontaktes werden alle Oberflächen als ideal glatt angenommen und durch deren minimalen und maximalen Krümmungen wird die Geometrie des Grundkörpers bzw. des Gegenkörpers beschrieben.
+Beim konvexen Körper (Index 1) sind die Kümmungsradien ($r_{11}, r_{12}$) positiv und beim kokaven Körper (Index 2) sind die Radien ($r_{21}, r_{22}$) negativ.
+Zwischen den beiden Ebenen, die $r_{11}$ und $r_{21}$ erhalten, bildet sich der Winkel $\varphi$.
+In Abbildung~\ref{fig:kontaktgeometrie_nichtkonforme_kontakte} wird die generelle Kontaktgeometrie bei nichtkonformen Festkörpern dargestellt.
+% ----------------------------------------
+% Fig: Wälzkontakt nach Wisniewski
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{Kontaktgeometrie bei nichtkonforme Paarungen}
+    \label{fig:kontaktgeometrie_nichtkonforme_kontakte}
+\end{figure}
+%
+
+Da die Versuche dieser Arbeit auf einem Kugel-Scheibe-Modellprüfstand durchgeführt werden, wird der Körper 1 als eine Kugel und der Körper 2 als eine Scheibe betrachtet.
+Im Kontaktpunkt bildet sich die Kontaktflächen eine Ellipse mit den Halbachsen $a$ und $b$ (Abbildung~\ref{fig:kontaktgeometrie_kugel_scheibe_model}).
+% ----------------------------------------
+% Fig: Kontaktgeometrie Kugel-Scheibe
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{Kontaktgeometrie beim Kugel-Scheibe-Model}
+    \label{fig:kontaktgeometrie_kugel_scheibe_model}
+\end{figure}
+%
+
+Zu $a$ und $b$ zu bestimmen, braucht man das reduzierte Elastizitätmodul $E$, die Belastung $P$ und der Krümmungsradius $R$.
+% ----------------------------------------
+% Eq: Laengen der Halbachsen der Kontaktellipse
+% ----------------------------------------
+\begin{align}
+    a = \beta_a  \sqrt[3]{\frac{3  P  R}{E}} \label{eq:laenge_a} \\
+    b = \beta_b  \sqrt[3]{\frac{3  P  R}{E}} \label{eq:laenge_b}
+\end{align}
+%
+Der reduzierte Elastizitätmodul $E$ beschreibt die elastische Eigenschaften der beiden Elemente und wird definiert als
+% ----------------------------------------
+% Eq: Der reduzierte Elastizitätmodul E
+% ----------------------------------------
+\begin{equation}
+    \label{eq:reduzierter_elastizitaetsmodul}
+    \frac{1}{E} = \frac{1}{2}  \left( \frac{1 - \nu_1^2}{E_1} + \frac{1 - \nu_2^2}{E_2} \right)
+\end{equation}
+%
+wobei $\nu_x$ die Querkontraktionszahl der Kontaktkörper und $E_x$ der Elastizitätmodul der Kontaktkörper ist.
+Die Druckverteilung $p$ hat eine Form eines Halbellipsoids und wird so definiert
+% ----------------------------------------
+% Eq: Druckverteilung p
+% ----------------------------------------
+\begin{equation}
+    \label{eq:druckverteilung}
+    p = p_0  \sqrt{1 - \left( \frac{x}{b} \right)^2 - \left( \frac{y}{a} \right)^2}
+\end{equation}
+%
+wobei $x, y$ die Koordinaten in der Ebene und die maximale Pressung $p_0$ ein Produkt der Belastung $P$ und der Länge von Halbachsen $a, b$ sind.
+% ----------------------------------------
+% Eq: Maximale Pressung p0
+% ----------------------------------------
+\begin{equation}
+    \label{eq:maximale_pressung}
+    p_0 = \frac{3  P}{2  \pi  a  b}
+\end{equation}
+%
+Der reziproke Krümmungsradius $R$ wird mit der Summe aller vier Hauptkrümmungen $r_x$ bestimmt
+% ----------------------------------------
+% Eq: Krümmungsradius R
+% ----------------------------------------
+\begin{equation}
+    \label{eq:kruemmungsradius}
+    \frac{1}{R} = \frac{1}{r_{11}} + \frac{1}{r_{12}} + \frac{1}{r_{21}} + \frac{1}{r_{22}}
+\end{equation}
+%
+Die Koeffizienten $\beta_a$ und $\beta_b$ wird über den Parameter $\cos{\psi}$ bestimmt
+% ----------------------------------------
+% Eq: cos psi
+% ----------------------------------------
+\begin{equation}
+    \label{eq:cos_psi}
+    \cos{\psi} = R  \sqrt{\left( \frac{1}{r_{11}} - \frac{1}{r_{12}} \right)^2 
+                                + \left( \frac{1}{r_{21}} - \frac{1}{r_{22}} \right)^2 
+                                + 2  \cos{2 \varphi} 
+                                 \left( \frac{1}{r_{11}} - \frac{1}{r_{12}}  \right)^2 
+                                 \left( \frac{1}{r_{21}} - \frac{1}{r_{22}} \right)^2}
+\end{equation}
+%
+
+Bei einem Kugel-Scheibe-Modell gilt
+%
+\begin{align*}
+    r_{11} &= r_{12} = r_{Kugel} \\
+    r_{21} &= r_{22} = r_{Scheibe} = \infty
+\end{align*}
+%
+Eingesetzt diese Werte in \ref{eq:kruemmungsradius} und in \ref{eq:cos_psi} ergibt sich 
+%
+\begin{align*}
+    R &= r_{Kugel}/2 \\
+    \cos{\psi} &= 0
+\end{align*}
+%
+Aus dem Diagram für den Fall $\cos_{\psi} = 0$ liefert den Wert $\beta_a = \beta_b = 1$.
+Werden diese in die \ref{eq:laenge_a} und \ref{eq:laenge_b} eingesetzt, ergibt sich
+%
+\begin{align*}
+    a = b
+\end{align*}
+%
+Damit ist es bewiesen, dass hier ein kreisförmiger Kontakt vorliegt.
+
 
 \begin{itemize}
     \item Hertzsche Gesetz
