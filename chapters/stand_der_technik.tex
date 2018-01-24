@@ -260,10 +260,13 @@ Abbildung~\ref{fig:nichtkonforme_kontakte} zeigt die Beispiele konforme und nich
     \label{fig:nichtkonforme_kontakte}
 \end{figure}
 %
-
 Gegenteil zu den konformen Kontakten, wo die Pressungen in der Großenordnung von 10 MPa auftreten, können in zwischen den Laufflächen nichtkonformer Kontakt die Druckspannungen 0,5 GPa und höher betragen.
 Durch die enorme, konzentrierte Belastung werden die Flächen an dem Kontaktpunkt elastisch verformt und vergrößert.
 Im Folgenden soll der Wälzkontakt nach Wisniewski\cite{wisniewski} näher betrachtet werden.
+
+\subsection{Kontakt von beliebig gekrümmten Elementen}
+\label{sub:kontakt_von_beliebig_gekruemmten_elementen}
+
 Bei der Betrachtung des konzentrischen Kontaktes werden alle Oberflächen als ideal glatt angenommen und durch deren minimalen und maximalen Krümmungen wird die Geometrie des Grundkörpers bzw. des Gegenkörpers beschrieben.
 Beim konvexen Körper (Index 1) sind die Kümmungsradien ($r_{11}, r_{12}$) positiv und beim kokaven Körper (Index 2) sind die Radien ($r_{21}, r_{22}$) negativ.
 Zwischen den beiden Ebenen, die $r_{11}$ und $r_{21}$ erhalten, bildet sich der Winkel $\varphi$.
@@ -274,24 +277,11 @@ In Abbildung~\ref{fig:kontaktgeometrie_nichtkonforme_kontakte} wird die generell
 \begin{figure}[htb]
     \centering
     \includegraphics[width=5cm]{./images/blank_img.jpg}
-    \caption{Kontaktgeometrie bei nichtkonforme Paarungen}
+    \caption{Kontaktgeometrie bei nichtkonforme Paarungen nach Wisniewski}
     \label{fig:kontaktgeometrie_nichtkonforme_kontakte}
 \end{figure}
 %
-
-Da die Versuche dieser Arbeit auf einem Kugel-Scheibe-Modellprüfstand durchgeführt werden, wird der Körper 1 als eine Kugel und der Körper 2 als eine Scheibe betrachtet.
-Im Kontaktpunkt bildet sich die Kontaktflächen eine Ellipse mit den Halbachsen $a$ und $b$ (Abbildung~\ref{fig:kontaktgeometrie_kugel_scheibe_model}).
-% ----------------------------------------
-% Fig: Kontaktgeometrie Kugel-Scheibe
-% ----------------------------------------
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=5cm]{./images/blank_img.jpg}
-    \caption{Kontaktgeometrie beim Kugel-Scheibe-Model}
-    \label{fig:kontaktgeometrie_kugel_scheibe_model}
-\end{figure}
-%
-
+Im Kontaktpunkt bildet sich die Kontaktflächen eine Ellipse mit den Halbachsen $a$ und $b$.
 Zu $a$ und $b$ zu bestimmen, braucht man das reduzierte Elastizitätmodul $E$, die Belastung $P$ und der Krümmungsradius $R$.
 % ----------------------------------------
 % Eq: Laengen der Halbachsen der Kontaktellipse
@@ -338,7 +328,19 @@ Der reziproke Krümmungsradius $R$ wird mit der Summe aller vier Hauptkrümmunge
     \frac{1}{R} = \frac{1}{r_{11}} + \frac{1}{r_{12}} + \frac{1}{r_{21}} + \frac{1}{r_{22}}
 \end{equation}
 %
-Die Koeffizienten $\beta_a$ und $\beta_b$ wird über den Parameter $\cos{\psi}$ bestimmt
+Die Koeffizienten $\beta_a$ und $\beta_b$ zur Bestimmung der Berührungsfläche in einem konformen Kontakt kann über den Parameter $\cos{\psi}$ aus dem Diagram~\ref{fig:beta_a_und_beta_b_als_funktion_der_cos_psi} abgelesen werden.
+% ----------------------------------------
+% Fig: beta_a und beta_b als Funktion des cos_psi
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{$\beta_a$ und $\beta_b$ als Funktion von $\cos{\psi}$}
+    \label{fig:beta_a_und_beta_b_als_funktion_der_cos_psi}
+\end{figure}
+%
+
+Der Parameter $\cos{\psi}$ kann mit folgender Formel\ref{eq:cos_psi} berechnet werden
 % ----------------------------------------
 % Eq: cos psi
 % ----------------------------------------
@@ -352,7 +354,7 @@ Die Koeffizienten $\beta_a$ und $\beta_b$ wird über den Parameter $\cos{\psi}$ 
 \end{equation}
 %
 
-Bei einem Kugel-Scheibe-Modell gilt
+Für ein Kugel-Scheibe-Modell gilt
 %
 \begin{align*}
     r_{11} &= r_{12} = r_{Kugel} \\
@@ -375,15 +377,16 @@ Werden diese in die \ref{eq:laenge_a} und \ref{eq:laenge_b} eingesetzt, ergibt s
 %
 Damit ist es bewiesen, dass hier ein kreisförmiger Kontakt vorliegt.
 
+\subsection{Kontakt von rauhen Festkörpern}
+\label{sub:kontakt_von_rauhen_festkoerpern}
+\improvement[inline]{blah blah blah}
+In Realität können die Oberflächen der Kontaktkörper nie perfekt glatt sein.
+Da die Mikrogeometrie der Kontaktkörper den Einfluss auf die Abmessungen der Kontaktzone bzw. auf die Bestimmung der maximalen Pressungen hat, ist eine einfache Anwendung der vorherigen Studie von glatten Festkörpern für die rauhe Oberflächen nicht geeignet.
+Zum Vergleich mit den glatten Oberflächen sind bei rauhen Festkörpern die Kontaktflächen größer und dadurch sind die maximalen Pressungen kleiner.
 
-\begin{itemize}
-    \item Hertzsche Gesetz
-        \begin{itemize}
-            \item Kugel-Kugel
-            \item Kugel-Platte
-        \end{itemize}
-    \item Kontakt von beschichteten Körpern
-\end{itemize}
+\subsection{Kontakt von beschichteten Festkörpern}
+\label{sub:kontakt_von_beschichteten_Festkoerpern}
+\improvement[inline]{blah blah blah}
 
 % ----------------------------------------
 % Sec: Elastohydrodynamische Schmiertheorie
@@ -399,3 +402,4 @@ Erklärung, wie EHD funktioniert
 \section{Schmierfilmdicke nach Hamrock und Dowson}
 \label{sec:schmierfilmdicke_nach_hamrock_und_dowson}
 Erklärung, wie mann die Schmierfilmdicke berechnen kann
+
