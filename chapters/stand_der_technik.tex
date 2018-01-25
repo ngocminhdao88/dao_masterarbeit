@@ -4,19 +4,13 @@
 \chapter{Stand der Technik}
 \label{chap:stand_der_technik}
 
-Ein geschmierter Reibungskontakt kann auf vier Elemente des tribologischen Systems nach Czichos\cite{czichos} reduziert werden:
-\begin{itemize}
-    \item Grundkörper
-    \item Gegenkörper
-    \item Zischenstoff
-    \item Umgebungsmedium
-\end{itemize}
+Ein geschmierter Reibungskontakt kann auf vier Elemente des tribologischen Systems nach Czichos\cite{czichos} reduziert werden: Grundkörper, Gegenkörper, Zischenstoff und Umgebungsmedium.
 % ----------------------------------------
 % Fig: Das tribologische System
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \includegraphics[width=0.7\linewidth]{./images/tribologisches_system.pdf}
     \caption{Das tribologische System}
     \label{fig:das_tribologische_system}
 \end{figure}
@@ -41,8 +35,8 @@ Ein Modell des Parallelplattenversuchs veranschaulicht das FließVerhalten des S
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=5cm]{./images/blank_img.jpg}
-    \caption{Geschwindigkeitsprofil in einem Parallelplattenversuch}
+    \includegraphics[width=0.9\linewidth]{./images/parallelplattenversuch.pdf}
+    \caption{Geschwindigkeitsprofil in einem Parallelplattenversuch\cite{wisniewski}}
     \label{fig:geschwindigkeitsprofil_parallelplattenversuch}
 \end{figure}
 
@@ -87,7 +81,7 @@ Die einfachste Gleichung nach Reynold lautet:
 % Eq: Dynamische Viskosität nach Reynold
 % ----------------------------------------
 \begin{equation}
-    \eta = \eta_{s}  exp (-\beta  \Delta\phi)
+    \eta = \eta_{s}  e^{\left( -\beta  \Delta\phi \right)}
     \label{eq:dynamische_viskositaet_reynold}
 \end{equation}
 %
@@ -96,7 +90,7 @@ wobei $\eta_{s}$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi
 % Eq: Dynamische Viskosität nach Cameron
 % ----------------------------------------
 \begin{equation}
-    \eta(\phi) = k_1  exp \left( \frac{k_2}{\phi + 95} \right)
+    \eta(\phi) = k_1  e^{ \left( k_2 / (\phi + 95) \right)}
     \label{eq:dynamische_viskositaet_cameron}
 \end{equation}
 
@@ -147,7 +141,7 @@ Nach Barus kann die Viskosität mit der unteren Formel berechnet werden
 % Eq: Viskositätsindex
 % ----------------------------------------
 \begin{equation}
-    \eta = \eta_0  exp(\alpha_p  p)
+    \eta = \eta_0  e^{(\alpha_p  p)}
     \label{eq:dynamische_viskositaet_druck_barus}
 \end{equation}
 %
@@ -276,8 +270,8 @@ In Abbildung~\ref{fig:kontaktgeometrie_nichtkonforme_kontakte} wird die generell
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=5cm]{./images/blank_img.jpg}
-    \caption{Kontaktgeometrie bei nichtkonforme Paarungen nach Wisniewski}
+    \includegraphics[width=0.9\linewidth]{./images/Hertzsche_Pressung.pdf}
+    \caption{Kontaktgeometrie bei nichtkonforme Paarungen nach Wisniewski\cite{wisniewski}}
     \label{fig:kontaktgeometrie_nichtkonforme_kontakte}
 \end{figure}
 %
@@ -383,6 +377,16 @@ Damit ist es bewiesen, dass hier ein kreisförmiger Kontakt vorliegt.
 In Realität können die Oberflächen der Kontaktkörper nie perfekt glatt sein.
 Da die Mikrogeometrie der Kontaktkörper den Einfluss auf die Abmessungen der Kontaktzone bzw. auf die Bestimmung der maximalen Pressungen hat, ist eine einfache Anwendung der vorherigen Studie von glatten Festkörpern für die rauhe Oberflächen nicht geeignet.
 Zum Vergleich mit den glatten Oberflächen sind bei rauhen Festkörpern die Kontaktflächen größer und dadurch sind die maximalen Pressungen kleiner.
+% ----------------------------------------
+% Fig: Druckverteilung im konzentrischen Kontakt, glatten und rauhen
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.7\linewidth]{./images/druckverteilung_im_konzentrierten_kontakt.pdf}
+    \caption{Druckverteilung beim glatten und rauhen Kontakt}
+    \label{fig:druckverteilung_beim_glatten_und_rauhen_kontakt}
+\end{figure}
+%
 
 \subsection{Kontakt von beschichteten Festkörpern}
 \label{sub:kontakt_von_beschichteten_Festkoerpern}
