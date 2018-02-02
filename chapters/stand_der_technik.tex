@@ -15,6 +15,8 @@ Ein geschmierter Reibungskontakt kann auf vier Elemente des tribologischen Syste
     \label{fig:das_tribologische_system}
 \end{figure}
 
+\improvement[inline]{Definition der EHD-Schmierung}
+
 Um ein besseres Verständnis der EHD-Schmierung zu haben, wird in diesem Abschnitt zuerst die Kennwerte des Zwischenstoffes (Schmiermittel) und der beiden Kontaktelementen (Grund- und Gegenkörper) ausführlich besprochen.
 Danach wird der Mechanismus der EHD-Schmierung beleuchtet und am Ende wird die Arbeit von Hamrock und Dowson zur theoretischen Bestimmung der Schmierfilmdicke erwähnt.
 
@@ -81,7 +83,7 @@ Die einfachste Gleichung nach Reynold lautet:
 % Eq: Dynamische Viskosität nach Reynold
 % ----------------------------------------
 \begin{equation}
-    \eta = \eta_{s}  e^{\left( -\beta  \Delta\phi \right)}
+    \eta = \eta_{s}  \ exp \left( -\beta  \Delta\phi \right)
     \label{eq:dynamische_viskositaet_reynold}
 \end{equation}
 %
@@ -90,7 +92,7 @@ wobei $\eta_{s}$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi
 % Eq: Dynamische Viskosität nach Cameron
 % ----------------------------------------
 \begin{equation}
-    \eta(\phi) = k_1  e^{ \left( k_2 / (\phi + 95) \right)}
+    \eta(\phi) = k_1  \ exp \left( k_2 / (\phi + 95) \right)
     \label{eq:dynamische_viskositaet_cameron}
 \end{equation}
 
@@ -141,11 +143,29 @@ Nach Barus kann die Viskosität mit der unteren Formel berechnet werden
 % Eq: Viskositätsindex
 % ----------------------------------------
 \begin{equation}
-    \eta = \eta_0  e^{(\alpha_p  p)}
+    \eta = \eta_0 \ exp(\alpha_p  p)
     \label{eq:dynamische_viskositaet_druck_barus}
 \end{equation}
 %
 wobei $\eta_0$ die Viskosität beim Atmosphärendruck und $\alpha_p$ der Druckkoeffizient der Viskosität ist.
+Für Mineralöle sind diese Parameter ungefähr
+\begin{align*}
+    0,001 \leq \ &\eta_0 \leq 0,1 \quad Pas \\
+    0 \leq \ &\alpha \leq 4,0 \times 10^{-8} \quad Pa^{-1}
+\end{align*}
+%
+Leider liefert die Barus Gleichung einen zu großen Wert bem hohen Druck.
+Eine genauer Gleichung wurde von Roelands\cite{roelands} vorgeschlagen
+% ----------------------------------------
+% Eq: Roelands Gleichung
+% ----------------------------------------
+\begin{equation}
+    \eta(p, T) = \eta_0 \ exp \left[ (\ln{\eta_0} + 9,67)
+                              \left( \left( 1 + \frac{p}{p_r} \right) ^z 
+                              \left( \frac{T_0 - 138}{T - 138} \right)^{s_0} -1 \right) \right]
+    \label{eq:dynamische_viskositaet_druck_roelands}
+\end{equation}
+%
 
 Der Druckkoeffizient der Viskosität $\alpha_p$ ist nicht eine Konstante, sodern eine Funktion der Temperatur.
 Diese Abhängigkeit wird in Abbildung~\ref{fig:druckkoeffizient_temperatur} für die Referenzöle der FVA gezeigt.
@@ -223,10 +243,10 @@ Nach Cameron\cite{cameron} kann diese Größe beim normalen Luftdruck mit folgen
 % ----------------------------------------
 \begin{equation}
     \label{eq:waermeleitfaehigkeit}
-    k = \frac{0,1173 - 6,33 \times 10^{-5}  \theta}{\rho_0}
+    k = \frac{0,1173 - 6,33 \times 10^{-5} \ T}{\rho_0}
 \end{equation}
 %
-wobei $\theta$ die absolute Temperatur in $K$ und $\rho_0$ die Dichte in $kg/m^3$ ist.
+wobei $T$ die absolute Temperatur in $K$ und $\rho_0$ die Dichte in $kg/m^3$ ist.
 
 \subsection*{Newtonsche Fluide}
 \label{sub:newtonsche_fluide}
@@ -271,7 +291,7 @@ Gegenteil zu den konformen Kontakten, wo die Pressungen in der Großenordnung vo
 Durch die enorme, konzentrierte Belastung werden die Flächen an dem Kontaktpunkt elastisch verformt und vergrößert.
 Im Folgenden soll der Wälzkontakt nach Wisniewski\cite{wisniewski} näher betrachtet werden.
 
-\subsection{Kontakt von beliebig gekrümmten Elementen}
+\subsection*{Kontakt von beliebig gekrümmten Elementen}
 \label{sub:kontakt_von_beliebig_gekruemmten_elementen}
 
 Bei der Betrachtung des konzentrischen Kontaktes werden alle Oberflächen als ideal glatt angenommen und durch deren minimalen und maximalen Krümmungen wird die Geometrie des Grundkörpers bzw. des Gegenkörpers beschrieben.
@@ -384,7 +404,7 @@ Werden diese in die \ref{eq:laenge_a} und \ref{eq:laenge_b} eingesetzt, ergibt s
 %
 Damit ist es bewiesen, dass hier ein kreisförmiger Kontakt vorliegt.
 
-\subsection{Kontakt von rauhen Festkörpern}
+\subsection*{Kontakt von rauhen Festkörpern}
 \label{sub:kontakt_von_rauhen_festkoerpern}
 In Realität können die Oberflächen der Kontaktkörper nie perfekt glatt sein.
 Da die Mikrogeometrie der Kontaktkörper den Einfluss auf die Abmessungen der Kontaktzone bzw. auf die Bestimmung der maximalen Pressungen hat, ist eine einfache Anwendung der vorherigen Studie von glatten Festkörpern für die rauhe Oberflächen nicht geeignet.
@@ -400,7 +420,7 @@ Zum Vergleich mit den glatten Oberflächen sind bei rauhen Festkörpern die Kont
 \end{figure}
 %
 
-\subsection{Kontakt von beschichteten Festkörpern}
+\subsection*{Kontakt von beschichteten Festkörpern}
 \label{sub:kontakt_von_beschichteten_Festkoerpern}
 \improvement[inline]{blah blah blah}
 
