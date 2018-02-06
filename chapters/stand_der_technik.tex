@@ -15,7 +15,10 @@ Ein geschmierter Reibungskontakt kann auf vier Elemente des tribologischen Syste
     \label{fig:das_tribologische_system}
 \end{figure}
 
-\improvement[inline]{Definition der EHD-Schmierung}
+Elastohydrodynamische Schmierung ist eine Art der Schmierung, die in der nichtkonformen Kontakt entsteht.
+Diese Kontaktarten sind z.B. Wälzlager, Zahnräder, Wellendichtringe etc.
+Wegen hohen Druck in der Kontaktzone werden die zu schmierende Laufflächen sich lokale verformt, daraus folgt die Erhöhung der Viskosität des Schmierstoffes.
+Beide Phänomene haben eine positive Wirkung auf die Schmierfilmdicke.
 
 Um ein besseres Verständnis der EHD-Schmierung zu haben, wird in diesem Abschnitt zuerst die Kennwerte des Zwischenstoffes (Schmiermittel) und der beiden Kontaktelementen (Grund- und Gegenkörper) ausführlich besprochen.
 Danach wird der Mechanismus der EHD-Schmierung beleuchtet und am Ende wird die Arbeit von Hamrock und Dowson zur theoretischen Bestimmung der Schmierfilmdicke erwähnt.
@@ -31,7 +34,7 @@ Danach wird der Mechanismus der EHD-Schmierung beleuchtet und am Ende wird die A
 Viskosität, die auch als innere Reibung bezeichnet wird, ist die wichtigste Kenngröße eines Schmierstoffes.
 Sie beschreibt die Zähigkeit von Flüssigkeiten und Gasen.
 Je größer die Viskosität ist, desto dickflüssiger ist das Fluid und je niedriger die Viskosität, desto dünnflüssiger ist es.
-Ein Modell des Parallelplattenversuchs veranschaulicht das FließVerhalten des Schmierstoffes, Abbildung \ref{fig:geschwindigkeitsprofil_parallelplattenversuch}.
+Ein Modell des Parallelplattenversuchs veranschaulicht das Fließverhalten des Schmierstoffes, Abbildung \ref{fig:geschwindigkeitsprofil_parallelplattenversuch}.
 % ----------------------------------------
 % Fig: Geschwindigkeitsprofil in einem Parallelplattenversuch
 % ----------------------------------------
@@ -136,8 +139,8 @@ Mit steigendem Druck nimmt die Viskosität aller Schmieröle zu.
     \label{fig:dynamische_viskositaet_in_abhaengigkeit_vom_druck}
 \end{figure}
 %
-Allerdings verändert sich das Schmiermittel unter dem für die EHD-Kontakte ernormen Druck schlagartig.
-Die Viskosität nimt rapide zu und der Schmierstoff erreicht einem festen Zustand.
+Allerdings verändert sich das Schmiermittel unter dem für die EHD-Kontakte enormen Druck schlagartig.
+Die Viskosität nimmt rapide zu und der Schmierstoff erreicht einem festen Zustand.
 Nach Barus kann die Viskosität mit der unteren Formel berechnet werden
 % ----------------------------------------
 % Eq: Viskositätsindex
@@ -154,7 +157,7 @@ Für Mineralöle sind diese Parameter ungefähr
     0 \leq \ &\alpha \leq 4,0 \times 10^{-8} \quad Pa^{-1}
 \end{align*}
 %
-Leider liefert die Barus Gleichung einen zu großen Wert bem hohen Druck.
+Leider liefert die Barus Gleichung einen zu großen Wert beim hohen Druck.
 Eine genauer Gleichung wurde von Roelands\cite{roelands} vorgeschlagen
 % ----------------------------------------
 % Eq: Roelands Gleichung
@@ -167,7 +170,7 @@ Eine genauer Gleichung wurde von Roelands\cite{roelands} vorgeschlagen
 \end{equation}
 %
 
-Der Druckkoeffizient der Viskosität $\alpha_p$ ist nicht eine Konstante, sodern eine Funktion der Temperatur.
+Der Druckkoeffizient der Viskosität $\alpha_p$ ist nicht eine Konstante, sondern eine Funktion der Temperatur.
 Diese Abhängigkeit wird in Abbildung~\ref{fig:druckkoeffizient_temperatur} für die Referenzöle der FVA gezeigt.
 % ----------------------------------------
 % Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
@@ -185,7 +188,7 @@ Diese Abhängigkeit wird in Abbildung~\ref{fig:druckkoeffizient_temperatur} für
 
 Für eine numerische Schmierfilmdickenmessung ist es notwendig zu wissen, wie die Dichte des Schmierstoffes unter verschiedenen Druck verhält.
 Die Form des Schmierfilms kann nicht richtig berechnet werden, wenn diese Eigenschaft vernachlässigt wird.
-Die Kompressibilität eines Schmierstoffes C ist nach Chu und Cameron mit folgender Fomel zu berechnen:
+Die Kompressibilität eines Schmierstoffes $C$ ist nach Chu und Cameron mit folgender Formel zu berechnen:
 % ----------------------------------------
 % Eq: Die Kompressibilität eines Schmierstoffes
 % ----------------------------------------
@@ -194,7 +197,7 @@ Die Kompressibilität eines Schmierstoffes C ist nach Chu und Cameron mit folgen
     C = \left( \frac{1}{\rho} \right) \frac{d\rho}{dp} = \left( \frac{1}{V} \right) \frac{dV}{dp}
 \end{equation}
 %
-wobei V das Volumen und $dV$ die Änderungs des Volumens ist.
+wobei V das Volumen und $dV$ die Änderung des Volumens ist.
 
 Die Dichte der Mineralöle ist nach Hirano\cite{hirano} mit folgender Formel zu berechnen
 % ----------------------------------------
@@ -205,7 +208,7 @@ Die Dichte der Mineralöle ist nach Hirano\cite{hirano} mit folgender Formel zu 
     \rho = \rho_0 \left( 1 + \frac{0,6  p}{1 + 1,7  p} \right)
 \end{equation}
 %
-wobei $p$ in GPa und $\rho_0$ die Dichte beim normalen Luftdruck ($0,87~kg/m^3$ bei $20^\circ C$) ist.
+wobei $p$ in $GPa$ und $\rho_0$ die Dichte beim normalen Luftdruck ($0,87~kg/m^3$ bei $20^\circ C$) ist.
 % ----------------------------------------
 % Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
 % ----------------------------------------
@@ -219,7 +222,7 @@ wobei $p$ in GPa und $\rho_0$ die Dichte beim normalen Luftdruck ($0,87~kg/m^3$ 
 \subsection*{Brechungsindex}
 \label{sub:brechungsindex}
 
-Für die Messverfahren, die auf optischen Interferometrie basieren, brauch man die Abhängigkeit zwischen der Dichte und dem Brechungsindex des Schmierstoffes.
+Für die Messverfahren, die auf optischen Interferometrie basieren, braucht man die Abhängigkeit zwischen der Dichte und dem Brechungsindex des Schmierstoffes.
 Nach Gohar wird das Verhältnis mit der Formel\ref{eq:dichte_brechnungsindex} beschrieben.
 % ----------------------------------------
 % Eq: Dichte und Brechungsindex
@@ -252,7 +255,7 @@ wobei $T$ die absolute Temperatur in $K$ und $\rho_0$ die Dichte in $kg/m^3$ ist
 \label{sub:newtonsche_fluide}
 
 Wenn die Viskosität eines Fluids von der Schubspannung unabhängig ist, wird das Fluid als newtonsches Fluid bezeichnet - Abbildung\ref{fig:newtonsche_fluide}.
-Flüssigkeiten, deren Viskosität mit steigender Schubspannung zunimmt, nennt mann dilatant.
+Flüssigkeiten, deren Viskosität mit steigender Schubspannung zunimmt, nennt man dilatant.
 Solches Verhalten ist geeignet für Suspensionen, nicht als Schmierstoff.
 Strukturviskose Fluide sind die Umkehr der Dilatanz.
 Strukturviskosität tritt bei synthetischen Fluiden auf.
@@ -287,7 +290,7 @@ Abbildung~\ref{fig:nichtkonforme_kontakte} zeigt die Beispiele konforme und nich
     \label{fig:nichtkonforme_kontakte}
 \end{figure}
 %
-Gegenteil zu den konformen Kontakten, wo die Pressungen in der Großenordnung von 10 MPa auftreten, können in zwischen den Laufflächen nichtkonformer Kontakt die Druckspannungen 0,5 GPa und höher betragen.
+Gegenteil zu den konformen Kontakten, wo die Pressungen in der Größenordnung von $10 MPa$ auftreten, können in zwischen den Laufflächen nichtkonformer Kontakt die Druckspannungen 0,5 GPa und höher betragen.
 Durch die enorme, konzentrierte Belastung werden die Flächen an dem Kontaktpunkt elastisch verformt und vergrößert.
 Im Folgenden soll der Wälzkontakt nach Wisniewski\cite{wisniewski} näher betrachtet werden.
 
@@ -295,21 +298,21 @@ Im Folgenden soll der Wälzkontakt nach Wisniewski\cite{wisniewski} näher betra
 \label{sub:kontakt_von_beliebig_gekruemmten_elementen}
 
 Bei der Betrachtung des konzentrischen Kontaktes werden alle Oberflächen als ideal glatt angenommen und durch deren minimalen und maximalen Krümmungen wird die Geometrie des Grundkörpers bzw. des Gegenkörpers beschrieben.
-Beim konvexen Körper (Index 1) sind die Kümmungsradien ($r_{11}, r_{12}$) positiv und beim kokaven Körper (Index 2) sind die Radien ($r_{21}, r_{22}$) negativ.
+Beim konvexen Körper (Index 1) sind die Krümmungsradien ($r_{11}, r_{12}$) positiv und beim konkaven Körper (Index 2) sind die Radien ($r_{21}, r_{22}$) negativ.
 Zwischen den beiden Ebenen, die $r_{11}$ und $r_{21}$ erhalten, bildet sich der Winkel $\varphi$.
-In Abbildung~\ref{fig:kontaktgeometrie_nichtkonforme_kontakte} wird die generelle Kontaktgeometrie bei nichtkonformen Festkörpern dargestellt.
+In Abbildung~\ref{fig:kontaktgeometrie_nichtkonforme_kontakte} wird die generelle Kontaktgeometrie bei nicht konformen Festkörpern dargestellt.
 % ----------------------------------------
 % Fig: Wälzkontakt nach Wisniewski
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/Hertzsche_Pressung.pdf}
-    \caption{Kontaktgeometrie bei nichtkonforme Paarungen\cite{psm}}
+    \caption{Kontaktgeometrie bei nicht konformer Paarungen\cite{psm}}
     \label{fig:kontaktgeometrie_nichtkonforme_kontakte}
 \end{figure}
 %
 Im Kontaktpunkt bildet sich die Kontaktflächen eine Ellipse mit den Halbachsen $a$ und $b$.
-Zu $a$ und $b$ zu bestimmen, braucht man das reduzierte Elastizitätmodul $E$, die Belastung $P$ und der Krümmungsradius $R$.
+Zu $a$ und $b$ zu bestimmen, braucht man das reduzierte Elastizitätsmodul $E$, die Belastung $P$ und der Krümmungsradius $R$.
 % ----------------------------------------
 % Eq: Laengen der Halbachsen der Kontaktellipse
 % ----------------------------------------
@@ -318,16 +321,16 @@ Zu $a$ und $b$ zu bestimmen, braucht man das reduzierte Elastizitätmodul $E$, d
     b = \beta_b  \sqrt[3]{\frac{3  P  R}{E}} \label{eq:laenge_b}
 \end{align}
 %
-Der reduzierte Elastizitätmodul $E$ beschreibt die elastische Eigenschaften der beiden Elemente und wird definiert als
+Der reduzierte Elastizitätsmodul $E$ beschreibt die elastische Eigenschaften der beiden Elemente und wird definiert als
 % ----------------------------------------
-% Eq: Der reduzierte Elastizitätmodul E
+% Eq: Der reduzierte Elastizitätsmodul E
 % ----------------------------------------
 \begin{equation}
     \label{eq:reduzierter_elastizitaetsmodul}
     \frac{1}{E} = \frac{1}{2}  \left( \frac{1 - \nu_1^2}{E_1} + \frac{1 - \nu_2^2}{E_2} \right)
 \end{equation}
 %
-wobei $\nu_x$ die Querkontraktionszahl der Kontaktkörper und $E_x$ der Elastizitätmodul der Kontaktkörper ist.
+wobei $\nu_x$ die Querkontraktionszahl der Kontaktkörper und $E_x$ der Elastizitätsmodul der Kontaktkörper ist.
 Die Druckverteilung $p$ hat eine Form eines Halbellipsoids und wird so definiert
 % ----------------------------------------
 % Eq: Druckverteilung p
@@ -395,7 +398,7 @@ Eingesetzt diese Werte in \ref{eq:kruemmungsradius} und in \ref{eq:cos_psi} ergi
     \cos{\psi} &= 0
 \end{align*}
 %
-Aus dem Diagram für den Fall $\cos_{\psi} = 0$ liefert den Wert $\beta_a = \beta_b = 1$.
+Aus dem Diagramm für den Fall $\cos_{\psi} = 0$ liefert den Wert $\beta_a = \beta_b = 1$.
 Werden diese in die \ref{eq:laenge_a} und \ref{eq:laenge_b} eingesetzt, ergibt sich
 %
 \begin{align*}
