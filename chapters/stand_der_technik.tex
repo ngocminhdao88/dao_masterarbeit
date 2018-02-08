@@ -442,5 +442,39 @@ Erklärung, wie EHD funktioniert
 % ----------------------------------------
 \section{Schmierfilmdicke nach Hamrock und Dowson}
 \label{sec:schmierfilmdicke_nach_hamrock_und_dowson}
-Erklärung, wie mann die Schmierfilmdicke berechnen kann
 
+Die Berechnung der Schmierfilmhöhe bei EHD-Schmierung wurde von vielen Autoren behandelt und ihre Ergebnisse wurden von Dowson und Higginson mit numerischer Unterstützung bestätigt.
+Nach Dowson und Higginson kann die Berechnung der Schmierfilmdicke durch vier dimensionslose Größe verallgemeinert werden.
+% ----------------------------------------
+% Eq: Allgemein Schmierfilmdicke
+% ----------------------------------------
+\begin{equation}
+    \label{eq:allgemein_schmierfilmdicke}
+    H = k G^{\alpha} U^{\beta} W^{\gamma}
+\end{equation}
+%
+wobei
+
+% ----------------------------------------
+% List: Parameter zur Berechnung der Schmierfilmdicke
+% ----------------------------------------
+\begin{tabular}{lll}
+    Schmierfilmparameter & $H_{min} = \cfrac{h_{min}}{R} ,\quad H_0 = \cfrac{h_0}{R}$ & (c.a $10^{-6} \rightarrow 10^{-2}$) \\
+    Werkstoffparameter & $G = \alpha_p E$ & (c.a $2000 \rightarrow 6000$) \\
+    Geschwindigkeitsparameter & $U = \cfrac{\eta_0 u}{E R}$ & (c.a $10^{-13} \rightarrow 10 ^{-8}$) \\
+    Belastungsparameter & $W = \cfrac{P}{E R}$ & (c.a $10^{-5} \rightarrow 10^{-3}$)
+\end{tabular}
+%
+
+In einer Reihe von Veröffentlichungen in 1976-1977 wurde von Dowson und Hamrock Formel zur Berechnung der minimalen und zentralen Schmierfilmdicke in elliptischen Punktkontakten angeführt.
+% ----------------------------------------
+% Eq: Schmierfilmdicke von Dowson und Hamrock
+% ----------------------------------------
+\begin{align}
+    \label{eq:schmierfilmdicke_downson_hamrock}
+    H_{min} &= \cfrac{3,63 G^{0,49} U_0^{0,68}}{W_0^{0,073}} (1 - e^{-0,68 \chi}) \\
+    H_0 &= \cfrac{2,69 G^{0,53} U_0^{0,67}}{W_0^{0,067}} (1 - 0,61 e^{-0,73 \chi})
+\end{align}
+%
+wobei $\chi = a/b$ das Verhältnis der Halbachsen der Kontaktellipse ist.
+Nach den experimentellen Ergebnissen von Kyoe\improvement{Quelle} kann man die Formel \ref{eq:schmierfilmdicke_downson_hamrock} im Bereich $0,117 < \chi < 3,7$ verwenden.
