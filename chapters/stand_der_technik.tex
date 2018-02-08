@@ -15,6 +15,7 @@ Ein geschmierter Reibungskontakt kann auf vier Elemente des tribologischen Syste
     \label{fig:das_tribologische_system}
 \end{figure}
 
+\improvement[inline]{Verbesserung der Beschreibung zwei Phänomene}
 Elastohydrodynamische Schmierung ist eine Art der Schmierung, die in der nichtkonformen Kontakt entsteht.
 Diese Kontaktarten sind z.B. Wälzlager, Zahnräder, Wellendichtringe etc.
 Wegen hohen Druck in der Kontaktzone werden die zu schmierende Laufflächen sich lokale verformt, daraus folgt die Erhöhung der Viskosität des Schmierstoffes.
@@ -115,7 +116,15 @@ Aus dem Vergleich der kinematischen Viskosität eines zu beschreibenden Öls mit
 \end{equation}
 %
 In der VI-Definition ist es angenommen, dass die Veränderung der Viskosität mit Temperatur von drei Ölen linear ist.
-Die Linearisierung ist nach Walther\cite{walther} und wird in der Abbildung~\ref{fig:variation_der_viskositaet_mit_temperatur} für das Mineralöle dargestellt.
+Die Linearisierung ist nach Walther (S\'{a}nchez-Rubio, et al.)\cite{sanchez-rubio} und wird in der Abbildung~\ref{fig:variation_der_viskositaet_mit_temperatur} für das Mineralöle dargestellt.
+% ----------------------------------------
+% Eq: kinematische Viskosität nach Walther
+% ----------------------------------------
+\begin{equation}
+    \label{eq:kinematische_viskotitaet_walther}
+    \log \log(\nu + 0,7) = A + B \log T
+\end{equation}
+%
 % ----------------------------------------
 % Fig: Naeherungsgleichung der Viskosität-Temperatur nach Walther
 % ----------------------------------------
@@ -125,6 +134,7 @@ Die Linearisierung ist nach Walther\cite{walther} und wird in der Abbildung~\ref
     \caption{Variation der Viskosität mit Temperatur}
     \label{fig:variation_der_viskositaet_mit_temperatur}
 \end{figure}
+\improvement[inline]{Walther Linearisierung}
 
 \subsection*{Einfluss von Druck auf Viskosität}
 \label{sub:einfluss_von_druck_auf_viskositaet}
@@ -430,21 +440,13 @@ Zum Vergleich mit den glatten Oberflächen sind bei rauhen Festkörpern die Kont
 \improvement[inline]{blah blah blah}
 
 % ----------------------------------------
-% Sec: Elastohydrodynamische Schmiertheorie
-% ----------------------------------------
-\section{Elastohydrodynamische Schmiertheorie}
-\label{elastohydrodynamische_schmiertheorie}
-
-Erklärung, wie EHD funktioniert
-
-% ----------------------------------------
 % Sec: Schmierung nach Hamrock und Dowson
 % ----------------------------------------
 \section{Schmierfilmdicke nach Hamrock und Dowson}
 \label{sec:schmierfilmdicke_nach_hamrock_und_dowson}
 
 Die Berechnung der Schmierfilmhöhe bei EHD-Schmierung wurde von vielen Autoren behandelt und ihre Ergebnisse wurden von Dowson und Higginson mit numerischer Unterstützung bestätigt.
-Nach Dowson und Higginson kann die Berechnung der Schmierfilmdicke durch vier dimensionslose Größe verallgemeinert werden.
+Nach Dowson und Higginson kann die Schmierfilmdicke durch vier dimensionslose Größe ermittelt werden.
 % ----------------------------------------
 % Eq: Allgemein Schmierfilmdicke
 % ----------------------------------------
@@ -459,22 +461,30 @@ wobei
 % List: Parameter zur Berechnung der Schmierfilmdicke
 % ----------------------------------------
 \begin{tabular}{lll}
-    Schmierfilmparameter & $H_{min} = \cfrac{h_{min}}{R} ,\quad H_0 = \cfrac{h_0}{R}$ & (c.a $10^{-6} \rightarrow 10^{-2}$) \\
+    Schmierfilmparameter & $H_{min} = \cfrac{h_{min}}{R} ;\quad H_0 = \cfrac{h_0}{R}$ & (c.a $10^{-6} \rightarrow 10^{-2}$) \\
     Werkstoffparameter & $G = \alpha_p E$ & (c.a $2000 \rightarrow 6000$) \\
     Geschwindigkeitsparameter & $U = \cfrac{\eta_0 u}{E R}$ & (c.a $10^{-13} \rightarrow 10 ^{-8}$) \\
     Belastungsparameter & $W = \cfrac{P}{E R}$ & (c.a $10^{-5} \rightarrow 10^{-3}$)
 \end{tabular}
 %
 
-In einer Reihe von Veröffentlichungen in 1976-1977 wurde von Dowson und Hamrock Formel zur Berechnung der minimalen und zentralen Schmierfilmdicke in elliptischen Punktkontakten angeführt.
+In einer Reihe von Veröffentlichungen in \cite{hamrock_dowson_1976_a}\cite{hamrock_dowson_1976_b}\cite{hamrock_dowson_1977_a}\cite{hamrock_dowson_1977_b} wurde von Dowson und Hamrock die Formel zur Berechnung der minimalen und zentralen Schmierfilmdicke in elliptischen Punktkontakten angeführt.
 % ----------------------------------------
 % Eq: Schmierfilmdicke von Dowson und Hamrock
 % ----------------------------------------
 \begin{align}
-    \label{eq:schmierfilmdicke_downson_hamrock}
+    \label{eq:mininmale_schmierfilmdicke_downson_hamrock}
     H_{min} &= \cfrac{3,63 G^{0,49} U_0^{0,68}}{W_0^{0,073}} (1 - e^{-0,68 \chi}) \\
-    H_0 &= \cfrac{2,69 G^{0,53} U_0^{0,67}}{W_0^{0,067}} (1 - 0,61 e^{-0,73 \chi})
+    \label{eq:zentrale_schmierfilmdicke_downson_hamrock}
+    H_0 &= \cfrac{2,69 G^{0,53} U_0^{0,67}}{W_0^{0,067}} (1 - 0,61 e^{-0,73 \chi}) \\
+    \text{mit} \quad
+    U_0 &= \cfrac{\eta_0 u}{E R_x};\ 
+    W_0 = \cfrac{P}{E R_x^2};\
+    \chi = \frac{a}{b};\
+    \frac{1}{R_x} = \frac{1}{R_{1x}} + \frac{1}{R_{2x}} \nonumber 
 \end{align}
 %
-wobei $\chi = a/b$ das Verhältnis der Halbachsen der Kontaktellipse ist.
-Nach den experimentellen Ergebnissen von Kyoe\improvement{Quelle} kann man die Formel \ref{eq:schmierfilmdicke_downson_hamrock} im Bereich $0,117 < \chi < 3,7$ verwenden.
+wobei $\chi$ das Verhältnis der Halbachsen der Kontaktellipse ist und $R_x$ bedeutet der Krümmungsradius in der Bewegungsebene.
+Der Geschwindigkeits-, und Belastungsparameter weichen hier von den verallgemeinerten ab.
+Nach den experimentellen Ergebnissen von Kyoe\improvement{Quelle} kann die Formel \ref{eq:mininmale_schmierfilmdicke_downson_hamrock} und \ref{eq:zentrale_schmierfilmdicke_downson_hamrock} im Bereich $0,117 < \chi < 3,7$ verwendet werden.
+
