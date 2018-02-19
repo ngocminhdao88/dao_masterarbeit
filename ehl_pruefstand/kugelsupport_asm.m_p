@@ -1,0 +1,58 @@
+﻿                Masseneigenschaft von BAUGRUPPE KUGELSUPPORT_ASM
+
+                        VOLUMEN =  1.1035191e+04 MM^3
+                 FLÄCHENINHALT =  1.0131193e+04 MM^2
+                MITTLERE DICHTE =  7.6381867e-06 KILOGRAMM / MM^3
+                          MASSE =  8.4288850e-02 KILOGRAMM 
+
+        SCHWERPUNKT in Bezug auf den Koordinatenrahmen _KUGELSUPPORT_ASM:
+X   Y   Z           1.0877232e+00  1.7489214e+01  1.2428283e+00  MM
+
+  Trägheit in Bezug auf Koordinatensystem _KUGELSUPPORT_ASM  (KILOGRAMM * MM^2)
+
+TRÄGHEITSTENSOR:
+Ixx Ixy Ixz         3.8123956e+01 -1.4871665e+00 -1.0108033e+00
+Iyx Iyy Iyz        -1.4871665e+00  8.0769606e+00 -2.2862824e+00
+Izx Izy Izz        -1.0108033e+00 -2.2862824e+00  4.0307487e+01
+
+    Trägheit im Schwerpunkt in Bezug auf Koordinatenrahmen _KUGELSUPPORT_ASM
+                                                          (KILOGRAMM * MM^2)    
+TRÄGHEITSTENSOR:
+Ixx Ixy Ixz         1.2212110e+01  1.1629610e-01 -8.9685714e-01
+Iyx Iyy Iyz         1.1629610e-01  7.8470405e+00 -4.5417223e-01
+Izx Izy Izz        -8.9685714e-01 -4.5417223e-01  1.4426110e+01
+
+                    HAUPTTRÄGHEITSMOMENT:  (KILOGRAMM * MM^2)
+I1  I2  I3          7.8151396e+00  1.1894827e+01  1.4775293e+01
+
+       Rotationsmatrix von _KUGELSUPPORT_ASM Orientierung auf Hauptachsen:
+                      -0.01276       -0.94311       -0.33224
+                       0.99768        0.01019       -0.06725
+                       0.06681       -0.33232        0.94080
+
+  Rotationswinkel von _KUGELSUPPORT_ASM Orientierung auf Hauptachsen (in Grad):
+Winkel um x  y  z       4.089        -19.405         90.775 
+
+               Umlaufbewegungsradius in Bezug auf die Hauptachsen:
+R1  R2  R3          9.6290470e+00  1.1879386e+01  1.3239848e+01  MM
+
+
+
+                Masseneigenschaften der Komponenten der Baugruppe
+      (in Baugruppeneinheiten und dem Koordinatensystem _KUGELSUPPORT_ASM)
+
+                                     MATERIAL
+           DICHTE         MASSE      SCHW.PKT.:  X        Y         Z
+
+    KUGELSUPPORT                     UNKNOWN
+         7.85000e-06  2.74055e-02  0.00000e+00  6.29061e+00  2.56513e-04
+    KUGEL_DURCHGEBOHRT_ASM           UNKNOWN
+         7.85000e-06  3.23373e-02  0.00000e+00  2.89750e+01  1.30409e+00
+    SUPPORTLAGER_ASM                 UNKNOWN
+         6.89654e-06  5.63561e-03  0.00000e+00  1.23536e+01  5.58737e+00
+    SUPPORTLAGER_ASM                 UNKNOWN
+         6.89654e-06  5.63561e-03 -9.00000e+00  1.46827e+01 -4.71395e+00
+    SUPPORTLAGER_ASM                 UNKNOWN
+         6.89654e-06  5.63561e-03  9.00000e+00  1.46827e+01 -4.71395e+00
+    KOECHER-BUERSTENHALTER_KH34      UNKNOWN
+         7.85000e-06  7.63923e-03  1.20016e+01  1.69734e+01  1.10250e+01

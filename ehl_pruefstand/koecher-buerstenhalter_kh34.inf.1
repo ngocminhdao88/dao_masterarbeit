@@ -1,0 +1,320 @@
+﻿
+ Teil KOECHER-BUERSTENHALTER_KH34 - Variante des generischen Teils KOECHER-BUERSTENHALTER-KH       H:\workspace\dao_masterarbeit\ehl_pruefstand\koecher-buerstenhalter-kh.prt.8
+
+Einheiten-Info für das Basis-Einheitensystem 'millimeter Kilogram Sec (mmKs)'
+
+                    Länge  mm 
+                    Masse  kg 
+                    Kraft  mm kg / sec^2
+                     Zeit  sec 
+               Temperatur  C 
+ KEs:
+
+
+ KE-Nummer       1
+ INTERNE KE-ID 1
+ Kinder = 181(#5) 256(#6) 297(#7) 356(#8) 380(#9) 
+
+
+ BEZUGSEBENE
+
+  Nr.     ELEMENTNAME         INFO                                              
+  ---     -------------       -------------                                     
+   1      KE-Name             Definiert                                         
+   2      Bedingungen         Definiert                                         
+   2.1    Bedingung #1        Definiert                                         
+   2.1.1  Konstr-Typ          X-Achse                                           
+   3      BezugsRicht umkehr  Definiert                                         
+   4      Einpassen           Definiert                                         
+   4.1    Einpassart          Standard                                          
+
+ Name = RIGHT
+
+    FEATURE Ist in Folie(n) :
+      01___PRT_ALL_DTM_PLN - Operation = Gezeigt
+      01___PRT_DEF_DTM_PLN - Operation = Gezeigt
+
+
+ ********************
+
+
+ KE-Nummer       2
+ INTERNE KE-ID 3
+ Kinder = 181(#5) 256(#6) 297(#7) 356(#8) 380(#9) 
+
+
+ BEZUGSEBENE
+
+  Nr.     ELEMENTNAME         INFO                                              
+  ---     -------------       -------------                                     
+   1      KE-Name             Definiert                                         
+   2      Bedingungen         Definiert                                         
+   2.1    Bedingung #1        Definiert                                         
+   2.1.1  Konstr-Typ          Y-Achse                                           
+   3      BezugsRicht umkehr  Definiert                                         
+   4      Einpassen           Definiert                                         
+   4.1    Einpassart          Standard                                          
+
+ Name = TOP
+
+    FEATURE Ist in Folie(n) :
+      01___PRT_ALL_DTM_PLN - Operation = Gezeigt
+      01___PRT_DEF_DTM_PLN - Operation = Gezeigt
+
+
+ ********************
+
+
+ KE-Nummer       3
+ INTERNE KE-ID 5
+ Kinder = 181(#5) 256(#6) 297(#7) 356(#8) 380(#9) 
+
+
+ BEZUGSEBENE
+
+  Nr.     ELEMENTNAME         INFO                                              
+  ---     -------------       -------------                                     
+   1      KE-Name             Definiert                                         
+   2      Bedingungen         Definiert                                         
+   2.1    Bedingung #1        Definiert                                         
+   2.1.1  Konstr-Typ          Z-Achse                                           
+   3      BezugsRicht umkehr  Definiert                                         
+   4      Einpassen           Definiert                                         
+   4.1    Einpassart          Standard                                          
+
+ Name = FRONT
+
+    FEATURE Ist in Folie(n) :
+      01___PRT_ALL_DTM_PLN - Operation = Gezeigt
+      01___PRT_DEF_DTM_PLN - Operation = Gezeigt
+
+
+ ********************
+
+
+ KE-Nummer       4
+ INTERNE KE-ID 7
+ Typ = KOORDINATENSYSTEM
+ Name = PRT_CSYS_DEF
+
+
+    FEATURE Ist in Folie(n) :
+      05___PRT_ALL_DTM_CSYS - Operation = Gezeigt
+      05___PRT_DEF_DTM_CSYS - Operation = Gezeigt
+
+
+ ********************
+
+
+ KE-Nummer       5
+ INTERNE KE-ID 181
+ Eltern = 1(#1) 3(#2) 5(#3) 
+ Kinder = 356(#8) 380(#9) 
+
+
+ KÖRPER: Drehen
+
+  Nr.     ELEMENTNAME        INFO                                               
+  ---     -------------      -------------                                      
+   1      KE-Name            Definiert                                          
+   2      KE-Typ Profil      Volumenkörper                                      
+   3      Material           Hinzufügen                                         
+   4      Schnitt            Definiert                                          
+   4.1    Ebene einrichten   Definiert                                          
+   4.1.1  Skizzierebene      FRONT:F3(BEZUGSEBENE)                              
+   4.1.2  Ansichtsrichtung   Seite 1                                            
+   4.1.3  Orientierung       Rechts                                             
+   4.1.4  Referenz           RIGHT:F1(BEZUGSEBENE)                              
+   4.2    Skizze             Definiert                                          
+   5      KE-Form            Volumenkörper                                      
+   6      Drehachse          Definiert                                          
+   7      Drehachsen-Option  Interne Mittellinie                                
+   8      Richtung           Seite 2                                            
+   9      Winkel             Definiert                                          
+   9.1    Seite Eins         Definiert                                          
+   9.1.1  SeiteEins Wink     Kein(e)                                            
+   9.2    Seite Zwei         Definiert                                          
+   9.2.1  SeiteZwei Wink     Variable                                           
+   9.2.2  Wert               360.0                                              
+
+ Schnittname = Schnitt 1 
+
+    FEATURE Ist in Folie(n) :
+      02___PRT_ALL_AXES - Operation = Gezeigt
+
+ Bemaßungen des KE:
+ d13 = (Dargestellt:) 360
+       (Gespeichert:) 360.0 ( 0.5, -0.5 ) 
+ ad1 = (Dargestellt:) 7 General_Dims Dia
+       (Gespeichert:) 7.0 ( 0.2, -0.2 ) 
+ p = (Dargestellt:) 20 General_Dims
+     (Gespeichert:) 20.0 ( 0.2, -0.2 ) 
+ ad2 = (Dargestellt:) 10 General_Dims Dia
+       (Gespeichert:) 10.0 ( 0.2, -0.2 ) 
+ i = (Dargestellt:) 10 General_Dims
+     (Gespeichert:) 10.0 ( 0.2, -0.2 ) 
+ gewinde_m = (Dargestellt:) 8 General_Dims Dia
+             (Gespeichert:) 8.0 ( 0.2, -0.2 ) 
+ gewinde_g = (Dargestellt:) 5 General_Dims
+             (Gespeichert:) 5.0 ( 0.1, -0.1 ) 
+
+ ********************
+
+
+ KE-Nummer       6
+ INTERNE KE-ID 256
+ Eltern = 1(#1) 5(#3) 3(#2) 
+
+
+ SCHNITT: Profil
+
+  Nr.     ELEMENTNAME       INFO                                                
+  ---     -------------     -------------                                       
+   1      KE-Name           Definiert                                           
+   2      KE-Typ Profil     Volumenkörper                                       
+   3      Material          Entfernen                                           
+   4      Schnitt           Definiert                                           
+   4.1    Ebene einrichten  Definiert                                           
+   4.1.1  Skizzierebene     TOP:F2(BEZUGSEBENE)                                 
+   4.1.2  Ansichtsrichtung  Seite 1                                             
+   4.1.3  Orientierung      Rechts                                              
+   4.1.4  Referenz          RIGHT:F1(BEZUGSEBENE)                               
+   4.2    Skizze            Definiert                                           
+   5      KE-Form           Volumenkörper                                       
+   6      Materialseite     Seite Zwei                                          
+   7      Richtung          Seite 2                                             
+   8      Tiefe             Definiert                                           
+   8.1    Seite Eins        Definiert                                           
+   8.1.1  Tiefe Seite Eins  Kein(e)                                             
+   8.2    Seite Zwei        Definiert                                           
+   8.2.1  Tiefe Seite Zwei  Durch alle                                          
+
+ Schnittname = Schnitt 1 
+
+
+ Bemaßungen des KE:
+ t = (Dargestellt:) 3 General_Dims
+     (Gespeichert:) 3.0 ( 0.1, -0.1 ) 
+ a = (Dargestellt:) 4 General_Dims
+     (Gespeichert:) 4.0 ( 0.1, -0.1 ) 
+
+ ********************
+
+
+ KE-Nummer       7
+ INTERNE KE-ID 297
+ Eltern = 1(#1) 5(#3) 3(#2) 
+
+
+ SCHNITT: Profil
+
+  Nr.     ELEMENTNAME       INFO                                                
+  ---     -------------     -------------                                       
+   1      KE-Name           Definiert                                           
+   2      KE-Typ Profil     Volumenkörper                                       
+   3      Material          Entfernen                                           
+   4      Schnitt           Definiert                                           
+   4.1    Ebene einrichten  Definiert                                           
+   4.1.1  Skizzierebene     TOP:F2(BEZUGSEBENE)                                 
+   4.1.2  Ansichtsrichtung  Seite 1                                             
+   4.1.3  Orientierung      Rechts                                              
+   4.1.4  Referenz          RIGHT:F1(BEZUGSEBENE)                               
+   4.2    Skizze            Definiert                                           
+   5      KE-Form           Volumenkörper                                       
+   6      Materialseite     Seite Zwei                                          
+   7      Richtung          Seite 2                                             
+   8      Tiefe             Definiert                                           
+   8.1    Seite Eins        Definiert                                           
+   8.1.1  Tiefe Seite Eins  Kein(e)                                             
+   8.2    Seite Zwei        Definiert                                           
+   8.2.1  Tiefe Seite Zwei  Durch alle                                          
+
+ Schnittname = Schnitt 1 
+
+
+ Bemaßungen des KE:
+ d24 = (Dargestellt:) 3.5 General_Dims Dia
+       (Gespeichert:) 3.5 ( 0.1, -0.1 ) 
+
+ ********************
+
+
+ KE-Nummer       8
+ INTERNE KE-ID 356
+ Eltern = 181(#5) 
+
+
+ FASE: Kante
+
+  Nr.           ELEMENTNAME      INFO                                           
+  ---           -------------    -------------                                  
+   1            KE-Name          Definiert                                      
+   2            Sätze            1 Satz                                         
+   2.1          Satz 0           Definiert                                      
+   2.1.1        Bemaßungsschema  d x d                                          
+   2.1.2        Fasenform        Versatzflächen                                 
+   2.1.3        Kegel            Definiert                                      
+   2.1.3.1      Koniktyp         Einfach                                        
+   2.1.4        Referenzen       Definiert                                      
+   2.1.4.1      Referenztyp      Kantenkette                                    
+   2.1.4.2      Kurvensammlung   2 Auswahlen                                    
+   2.1.5        Radien           1 Punkte                                       
+   2.1.5.1      Rad 0            Definiert                                      
+   2.1.5.1.1    D1               Definiert                                      
+   2.1.5.1.1.1  Abstandstyp      Wert eingeben                                  
+   2.1.5.1.1.2  Abstandswert     0.50                                           
+   2.1.6        Stücke           1 von 1 Eingeschlossenen, 0 Getrimmten, 0 Verlä
+   3            Ansatztyp        Volumenkörper                                  
+   4            Übergänge        Definiert                                      
+
+
+
+ Bemaßungen des KE:
+ d25 = (Dargestellt:) 0.5 General_Dims
+       (Gespeichert:) 0.5 ( 0.1, -0.1 ) 
+
+ ********************
+
+
+ KE-Nummer       9
+ INTERNE KE-ID 380
+ Eltern = 1(#1) 181(#5) 
+
+
+ KOMPONENTENSCHNITTSTELLE
+
+  Nr.     ELEMENTNAME              INFO                                         
+  ---     -------------            -------------                                
+   1                               Definiert                                    
+   2      Interface Sets           Definiert                                    
+   3                               Definiert                                    
+   3.1    Bedingung #1             Definiert                                    
+   3.1.1                           Durch                                        
+   3.1.2                           Definiert                                    
+   3.1.3                           Wert = 0.0000                                
+   3.1.4  Interface Constr Set Id  Component Set Id = -1                        
+   3.1.5                           Definiert                                    
+   3.2    Bedingung #2             Definiert                                    
+   3.2.1                           Durch                                        
+   3.2.2                           Definiert                                    
+   3.2.3                           Wert = 0.0000                                
+   3.2.4  Interface Constr Set Id  Component Set Id = -1                        
+   3.2.5                           Definiert                                    
+   3.3    Bedingung #3             Definiert                                    
+   3.3.1                           Durch                                        
+   3.3.2                           Definiert                                    
+   3.3.3                           Wert = 0.0000                                
+   3.3.4  Interface Constr Set Id  Component Set Id = -1                        
+   3.3.5                           Definiert                                    
+   4      Receive type             Interface Receive Type = 2                   
+   5      Interface type           Interface Type = 5200                        
+   6      Interface default        Interface Default = 1                        
+   7                               Definiert                                    
+
+ Name = MONTAGE
+ KE GEHÖRRT ZU FUSSZEILE 
+
+
+
+ ********************
+
