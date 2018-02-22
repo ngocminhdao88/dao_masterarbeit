@@ -1,0 +1,16 @@
+﻿
+Calculation Type      Exact Result
+
+Pair  Component1             Component2           Vol. of Intf.       
+----------------------------------------------------------------------
+1     KUGELSUPPORT_ASM_SKEL  KUGELSUPPORT         3595.294433 mm^3    
+2     KUGELWELLE             KUNSTOFFWELLE        3.289501 mm^3       
+3     SUPPORTLAGER_ASM_SKEL  SUPPORTLAGER_HUELSE  48.694686 mm^3      
+4     KUGELSUPPORT_ASM_SKEL  DIN_7984-1_M3_X_10   27.878493 mm^3      
+5     KUGELSUPPORT           DIN_7984-1_M3_X_10   8.253226 mm^3       
+6     SUPPORTLAGER_ASM_SKEL  SUPPORTLAGER_HUELSE  48.694686 mm^3      
+7     KUGELSUPPORT_ASM_SKEL  DIN_7984-1_M3_X_10   27.869601 mm^3      
+8     KUGELSUPPORT           DIN_7984-1_M3_X_10   8.247776 mm^3       
+9     SUPPORTLAGER_ASM_SKEL  SUPPORTLAGER_HUELSE  48.694686 mm^3      
+10    KUGELSUPPORT_ASM_SKEL  DIN_7984-1_M3_X_10   27.869601 mm^3      
+11    KUGELSUPPORT           DIN_7984-1_M3_X_10   8.247776 mm^3       

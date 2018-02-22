@@ -1,0 +1,45 @@
+﻿|***************************|
+    REFERENZ-INFORMATIONEN    
+|***************************|
+ Referenz Nr. 1 aus 1 
+
+Referenz:
+   TYP   : Ebene
+
+Status   : nicht in Geometrie
+
+
+Referenz-Besitzer:
+ Modell  :
+   Name   : BLECHHALTER
+   TYP   : Teil
+ KE :
+
+    INTERNE KE-ID 2469
+
+
+ BEZUGSEBENE
+
+  Nr.     ELEMENTNAME         INFO                                              
+  ---     -------------       -------------                                     
+   1      KE-Name             Definiert                                         
+   2      Bedingungen         Definiert                                         
+   2.1    Bedingung #1        Definiert                                         
+   2.1.1  Konstr-Typ          Senkrecht                                         
+   2.1.2  Konstr-Referenzen   Definiert                                         
+   2.2    Bedingung #2        Definiert                                         
+   2.2.1  Konstr-Typ          Durch                                             
+   2.2.2  Konstr-Referenzen   Kante  von KE Nr. 9 (WANDFLÄCHE)                  
+   3      BezugsRicht umkehr  Definiert                                         
+   4      Einpassen           Definiert                                         
+   4.1    Einpassart          Standard                                          
+
+    Name = DTM3
+
+
+    Attribut:  Keine Darstellung
+    Attribut:  Intern
+Beziehung                           Parameter                 Neuer Wert
+--------                           ---------                 --- -----
+
+*** Von diesesm KE gesteuerte Teilebeziehungen:
