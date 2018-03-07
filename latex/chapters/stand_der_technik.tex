@@ -4,7 +4,9 @@
 \chapter{Stand der Technik}
 \label{chap:stand_der_technik}
 
-Ein geschmierter Reibungskontakt kann auf vier Elemente des tribologischen Systems nach Czichos\cite{czichos} reduziert werden: Grundkörper, Gegenkörper, Zischenstoff und Umgebungsmedium.
+Der Begriff Tribologie ist nach \cite{bartz_2000} die Wissenschaft und Technik von aufeinander einwirkenden Oberflächen in Relativbewegung.
+Sie beschäftigt sich mit Reibung, Verschleiß und Schmierung sowie Grenzflächenwechselwirkungen zwischen Festkörpern, Flüssigkeiten und Gasen (Abbildung \ref{fig:das_tribologische_system}).
+
 % ----------------------------------------
 % Fig: Das tribologische System
 % ----------------------------------------
@@ -15,14 +17,8 @@ Ein geschmierter Reibungskontakt kann auf vier Elemente des tribologischen Syste
     \label{fig:das_tribologische_system}
 \end{figure}
 
-\improvement[inline]{Verbesserung der Beschreibung zwei Phänomene}
-Elastohydrodynamische Schmierung ist eine Art der Schmierung, die in der nichtkonformen Kontakt entsteht.
-Diese Kontaktarten sind z.B. Wälzlager, Zahnräder, Wellendichtringe etc.
-Wegen hohen Druck in der Kontaktzone werden die zu schmierende Laufflächen sich lokale verformt, daraus folgt die Erhöhung der Viskosität des Schmierstoffes.
-Beide Phänomene haben eine positive Wirkung auf die Schmierfilmdicke.
-
-Um ein besseres Verständnis der EHD-Schmierung zu haben, wird in diesem Abschnitt zuerst die Kennwerte des Zwischenstoffes (Schmiermittel) und der beiden Kontaktelementen (Grund- und Gegenkörper) ausführlich besprochen.
-Danach wird der Mechanismus der EHD-Schmierung beleuchtet und am Ende wird die Arbeit von Hamrock und Dowson zur theoretischen Bestimmung der Schmierfilmdicke erwähnt.
+Die vorliegende Arbeit beschäftigt sich vornehmlich mit dem ölgeschmierten Kugel-Scheibe-Kontakt.
+Aus diesem Grund soll im folgenden kurz auf die Themen Schmieröle, Reibung und auf die elastohydrodynamischen Grundlagen eingegangen werden.
 
 % ----------------------------------------
 % Sec: Eigenschaften des Schmiermittels
@@ -30,6 +26,9 @@ Danach wird der Mechanismus der EHD-Schmierung beleuchtet und am Ende wird die A
 \section{Eigenschaften des Schmiermittels}
 \label{sec:eigenschaften_des_schmiermittels}
 
+% ----------------------------------------
+% Subsec: Viskosität
+% ----------------------------------------
 \subsection*{Viskosität}
 \label{sub:viskositaet}
 Viskosität, die auch als innere Reibung bezeichnet wird, ist die wichtigste Kenngröße eines Schmierstoffes.
@@ -100,6 +99,9 @@ wobei $\eta_{s}$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi
     \label{eq:dynamische_viskositaet_cameron}
 \end{equation}
 
+% ----------------------------------------
+% Subsec: Viskositätsindex
+% ----------------------------------------
 \subsection*{Viskositätsindex}
 \label{sub:Viskositaetsindex}
 Die Temperaturabhängigkeit der kinematischen Viskosität eines Schmieröls wird auch von einem Viskositätsindex (VI oder KVI) beschreibt.
@@ -136,6 +138,9 @@ Die Linearisierung ist nach Walther (S\'{a}nchez-Rubio, et al.)\cite{sanchez-rub
 \end{figure}
 \improvement[inline]{Walther Linearisierung}
 
+% ----------------------------------------
+% Subsec: Einfluss von Druck auf Viskosität
+% ----------------------------------------
 \subsection*{Einfluss von Druck auf Viskosität}
 \label{sub:einfluss_von_druck_auf_viskositaet}
 Mit steigendem Druck nimmt die Viskosität aller Schmieröle zu.
@@ -194,6 +199,9 @@ Diese Abhängigkeit wird in Abbildung~\ref{fig:druckkoeffizient_temperatur} für
 \end{figure}
 %
 
+% ----------------------------------------
+% Subsec: Dichte
+% ----------------------------------------
 \subsection*{Dichte}
 \label{sub:dichte}
 
@@ -230,6 +238,9 @@ wobei $p$ in $GPa$ und $\rho_0$ die Dichte beim normalen Luftdruck ($0,87~kg/m^3
     \label{fig:variation_der_dichte_bei_verschiedenen_druecke}
 \end{figure}
 
+% ----------------------------------------
+% Subsec: Brechungsindex
+% ----------------------------------------
 \subsection*{Brechungsindex}
 \label{sub:brechungsindex}
 
@@ -246,7 +257,9 @@ Nach Gohar wird das Verhältnis mit der Formel\ref{eq:dichte_brechnungsindex} be
 wobei $c$ ein Ölkonstante ist (zB: SAE30, $c = 0,33$).
 Der Brechungsindex für meist Mineralöle bei normalen Luftdruck ist c.a 1,51.
 
-
+% ----------------------------------------
+% Subsec: Wärmeleitfähigkeit
+% ----------------------------------------
 \subsection*{Wärmeleitfähigkeit}
 \label{waermeleitfaehigkeit}
 
@@ -262,6 +275,9 @@ Nach Cameron\cite{cameron} kann diese Größe beim normalen Luftdruck mit folgen
 %
 wobei $T$ die absolute Temperatur in $K$ und $\rho_0$ die Dichte in $kg/m^3$ ist.
 
+% ----------------------------------------
+% Subsec: Newtonsche Fluide
+% ----------------------------------------
 \subsection*{Newtonsche Fluide}
 \label{sub:newtonsche_fluide}
 
@@ -281,6 +297,55 @@ Für die Bestimmung der Schmierfilmdicke werden alle Fluide in Rahmen dieser Arb
     \label{fig:newtonsche_fluide}
 \end{figure}
 %
+
+% ----------------------------------------
+% Sec: Reibung
+% ----------------------------------------
+\section{Reibung}
+\label{sec:reibung}
+
+% ----------------------------------------
+% Subsec: Reibungsarten
+% ----------------------------------------
+\subsection{Reibungsarten}
+\label{sub:reibungsarten}
+
+% ----------------------------------------
+% Subsec: Reibungszustände
+% ----------------------------------------
+\subsection{Reibungszustände}
+\label{sub:reibungszustaende}
+
+% ----------------------------------------
+% Subsec: Festkörperreibung
+% ----------------------------------------
+\subsection*{Festkörperreibung}
+\label{sub:festkoerperreibung}
+
+% ----------------------------------------
+% Subsec: Grenzreibung
+% ----------------------------------------
+\subsection*{Grenzreibung}
+\label{sub:grenzreibung}
+
+% ----------------------------------------
+% Subsec: Mischreibung
+% ----------------------------------------
+\subsection*{Mischreibung}
+\label{sub:mischreibung}
+
+% ----------------------------------------
+% Subsec: Flüssigkeitsreibung
+% ----------------------------------------
+\subsection*{Flüssigkeitsreibung}
+\label{sub:fluessigkeitsreibung}
+
+% ----------------------------------------
+% Subsec: Stribeck-Kurve
+% ----------------------------------------
+\subsection{Stribeck-Kurve}
+\label{sub:stribeck-kurve}
+
 
 % ----------------------------------------
 % Sec: Betrachtung des EHD-Kontaktes
