@@ -310,17 +310,59 @@ Für die Bestimmung der Schmierfilmdicke werden alle Fluide in Rahmen dieser Arb
 \subsection{Reibungsarten}
 \label{sub:reibungsarten}
 
+Bewegungsreibung ist immer da, wo sich berührende Körper bzw. Stoffbereiche relativ zueinander bewegen.
+Sie ist entgegen der Bewegungsrichtung gerichtet und wandelt die mechanische Energie in Wärme.
+Man unterscheidet zwischen innerer und äußerer Reibung.
+Äußere Reibung tritt auf, wo die Flächen der unterschiedlichen Körpern sich berühren.
+Von innerer Reibung spricht man, wenn die sich berührenden Stoffbereiche einem Körper angehören, z.B im Schmierstoff.
+
+Im Gegensatz zur Bewebungsreibung tritt die Haftreibung auf, wo es keine relative Bewegung zwischen Reibpartner gibt.
+In diesem Fall ist angreifende Kraft nicht ausreichend, um die Körper in Bewegung zu bringen.
+
+Reibung wird durch den Reibwert $\mu$ charakterisiert.
+Er beschreibt das Verhältnis von Reibungskraft $F_R$ und der Normalkraft $F_N$
+% ----------------------------------------
+% Eq: Reibung
+% ----------------------------------------
+\begin{equation}
+    \label{eq:reibung}
+	\mu = \cfrac{F_R}{F_N}
+\end{equation}
+%
+
+Die Bewegungsreibung kann man in drei Kategorien Gleitreibung, Rollreibung und Bohrreibung einteilen (Abbildung \ref{fig:arten_der_bewegungsreibung}).
+In der Praxis treten meist Kombinationen dieser drei Reibungsarten auf.
+Die wichtigste ist hier die sogenante Wälzreibung, eine Kombination aus Rollen und Gleiten.
+% ----------------------------------------
+% Fig: Arten der Bewegungsreibung
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{Arten der Bewegungsreibung \cite{steinhilper_2008}}
+    \label{fig:arten_der_bewegungsreibung}
+\end{figure}
+%
+
 % ----------------------------------------
 % Subsec: Reibungszustände
 % ----------------------------------------
 \subsection{Reibungszustände}
 \label{sub:reibungszustaende}
 
+Die Reibungszustände werden durch den Kontaktzustand der beteiligten Reibpartner beschrieben.
+Man spricht hier von Festkörper-, Grenz-, Misch-, Flüssigkeits- und Gasreibung.
+Da die Gasreibung für diese Arbeit unrelevant ist, wird es kurz auf die einzelnen Reibungszustände außer Gasreibung eingegangen.
+
+\improvement[inline]{Bilde zu jedem Reibungszustand}
 % ----------------------------------------
 % Subsec: Festkörperreibung
 % ----------------------------------------
 \subsection*{Festkörperreibung}
 \label{sub:festkoerperreibung}
+
+Von Festkörperreibung spricht man, wenn kein Schmierstoff sich im Reibkontakt befindet.
+Dabei besteht die Gefahr bei hohen Flächenpressungen, dass die beiden Körper aneinander haften, verschleißen und es zum Fressen kommen kann.
 
 % ----------------------------------------
 % Subsec: Grenzreibung
@@ -328,11 +370,20 @@ Für die Bestimmung der Schmierfilmdicke werden alle Fluide in Rahmen dieser Arb
 \subsection*{Grenzreibung}
 \label{sub:grenzreibung}
 
+Grenzreibung ist von der Festkörperreibung schon sehr ähnlich.
+Allerdings werden die Oberflächen der Reibpartner von einer Schicht getrennt und befinden sich nicht direkt in Berührung.
+Diese Schicht kann zum Beispiel durch Oxidation, Adsorption oder chemische Reaktionen entstanden sein und vermindert die Reibung im Verleich zur Festkörperreibung schon eheblich.
+
 % ----------------------------------------
 % Subsec: Mischreibung
 % ----------------------------------------
 \subsection*{Mischreibung}
 \label{sub:mischreibung}
+
+Bei Mischreibung gibt es schon im Reibkontakt ein bisschen Schmierstoff und die Laufflächen werden zum Teil durch einen Schmierfilm getrennt.
+Leider ist der nicht hoch genug, um ein vollständiges Trennen der beiden Körpern zu erreichen.
+Es kommt immer noch die Berührung der Rauheitsspitzen der Laufflächen.
+Die Reibung bei der Mischreibung ist deutlich geringer als die der Grenzreibung. Allerdings bleibt immer noch der Verschleiß im Reibkontakt.
 
 % ----------------------------------------
 % Subsec: Flüssigkeitsreibung
@@ -340,12 +391,53 @@ Für die Bestimmung der Schmierfilmdicke werden alle Fluide in Rahmen dieser Arb
 \subsection*{Flüssigkeitsreibung}
 \label{sub:fluessigkeitsreibung}
 
+Bei Flüssigkeitsreibung handelt sich um eine vollständige Trennung der Laufflächen.
+Selbst die Rauheitsspitzen berühren sich hierbei nicht mehr.
+Die äußere Reibung ist weg, bleibt nur noch die innere Reibung, welche durch die Scherbeanspruchung des Schmierstoffs hervorgerufen wird.
+
+Der Aufbau des Schmierfilms erfolgt hydrodynamisch, elastohydrodynamisch oder hydrostatisch.
+Hydrostatisch aufgebaute Schmierfilme werden durch externe Aggregate wie zum Beispiel eine Pumpe aufgebaut.
+Bei der hydrodynamischen Schmierung wird der Schmierfilm durch die Relativbewegung der Reibpartner aufgebaut.
+Die hydrodynamische Schmierung tritt im Allgemein nur bei konformen Kontaktpaarungen.
+Mit konformen Kontaktpaarungen spricht man von Kontaktkörpern, die sich auf eine Fläche berühren.
+Eine Verformung der Oberflächen spielt hier keine wichtige Rolle, da die Pressungen aufgrund der großen Kontaktflächen vergleichsweise gering sind.
+Im Gegenteil dazu ist bei der elastohydrodynamischen Schmierung die Flächenpressung ein entscheidender Faktor zum Aufbau einer tragenden Schicht.
+Die Kontaktpaarungen bei dieser Schmierung sind im Allgemein kontraform.
+Ihre Flächen berühren sich nur in einem Punkt oder einer Linie.
+Dadurch treten deutlich höhere Flächenpressungen als bei konformen Kontakten, was zu einer lokalen Verformung der Oberflächen führt.
+Durch dieses Phänomen und die Zunahme der Viskosität des Schmierstoffes unter hohem Druck wird der Schmierfilm im Kontaktbereich bei elastohydrodynamischen Schmierung aufgebaut.
+
+\improvement[inline]{Tabelle der Kontaktformen}
+
 % ----------------------------------------
 % Subsec: Stribeck-Kurve
 % ----------------------------------------
 \subsection{Stribeck-Kurve}
 \label{sub:stribeck-kurve}
 
+Zur anschaulichen Darstellung der verschiedenen Reibungszustände wird häufig die Stribeck-Kurve gewählt.
+In die Abbildung \ref{fig:stribeck-kurve} wird die Reibungszahl eines geschmierten Gleitlagers in Abhängigkeit von der Geschwindigkeit dargestellt.
+% ----------------------------------------
+% Fig: Stribeck-Kurve
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=5cm]{./images/blank_img.jpg}
+    \caption{Stribeck-Kurve eines geschmierten Gleitlagers \cite{ikz_haustechnik}}
+    \label{fig:stribeck-kurve}
+\end{figure}
+%
+
+Im Stillstand tritt erst einmal reine Haftreibung auf.
+Nach dem Anlauf des Lagers sinkt die Reibungszahl trotz des fehlenden Schmierstoffes im Reibkontakt und es kommt zur Grenzreibung.
+Mit zunehmender Relativgeschwindigkeit zwischen Lagerbuchse und Welle wird der Schmierstoff in den Lagerspalt gefördert.
+Jetzt nimmt die Reibung weiter ab und es kommt zur Mischreibung.
+Bei weiter zunehmender Drehzahl sinkt die Reibungszahl ab bzw. steigt der Schmierfilm so weit an, bis es ab dem Ausklinkpunkt zur reinen Flüssigkeitsreibung kommt.
+Nun schwimmt die Welle im Schmierstoff und berührt sich nicht mehr mit der Lagerbuchse.
+Da die innere Reibung mit der steigenden Drehzahl zunimmt, liegt an der Stelle (Ausklinkpunkt) ein Minimum der Reibungszahl vor.
+
+Für Gleitlager, deren Schmierfilm hydrostatisch durch eine Pumpe aufgebaut wird, gilt die Stribeck-Kurve nicht.
+Da der Schmierfilm schon beim Stillstand voll ausgebildet ist, befinden sich solche Lager bei jeder Drehzahl im Bereich der Flüssigkeitsreibung.
 
 % ----------------------------------------
 % Sec: Betrachtung des EHD-Kontaktes
