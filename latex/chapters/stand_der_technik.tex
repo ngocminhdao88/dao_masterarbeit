@@ -355,30 +355,31 @@ Man spricht hier von Festkörper-, Grenz-, Misch-, Flüssigkeits- und Gasreibung
 Da die Gasreibung für diese Arbeit unrelevant ist, wird es kurz auf die einzelnen Reibungszustände außer Gasreibung eingegangen.
 
 \improvement[inline]{Bilde zu jedem Reibungszustand}
+
 % ----------------------------------------
-% Subsec: Festkörperreibung
+% Par: Festkörperreibung
 % ----------------------------------------
-\subsection*{Festkörperreibung}
-\label{sub:festkoerperreibung}
+\paragraph{Festkörperreibung}
+\label{par:festkoerperreibung}
 
 Von Festkörperreibung spricht man, wenn kein Schmierstoff sich im Reibkontakt befindet.
 Dabei besteht die Gefahr bei hohen Flächenpressungen, dass die beiden Körper aneinander haften, verschleißen und es zum Fressen kommen kann.
 
 % ----------------------------------------
-% Subsec: Grenzreibung
+% Par: Grenzreibung
 % ----------------------------------------
-\subsection*{Grenzreibung}
-\label{sub:grenzreibung}
+\paragraph{Grenzreibung}
+\label{par:grenzreibung}
 
 Grenzreibung ist von der Festkörperreibung schon sehr ähnlich.
 Allerdings werden die Oberflächen der Reibpartner von einer Schicht getrennt und befinden sich nicht direkt in Berührung.
 Diese Schicht kann zum Beispiel durch Oxidation, Adsorption oder chemische Reaktionen entstanden sein und vermindert die Reibung im Verleich zur Festkörperreibung schon eheblich.
 
 % ----------------------------------------
-% Subsec: Mischreibung
+% Par: Mischreibung
 % ----------------------------------------
-\subsection*{Mischreibung}
-\label{sub:mischreibung}
+\paragraph{Mischreibung}
+\label{par:mischreibung}
 
 Bei Mischreibung gibt es schon im Reibkontakt ein bisschen Schmierstoff und die Laufflächen werden zum Teil durch einen Schmierfilm getrennt.
 Leider ist der nicht hoch genug, um ein vollständiges Trennen der beiden Körpern zu erreichen.
@@ -386,10 +387,10 @@ Es kommt immer noch die Berührung der Rauheitsspitzen der Laufflächen.
 Die Reibung bei der Mischreibung ist deutlich geringer als die der Grenzreibung. Allerdings bleibt immer noch der Verschleiß im Reibkontakt.
 
 % ----------------------------------------
-% Subsec: Flüssigkeitsreibung
+% Par: Flüssigkeitsreibung
 % ----------------------------------------
-\subsection*{Flüssigkeitsreibung}
-\label{sub:fluessigkeitsreibung}
+\paragraph{Flüssigkeitsreibung}
+\label{par:fluessigkeitsreibung}
 
 Bei Flüssigkeitsreibung handelt sich um eine vollständige Trennung der Laufflächen.
 Selbst die Rauheitsspitzen berühren sich hierbei nicht mehr.
@@ -410,7 +411,7 @@ Durch dieses Phänomen und die Zunahme der Viskosität des Schmierstoffes unter 
 \improvement[inline]{Tabelle der Kontaktformen}
 
 % ----------------------------------------
-% Subsec: Stribeck-Kurve
+% Par: Stribeck-Kurve
 % ----------------------------------------
 \subsection{Stribeck-Kurve}
 \label{sub:stribeck-kurve}
@@ -462,7 +463,7 @@ Gegenteil zu den konformen Kontakten, wo die Pressungen in der Größenordnung v
 Durch die enorme, konzentrierte Belastung werden die Flächen an dem Kontaktpunkt elastisch verformt und vergrößert.
 Im Folgenden soll der Wälzkontakt nach Wisniewski\cite{wisniewski} näher betrachtet werden.
 
-\subsection*{Kontakt von beliebig gekrümmten Elementen}
+\subsection{Kontakt von beliebig gekrümmten Elementen}
 \label{sub:kontakt_von_beliebig_gekruemmten_elementen}
 
 Bei der Betrachtung des konzentrischen Kontaktes werden alle Oberflächen als ideal glatt angenommen und durch deren minimalen und maximalen Krümmungen wird die Geometrie des Grundkörpers bzw. des Gegenkörpers beschrieben.
@@ -559,23 +560,8 @@ Für ein Kugel-Scheibe-Modell gilt
     r_{21} &= r_{22} = r_{Scheibe} = \infty
 \end{align*}
 %
-Eingesetzt diese Werte in \ref{eq:kruemmungsradius} und in \ref{eq:cos_psi} ergibt sich 
-%
-\begin{align*}
-    R &= r_{Kugel}/2 \\
-    \cos{\psi} &= 0
-\end{align*}
-%
-Aus dem Diagramm für den Fall $\cos_{\psi} = 0$ liefert den Wert $\beta_a = \beta_b = 1$.
-Werden diese in die \ref{eq:laenge_a} und \ref{eq:laenge_b} eingesetzt, ergibt sich
-%
-\begin{align*}
-    a = b
-\end{align*}
-%
-Damit ist es bewiesen, dass hier ein kreisförmiger Kontakt vorliegt.
 
-\subsection*{Kontakt von rauhen Festkörpern}
+\subsection{Kontakt von rauhen Festkörpern}
 \label{sub:kontakt_von_rauhen_festkoerpern}
 In Realität können die Oberflächen der Kontaktkörper nie perfekt glatt sein.
 Da die Mikrogeometrie der Kontaktkörper den Einfluss auf die Abmessungen der Kontaktzone bzw. auf die Bestimmung der maximalen Pressungen hat, ist eine einfache Anwendung der vorherigen Studie von glatten Festkörpern für die rauhe Oberflächen nicht geeignet.
@@ -593,7 +579,7 @@ Zum Vergleich mit den glatten Oberflächen sind bei rauhen Festkörpern die Kont
 
 \improvement[inline]{blah blah blah}
 
-\subsection*{Kontakt von beschichteten Festkörpern}
+\subsection{Kontakt von beschichteten Festkörpern}
 \label{sub:kontakt_von_beschichteten_Festkoerpern}
 \improvement[inline]{blah blah blah}
 
@@ -646,3 +632,5 @@ wobei $\chi$ das Verhältnis der Halbachsen der Kontaktellipse ist und $R_x$ bed
 Der Geschwindigkeits-, und Belastungsparameter weichen hier von den verallgemeinerten ab.
 Nach den experimentellen Ergebnissen von Kyoe\improvement{Quelle} kann die Formel \ref{eq:mininmale_schmierfilmdicke_downson_hamrock} und \ref{eq:zentrale_schmierfilmdicke_downson_hamrock} im Bereich $0,117 < \chi < 3,7$ verwendet werden.
 
+Man kann hier erkennen, dass der Geschwindigkeitsparameter $U_0$ mit einem Exponenten von $0,67$ den höchsten Einfluss auf die Schmierfilmdicke hat.
+Erstaunlicherweise hat die Belastung kaum den Einfluss.
