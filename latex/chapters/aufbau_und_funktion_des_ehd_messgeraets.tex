@@ -1,8 +1,8 @@
 % ----------------------------------------
 % Chap: 
 % ----------------------------------------
-\chapter{Durchgeführte experimentellen Methoden zur Schmierfilmdickenmessung}
-\label{chap:durchgefuehrte_experimentellen_methoden}
+\chapter{Aufbau und Funktion des EHD-Messgeräts}
+\label{chap:aufbau_und_funktion_des_ehd_messgeraets}
 
 % ----------------------------------------
 % Sec: 
@@ -54,7 +54,7 @@ Durch die Heizvorrichtung kann das Öl bis c.a $150 ^\circ C$ temperiert werden.
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \includegraphics[width=0.8\textwidth]{./images/ehd_pruefstand_aufbau.png}
     \caption{Schematischer Aufbau des EHL-Prüfstands \cite{ehl}}
     \label{fig:ehl_aufbau}
 \end{figure}
@@ -104,40 +104,48 @@ In Tabelle \ref{tab:ehl_specs} sind die wichtigsten Daten zu dem Prüfstand zusa
 \subsection{Messsystem zur Schmierfilmdickemessung}
 \label{sub:messsystem_zur_schmierfilmdickemessung}
 
-Beim EHD-Prüfstand von PCS Instrument wird die Schmierfilmdicke im Kugel-Scheibe-Kontakt mit Weißlichtinterferometrie (Abschnitt \ref{sec:optische_messung_der_ehd_schmierfilmdicke}) bestimmt.
+Beim EHD-Prüfstand von PCS Instrument wird die Schmierfilmdicke im Kugel-Scheibe-Kontakt mit Weißlichtinterferometrie (siehe Abschnitt \ref{sec:optische_messung_der_ehd_schmierfilmdicke}) bestimmt.
 Der Kontakt wird von oben durch das Glasscheibe beleuchtet und das zurück reflektierende Bild wird von einem Spektrometer bewertet.
-Die Messeinrichtung wird in Abbildung angezeigt.
+Die Messeinrichtung wird in Abbildung \ref{fig:ehl_messprinzip} angezeigt.
 % ----------------------------------------
 % Fig: EHL Messeinrichtung
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \includegraphics[]{./images/ehd_messprinzip.pdf}
     \caption{Messprinzip des EHD-Prüfstand von PCS \cite{mach_2008}}
-    \label{fig:ehl_messeinrichtung}
+    \label{fig:ehl_messprinzip}
 \end{figure}
 %
+
 Die Glasscheibe hat nicht nur eine Chromschicht, sondern auch eine Silikatschicht (Spacer-Layer) darauf.
 Die hat eine Funktion sowie ein Hart-Ölfilm, der immer da ist, das heißt es auch beim Stillstand die Interferenzen gibt.
-Interferenzmuster im Auge des Betrachters sind fabelhafte Bilder (Abbildung \ref{fig:ehl_interferenzmuster}) und aus ihrer Farben kann die Schmierfilmdicke bei bekannter Silikatschictdicke berechnet werden.
+Interferenzmuster im Auge des Betrachters sind fabelhafte Bilder (Abbildung \ref{fig:ehl_bilder}) und aus ihrer Farben kann die Schmierfilmdicke bei bekannter Silikatschictdicke berechnet werden.
 % ----------------------------------------
 % Fig: EHL Interferenzbilder
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=4cm]{./images/blank_img.jpg}
-    \caption{Interferenzmuster eines Punktkontaktes bei verschiedenen Geschwindigkeiten}
+    \includegraphics[width=0.8\textwidth]{./images/ehl_contact_at_increasing_speeds.png}
+    \caption{Interferenzmuster eines Punktkontaktes bei zunehmenden Geschwindigkeiten \cite{ehl_broshure}}
+    \label{fig:ehl_bilder}
+\end{figure}
+%
+
+Da eine Auswertung der Schmierfilmdicke aus den Farben der Interferenzen durch einen Beobachter zu ungenau wäre, wird der zurück reflektierende Lichtstrahl über einen Prisma durch einen Spalt in ein Spektrometer geleitet.
+Dort werden die Interferenzmuster analysiert und an einem SW-Monitor angezeigt (Abbildung \ref{fig:ehl_interferenzmuster}).
+
+% ----------------------------------------
+% Fig: EHL Beugungsmuster
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[]{./images/interferenzsmuster.pdf}
+    \caption{Interferenzmuster im Spektrometer \cite{ehl_broshure}}
     \label{fig:ehl_interferenzmuster}
 \end{figure}
 %
-% ----------------------------------------
-% Sec: 
-% ----------------------------------------
-\section{Versuchte Öle}
-\label{sec:versuchte_oele}
+Der senkrechte, weiße Balken im Interferenzmuster sind die Maxima, wo die konstruktive Interferenzen stattfinden, und die gibt dabei die Wellenlänge an.
+Wandern diese Balken nach rechts, nimmt die Wellenlänge bzw. Schmierfilmdicke zu.
+Mit Hilfe des Ultra-Softwarepakets kann man aus dem Interferenzmuster die genaue Schmierfilmdicke berechnen.
 
-% ----------------------------------------
-% Sec: 
-% ----------------------------------------
-\section{Versuchdurchführung}
-\label{sec:versuchdurchfuehrung}
