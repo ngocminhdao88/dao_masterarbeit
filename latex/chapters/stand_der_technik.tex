@@ -356,13 +356,15 @@ Die Reibungszustände werden durch den Kontaktzustand der beteiligten Reibpartne
 Man spricht hier von Festkörper-, Grenz-, Misch-, Flüssigkeits- und Gasreibung.
 Da die Gasreibung für diese Arbeit unrelevant ist, wird es kurz auf die einzelnen Reibungszustände außer Gasreibung eingegangen.
 
-\improvement[inline]{Bilde zu jedem Reibungszustand}
-
 % ----------------------------------------
 % Par: Festkörperreibung
 % ----------------------------------------
 \paragraph{Festkörperreibung}
 \label{par:festkoerperreibung}
+%
+\begin{wrapfigure}{R}{0.25\textwidth}
+    \includegraphics[trim={0 1cm 0 1cm}]{./images/festkoerperreibung.pdf}
+\end{wrapfigure}
 
 Von Festkörperreibung spricht man, wenn kein Schmierstoff sich im Reibkontakt befindet.
 Dabei besteht die Gefahr bei hohen Flächenpressungen, dass die beiden Körper aneinander haften, verschleißen und es zum Fressen kommen kann.
@@ -372,6 +374,10 @@ Dabei besteht die Gefahr bei hohen Flächenpressungen, dass die beiden Körper a
 % ----------------------------------------
 \paragraph{Grenzreibung}
 \label{par:grenzreibung}
+%
+\begin{wrapfigure}{R}{0.25\textwidth}
+    \includegraphics[trim={0 0.5cm 0 0.5cm}]{./images/grenzreibung.pdf}
+\end{wrapfigure}
 
 Grenzreibung ist von der Festkörperreibung schon sehr ähnlich.
 Allerdings werden die Oberflächen der Reibpartner von einer Schicht getrennt und befinden sich nicht direkt in Berührung.
@@ -382,6 +388,10 @@ Diese Schicht kann zum Beispiel durch Oxidation, Adsorption oder chemische Reakt
 % ----------------------------------------
 \paragraph{Mischreibung}
 \label{par:mischreibung}
+%
+\begin{wrapfigure}{R}{0.25\textwidth}
+    \includegraphics[trim={0 0.5cm 0 0.5cm}]{./images/mischreibung.pdf}
+\end{wrapfigure}
 
 Bei Mischreibung gibt es schon im Reibkontakt ein bisschen Schmierstoff und die Laufflächen werden zum Teil durch einen Schmierfilm getrennt.
 Leider ist der nicht hoch genug, um ein vollständiges Trennen der beiden Körpern zu erreichen.
@@ -393,6 +403,10 @@ Die Reibung bei der Mischreibung ist deutlich geringer als die der Grenzreibung.
 % ----------------------------------------
 \paragraph{Flüssigkeitsreibung}
 \label{par:fluessigkeitsreibung}
+%
+\begin{wrapfigure}{R}{0.25\textwidth}
+    \includegraphics[trim={0 0.5cm 0 0.5cm}]{./images/fluessigkeitreibung.pdf}
+\end{wrapfigure}
 
 Bei Flüssigkeitsreibung handelt sich um eine vollständige Trennung der Laufflächen.
 Selbst die Rauheitsspitzen berühren sich hierbei nicht mehr.
@@ -409,8 +423,6 @@ Die Kontaktpaarungen bei dieser Schmierung sind im Allgemein kontraform.
 Ihre Flächen berühren sich nur in einem Punkt oder einer Linie.
 Dadurch treten deutlich höhere Flächenpressungen als bei konformen Kontakten, was zu einer lokalen Verformung der Oberflächen führt.
 Durch dieses Phänomen und die Zunahme der Viskosität des Schmierstoffes unter hohem Druck wird der Schmierfilm im Kontaktbereich bei elastohydrodynamischen Schmierung aufgebaut.
-
-\improvement[inline]{Tabelle der Kontaktformen}
 
 % ----------------------------------------
 % Par: Stribeck-Kurve
@@ -450,15 +462,15 @@ Da der Schmierfilm schon beim Stillstand voll ausgebildet ist, befinden sich sol
 
 Die Kontaktflächen von Maschinenelementen werden in zwei Grundformen eingeteilt.
 Dies sind konforme (z.B. Gleitlager) und nichtkonforme Paarungen (z.B. Zahnrad, Reibrad, Nocken-Stößel).
-Abbildung~\ref{fig:nichtkonforme_kontakte} zeigt die Beispiele konforme und nichtkonforme Kontakte.
+Abbildung~\ref{fig:konforme_kontraforme_kontakte} zeigt die Beispiele konforme und nichtkonforme Kontakte.
 % ----------------------------------------
 % Fig: Nichtkonforme Paarungen
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=5cm]{./images/blank_img.jpg}
-    \caption{Nichtkonforme Kontakte}
-    \label{fig:nichtkonforme_kontakte}
+    \includegraphics[]{./images/konforme_kontraforme_kontakte.pdf}
+    \caption{Konforme und kontraforme Kontakte \cite{steinhilper_2008}}
+    \label{fig:konforme_kontraforme_kontakte}
 \end{figure}
 %
 Gegenteil zu den konformen Kontakten, wo die Pressungen in der Größenordnung von $10 MPa$ auftreten, können in zwischen den Laufflächen nichtkonformer Kontakt die Druckspannungen 0,5 GPa und höher betragen.
@@ -477,7 +489,7 @@ In Abbildung~\ref{fig:kontaktgeometrie_nichtkonforme_kontakte} wird die generell
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[]{./images/Hertzsche_Pressung.pdf}
+    \includegraphics[width=0.8\textwidth]{./images/Hertzsche_Pressung.pdf}
     \caption{Kontaktgeometrie bei nicht konformer Paarungen\cite{psm}}
     \label{fig:kontaktgeometrie_nichtkonforme_kontakte}
 \end{figure}
@@ -562,28 +574,6 @@ Für ein Kugel-Scheibe-Modell gilt
     r_{21} &= r_{22} = r_{Scheibe} = \infty
 \end{align*}
 %
-
-\subsection{Kontakt von rauhen Festkörpern}
-\label{sub:kontakt_von_rauhen_festkoerpern}
-In Realität können die Oberflächen der Kontaktkörper nie perfekt glatt sein.
-Da die Mikrogeometrie der Kontaktkörper den Einfluss auf die Abmessungen der Kontaktzone bzw. auf die Bestimmung der maximalen Pressungen hat, ist eine einfache Anwendung der vorherigen Studie von glatten Festkörpern für die rauhe Oberflächen nicht geeignet.
-Zum Vergleich mit den glatten Oberflächen sind bei rauhen Festkörpern die Kontaktflächen größer und dadurch sind die maximalen Pressungen kleiner - Abbildung \ref{fig:druckverteilung_beim_glatten_und_rauhen_kontakt}
-% ----------------------------------------
-% Fig: Druckverteilung im konzentrischen Kontakt, glatten und rauhen
-% ----------------------------------------
-\begin{figure}[htb]
-    \centering
-    \includegraphics[]{./images/druckverteilung_im_konzentrierten_kontakt.pdf}
-    \caption{Druckverteilung beim glatten (a) und rauhen (b) Kontakt\cite{wisniewski}}
-    \label{fig:druckverteilung_beim_glatten_und_rauhen_kontakt}
-\end{figure}
-%
-
-\improvement[inline]{blah blah blah}
-
-\subsection{Kontakt von beschichteten Festkörpern}
-\label{sub:kontakt_von_beschichteten_Festkoerpern}
-\improvement[inline]{blah blah blah}
 
 % ----------------------------------------
 % Sec: Schmierung nach Hamrock und Dowson
