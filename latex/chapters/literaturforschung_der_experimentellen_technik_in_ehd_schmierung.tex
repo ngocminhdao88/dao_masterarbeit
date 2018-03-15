@@ -1,25 +1,35 @@
+% ----------------------------------------
+% Chap: Literaturforschung
+% ----------------------------------------
 \chapter{Literaturforschung der experimentellen Techniken zur Schmierfilmdickenmessung in EHD-Kontakten}
 \label{chap:literaturforschung_der_experimentellen_technik_in_ehd_schmierung}
+
 % ----------------------------------------
-% Optische Methode
+% Sec: Optische Messmethoden
 % ----------------------------------------
 \section{Optische Messung der EHD Schmierfilmdicke}
 \label{sec:optische_messung_der_ehd_schmierfilmdicke}
 
+% ----------------------------------------
+% Sub: Lichtinterferenz
+% ----------------------------------------
 \subsection{Licht Interferometrie}
 \label{ssec:licht_interferometrie}
 
+% ----------------------------------------
+% Sub: Variante Methoden von Lichtinterferenz
+% ----------------------------------------
 \subsection{Variante von der klassichen optischen Interferometrie Methode}
 \label{ssec:variante_interferometrie}
 
 % ----------------------------------------
-% Elektrische Methode
+% Sec: Elektrische Methode
 % ----------------------------------------
 \section{Elektrische Messung der EHD Schmierfilmdicke}
 \label{sec:elektrische_messung_der_ehd_schmierfilmdicke}
 
 Neben der optischen Messmethoden gibt es noch die elektrische Messmethode zur Untersuchung der EHD-Schmierung, wie zum Beispiel Widerstand, Kapazität, Entladespannung.
-Der Vorteil dieser Methode ist, dass die sie direkt bei Maschinenelementen, welche aus Stahl sind, während Betrieb verwendet werden kann.
+Der Vorteil dieser Methode ist, dass sie direkt bei Maschinenelementen, welche aus Stahl sind, während Betrieb verwendet werden kann.
 Allerdings gibt es auch Nachteile.
 Die Form des Kontakts, wo die große lokale Verformung stattfindet, ist nur vermutet und stark vereinfacht.
 Die hat den Einfluss auf die Widerstand-,Kapazität-Messergebnisse.
@@ -33,20 +43,92 @@ Normalerweise werden die elektrische Methoden für folgende Anwendungen verwende
     \item Evaluierung des geschmierten Kontakts unter Einfluss des elektrischen Felds
 \end{itemize}
 
-\subsection{Kapazitive Methoden}
-\label{ssec:kapazitive_methoden}
+% ----------------------------------------
+% Sub: Widerstandmessung
+% ----------------------------------------
+\subsection{Widerstandmessung}
+\label{sub:wiederstandmessung}
 
-\subsection{Resistive Methoden}
-\label{ssec:resistive_methoden}
+Die Widerstandmessmethode ist geeignet, um den Schmierungszustand qualitativ zu beschreiben.
+Der Widerstand ist eine Indikation der direkten Berührung der Rauheitspitzen der Kontaktpartner.
+Bei vollständiger Oberflächentrennung (Flüssigkeitschmierung) soll der Widerstand in theoretisch unendlich groß sein.
+Zum besseren Verständnis der elektrischen Vorgängen im EHD-Kontakt wurde eine Reihe Arbeiten an unterschiedlichen Modellprüfständen und Maschinenelementen durchgeführt.
+
+In einem System bestehend aus einer feststehenden Kugel und einem rotierenden Zylinder hat \textit{Furey} \cite{furey_1961} das Verhalten des elektrischen Widerstands untersucht.
+Die Ergebnisse (Abbildung \ref{fig:resistance_vs_time_furey}) zeigten eine große Streuung des Widerstands bei Mischreibung.
+Zum Beschreiben für einen isolierenden Schmierfilm definiert er einen Wert von 10$k\Omega$.
+In Oszilloskop erkannt er, dass es zwei Zustände des Kontaktwiderstands gabt, hoch und niedrig.
+Das zeitliche Verhältnis zwischen den beiden Zuständen wird über Intervalle von 10 $ms$ aufgenommen, ausgewertet und das Ergebnis als prozentualer Anteil des direkten Kontakt angegeben.
+Mit dieser Methode konnte er berechnen, wie groß der Anteil der Festkörperkontakte in jedem Reibungszustand ist.
+% ----------------------------------------
+% Fig: Widerstand - Zeit Furey
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[]{./images/resistance_vs_time_furey.pdf}
+    \caption{Der prozentuale Anteil von metallischen Kontakt \cite{furey_1961}}
+    \label{fig:resistance_vs_time_furey}
+\end{figure}
+%
+
+In seiner Arbeit \cite{kuhlmann_2009} verwendete \textit{Kuhlmann} zwei unterschiedliche Systeme zur Widerstandmessung.
+Ein System basiert auf die \textit{Wheatstonsche} Brückenschaltung (Abbildung \ref{fig:ersatzschaltbild_messsysteme_kuhlmann} links), welche zur Vermeidung eines Tunneleffektes mit Wechselstrom gespeist wird.
+Der Zusammenhang zwischen dem Widerstand $R_L$ des Lagers und der gemessenen Brückenspannung $U_m$ wird durch eine aufwändige Kalibration über variable Referenzwiderstände hergestellt.
+Zur Vereinfachung der Messkettenkalibrierung und zur Verbesserung der Messempfindlichkeit bei $R_L$ mehr als 1 $k\Omega$ setzte \textit{Kuhlmann} ein direkt messendes Trägerfrequenz-Messsystem ein (Abbildung \ref{fig:ersatzschaltbild_messsysteme_kuhlmann} rechts).
+Der Widerstandszwei wird an einer hochgenauen Wechselstromquelle ($1 \pm 0,2 mA$) angeschlossen.
+Aus dem Spannungsabfall über den Gesamtwiderstand ($R_V$ und $R_P$ sind bekannt) konnte er den Lagerwiderstand bestimmen.
+% ----------------------------------------
+% Fig: Kuhlmann Messsysteme
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[]{./images/ersatzschaltbild_kuhlmann.pdf}
+    \caption{Ersatzschaltbild für die Messsysteme \cite{kuhlmann_2009}}
+    \label{fig:ersatzschaltbild_messsysteme_kuhlmann}
+\end{figure}
+%
+
+Beide obengenannte Messsysteme wurden von \textit{Kuhlmann} bei Fettuntersuchung mit Schrägkugellagern und Kegelrollenlagern bei niedrigen Betriebstemperatur eingesetzt (Abbildung \ref{fig:schema_schraerikula_kerola_kuhlmann}).
+Durch eine 0,4 mm dicke Keramikbeschicht zwischen der Lagersitze und der Welle konnte er den Widerstand für beide Lager separat messen.
+Abbildung \ref{fig:schema_schraerikula_kerola_kuhlmann} zeigt die elektrische Ersatzschaltbilder für einen Wälzkörper im Schrägkugellager und Kegelrollenlager.
+Alle Wälzkörper eines Lagers sind elektrisch parallel geschaltet und der Kontakt zwischen Rollenstirn und Bord beim Kegelrollenlager muss berücksichtigt werden.
+% ----------------------------------------
+% Fig: Kuhlmann Test Lager
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[]{./images/schema_schraegrikula_kerola_kuhlmann.pdf}
+    \caption{Schema des Schrägkugellager- und Kegelrollenlager-Einzelkontaktes \cite{kuhlmann_2009}}
+    \label{fig:schema_schraerikula_kerola_kuhlmann}
+\end{figure}
+%
 
 % ----------------------------------------
-% Alternative Methoden
+% Sub: Kapazitätmessung
+% ----------------------------------------
+\subsection{Kapazitätmessung}
+\label{sub:kapazitatmessung}
+
+% ----------------------------------------
+% Sec: Alternative Methoden
 % ----------------------------------------
 \section{Alternative EHD Schmierfilmdicke Messmethoden}
 \label{sec:alternative_messmethoden}
 
-\subsection{Ultraschall}
-\label{ssec:ultraschall}
+% ----------------------------------------
+% Sub: Taktile Messung
+% ----------------------------------------
+\subsection{Taktile}
+\label{sub:taktil}
 
+% ----------------------------------------
+% Sub: Ultrashall Messung
+% ----------------------------------------
+\subsection{Ultraschall}
+\label{sub:ultraschall}
+
+% ----------------------------------------
+% Sub: Laserinduzierte Messung
+% ----------------------------------------
 \subsection{Laserinduzierte Fluoreszenz}
-\label{ssec:laserinduzierte_fluoreszenz}
+\label{sub:laserinduzierte_fluoreszenz}
