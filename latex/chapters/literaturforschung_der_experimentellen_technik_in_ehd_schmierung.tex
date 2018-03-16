@@ -109,6 +109,74 @@ Alle Wälzkörper eines Lagers sind elektrisch parallel geschaltet und der Konta
 \subsection{Kapazitätmessung}
 \label{sub:kapazitatmessung}
 
+Der Vorteil bei der Kapazitätmessung ist wie bei der Widerstandsmessung die einfache Anwendung im Maschinenelement.
+Es ist auch möglich bei dieser Methode quantitative Schmierfilmdickenmessung durchzuführen, welche bei resistiver Methode schwer oder unmöglich ist.
+
+Auf Basis der Konstantstromladung hat \textit{Barz} \cite{barz_1996} ein System zur kapazitiven Schmierfilmdickenmessung im Wälzlager entwickelt.
+Hier werden die Oberflächen zwischen Wälzkörpern, Außenring und Innenring bei einem trennenden Schmierfilm als Kondensator betrachtet.
+Die Kapazität des einzelnen EHD-Kontaktes wird nach dem Modell von \textit{Brüser} \cite{brueser_1972} beschrieben.
+% ----------------------------------------
+% Fig: Brüser Modell des EHD-Kontaktes
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \caption{Kapazitives Modell eines EHD-Kontaktes \cite{barz_1996}}
+    \label{fig:kapazitives_modell_eines_ehd_kontaktes}
+\end{figure}
+%
+
+Im Modell von \textit{Barz} wird der EHD-Kontakt in drei Bereiche \textit{Einlaufbereich}, \textit{Hertzscher Kontaktbereich} und \textit{Auslaufbereich} geteilt und unter folgenden Annahmen betrachtet:
+%
+\begin{enumerate}
+    \item Der Einlaufbereich ist vollständig mit Schmierstoff gefüllt
+    \item Im Hertzschen Kontaktbereich herrscht es eine konstante Schmierfilmdicke $h_0$
+    \item Die Einschnürung vor dem Auslaufbereich wird vernachlässigt
+    \item Im Auslaufbereich haftet der Schmierstoff gleichmäßig an den Kontaktpartner an
+    \item Das elektrische Feld im Hertzschen Bereich ist homogen
+\end{enumerate}
+%
+
+Mit dieser Annahmen kann man die Kontaktkapazität so berechnen:
+%
+\begin{equation}
+    C_K = C_{Einlauf} + C_{Hertz} + C_{Auslauf}
+    \label{eq:kontaktkapazitaet}
+\end{equation}
+%
+Aufgrund dem großen Einfluss und der linearen Proportional von der $C_{Hertz}$ mit der $C_K$ vereinfachte \textit{Barz} die Kontaktkapazität als:
+%
+\begin{align}
+    C_K = f(C_{Hertz}) = k_C C_{Hertz} \\
+    C_{Hertz} = \varepsilon_0 \varepsilon_r \cfrac{A_{Hertz}}{h_0}
+    \label{eq:kontaktkapazitaet_vereinfach}
+\end{align}
+%
+\textit{Barz} definierte einen Umrechnungsfaktor $k_C$ in der Gleichung \ref{eq:kontaktkapazitaet_vereinfach}, welcher die $C_{Einlauf}$ und die $C_{Auslauf}$ berücksichtigt.
+Der Umrechnungsfaktor ist von den Betriebsbedingungen, dem Lager, dem Schmierstoff, der Laufzeit etc. abhängig.
+Selbst ist er von der Schmierfilmdicke abhängig, da das Verhältnis zwischen $C_{Einlauf}$ und $C_{Auslauf}$ bei der Änderung der Schmierfilmdicke nicht konstant bleibt.
+Für den betrachten Fall mit axial belasteten Spindellagern hat \textit{Barz} mit dem Wert $k_C = 3,5$ bestimmt.
+
+Da die Kontakte zwischen den Wälzkörpern mit dem Außenring und dem Innenring nicht gleich sind, führte \textit{Barz} weiterhin einen Faktor $k_h$ zur individuellen Bestimmung der Schmierfilmdicke an der beiden Ringen ein.
+Der ist das Verhältnis von den nach EHD-Theorie berechneten Schmierfilmdicken am Innenring $h_{EHD,i}$ und am Außenring $h_{EHD,a}$ und berechnet sich unter einer Annahme, dass die Schmierungbedingungen am Innenring und Außenring gleich sind, zu
+%
+\begin{equation}
+    k_h = \cfrac{h_a}{h_i} = \cfrac{h_{mess,a}}{h_{mess,i}} = \cfrac{h_{EHD,a}}{h_{EHD,i}}
+    \label{eq:kh_faktor}
+\end{equation}
+%
+Schließlich berechnen sich die Schmierfilmdicken am Innenring bzw. am Außenring zu
+%
+\begin{align}
+    h_{mess,i} = 2 Z k_C \varepsilon_0 
+                \cfrac{(\varepsilon_{r,i} A_{Hertz,i}) \left( \varepsilon_{r,a} \cfrac{A_{Hertz,a}}{k_h} \right) }
+                      {(\varepsilon_{r,i} A_{Hertz,i}) + \left( \varepsilon_{r,a} \cfrac{A_{Hertz,a}}{k_h} \right) }
+                \cfrac{1}{C_{ges}}
+    \label{eq:schmierfilmdicke_am_innenring}
+\end{align}
+%
+
+
 % ----------------------------------------
 % Sec: Alternative Methoden
 % ----------------------------------------
