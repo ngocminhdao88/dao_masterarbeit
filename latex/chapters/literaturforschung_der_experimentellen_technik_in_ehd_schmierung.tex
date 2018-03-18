@@ -152,8 +152,9 @@ Aufgrund dem großen Einfluss und der linearen Proportional von der $C_{Hertz}$ 
     \label{eq:kontaktkapazitaet_vereinfach}
 \end{align}
 %
-\textit{Barz} definierte einen Umrechnungsfaktor $k_C$ in der Gleichung \ref{eq:kontaktkapazitaet_vereinfach}, welcher die $C_{Einlauf}$ und die $C_{Auslauf}$ berücksichtigt.
-Der Umrechnungsfaktor ist von den Betriebsbedingungen, dem Lager, dem Schmierstoff, der Laufzeit etc. abhängig.
+wobei $A_{Hertz}$ die Größe der Hertzschen Kontaktfläche, $h_0$ die zentrale Schmierfilmdicke, $\varepsilon_0$ die elektrische Feldkonstante ($\varepsilon_0 = 8,85 \cdot 10^{-15} As/Vm$) und $\varepsilon_r$ die relative Dielektrizitätskonstante ist.
+In der Gleichung \ref{eq:kontaktkapazitaet_vereinfach} definierte \textit{Barz} definierte einen Umrechnungsfaktor $k_C$, welcher die $C_{Einlauf}$ und die $C_{Auslauf}$ berücksichtigt.
+Er ist von den Betriebsbedingungen, dem Lager, dem Schmierstoff, der Laufzeit etc. abhängig.
 Selbst ist er von der Schmierfilmdicke abhängig, da das Verhältnis zwischen $C_{Einlauf}$ und $C_{Auslauf}$ bei der Änderung der Schmierfilmdicke nicht konstant bleibt.
 Für den betrachten Fall mit axial belasteten Spindellagern hat \textit{Barz} mit dem Wert $k_C = 3,5$ bestimmt.
 
@@ -165,14 +166,15 @@ Der ist das Verhältnis von den nach EHD-Theorie berechneten Schmierfilmdicken a
     \label{eq:kh_faktor}
 \end{equation}
 %
-Schließlich berechnen sich die Schmierfilmdicken am Innenring bzw. am Außenring zu
+Schließlich berechnen sich die Schmierfilmdicken am Innenring bzw. am Außenring aus der gemessenen Gesamtkapazität $C_{ges}$ eines Lagers mit einer Wälzkörperanzahl $Z$ zu
 %
 \begin{align}
-    h_{mess,i} = 2 Z k_C \varepsilon_0 
+    h_{mess,i} &= 2 Z k_C \varepsilon_0 
                 \cfrac{(\varepsilon_{r,i} A_{Hertz,i}) \left( \varepsilon_{r,a} \cfrac{A_{Hertz,a}}{k_h} \right) }
                       {(\varepsilon_{r,i} A_{Hertz,i}) + \left( \varepsilon_{r,a} \cfrac{A_{Hertz,a}}{k_h} \right) }
-                \cfrac{1}{C_{ges}}
-    \label{eq:schmierfilmdicke_am_innenring}
+                \cfrac{1}{C_{ges}} \\
+    %
+    h_{mess,a} &= k_h h_{mess,i}
 \end{align}
 %
 
