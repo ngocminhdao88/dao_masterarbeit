@@ -10,17 +10,95 @@
 \section{Optische Messung der EHD Schmierfilmdicke}
 \label{sec:optische_messung_der_ehd_schmierfilmdicke}
 
+Viele lichtspezifische Phänomene so wie Spiegelung, Refraktion, Interferenz, etc. kann durch die Wellentheorie erklärt werden.
+Einige dieser Phänomene mach Licht zu einem sehr nützlichen Werkzeug in zahlreichen Forschungsbereichen.
+In diesem Kapitel werden einige Begriffe und Konzepte für die physikalische Optik kurz definiert.
+
 % ----------------------------------------
 % Sub: Lichtinterferenz
 % ----------------------------------------
 \subsection{Licht Interferometrie}
 \label{ssec:licht_interferometrie}
 
+Eine Lichtwelle, die eine Amplitude von $A$, eine Wellenlänge von $\lambda$ hat und die sich in $x$ Richtung mit einer Geschwindigkeit $v$ bewegt, kann durch eine Sinus- oder Cosinus Funktion beschrieben werden.
 % ----------------------------------------
-% Sub: Variante Methoden von Lichtinterferenz
+% Eq: Lichtwelle as sinus, cosinus function
 % ----------------------------------------
-\subsection{Variante von der klassichen optischen Interferometrie Methode}
-\label{ssec:variante_interferometrie}
+\begin{equation}
+        y = A \sin \cfrac{2 \pi}{\lambda} (x - v t) = A \sin (\omega t - \cfrac{2 \pi}{\lambda} x)
+    \label{eq:lichtwelle}
+\end{equation}
+%
+
+Das Term $x - v t$ in der Gleichung \ref{eq:lichtwelle} ist die Phase der Lichtwelle, die die Wellenposition beim Zeitpunkt $t$ angibt.
+Was in der Praxis wichtig ist, ist die Phasendifferenz von zwei Lichtquellen an der gesuchten Stelle zu finden.
+Wenn Licht in unterschiedlichen Medien durchdringt, wird dessen Geschwindigkeit entsprechend dem Brechungsindex der Medien verändert.
+Diese Geschwindigkeitsabweichung verursacht einen Pfadunterschied $\Delta$, der in Folge zur Phasenabweichung $\delta$ führt.
+% ----------------------------------------
+% Eq: Licht Phasenabweichung
+% ----------------------------------------
+\begin{equation}
+    \delta = \cfrac{2 \pi}{\lambda} \Delta
+    \label{eq:lichtwelle}
+\end{equation}
+%
+
+Immer wenn ein Lichtstrahl, der durch ein Medium mit einem bestimmten Brechungsindex läuft, mit einem anderen Medium mit einem anderen Brechungsindex an der Grenze ankommt, wird er teilweise reflektiert und teilweise transmittiert.
+Rein nur die Reflektion allein an der Grenze resultiert auch eine Phasenverschiebung zwischen dem originalen und dem reflektierten Lichtstrahl.
+
+Wenn zwei Lichtstrahle, die gleiche Wellenlänge sind, an einem Punkt erreichen, tritt dort das Phänomen Interferenz auf.
+Durch die Überlagerung der beiden Strahlen führt es zu einer Veränderung der Amplitude bzw. Intensität des resultierenden Licht.
+Wo die Intensität stärken wird, nennt man dort konstruktive Interferenz, wo die Intensität schwächen wird, nennt man destruktive Interferenz.
+
+Diese Phänomene sind in einem Beispiel (Abbildung \ref{fig:pfadabweichung_des_lichtstrahls}), wo ein Lichtstrahl in der Luft in eine Glasscheibe mit einem Winkel $\theta$ angeht, dargestellt.
+Der Brechungsindex der Luft ist $n_1$ und von der Glasscheibe ist $n_2$.
+Hier wird der Lichtstrahl an der Grenze der Glasscheibe am Punkt $A$ teilweise zurück reflektiert (Pfad $ADF$) und teilweise durchgelassen (Pfad $AB$).
+An der Unterseite der Glasscheibe wird er noch mal am Punkt $B$ zurück gespiegelt und am Punkt $C$ in die Luft durchdringt (Pfad $BCF'$).
+Von einem Lichtstrahl gibt es jetzt zwei Lichtstrahle, die gleiche Wellenlänge sowie der originale aber wegen dem Pfaddifferenz ($ABCF' > ADF$) verschiedene Phasen haben.
+% ----------------------------------------
+% Fig: Licht Reflektion und Transmittion
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[]{./images/licht_interferenz_furtuna.pdf}
+    \caption{Pfaddifferenz eines Lichstrahles \cite{furtuna_2011}}
+    \label{fig:pfadabweichung_des_lichtstrahls}
+\end{figure}
+%
+
+% ----------------------------------------
+% Sub: Schmierfilmdickenmessungen mittels Lichtinterferenz
+% ----------------------------------------
+\subsection{Schmierfilmdickenmessungen mittels Lichtinterferenz}
+\label{sub:schmierfilmdickenmessung_mittels_lichtinterferenz}
+
+Diese Methode wurde in den frühen sechziger Jahren auf der Basis der Lichtinterferenz entwickelt und verwendet eine flache, transparente Scheibe (Glas, Saphir), die gegen eine glänzende Stahlkugel oder -rolle geladen ist (Abbildung \ref{fig:ehd_pruefsprinzip_furtuna}).
+Die berührende Fläche der Scheibe ist mit einer halbdurchsichtigen Schicht (Chrom) beschichtet, so dass ein auf den Kontakt auftreffende Licht (monochrom) zweimal reflektiert wird, erstens an der Glas-Metallschicht-Grenzfläche und zweitens an der Kugel-, Rolleroberfläche.
+% ----------------------------------------
+% Fig: EHD Prüfsprinzip Furtuna
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[]{./images/ehd_pruefsprinzip_furtuna.pdf}
+    \caption{Prinzip der optischen Schmierfilmdickenmessung \cite{furtuna_2011}}
+    \label{fig:ehd_pruefsprinzip_furtuna}
+\end{figure}
+%
+
+Bei Rekombinaiton führt die Webdifferenz zwischen den reflektierten Strahlen entweder zu einer konstruktiven oder zu einer destruktiven Interferenz.
+Diese Interferenzmuster hängt von der Dicke der Chromschicht und der Schmierfilmdicke ab.
+Bei der bekanten Chromschichtdicke und durch entsprechende Kalibrierung lässt sich daraus die Schmierfilmdicke bestimmen.
+Leider ist die Auflösung dieser Methode nicht so hoch, nur der Schmierfilm, der dicker als ein Viertel der Wellenlänge der Lichtquelle ist, ist messbar.
+
+% ----------------------------------------
+% Sub: Variante der optischen Messmethoden
+% ----------------------------------------
+\subsection{Variante der optischen Messmethoden}
+\label{sub:variante_der_optischen_messmethoden}
+
+Spacer layer methode
+
+Slim methode
 
 % ----------------------------------------
 % Sec: Elektrische Methode
