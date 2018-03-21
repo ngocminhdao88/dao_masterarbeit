@@ -96,9 +96,38 @@ Leider ist die Auflösung dieser Methode nicht so hoch, nur der Schmierfilm, der
 \subsection{Variante der optischen Messmethoden}
 \label{sub:variante_der_optischen_messmethoden}
 
-Spacer layer methode
+\textit{Johnston et al} \cite{johnston_1991} versucht die geringe Auflösung der klassischen Methode zu überwinden.
+Sein Ansatz bestand darin, eine Abstandsschicht aus Silikat mit fixierter Dicke zu verwenden, die auf der $20 nm$ Chromschicht abgelagert wurde.
+Die Silikatschicht hat einen Brechungsindex, der ähnlich so wie von Mineralölen ist und wirkt als "`festes Öl"'. Sie soll die Trennung zwischen den Kontaktflächen erhöhen und dadurch ermöglicht es die Messungen von Filmen theoretisch beliebiger Dicke.
+Die Vorteile der Spacer-Schicht-Methode wurden in der \textit{Ultra-Dünnfilm-Interferometrie-Methode} (UTFI) voll ausgenutzt, die weißes Licht und ein Spektrometer verwendet, um das Licht in seine Wellenlängenkomponenten zu teilen (Abbildung \ref{fig:ehd_spacer_layer_johnston}).
+Die Auflösung dierser Technik liegt in der Größenordnung von Nanometern.
+% ----------------------------------------
+% Fig: EHD Spacer Layer Prüfsprinzip
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[]{./images/spacer_layer_methode_furtuna.pdf}
+    \caption{Spacer-Layer-Methode \cite{johnston_1991}}
+    \label{fig:ehd_spacer_layer_johnston}
+\end{figure}
+%
 
-Slim methode
+Eine Beschränkung der Technik der Spacer-Layer besteht darin, dass nur eine Messung von der Mitte des Kontakts aufgenommen wird.
+\textit{Cann et al.} \cite{cann_1996} beschrieb die Entwicklung einer neuen Technik, die die Abbildungsfähigkeiten des klassischen optischen Verfahrens mit der UTFI-Methode kombiniert, das \textit{Spacer-Layer-Imaging-Verfahren} (SLIM).
+Anstatt ein Spektrometer zu verwenden, um die Wellenlänge des vom Bild eines EHD-Kontakts zurückgeworfenen Lichts zu bestimmen, benutzt SLIM eine hochauflösende RGB-CCD-Farbkamera, um ein Bild des gesamten Kontakts aufzunehmen.
+Das SLIM-Softwarepaket passt die Farben im Bild anhand einer vorher festgelegten Farbraumkalibrierung an die Schmierfilmdicke an.
+Das System erzeugt somit in wenigen Sekunden eine Filmdickenkarte des gesamten EHD-Kontakts (Abbildung \ref{fig:ehd_slim_methode}).
+Diese Fähigkeit macht es zu einem geeigneten Werkzeug für die Untersuchung des EHD-Kontakts in verschiedenen Bedingungen, wie zum Beispiel Fettschmierung, rauhe Oberflächen, mangelte Schmierung oder additive Grenzschichtbildung.
+% ----------------------------------------
+% Fig: EHD SLIM Methode
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[]{./images/slim_methode.pdf}
+    \caption{SLIM Methode \cite{ehl_broshure}}
+    \label{fig:ehd_slim_methode}
+\end{figure}
+%
 
 % ----------------------------------------
 % Sec: Elektrische Methode
