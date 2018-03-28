@@ -19,7 +19,7 @@ Für solches System gibt es die folgende Anforderungen, die durch konstruktive B
 \section{Konstruktion der Kugelführung}
 \label{sec:konstruktion_der_kugelfuehrung}
 
-Da das modifizierte Kugelsupport mit einstellbarer Achse von \textit{E. Wittek} \cite{wittek_2007} wegen Rundlaufabweichung nur bis Wälzgeschwindigkeit von c.a 0,7 $m/s$ einsetzbar ist, wird das Prinzip der originalen Kugelführung der PCS Firma im Rahmen dieser Arbeit weiter benutzt.
+Da das modifizierte Kugelsupport mit einstellbarer Achse von \textit{E. Wittek} \cite{wittek_2007} wegen Rundlaufabweichung nur bis Wälzgeschwindigkeit von c.a 0,7 $m/s$ einsetzbar ist, wird die originale Kugelführung der PCS Firma im Rahmen dieser Arbeit modifizierte und weiter benutzt.
 Bei der standardmäßigen Kugelführung wird eine durchgebohrte Kugel in einem Adapter eingeklemmt, welche dann über einen Querstift mit der Motorausgangswelle des zweiten Antriebs formschlüssig verbunden wird.
 Für die kapazitive Messung soll die Kugel elektrisch mit dem gesamten System isoliert werden, das erfolgt durch die Verwendung eine Kunststoffwelle.
 Die Kugelaufnahme wird aus Messing gefertigt, um den Kontaktwiderstand mit den zu Signal übertragenden Kohlebürsten zu reduzieren.
@@ -47,12 +47,13 @@ In diesem Fall dreht sich die Kugelführung frei in der Motorausgangswelle.
 
 Das originale Kugelsupport von PCS ist relativ kompakt und simpel konstruiert, aus diesem Grund wird es für die elektrische Messung modifiziert und weiter benutzt.
 
-Das neue Kugelsupport (Abbildung \ref{fig:das_modifizierte_kugelsupport}) besteht aus drei Rillenkugellager, die auf einem dreieckigen Klotz befestigt werden.
+Das neue Kugelsupport besteht aus drei Rillenkugellager, die durch drei $M3$ Schrauben auf einem dreieckigen Klotz befestigt werden.
 Die Kugel wird von den drei Lagern sicher von unten gegen der Glasscheibe gestützt.
 Da die Kugel mit der Lasteinheit elektrisch isoliert werden muss, ist der Klotz aus Kunststoff gefertigt.
 Auf der Unterseite des Klotzs befinden sich zwei Löcher, die mit den Stifte der Lasteinheit arretiert werden, dadurch wird die Position des Kugelsupports während Versuche sicher gestellt.
 An der Seite des Supports sind zwei M3 Bohrung zur Anbringung der Kohlebürstenhalter, die für die Aufnahme der elektrischen Signale von der Kugel zuständig sind, zu versehen.
 Bei der Versuchen mit Fett ist dort auch möglich, die Befettungsvorrichtung zu montieren.
+Abbildung \ref{fig:das_modifizierte_kugelsupport} zeigt die Lagerung (links) und den Zusammenbau (rechts) des neuen Kugelsupports.
 % ----------------------------------------
 % Fig: Das modifizierte Kugelsupport
 % ----------------------------------------
@@ -101,4 +102,72 @@ Abbildung \ref{fig:der_zusammenbau_des_gesamten_kugelsupports} zeigt den Zusamme
 \section{Die Glasscheibebaugruppe}
 \label{sec:die_glasscheibebaugruppe}
 
-Blah blah blah
+Um die elektrische Messung bei dem vorhandenen Prüfstand durchzuführen, müssen die folgende Maßnahmen gemacht werden:
+\begin{itemize}
+    \item Stromleitende Beschichtung für die Glasscheibe
+    \item Isolierung der Glasscheibe mit dem gesamten Prüfsystem
+    \item Elektrischer Zugang für die Messprobe zur Unterseite der Glasscheibe
+\end{itemize}
+
+Wie im vorherigen Kapitel \ref{chap:literaturforschung_der_experimentellen_technik_in_ehd_schmierung} schon erwähnt, ist es auch möglich, die Schmierfilmdickenmessung bei einer Chrom beschichteten Scheibe durch zu führen.
+Allerdings es gibt folgende Probleme bei der klassischen Messmethode.
+Ersten bietet dieses Verfahren eine niedrige Auflösung. Zweiten ist eine monochrom Lichtquelle notwendig, es fehlt bei dem vorhandenen Prüfstand diesen Apparat.
+Nicht zuletzt ist das \textit{Ultra-Softwarepaket} von PCS nicht in der Lager solche Messung durchzuführen bzw. auszuwerten.
+Letzten ist der Eigenwiderstand der Chromschicht wegen ihrer extrem dünnen Dicke sehr hoch (größer als $1 k\omega$) und unregelmäßig verteilt.
+\label{chap:literaturforschung_der_experimentellen_technik_in_ehd_schmierung}
+Das macht die optische und elektrische Messung bei der Chrom-Glasscheibe ungünstig.
+
+Eine andere Option ist die \textit{Spacer-Layer-Scheibe} zu benutzen.
+Da die Silikatschicht nicht Strom leitend ist, wird die Hälfte der Scheibe mit einer dickeren Chromschicht (c.a $300 nm$) beschichtet (Abbildung \ref{fig:die_neu_beschichtet_glassscheibe}).
+Durch die Erhöhung der Beschichtung wird der Eigenwiderstand reduziert und auch besser auf der Oberfläche verteilt.
+Die unbehandelte Hälfte kann man wie normal mit der \textit{Spacer-Layer-Methode} die Schmierfilmdicke bestimmen.
+% ----------------------------------------
+% Fig: Bild der neuen beschichteten Scheibe
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \caption{Die neu beschichtete Glasscheibe}
+    \label{fig:die_neu_beschichtet_glassscheibe}
+\end{figure}
+%
+
+Der nächste Schritt ist die behandelte Glasscheibe mit dem gesamten Testsystem isolieren.
+Das erfolgt durch die Verwendung einer Kunststoff-Unterlegscheibe und einer Kunststoffhülse (Abbildung \ref{fig:isolierung_der_glassscheibe})
+% ----------------------------------------
+% Fig: Isolierung der Scheibe
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \caption{Isolierung der Glasscheibe}
+    \label{fig:isolierung_der_glassscheibe}
+\end{figure}
+%
+
+Beide Teile sind aus \textit{Polypropylen}, welcher bis $80 ^\circ C$ beständig ist und die Unterlegscheibe ist nur $0,5 mm$ dick.
+Da die Lasteinheit nicht nur in die horizontale sondern auch in die vertikale Richtung sich bewegen kann, ist diese minimale Höheänderung der Glasscheibe kein Problem.
+Die äußere Oberfläche der Hülse wurden an sechs Positionen flach gefräst. Die bilden sich mit der inneren Bohrung der Glasscheibe sechs Kanäle, die den Platz für die elektrische Verbindungen von Unterseite zur Oberseite der Scheibe schaffen.
+Die Kunststoff-Unterlegscheibe wurde mit der Hülse mit dem \textit{Plastix} Klebe von Pattex geklebt, diese Verbindung ist gegen dem Wegrutschen der beiden Teilen während Betriebs zu sichern.
+
+Um die elektrische Verbindung von der Unterseite der Scheibe nach oben zu bringen, werden sechs Kupferstreifen verwendet.
+Sie werden auf der Kunststoff-Unterlegscheibe angeklebt und durch die sechs Kanäle (zwischen Hülse und Glasscheibe) nach oben geführt.
+Dort werden sie bei der Montageposition zwischen der Oberkante der Hülse und einer Mitnehmerscheibe geklemmt und dadurch ist die elektrische Verbindung zwischen beiden Seite Scheibe hergestellt.
+Die von oben geschraubt Sicherungsmutter sichert die ganze Baugruppe fest.
+Die Abbildung \ref{fig:glasscheibebaugruppe} zeigt die ganze Baugruppe der Glasscheibe an.
+% ----------------------------------------
+% Fig: Glasscheibebaugruppe
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \caption{Glasscheibebaugruppe}
+    \label{fig:glasscheibebaugruppe}
+\end{figure}
+%
+
+% ----------------------------------------
+% Sec: Konstruktion des Deckels
+% ----------------------------------------
+\section{Konstruktion des Deckels}
+\label{sec:konstruktion_des_deckels}
