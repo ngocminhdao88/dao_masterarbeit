@@ -1,0 +1,127 @@
+#VRML V2.0 utf8
+
+PROTO Header_Info [
+field SFString vendor "Parametric Technology Corporation"
+field SFString product "Pro/ENGINEER"
+field SFString version ""
+field SFString sceneFile ""]
+{WorldInfo {}}
+
+PROTO Node_Info [
+field SFString node_type ""
+field SFString node_name ""]
+{WorldInfo {}}
+
+PROTO Geom_Type [
+field SFString geom_type_s "T_Empty"
+field SFInt32 trg_qual 1]
+{WorldInfo {}}
+
+PROTO Member_Info [
+field SFString member_name ""
+field SFInt32 member_id 0
+field SFString proe_name ""
+field SFString proe_type_s  ""
+field SFString expl_status_s "Vrml_Exp_Unknown"
+field MFFloat drag_trf [] ]
+{WorldInfo {}}
+
+PROTO Model_Info [
+field SFInt32 proe_id 0
+field SFString proe_type_s "Proe_Part"
+field SFString proe_name "SCHEIBE_ASM_SKEL"
+field SFInt32 maj_rev -5
+field SFInt32 min_rev  -5
+field SFInt32 rev_num 606
+field SFInt32 rev_num_cosm 111
+field SFString inst_type_s "Inst_Type_Main"
+field SFString generic_name "generic_name"
+field SFFloat s_factor 39.3701
+field MFString parameter_names []
+field MFString parameter_types []
+field MFString parameter_values []
+]
+{WorldInfo {}}
+
+Header_Info{
+vendor "Parametric Technology Corporation"
+product "Creo Parametric"
+version "2"
+}
+
+DEF V_Model Anchor {
+  url ""
+  description "scheibe_asm_skel.prt"
+children [
+Node_Info {
+node_type "V_Model"
+node_name "scheibe_asm_skel.prt"
+}
+DEF Default Viewpoint {
+description "Default"
+position 0.0904808 0.0625296 0.0684814
+orientation -0.590281 0.769278 0.244501 0.987852
+fieldOfView 1.56959
+}
+
+DEF FRONT Viewpoint {
+description "FRONT"
+position 0.022 -0.00595 0.118612
+orientation 0 0 1 0
+fieldOfView 1.56959
+}
+
+DEF TOP Viewpoint {
+description "TOP"
+position 0.022 0.112662 0
+orientation -1 0 0 1.5708
+fieldOfView 1.56959
+}
+
+DEF RIGHT Viewpoint {
+description "RIGHT"
+position 0.140612 -0.00595 0
+orientation 0 1 0 1.5708
+fieldOfView 1.56959
+}
+
+DEF BOTTOM Viewpoint {
+description "BOTTOM"
+position 0.022 -0.124562 0
+orientation 0 -0.707107 0.707107 3.14159
+fieldOfView 1.56959
+}
+
+DEF BACK Viewpoint {
+description "BACK"
+position 0.022 -0.00595 -0.118612
+orientation 0 1 0 3.14159
+fieldOfView 1.56959
+}
+
+DEF LEFT Viewpoint {
+description "LEFT"
+position -0.0966118 -0.00595 0
+orientation 0 -1 0 1.5708
+fieldOfView 1.56959
+}
+
+Model_Info {
+proe_id 0
+proe_type_s "Proe_Part"
+proe_name "SCHEIBE_ASM_SKEL"
+maj_rev -5
+min_rev  -5
+rev_num 606
+rev_num_cosm 111
+inst_type_s "Inst_Type_Main"
+generic_name ""
+s_factor 39.3701
+parameter_names ["ZEICHNUNGSNUMMER","WERKSTOFF","GROESSE","ERSTELLER","BENENNUNG"]
+parameter_types ["STRING","STRING","STRING","STRING","STRING"]
+parameter_values ["","","","",""]
+}
+
+]
+}
+

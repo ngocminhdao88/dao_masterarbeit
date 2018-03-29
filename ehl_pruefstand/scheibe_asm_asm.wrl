@@ -1,0 +1,388 @@
+#VRML V2.0 utf8
+
+PROTO Header_Info [
+field SFString vendor "Parametric Technology Corporation"
+field SFString product "Pro/ENGINEER"
+field SFString version ""
+field SFString sceneFile ""]
+{WorldInfo {}}
+
+PROTO Node_Info [
+field SFString node_type ""
+field SFString node_name ""]
+{WorldInfo {}}
+
+PROTO Geom_Type [
+field SFString geom_type_s "T_Empty"
+field SFInt32 trg_qual 1]
+{WorldInfo {}}
+
+PROTO Member_Info [
+field SFString member_name ""
+field SFInt32 member_id 0
+field SFString proe_name ""
+field SFString proe_type_s  ""
+field SFString expl_status_s "Vrml_Exp_Unknown"
+field MFFloat drag_trf [] ]
+{WorldInfo {}}
+
+PROTO Model_Info [
+field SFInt32 proe_id 0
+field SFString proe_type_s "Proe_Assembly"
+field SFString proe_name "SCHEIBE_ASM"
+field SFInt32 maj_rev -5
+field SFInt32 min_rev  -5
+field SFInt32 rev_num 7775
+field SFInt32 rev_num_cosm 51
+field SFString inst_type_s "Inst_Type_Main"
+field SFString generic_name "generic_name"
+field SFFloat s_factor 39.3701
+field MFString parameter_names []
+field MFString parameter_types []
+field MFString parameter_values []
+]
+{WorldInfo {}}
+
+Header_Info{
+vendor "Parametric Technology Corporation"
+product "Creo Parametric"
+version "2"
+}
+
+DEF V_Model Anchor {
+  url ""
+  description "scheibe_asm.asm"
+children [
+Node_Info {
+node_type "V_Model"
+node_name "scheibe_asm.asm"
+}
+DEF Default Viewpoint {
+description "Default"
+position 0.119218 0.111466 0.119219
+orientation -0.590281 0.769278 0.244501 0.987852
+fieldOfView 1.56959
+}
+
+DEF FRONT Viewpoint {
+description "FRONT"
+position 0.0178228 -0.0301937 0.130954
+orientation 0 0 1 0
+fieldOfView 1.56956
+}
+
+DEF RIGHT Viewpoint {
+description "RIGHT"
+position -0.130954 -0.0301937 0.0178228
+orientation 0 -1 0 1.5708
+fieldOfView 1.56956
+}
+
+DEF TOP Viewpoint {
+description "TOP"
+position 0.0178228 0.0934544 -0.00730625
+orientation -1 0 0 1.5708
+fieldOfView 1.56985
+}
+
+Model_Info {
+proe_id 0
+proe_type_s "Proe_Assembly"
+proe_name "SCHEIBE_ASM"
+maj_rev -5
+min_rev  -5
+rev_num 7775
+rev_num_cosm 51
+inst_type_s "Inst_Type_Main"
+generic_name ""
+s_factor 39.3701
+parameter_names ["ZEICHNUNGSNUMMER","WEIGHT","MC_INTF","ERSTELLER","BENENNUNG"]
+parameter_types ["STRING","DOUBLE","STRING","STRING","STRING"]
+parameter_values ["01-00","0.283","02/15/2018 046","dao","Scheibe ASM"]
+}
+
+DEF Rep_0 Group {
+ children [
+Node_Info {
+node_type "Rep"
+node_name "Rep_0"
+}
+DEF Member_0_8993 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_8993"
+}
+Member_Info {
+member_name "Member_0_8993"
+member_id 8993
+}
+
+Inline {
+url "welle_prt.wrl"}
+
+]
+}
+
+DEF Member_0_9012 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9012"
+}
+Member_Info {
+member_name "Member_0_9012"
+member_id 9012
+}
+
+Inline {
+url "glasscheibe_prt.wrl"}
+
+]
+}
+
+DEF Member_0_9013 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9013"
+}
+Member_Info {
+member_name "Member_0_9013"
+member_id 9013
+}
+
+Inline {
+url "kunstoffscheibe_prt.wrl"}
+
+]
+}
+
+DEF Member_0_9015 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9015"
+}
+Member_Info {
+member_name "Member_0_9015"
+member_id 9015
+}
+
+Inline {
+url "kunstoffhuelse_prt.wrl"}
+
+]
+}
+
+DEF Member_0_9016 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9016"
+}
+Member_Info {
+member_name "Member_0_9016"
+member_id 9016
+}
+
+Inline {
+url "mitnehmerscheibe_prt.wrl"}
+
+]
+}
+
+DEF Member_0_9018 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9018"
+}
+Member_Info {
+member_name "Member_0_9018"
+member_id 9018
+}
+
+Inline {
+url "kunstoffunterlegscheibe_prt.wrl"}
+
+]
+}
+
+DEF Member_0_9019 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9019"
+}
+Member_Info {
+member_name "Member_0_9019"
+member_id 9019
+}
+
+Inline {
+url "sicherungsmutter_prt.wrl"}
+
+]
+}
+
+DEF Member_0_9275 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9275"
+}
+Member_Info {
+member_name "Member_0_9275"
+member_id 9275
+}
+
+Inline {
+url "kupferklebeband_prt.wrl"}
+
+]
+}
+
+DEF Member_0_9277 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9277"
+}
+Member_Info {
+member_name "Member_0_9277"
+member_id 9277
+}
+
+Transform {
+rotation 0 -1 0 -1.0472
+translation 0 0 0
+children [
+Inline {
+url "kupferklebeband_prt.wrl"}
+
+]
+}
+
+]
+}
+
+DEF Member_0_9278 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9278"
+}
+Member_Info {
+member_name "Member_0_9278"
+member_id 9278
+}
+
+Transform {
+rotation 0 -1 0 -2.0944
+translation 0 0 0
+children [
+Inline {
+url "kupferklebeband_prt.wrl"}
+
+]
+}
+
+]
+}
+
+DEF Member_0_9279 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9279"
+}
+Member_Info {
+member_name "Member_0_9279"
+member_id 9279
+}
+
+Transform {
+rotation 0 1 0 3.14159
+translation 0 0 0
+children [
+Inline {
+url "kupferklebeband_prt.wrl"}
+
+]
+}
+
+]
+}
+
+DEF Member_0_9280 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9280"
+}
+Member_Info {
+member_name "Member_0_9280"
+member_id 9280
+}
+
+Transform {
+rotation 0 1 0 -2.0944
+translation 0 0 0
+children [
+Inline {
+url "kupferklebeband_prt.wrl"}
+
+]
+}
+
+]
+}
+
+DEF Member_0_9281 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_9281"
+}
+Member_Info {
+member_name "Member_0_9281"
+member_id 9281
+}
+
+Transform {
+rotation 0 1 0 -1.0472
+translation 0 0 0
+children [
+Inline {
+url "kupferklebeband_prt.wrl"}
+
+]
+}
+
+]
+}
+
+DEF Member_0_11812 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "Member_0_11812"
+}
+Member_Info {
+member_name "Member_0_11812"
+member_id 11812
+}
+
+Inline {
+url "oring_prt.wrl"}
+
+]
+}
+
+]
+}
+
+]
+}
+

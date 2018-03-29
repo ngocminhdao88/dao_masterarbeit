@@ -1,0 +1,928 @@
+#VRML V2.0 utf8
+
+PROTO Header_Info [
+field SFString vendor "Parametric Technology Corporation"
+field SFString product "Pro/ENGINEER"
+field SFString version ""
+field SFString sceneFile ""]
+{WorldInfo {}}
+
+PROTO Node_Info [
+field SFString node_type ""
+field SFString node_name ""]
+{WorldInfo {}}
+
+PROTO Geom_Type [
+field SFString geom_type_s "T_Empty"
+field SFInt32 trg_qual 1]
+{WorldInfo {}}
+
+PROTO Member_Info [
+field SFString member_name ""
+field SFInt32 member_id 0
+field SFString proe_name ""
+field SFString proe_type_s  ""
+field SFString expl_status_s "Vrml_Exp_Unknown"
+field MFFloat drag_trf [] ]
+{WorldInfo {}}
+
+PROTO Model_Info [
+field SFInt32 proe_id 8
+field SFString proe_type_s "Proe_Part"
+field SFString proe_name "KUPFERKLEBEBAND"
+field SFInt32 maj_rev -5
+field SFInt32 min_rev  -5
+field SFInt32 rev_num 1688
+field SFInt32 rev_num_cosm 99
+field SFString inst_type_s "Inst_Type_Main"
+field SFString generic_name "generic_name"
+field SFFloat s_factor 39.3701
+field MFString parameter_names []
+field MFString parameter_types []
+field MFString parameter_values []
+]
+{WorldInfo {}}
+
+Header_Info{
+vendor "Parametric Technology Corporation"
+product "Creo Parametric"
+version "2"
+}
+
+DEF V_Model Anchor {
+  url ""
+  description "kupferklebeband.prt"
+children [
+Node_Info {
+node_type "V_Model"
+node_name "kupferklebeband.prt"
+}
+DEF Default Viewpoint {
+description "Default"
+position 0.0347703 0.0255517 0.0271163
+orientation -0.477741 0.764426 0.432916 0.879994
+fieldOfView 1.56959
+}
+
+DEF FRONT Viewpoint {
+description "FRONT"
+position 0.015 0.006785 0.038479
+orientation 0 0 1 0
+fieldOfView 1.56959
+}
+
+DEF TOP Viewpoint {
+description "TOP"
+position 0.015 0.045264 -6.4427e-18
+orientation -1 0 0 1.5708
+fieldOfView 1.56959
+}
+
+DEF RIGHT Viewpoint {
+description "RIGHT"
+position 0.053479 0.006785 -6.4427e-18
+orientation 0 1 0 1.5708
+fieldOfView 1.56959
+}
+
+DEF BOTTOM Viewpoint {
+description "BOTTOM"
+position 0.015 -0.031694 -6.4427e-18
+orientation 0 -0.707107 0.707107 3.14159
+fieldOfView 1.56959
+}
+
+DEF BACK Viewpoint {
+description "BACK"
+position 0.015 0.006785 -0.038479
+orientation 0 1 0 3.14159
+fieldOfView 1.56959
+}
+
+DEF LEFT Viewpoint {
+description "LEFT"
+position -0.023479 0.006785 -6.4427e-18
+orientation 0 -1 0 1.5708
+fieldOfView 1.56959
+}
+
+Model_Info {
+proe_id 8
+proe_type_s "Proe_Part"
+proe_name "KUPFERKLEBEBAND"
+maj_rev -5
+min_rev  -5
+rev_num 1688
+rev_num_cosm 99
+inst_type_s "Inst_Type_Main"
+generic_name ""
+s_factor 39.3701
+parameter_names ["ZEICHNUNGSNUMMER","WERKSTOFF","GROESSE","ERSTELLER","BENENNUNG"]
+parameter_types ["STRING","STRING","STRING","STRING","STRING"]
+parameter_values ["01-07","kupfer","","","Kupferfolie"]
+}
+
+DEF Rep_0 Group {
+ children [
+Node_Info {
+node_type "Rep"
+node_name "Rep_0"
+}
+DEF Geom_0 Group {
+children [
+Node_Info {
+node_type "Geom"
+node_name "Geom_0"
+}
+Geom_Type {
+geom_type_s "T_Polygons"
+trg_qual 10
+}
+
+DEF Poly_Geom_Data Group {
+children [
+Node_Info {
+node_type "Poly_Geom_Data"
+node_name ""
+}
+DEF myShape_1014 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1014"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord DEF FaceC Coordinate {
+point  [
+0.00724841 0.01335 0.002,
+0.00724841 0.01335 -0.002,
+0.00724841 0.00069999 -0.002,
+0.00724841 0.00069999 0.002,
+0.00702841 0.01356999 0.002,
+0.00565685 0.01356999 0.002,
+0.00591359 0.01356999 0.00101461,
+0.006 0.01356999 0,
+0.00591359 0.01356999 -0.00101461,
+0.00565685 0.01356999 -0.002,
+0.00702841 0.01356999 -0.002,
+0.00742841 0.00051999 -0.002,
+0.02491987 0.00051999 -0.002,
+0.02499109 0.00051999 -0.0006673,
+0.02499109 0.00051999 0.0006673,
+0.02491987 0.00051999 0.002,
+0.00742841 0.00051999 0.002,
+0.00726215 0.00063102 -0.002,
+0.00730113 0.00057272 -0.002,
+0.00735943 0.00053374 -0.002,
+0.00735943 0.00053374 0.002,
+0.00730113 0.00057272 0.002,
+0.00726215 0.00063102 0.002,
+0.00723166 0.01343419 0.002,
+0.00718397 0.01350556 0.002,
+0.0071126 0.01355325 0.002,
+0.0071126 0.01355325 -0.002,
+0.00718397 0.01350556 -0.002,
+0.00723166 0.01343419 -0.002,
+0.00723841 0.01335 -0.002,
+0.00723841 0.00069999 -0.002,
+0.00723841 0.00069999 0.002,
+0.00723841 0.01335 0.002,
+0.00702841 0.01356 0.002,
+0.00565685 0.01356 0.002,
+0.00591359 0.01356 0.00101461,
+0.006 0.01356 0,
+0.00591359 0.01356 -0.00101461,
+0.00565685 0.01356 -0.002,
+0.00702841 0.01356 -0.002,
+0.00742841 0.00050999 -0.002,
+0.02491987 0.00050999 -0.002,
+0.02499109 0.00050999 -0.0006673,
+0.02499109 0.00050999 0.0006673,
+0.02491987 0.00050999 0.002,
+0.00742841 0.00050999 0.002,
+0.00725292 0.00062718 -0.002,
+0.00729406 0.00056564 -0.002,
+0.0073556 0.0005245 -0.002,
+0.0073556 0.0005245 0.002,
+0.00729406 0.00056564 0.002,
+0.00725292 0.00062718 0.002,
+0.00722243 0.01343036 0.002,
+0.0071769 0.01349849 0.002,
+0.00710877 0.01354401 0.002,
+0.00710877 0.01354401 -0.002,
+0.0071769 0.01349849 -0.002,
+0.00722243 0.01343036 -0.002,
+]}
+normal DEF FaceN Normal {
+vector  [
+1 0 0,
+0 1 0,
+0.923 0.383 0,
+0.707 0.707 0,
+0.383 0.923 0,
+0.923 0.382 0,
+0.382 0.923 0,
+0 0 -1,
+0 0 1,
+-0.942 0 -0.333,
+-0.985 0 -0.169,
+-1 0 0,
+-0.985 0 0.169,
+-0.942 0 0.333,
+0.996 0 -0.079,
+0.999 0 -0.026,
+0.999 0 0.026,
+0.996 0 0.079,
+0 -1 0,
+-0.923 -0.383 0,
+-0.707 -0.707 0,
+-0.383 -0.923 0,
+-0.923 -0.382 0,
+-0.382 -0.923 0,
+]}
+normalPerVertex TRUE
+coordIndex [
+2, 1, 3, -1,0, 3, 1, -1,
+]
+normalIndex [
+0, 0, 0, -1,0, 0, 0, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1024 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1024"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+9, 8, 10, -1,10, 8, 7, -1,10, 7, 6, -1,
+10, 6, 5, -1,4, 10, 5, -1,
+]
+normalIndex [
+1, 1, 1, -1,1, 1, 1, -1,1, 1, 1, -1,
+1, 1, 1, -1,1, 1, 1, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1019 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1019"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+13, 12, 14, -1,15, 14, 12, -1,12, 11, 15, -1,
+16, 15, 11, -1,
+]
+normalIndex [
+1, 1, 1, -1,1, 1, 1, -1,1, 1, 1, -1,
+1, 1, 1, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1032 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1032"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+11, 19, 16, -1,20, 16, 19, -1,19, 18, 20, -1,
+21, 20, 18, -1,18, 17, 21, -1,22, 21, 17, -1,
+17, 2, 22, -1,3, 22, 2, -1,
+]
+normalIndex [
+1, 4, 1, -1,4, 1, 4, -1,4, 3, 4, -1,
+3, 4, 3, -1,3, 2, 3, -1,2, 3, 2, -1,
+2, 0, 2, -1,0, 2, 0, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1029 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1029"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+1, 28, 0, -1,23, 0, 28, -1,28, 27, 23, -1,
+24, 23, 27, -1,27, 26, 24, -1,25, 24, 26, -1,
+26, 10, 25, -1,4, 25, 10, -1,
+]
+normalIndex [
+0, 5, 0, -1,5, 0, 5, -1,5, 3, 5, -1,
+3, 5, 3, -1,3, 6, 3, -1,6, 3, 6, -1,
+6, 1, 6, -1,1, 6, 1, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1083 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1083"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+1, 2, 29, -1,30, 29, 2, -1,
+]
+normalIndex [
+7, 7, 7, -1,7, 7, 7, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1086 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1086"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+32, 31, 0, -1,3, 0, 31, -1,
+]
+normalIndex [
+8, 8, 8, -1,8, 8, 8, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1096 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1096"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+34, 33, 5, -1,4, 5, 33, -1,
+]
+normalIndex [
+8, 8, 8, -1,8, 8, 8, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1098 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1098"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+38, 37, 9, -1,8, 9, 37, -1,37, 36, 8, -1,
+7, 8, 36, -1,36, 35, 7, -1,6, 7, 35, -1,
+35, 34, 6, -1,5, 6, 34, -1,
+]
+normalIndex [
+13, 12, 13, -1,12, 13, 12, -1,12, 11, 12, -1,
+11, 12, 11, -1,11, 10, 11, -1,10, 11, 10, -1,
+10, 9, 10, -1,9, 10, 9, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1100 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1100"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+9, 10, 38, -1,39, 38, 10, -1,
+]
+normalIndex [
+7, 7, 7, -1,7, 7, 7, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1089 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1089"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+11, 12, 40, -1,41, 40, 12, -1,
+]
+normalIndex [
+7, 7, 7, -1,7, 7, 7, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1091 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1091"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+44, 43, 15, -1,14, 15, 43, -1,43, 42, 14, -1,
+13, 14, 42, -1,42, 41, 13, -1,12, 13, 41, -1,
+
+]
+normalIndex [
+17, 16, 17, -1,16, 17, 16, -1,16, 15, 16, -1,
+15, 16, 15, -1,15, 14, 15, -1,14, 15, 14, -1,
+
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1093 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1093"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+45, 44, 16, -1,15, 16, 44, -1,
+]
+normalIndex [
+8, 8, 8, -1,8, 8, 8, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1103 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1103"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+40, 48, 11, -1,19, 11, 48, -1,48, 47, 19, -1,
+18, 19, 47, -1,47, 46, 18, -1,17, 18, 46, -1,
+46, 30, 17, -1,2, 17, 30, -1,
+]
+normalIndex [
+7, 7, 7, -1,7, 7, 7, -1,7, 7, 7, -1,
+7, 7, 7, -1,7, 7, 7, -1,7, 7, 7, -1,
+7, 7, 7, -1,7, 7, 7, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1104 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1104"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+49, 45, 16, -1,16, 20, 49, -1,50, 49, 20, -1,
+20, 21, 50, -1,51, 50, 21, -1,21, 22, 51, -1,
+51, 22, 3, -1,31, 51, 3, -1,
+]
+normalIndex [
+8, 8, 8, -1,8, 8, 8, -1,8, 8, 8, -1,
+8, 8, 8, -1,8, 8, 8, -1,8, 8, 8, -1,
+8, 8, 8, -1,8, 8, 8, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1101 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1101"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+25, 4, 33, -1,33, 54, 25, -1,24, 25, 54, -1,
+54, 53, 24, -1,23, 24, 53, -1,53, 52, 23, -1,
+23, 52, 32, -1,0, 23, 32, -1,
+]
+normalIndex [
+8, 8, 8, -1,8, 8, 8, -1,8, 8, 8, -1,
+8, 8, 8, -1,8, 8, 8, -1,8, 8, 8, -1,
+8, 8, 8, -1,8, 8, 8, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1102 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1102"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+29, 57, 1, -1,28, 1, 57, -1,57, 56, 28, -1,
+27, 28, 56, -1,56, 55, 27, -1,26, 27, 55, -1,
+55, 39, 26, -1,10, 26, 39, -1,
+]
+normalIndex [
+7, 7, 7, -1,7, 7, 7, -1,7, 7, 7, -1,
+7, 7, 7, -1,7, 7, 7, -1,7, 7, 7, -1,
+7, 7, 7, -1,7, 7, 7, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1052 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1052"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+29, 30, 32, -1,31, 32, 30, -1,
+]
+normalIndex [
+11, 11, 11, -1,11, 11, 11, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1054 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1054"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+34, 35, 33, -1,33, 35, 36, -1,33, 36, 37, -1,
+33, 37, 38, -1,39, 33, 38, -1,
+]
+normalIndex [
+18, 18, 18, -1,18, 18, 18, -1,18, 18, 18, -1,
+18, 18, 18, -1,18, 18, 18, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1053 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1053"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+43, 44, 42, -1,41, 42, 44, -1,44, 45, 41, -1,
+40, 41, 45, -1,
+]
+normalIndex [
+18, 18, 18, -1,18, 18, 18, -1,18, 18, 18, -1,
+18, 18, 18, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1056 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1056"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+45, 49, 40, -1,48, 40, 49, -1,49, 50, 48, -1,
+47, 48, 50, -1,50, 51, 47, -1,46, 47, 51, -1,
+51, 31, 46, -1,30, 46, 31, -1,
+]
+normalIndex [
+18, 21, 18, -1,21, 18, 21, -1,21, 20, 21, -1,
+20, 21, 20, -1,20, 19, 20, -1,19, 20, 19, -1,
+19, 11, 19, -1,11, 19, 11, -1,
+]
+}
+
+}
+
+]
+}
+
+DEF myShape_1055 Group {
+children [
+Node_Info {
+node_type "Poly_Surface"
+node_name "Poly_Surf_1055"
+}
+Shape {
+geometry IndexedFaceSet {
+ccw  TRUE
+solid  TRUE
+convex TRUE
+coord USE FaceC 
+
+normal USE FaceN 
+
+normalPerVertex TRUE
+coordIndex [
+32, 52, 29, -1,57, 29, 52, -1,52, 53, 57, -1,
+56, 57, 53, -1,53, 54, 56, -1,55, 56, 54, -1,
+54, 33, 55, -1,39, 55, 33, -1,
+]
+normalIndex [
+11, 22, 11, -1,22, 11, 22, -1,22, 20, 22, -1,
+20, 22, 20, -1,20, 23, 20, -1,23, 20, 23, -1,
+23, 18, 23, -1,18, 23, 18, -1,
+]
+}
+
+}
+
+]
+}
+
+]
+}
+
+ ]
+}
+]
+}
+
+]
+}
+
