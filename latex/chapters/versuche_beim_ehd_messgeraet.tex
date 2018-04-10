@@ -1,0 +1,121 @@
+% ----------------------------------------
+% Chap: Versuche auf dem EHD-Messgerät
+% ----------------------------------------
+\chapter{Versuche auf dem EHD-Messgerät}
+\label{chap:versuche_auf_dem_ehd_messgeraet}
+
+% ----------------------------------------
+% Sec: Versuchte Öle
+% ----------------------------------------
+\section{Versuchte Öle}
+\label{sec:versuchte_oele}
+
+Um die Funktionsfähigkeit des neuen Messsystem zu überprüfen, wird es mit verschiedenen Schmierstoffe getestet.
+
+\paragraph{Schmierstoff 1}
+\label{par:schmierstoff_1}
+
+\begin{itemize}
+    \item Firma
+    \item Grund für das Öl
+    \item Anwendungsbereiche
+    \item technische Daten, kinematische Viskosität bei 40 und 100 Grad Celsius
+\end{itemize}
+
+\paragraph{Schmierstoff 2}
+\label{par:schmierstoff_2}
+
+\begin{itemize}
+    \item Firma
+    \item Grund für das Öl
+    \item Anwendungsbereiche
+    \item technische Daten, kinematische Viskosität bei 40 und 100 Grad Celsius
+\end{itemize}
+
+% ----------------------------------------
+% Sec: Kapazitive Messgeräte zur Schmierfilmdickenbestimmung
+% ----------------------------------------
+\section{Kapazitive Messgeräte zur Schmierfilmdickenbestimmung}
+\label{sec:kapazitive_messgeraete_zur_schmierfilmdickenbestimmung}
+
+% ----------------------------------------
+% Sub: Stromladekurve Messgerät
+% ----------------------------------------
+\subsection{Stromladekurve Messgerät}
+\label{sub:stromladekurve_messgeraet}
+
+Im IMKT gibt es ein mobiles Messsystem zur Schmierfilmdickenmessung mittels kapazitiven Messverfahren.
+Das System besteht aus einem Laptop, der mit \textit{Laderkurve-Software} installiert, und einer Messkarte (Typ USB-6211) von der Firma National Instrument.
+
+Bei kapazitiver Messmethode wird der EHD-Kontakt als ein Kondensator betrachtet.
+Die Auflade des Kondensators erfolgt durch eine Ladespannung $U_L$ ($0,2 - 0,5 \ V$) und einen Vorwiderstand $R_L$ ($1015 \ k\Omega$).
+Eine unendliche Erhöhung der Ladespannung hat leider eine negative Wirkung für die Messergebnisse, weil es bei hoher Spannung durch die Ionisierung des Schmierstoffes Rauschen verursacht.
+Abbildung \ref{fig:Schematischer_aufbau_des_mobilen_messsystems} zeigt den schematischen Aufbau des mobilen Messsystems zur Schmierfilmdickenmessung bei IMKT an.
+% ----------------------------------------
+% Fig: Schematischer Aufbau des mobilen Messsystems
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \caption{Schematischer Aufbau des mobilen Messsystems bei IMKT}
+    \label{fig:Schematischer_aufbau_des_mobilen_messsystems}
+\end{figure}
+
+Das ganze Messsystem wird von der \textit{Laderkurve-Software} gesteuert.
+Sie miss nicht direkt die Kapazität, sondern nimmt sie die Antwort bzw. Ladekurve des ``Kondensators'' auf, danach wird die Auswertung mit einem Matlab-Skript ausgeführt.
+Die Software kann die Ladekurve in zwei Modi: \emph{Anzahl der Messwerte} oder \emph{Messung nach Zeit} aufnehmen.
+Im Rahmen dieser Arbeit werden alle Messungen mit dem ersten Modus gemacht.
+Abbildung \ref{fig:gui_der_laderkurve_software} zeigt die Benutzeroberfläche der Ladekurve-Software bei einer Testmessung mit einem Referenz-Kondensator ($3,3 \ nF$) an.
+% ----------------------------------------
+% Fig: GUI der Ladekurve-Software
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \caption{Benutzeroberfläche der Laderkurve-Software}
+    \label{fig:gui_der_laderkurve_software}
+\end{figure}
+
+Die Software ist relative einfach zu bedienen, allerdings gibt es folgende Punkte, auf die man beachten muss.
+\begin{description}
+    \item[Anzahl der Messwerte] ist die Auflösung der Messung.
+        Zu niedriger Wert kann zum Messfehler führen und zu hohen Wert kann es schnell den Speicher voll machen.
+        Der Standardwert ist $2500$.
+
+    \item[Anzahl der Ladekurven] ist die Anzahl der Messungen, die nach einander durchgeführt werden. ist die Anzahl der Messungen, die nach einander durchgeführt werden.
+        Der Standardwert ist $10$.
+
+    \item[Abtastrate] ist die Anzahl der Messwerte, die Messkarte pro Sekunde messen kann.
+        Die USB-6211 Messkarte von NI kann maximal $250 \ kS/s$, das entspricht $2500$ Messwerte in einem Zeitraum von $10 \ ms$.
+
+    \item[Ladespannung] ist die Spannung zwischen zwei Terminal des Kondensators.
+        Der Wert sollte im Bereich von $0,2$ bis $0,5 \ V$ liegen.
+
+    \item[Verzögerung] ist die Wartezeit, die die Software warten muss, bevor sie eine Messung ausführt.
+        Der Standardwert ist $1 \ ms$.
+
+    \item[Entladezeit] ist die Zeit zwischen zwei Messungen.
+        Sie ist notwendig, um der Kondensator komplette leer bevor jeder neuen Messung zu entladen.
+        Der Standardwert ist $100 \ ms$.
+
+    \item[Ladewiderstand] ist der Wert des Vorwiderstands.
+        Er ist nur für den Dokumentationszweck und wird in der Messdatei geschrieben.
+
+    \item[Störkapazität] ist die externe Störung, wie zum Beispiel von Messkabel oder statische Kapazität zwischen Messkörpern.
+        Dieser Wert wird für die spätere Auswertung verwendet.
+
+    \item[Austecken des Netzteils] ist notwendig, um die Störungen von anderen elektronischen Geräte zu vermeiden.
+\end{description}
+
+%
+% ----------------------------------------
+% Sub: RLC Messgerät
+% ----------------------------------------
+\subsection{RLC Messgerät}
+\label{sub:rlc_messgeraet}
+
+% ----------------------------------------
+% Sec: Versuchdurchführung
+% ----------------------------------------
+\section{Versuchdurchführung}
+\label{sec:versuchdurchfuehrung}
