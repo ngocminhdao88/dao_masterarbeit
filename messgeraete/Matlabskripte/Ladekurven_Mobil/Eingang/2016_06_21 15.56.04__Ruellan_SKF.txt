@@ -1,0 +1,13 @@
+Ladekurvenmessung
+Zeit: 2016_06_21 15.56.04
+Info: 2250rpm
+Ladewiderstand[Ohm]: 1016000
+Störkapazität[pF]: 278.000000
+Entladezeit[ms]: 100
+Abtastrate[Hz]: 250000
+Messzeit [ms]: 10.000000
+Verzögerung[ms]: 1
+Ladespannung[V]: 1.400000
+
+Kurve 1
+
