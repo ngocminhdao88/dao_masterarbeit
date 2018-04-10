@@ -45,19 +45,19 @@ Um die Funktionsfähigkeit des neuen Messsystem zu überprüfen, wird es mit ver
 \label{sub:stromladekurve_messgeraet}
 
 Im IMKT gibt es ein mobiles Messsystem zur Schmierfilmdickenmessung mittels kapazitiven Messverfahren.
-Das System besteht aus einem Laptop, der mit \textit{Laderkurve-Software} installiert, und einer Messkarte (Typ USB-6211) von der Firma National Instrument.
+Das System besteht aus einem Laptop, der mit \textit{Laderkurve-Software} installiert, und einer Messkarte (Typ USB-6211) von der Firma National Instrument (NI).
 
-Bei kapazitiver Messmethode wird der EHD-Kontakt als ein Kondensator betrachtet.
-Die Auflade des Kondensators erfolgt durch eine Ladespannung $U_L$ ($0,2 - 0,5 \ V$) und einen Vorwiderstand $R_L$ ($1015 \ k\Omega$).
-Eine unendliche Erhöhung der Ladespannung hat leider eine negative Wirkung für die Messergebnisse, weil es bei hoher Spannung durch die Ionisierung des Schmierstoffes Rauschen verursacht.
-Abbildung \ref{fig:Schematischer_aufbau_des_mobilen_messsystems} zeigt den schematischen Aufbau des mobilen Messsystems zur Schmierfilmdickenmessung bei IMKT an.
+Bei kapazitiver Messmethode wird der EHD-Kontakt als ein Kondensator ($C_K$) betrachtet.
+Die Auflade des Kondensators erfolgt durch eine Ladespannung $U_L$ ($0,2 - 0,5 \ V$) und einen Vorwiderstand $R_V$ ($1015 \ k\Omega$).
+Eine unendliche Erhöhung der Ladespannung ist aber unerwünscht, weil die zur Ionisierung des Schmierstoffes bei hohen Spannung verursacht und das kann die Messergebnisse verfälschen.
+Abbildung \ref{fig:Schematischer_aufbau_des_mobilen_messsystems} zeigt das Prinzip des mobilen Messsystems zur Schmierfilmdickenmessung bei IMKT an.
 % ----------------------------------------
 % Fig: Schematischer Aufbau des mobilen Messsystems
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=4cm]{./images/blank_img.jpg}
-    \caption{Schematischer Aufbau des mobilen Messsystems bei IMKT}
+    \includegraphics[]{./images/schematischer_aufbau_des_mobilen_messsystem.pdf}
+    \caption{Schematischer Aufbau des mobilen Messsystems}
     \label{fig:Schematischer_aufbau_des_mobilen_messsystems}
 \end{figure}
 
@@ -109,10 +109,36 @@ Die Software ist relative einfach zu bedienen, allerdings gibt es folgende Punkt
 
 %
 % ----------------------------------------
-% Sub: RLC Messgerät
+% Sub: LCR Messgerät
 % ----------------------------------------
-\subsection{RLC Messgerät}
-\label{sub:rlc_messgeraet}
+\subsection{LCR Messgerät}
+\label{sub:lcr_messgeraet}
+
+Im Gegenteil zum mobilen Ladekurve-Messsystem, welches die Kapazität über die Antwort einer Ladespannung interpretiert, bietet das LCR-Messgerät \emph{ST2826} der Firma Sourcetronic die Möglichkeit, die Kapazität eines EHD-Kontakts direkt zu messen.
+Abbildung \ref{fig:versuchsaufbau_zur_kapazitaetsmessung_mit_lcr_meter} zeigt das Prinzip des Messsystems mit dem LCR-Messgerät.
+% ----------------------------------------
+% Fig: Schematischer Aufbau des Messsystems mit LCR-Meter
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \caption{Versuchsaufbau zur Kapazitätsmessung mit LCR-Meter}
+    \label{fig:versuchsaufbau_zur_kapazitaetsmessung_mit_lcr_meter}
+\end{figure}
+
+Das LCR-Messgerät bietet einen breiten Frequenzbereich von $20 \ Hz$ bis $5 \ MHz$.
+Dank der Kelvin-Messproben hat das Gerät eine sehr gute Genauigkeit von $0,1 \%$ und ermöglicht die Messung auch bei kleinsten Änderung des Systems.
+Mit einer Sinuskorrelationstechnik bietet das Gerät eine rauschfreie Analyse.
+Abbildung \ref{fig:messprobe_eines_mit_dem_lcr_meter} zeigt das Messergebnis beim Referenz-Kondensator ($3,3 \ nF$) mit dem LCR-Messgerät bei verschiedenen Frequenzen.
+% ----------------------------------------
+% Fig: Messprobe mit 3.3 nF mit dem LCR-Meter
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[]{./images/messprobe_mit_lcr_meter.pdf}
+    \caption{Messergebnis eines Referenz-Kondensators mit dem LCR-Messgerät}
+    \label{fig:messprobe_eines_mit_dem_lcr_meter}
+\end{figure}
 
 % ----------------------------------------
 % Sec: Versuchdurchführung
