@@ -71,40 +71,40 @@ Abbildung \ref{fig:gui_der_laderkurve_software} zeigt die Benutzeroberfläche de
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \includegraphics[]{./images/ladekurven_gui.pdf}
     \caption{Benutzeroberfläche der Laderkurve-Software}
     \label{fig:gui_der_laderkurve_software}
 \end{figure}
 
 Die Software ist relative einfach zu bedienen, allerdings gibt es folgende Punkte, auf die man beachten muss.
 \begin{description}
-    \item[Anzahl der Messwerte] ist die Auflösung der Messung.
+    \item[1. Anzahl der Messwerte] ist die Auflösung der Messung.
         Zu niedriger Wert kann zum Messfehler führen und zu hohen Wert kann es schnell den Speicher voll machen.
         Der Standardwert ist $2500$.
 
-    \item[Anzahl der Ladekurven] ist die Anzahl der Messungen, die nach einander durchgeführt werden. ist die Anzahl der Messungen, die nach einander durchgeführt werden.
+    \item[2. Anzahl der Ladekurven] ist die Anzahl der Messungen, die nach einander durchgeführt werden. ist die Anzahl der Messungen, die nach einander durchgeführt werden.
         Der Standardwert ist $10$.
 
-    \item[Abtastrate] ist die Anzahl der Messwerte, die Messkarte pro Sekunde messen kann.
+    \item[3. Abtastrate] ist die Anzahl der Messwerte, die Messkarte pro Sekunde messen kann.
         Die USB-6211 Messkarte von NI kann maximal $250 \ kS/s$, das entspricht $2500$ Messwerte in einem Zeitraum von $10 \ ms$.
 
-    \item[Ladespannung] ist die Spannung zwischen zwei Terminal des Kondensators.
+    \item[4. Ladespannung] ist die Spannung zwischen zwei Terminal des Kondensators.
         Der Wert sollte im Bereich von $0,2$ bis $0,5 \ V$ liegen.
 
-    \item[Verzögerung] ist die Wartezeit, die die Software warten muss, bevor sie eine Messung ausführt.
+    \item[5. Verzögerung] ist die Wartezeit, die die Software warten muss, bevor sie eine Messung ausführt.
         Der Standardwert ist $1 \ ms$.
 
-    \item[Entladezeit] ist die Zeit zwischen zwei Messungen.
+    \item[6. Entladezeit] ist die Zeit zwischen zwei Messungen.
         Sie ist notwendig, um der Kondensator komplette leer bevor jeder neuen Messung zu entladen.
         Der Standardwert ist $100 \ ms$.
 
-    \item[Ladewiderstand] ist der Wert des Vorwiderstands.
+    \item[7. Ladewiderstand] ist der Wert des Vorwiderstands.
         Er ist nur für den Dokumentationszweck und wird in der Messdatei geschrieben.
 
-    \item[Störkapazität] ist die externe Störung, wie zum Beispiel von Messkabel oder statische Kapazität zwischen Messkörpern.
+    \item[8. Störkapazität] ist die externe Störung, wie zum Beispiel von Messkabel oder statische Kapazität zwischen Messkörpern.
         Dieser Wert wird für die spätere Auswertung verwendet.
 
-    \item[Austecken des Netzteils] ist notwendig, um die Störungen von anderen elektronischen Geräte zu vermeiden.
+    \item[9. Austecken des Netzteils] ist notwendig, um die Störungen von anderen elektronischen Geräte zu vermeiden.
 \end{description}
 
 %
@@ -121,15 +121,15 @@ Abbildung \ref{fig:versuchsaufbau_zur_kapazitaetsmessung_mit_lcr_meter} zeigt da
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \includegraphics[]{./images/versuchsaufbau_mit_lcr_meter.pdf}
     \caption{Versuchsaufbau zur Kapazitätsmessung mit LCR-Meter}
     \label{fig:versuchsaufbau_zur_kapazitaetsmessung_mit_lcr_meter}
 \end{figure}
 
-Das LCR-Messgerät bietet einen breiten Frequenzbereich von $20 \ Hz$ bis $5 \ MHz$.
-Dank der Kelvin-Messproben hat das Gerät eine sehr gute Genauigkeit von $0,1 \%$ und ermöglicht die Messung auch bei kleinsten Änderung des Systems.
+Das LCR-Messgerät bietet einen breiten Frequenzbereich von 20Hz bis 50MHz.
+Dank der Kelvin-Messproben hat das Gerät eine sehr gute Genauigkeit von 0,1\% und ermöglicht die Messung auch bei kleinsten Änderung des Systems.
 Mit einer Sinuskorrelationstechnik bietet das Gerät eine rauschfreie Analyse.
-Abbildung \ref{fig:messprobe_eines_mit_dem_lcr_meter} zeigt das Messergebnis beim Referenz-Kondensator ($3,3 \ nF$) mit dem LCR-Messgerät bei verschiedenen Frequenzen.
+Abbildung \ref{fig:messprobe_eines_mit_dem_lcr_meter} zeigt das Messergebnis beim Referenz-Kondensator (3,3nF) mit dem LCR-Messgerät bei verschiedenen Frequenzen.
 % ----------------------------------------
 % Fig: Messprobe mit 3.3 nF mit dem LCR-Meter
 % ----------------------------------------
