@@ -114,8 +114,19 @@ Die Software ist relative einfach zu bedienen, allerdings gibt es folgende Punkt
 \subsection{LCR Messgerät}
 \label{sub:lcr_messgeraet}
 
+In der Praxis kann jede Flüssigkeit und jeder Feststoff Strom durchlassen.
+Wenn das Material von einem Wechselstrom gespeist wird, wird das Verhältnis zwischen der Spannung und dem Strom als Impedanz bezeichnet.
+Die Veränderung der gemessenen Impedanz durch die Variation der Stromfrequenz ist von der Eigenschaft des Materials abhängig.
+Das kann auf die physikalische Struktur des Werkstoffes, auf die innere chemische Prozesse oder eine Kombination von beiden zurückführen.
+Der Zusammenhang zwischen der Impedanz, der Frequenz und der Kapazität von einem mit Wechselstrom angelegten Kondensators wird in der Formel \ref{eq:impedanz_kondensator} \cite{impedance} dargestellt.
+%
+\begin{equation}
+    Z_{C} = \cfrac{v_C(t)}{i_C(t)} = \cfrac{1}{j \omega C}
+    \label{eq:impedanz_kondensator}
+\end{equation}
+
 Im Gegenteil zum mobilen Ladekurve-Messsystem, welches die Kapazität über die Antwort einer Ladespannung interpretiert, bietet das LCR-Messgerät ST2826 der Firma Sourcetronic die Möglichkeit, die Kapazität eines EHD-Kontakts direkt zu messen.
-Abbildung \ref{fig:versuchsaufbau_zur_kapazitaetsmessung_mit_lcr_meter} zeigt das Prinzip des Messsystems mit dem LCR-Messgerät.
+Abbildung \ref{fig:versuchsaufbau_zur_kapazitaetsmessung_mit_lcr_meter} zeigt den Aufbau des Messsystems mit dem LCR-Messgerät.
 % ----------------------------------------
 % Fig: Schematischer Aufbau des Messsystems mit LCR-Meter
 % ----------------------------------------
@@ -127,8 +138,13 @@ Abbildung \ref{fig:versuchsaufbau_zur_kapazitaetsmessung_mit_lcr_meter} zeigt da
 \end{figure}
 
 Das LCR-Messgerät bietet einen breiten Frequenzbereich von \SI{20}{\Hz} bis \SI{50}{\MHz}.
-Dank der Kelvin-Messproben hat das Gerät eine sehr gute Genauigkeit von \SI{0.1}{\percent} und ermöglicht die Messung auch bei kleinsten Änderung des Systems.
+Dank der Kelvin-Messproben (4-Punkt Messung) hat das Gerät eine sehr gute Genauigkeit von \SI{0.1}{\percent} und ermöglicht die Messung auch bei kleinsten Änderung des Systems.
 Mit einer Sinuskorrelationstechnik bietet das Gerät eine rauschfreie Analyse.
+Die Addition des Widerstands $R_1$ und des Kondensators $C_1$ sind benötigt, um zu sehen, ob der Strom tatsächlich durch den EHD-Kontakt fließt oder in irgeneiner Verbindung verloren geht.
+Unterschiedliche Werte für $R_1$ und $C_1$ wurden verwendet, um deren Einfluß auf die gemessene Kapazität zu untersuchen.
+Ein Erhöhung des Widerstandswertes führt zu einer signifikanten Abnahme der Messergebnisse und umgekehrt.
+Dieses Phänomen kann durch die Abnahme bzw. Zunahme des Stromflusses durch den EHD-Kontakt erklärt werden.
+Die Werte $R_1 = 2$ \si{\kilo\ohm} und $C_1 = 22$ \si{\pico\farad} wurden durch Experiment für weitere Messungen in dieser Arbeit gewählt.
 Abbildung \ref{fig:messprobe_eines_mit_dem_lcr_meter} zeigt das Messergebnis beim Referenz-Kondensator (\SI{3.3}{\nano\F}) mit dem LCR-Messgerät bei verschiedenen Frequenzen.
 % ----------------------------------------
 % Fig: Messprobe mit 3.3 nF mit dem LCR-Meter
@@ -139,6 +155,8 @@ Abbildung \ref{fig:messprobe_eines_mit_dem_lcr_meter} zeigt das Messergebnis bei
     \caption{Messergebnis eines Referenz-Kondensators mit dem LCR-Messgerät}
     \label{fig:messprobe_eines_mit_dem_lcr_meter}
 \end{figure}
+
+\improvement[inline]{Update the figure}
 
 % ----------------------------------------
 % Sec: Versuchdurchführung

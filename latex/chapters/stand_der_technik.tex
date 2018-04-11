@@ -72,8 +72,8 @@ Die kinematische Viskosität ergibt sich aus der dynamischen Viskosität durch d
     \label{eq:kinematische_viskotitaet}
 \end{equation}
 
-Im Si-Einheitensystem hat die dynamische Viskosität als Einheit $N  s/m^2$ oder $Pa  s$ und die kinematische Viskosität als Einheit $m^2/s$.
-Ein Stoff hat die Viskosität $1~N  s/m^2$, wenn er in zwischen zwei Platten, die Größe von $1~m^2$ und einen Abstand von $1~m$ haben, befindet und man braucht $1~N$, um die zwei Platten gegeneinander mit einer Geschwindigkeit von $1~m/s$ zu verschieben.
+Im Si-Einheitensystem hat die dynamische Viskosität als Einheit \si{N.s/m^2} oder \si{\pascal.\s} und die kinematische Viskosität als Einheit \si{m^2/s}.
+Ein Stoff hat die Viskosität \SI{1}{N.s/m^2}, wenn er in zwischen zwei Platten, die Größe von \SI{1}{m^2} und einen Abstand von \SI{1}{m} haben, befindet und man braucht \SI{1}{N}, um die zwei Platten gegeneinander mit einer Geschwindigkeit von \SI{1}{m/s} zu verschieben.
 
 \subsection*{Temperatureffekt}
 \label{sub:temperatureffekt}
@@ -106,8 +106,8 @@ wobei $\eta_{s}$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi
 \label{sub:Viskositaetsindex}
 Die Temperaturabhängigkeit der kinematischen Viskosität eines Schmieröls wird auch von einem Viskositätsindex (VI oder KVI) beschreibt.
 Der Viskositätsindex basiert auf einer Skalar, in der zwei unterschiedlichen Öltypen mit deutlich abweichenden Viskosität-Temperaturverhalten zugeordnet wurden.
-Das Öl, das starke Veränderung der Viskosität ist, wird mit 0 oder LVI (low viscosity index) indiziert.
-Das andere Öl wird mit 100 oder HVI (high viscosity index) gekennzeichnet.
+Das Öl, das starke Veränderung der Viskosität ist, wird mit \num{0} oder \si{LVI} (low viscosity index) indiziert.
+Das andere Öl wird mit \num{100} oder \si{HVI} (high viscosity index) gekennzeichnet.
 Aus dem Vergleich der kinematischen Viskosität eines zu beschreibenden Öls mit diesen beiden Referenzölen bei \SI{100}{\degree}  ergibt sich dessen Viskositätsindex, Formel \ref{eq:viskositaetsindex}.
 % ----------------------------------------
 % Eq: Viskositätsindex
@@ -170,8 +170,8 @@ wobei $\eta_0$ die Viskosität beim Atmosphärendruck und $\alpha_p$ der Druckko
 Für Mineralöle sind diese Parameter ungefähr
 
 \begin{tabular}{lll}
-    $0,001 \rightarrow 0,1$ & für & $\eta_0$ [\si{Pa.s}] \\
-    $0 \rightarrow 4,0 \times 10^{-8}$ & für & $\alpha_p$ [\si{Pa^{-1}}]
+    \SI{0,001}{\pascal.\second} $\rightarrow$ \SI{0,1}{\pascal.\second} & für & $\eta_0$ \\
+    \SI{0}{\per\pascal} $\rightarrow$ \SI{4.0e-8}{\per\pascal}          & für & $\alpha_p$
 \end{tabular}
 
 Leider liefert die Barus Gleichung einen zu großen Wert beim hohen Druck.
@@ -218,7 +218,7 @@ Die Kompressibilität eines Schmierstoffes $C$ ist nach Chu und Cameron mit folg
     C = \left( \frac{1}{\rho} \right) \frac{d\rho}{dp} = \left( \frac{1}{V} \right) \frac{dV}{dp}
 \end{equation}
 %
-wobei V das Volumen und $dV$ die Änderung des Volumens ist.
+wobei $V$ das Volumen und $dV$ die Änderung des Volumens ist.
 
 Die Dichte der Mineralöle ist nach Hirano\cite{hirano} mit folgender Formel zu berechnen
 % ----------------------------------------
@@ -256,8 +256,8 @@ Nach Gohar wird das Verhältnis mit der Formel\ref{eq:dichte_brechnungsindex} be
     c  p = \frac{n^2 - 1}{n^2 + 2}
 \end{equation}
 %
-wobei $c$ ein Ölkonstante ist (zB: SAE30, $c = 0,33$).
-Der Brechungsindex für meist Mineralöle bei normalen Luftdruck ist c.a \num{1,51}.
+wobei $c$ ein Ölkonstante ist (zB: SAE30, $c = $ \num{0,33}).
+Der Brechungsindex für meist Mineralöle bei normalen Luftdruck ist c.a \num{1.51}.
 
 % ----------------------------------------
 % Subsec: Wärmeleitfähigkeit
@@ -275,7 +275,7 @@ Nach Cameron\cite{cameron} kann diese Größe beim normalen Luftdruck mit folgen
     k = \frac{0,1173 - 6,33 \times 10^{-5} \ T}{\rho_0}
 \end{equation}
 %
-wobei $T \ [\textrm{K}]$ die absolute Temperatur und $\rho_0 \ [\textrm{kg/m}^3]$ die Dichte ist.
+wobei $T$ [\si{\kelvin}] die absolute Temperatur und $\rho_0$ [\si{kg/m^3}] die Dichte ist.
 
 % ----------------------------------------
 % Subsec: Newtonsche Fluide
@@ -473,7 +473,7 @@ Abbildung~\ref{fig:konforme_kontraforme_kontakte} zeigt die Beispiele konforme u
     \label{fig:konforme_kontraforme_kontakte}
 \end{figure}
 %
-Gegenteil zu den konformen Kontakten, wo die Pressungen in der Größenordnung von $10 MPa$ auftreten, können in zwischen den Laufflächen nichtkonformer Kontakt die Druckspannungen 0,5 GPa und höher betragen.
+Gegenteil zu den konformen Kontakten, wo die Pressungen in der Größenordnung von \SI{10}{\mega\pascal} auftreten, können in zwischen den Laufflächen nichtkonformer Kontakt die Druckspannungen \SI{0.5}{\giga\pascal} und höher betragen.
 Durch die enorme, konzentrierte Belastung werden die Flächen an dem Kontaktpunkt elastisch verformt und vergrößert.
 Im Folgenden soll der Wälzkontakt nach Wisniewski\cite{wisniewski} näher betrachtet werden.
 
@@ -597,10 +597,10 @@ wobei
 % List: Parameter zur Berechnung der Schmierfilmdicke
 % ----------------------------------------
 \begin{tabular}{lll}
-    Schmierfilmparameter & $H_{min} = \cfrac{h_{min}}{R} ;\quad H_0 = \cfrac{h_0}{R}$ & (c.a $10^{-6} \rightarrow 10^{-2}$) \\
-    Werkstoffparameter & $G = \alpha_p E$ & (c.a $2000 \rightarrow 6000$) \\
-    Geschwindigkeitsparameter & $U = \cfrac{\eta_0 u}{E R}$ & (c.a $10^{-13} \rightarrow 10 ^{-8}$) \\
-    Belastungsparameter & $W = \cfrac{P}{E R}$ & (c.a $10^{-5} \rightarrow 10^{-3}$)
+    Schmierfilmparameter      & $H_{min} = \cfrac{h_{min}}{R} ;\quad H_0 = \cfrac{h_0}{R}$ & (c.a $10^{-6} \rightarrow 10^{-2}$)   \\
+    Werkstoffparameter        & $G = \alpha_p E$                                           & (c.a $2000 \rightarrow 6000$)         \\
+    Geschwindigkeitsparameter & $U = \cfrac{\eta_0 u}{E R}$                                & (c.a $10^{-13} \rightarrow 10 ^{-8}$) \\
+    Belastungsparameter       & $W = \cfrac{P}{E R}$                                       & (c.a $10^{-5} \rightarrow 10^{-3}$)
 \end{tabular}
 %
 
@@ -611,8 +611,10 @@ In einer Reihe von Veröffentlichungen in \cite{hamrock_dowson_1976_a}\cite{hamr
 \begin{align}
     \label{eq:mininmale_schmierfilmdicke_downson_hamrock}
     H_{min} &= \cfrac{3,63 G^{0,49} U_0^{0,68}}{W_0^{0,073}} (1 - e^{-0,68 \chi}) \\
+    %
     \label{eq:zentrale_schmierfilmdicke_downson_hamrock}
     H_0 &= \cfrac{2,69 G^{0,53} U_0^{0,67}}{W_0^{0,067}} (1 - 0,61 e^{-0,73 \chi}) \\
+    %
     \text{mit} \quad
     U_0 &= \cfrac{\eta_0 u}{E R_x};\ 
     W_0 = \cfrac{P}{E R_x^2};\
