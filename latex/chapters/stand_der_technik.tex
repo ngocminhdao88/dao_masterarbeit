@@ -108,7 +108,7 @@ Die Temperaturabhängigkeit der kinematischen Viskosität eines Schmieröls wird
 Der Viskositätsindex basiert auf einer Skalar, in der zwei unterschiedlichen Öltypen mit deutlich abweichenden Viskosität-Temperaturverhalten zugeordnet wurden.
 Das Öl, das starke Veränderung der Viskosität ist, wird mit 0 oder LVI (low viscosity index) indiziert.
 Das andere Öl wird mit 100 oder HVI (high viscosity index) gekennzeichnet.
-Aus dem Vergleich der kinematischen Viskosität eines zu beschreibenden Öls mit diesen beiden Referenzölen bei $100^\circ$  ergibt sich dessen Viskositätsindex, Formel \ref{eq:viskositaetsindex}.
+Aus dem Vergleich der kinematischen Viskosität eines zu beschreibenden Öls mit diesen beiden Referenzölen bei \SI{100}{\degree}  ergibt sich dessen Viskositätsindex, Formel \ref{eq:viskositaetsindex}.
 % ----------------------------------------
 % Eq: Viskositätsindex
 % ----------------------------------------
@@ -169,9 +169,9 @@ Nach Barus kann die Viskosität mit der unteren Formel berechnet werden
 wobei $\eta_0$ die Viskosität beim Atmosphärendruck und $\alpha_p$ der Druckkoeffizient der Viskosität ist.
 Für Mineralöle sind diese Parameter ungefähr
 
-\begin{tabular}{llll}
-    $0,001 \rightarrow 0,1$ & für & $\eta_0$ & $[Pas]$ \\
-    $0 \rightarrow 4,0 \times 10^{-8}$ & für & $\alpha_p$ & $Pa^{-1}$
+\begin{tabular}{lll}
+    $0,001 \rightarrow 0,1$ & für & $\eta_0$ [\si{Pa.s}] \\
+    $0 \rightarrow 4,0 \times 10^{-8}$ & für & $\alpha_p$ [\si{Pa^{-1}}]
 \end{tabular}
 
 Leider liefert die Barus Gleichung einen zu großen Wert beim hohen Druck.
@@ -229,7 +229,7 @@ Die Dichte der Mineralöle ist nach Hirano\cite{hirano} mit folgender Formel zu 
     \rho = \rho_0 \left( 1 + \frac{0,6  p}{1 + 1,7  p} \right)
 \end{equation}
 %
-wobei $p$ in $GPa$ und $\rho_0$ die Dichte beim normalen Luftdruck ($0,87~kg/m^3$ bei $20^\circ C$) ist.
+wobei $p$ [\si{GPa}] und $\rho_0$ die Dichte beim normalen Luftdruck (\SI{0,87}{kg/m^3} bei \SI{20}{\degreeCelsius}) ist.
 % ----------------------------------------
 % Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
 % ----------------------------------------
@@ -257,7 +257,7 @@ Nach Gohar wird das Verhältnis mit der Formel\ref{eq:dichte_brechnungsindex} be
 \end{equation}
 %
 wobei $c$ ein Ölkonstante ist (zB: SAE30, $c = 0,33$).
-Der Brechungsindex für meist Mineralöle bei normalen Luftdruck ist c.a 1,51.
+Der Brechungsindex für meist Mineralöle bei normalen Luftdruck ist c.a \num{1,51}.
 
 % ----------------------------------------
 % Subsec: Wärmeleitfähigkeit
@@ -275,7 +275,7 @@ Nach Cameron\cite{cameron} kann diese Größe beim normalen Luftdruck mit folgen
     k = \frac{0,1173 - 6,33 \times 10^{-5} \ T}{\rho_0}
 \end{equation}
 %
-wobei $T$ die absolute Temperatur in $K$ und $\rho_0$ die Dichte in $kg/m^3$ ist.
+wobei $T \ [\textrm{K}]$ die absolute Temperatur und $\rho_0 \ [\textrm{kg/m}^3]$ die Dichte ist.
 
 % ----------------------------------------
 % Subsec: Newtonsche Fluide
@@ -623,5 +623,5 @@ In einer Reihe von Veröffentlichungen in \cite{hamrock_dowson_1976_a}\cite{hamr
 wobei $\chi$ das Verhältnis der Halbachsen der Kontaktellipse ist und $R_x$ bedeutet der Krümmungsradius in der Bewegungsebene.
 Der Geschwindigkeits-, und Belastungsparameter weichen hier von den verallgemeinerten ab.
 
-Man kann hier erkennen, dass der Geschwindigkeitsparameter $U_0$ mit einem Exponenten von $0,67$ den höchsten Einfluss auf die Schmierfilmdicke hat.
+Man kann hier erkennen, dass der Geschwindigkeitsparameter $U_0$ mit einem Exponenten von \num{0.67} den höchsten Einfluss auf die Schmierfilmdicke hat.
 Erstaunlicherweise hat die Belastung kaum den Einfluss.

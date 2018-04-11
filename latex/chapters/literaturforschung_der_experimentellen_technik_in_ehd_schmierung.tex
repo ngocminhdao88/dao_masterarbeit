@@ -164,9 +164,9 @@ Zum besseren Verständnis der elektrischen Vorgängen im EHD-Kontakt wurde eine 
 
 In einem System bestehend aus einer feststehenden Kugel und einem rotierenden Zylinder hat \textit{Furey} \cite{furey_1961} das Verhalten des elektrischen Widerstands untersucht.
 Die Ergebnisse (Abbildung \ref{fig:resistance_vs_time_furey}) zeigten eine große Streuung des Widerstands bei Mischreibung.
-Zum Beschreiben für einen isolierenden Schmierfilm definiert er einen Wert von 10$k\Omega$.
+Zum Beschreiben für einen isolierenden Schmierfilm definiert er einen Wert von \SI{10}{\kilo\ohm}.
 In Oszilloskop erkannt er, dass es zwei Zustände des Kontaktwiderstands gabt, hoch und niedrig.
-Das zeitliche Verhältnis zwischen den beiden Zuständen wird über Intervalle von 10 $ms$ aufgenommen, ausgewertet und das Ergebnis als prozentualer Anteil des direkten Kontakt angegeben.
+Das zeitliche Verhältnis zwischen den beiden Zuständen wird über Intervalle von \SI{10}{\milli\second} aufgenommen, ausgewertet und das Ergebnis als prozentualer Anteil des direkten Kontakt angegeben.
 Mit dieser Methode konnte er berechnen, wie groß der Anteil der Festkörperkontakte in jedem Reibungszustand ist.
 % ----------------------------------------
 % Fig: Widerstand - Zeit Furey
@@ -182,8 +182,8 @@ Mit dieser Methode konnte er berechnen, wie groß der Anteil der Festkörperkont
 In seiner Arbeit \cite{kuhlmann_2009} verwendete \textit{Kuhlmann} zwei unterschiedliche Systeme zur Widerstandmessung.
 Ein System basiert auf die \textit{Wheatstonsche} Brückenschaltung (Abbildung \ref{fig:ersatzschaltbild_messsysteme_kuhlmann} links), welche zur Vermeidung eines Tunneleffektes mit Wechselstrom gespeist wird.
 Der Zusammenhang zwischen dem Widerstand $R_L$ des Lagers und der gemessenen Brückenspannung $U_m$ wird durch eine aufwändige Kalibration über variable Referenzwiderstände hergestellt.
-Zur Vereinfachung der Messkettenkalibrierung und zur Verbesserung der Messempfindlichkeit bei $R_L$ mehr als 1 $k\Omega$ setzte \textit{Kuhlmann} ein direkt messendes Trägerfrequenz-Messsystem ein (Abbildung \ref{fig:ersatzschaltbild_messsysteme_kuhlmann} rechts).
-Der Widerstandszwei wird an einer hochgenauen Wechselstromquelle ($1 \pm 0,2 mA$) angeschlossen.
+Zur Vereinfachung der Messkettenkalibrierung und zur Verbesserung der Messempfindlichkeit bei $R_L$ mehr als \SI{1}{\kilo\ohm} setzte \textit{Kuhlmann} ein direkt messendes Trägerfrequenz-Messsystem ein (Abbildung \ref{fig:ersatzschaltbild_messsysteme_kuhlmann} rechts).
+Der Widerstandszwei wird an einer hochgenauen Wechselstromquelle \SI[separate-uncertainty]{1 +- 0.2}{\milli\ampere} angeschlossen.
 Aus dem Spannungsabfall über den Gesamtwiderstand ($R_V$ und $R_P$ sind bekannt) konnte er den Lagerwiderstand bestimmen.
 % ----------------------------------------
 % Fig: Kuhlmann Messsysteme
@@ -197,7 +197,7 @@ Aus dem Spannungsabfall über den Gesamtwiderstand ($R_V$ und $R_P$ sind bekannt
 %
 
 Beide obengenannte Messsysteme wurden von \textit{Kuhlmann} bei Fettuntersuchung mit Schrägkugellagern und Kegelrollenlagern bei niedrigen Betriebstemperatur eingesetzt (Abbildung \ref{fig:schema_schraerikula_kerola_kuhlmann}).
-Durch eine 0,4 mm dicke Keramikbeschicht zwischen der Lagersitze und der Welle konnte er den Widerstand für beide Lager separat messen.
+Durch eine \SI{0.4}{\milli\meter} dicke Keramikbeschicht zwischen der Lagersitze und der Welle konnte er den Widerstand für beide Lager separat messen.
 Abbildung \ref{fig:schema_schraerikula_kerola_kuhlmann} zeigt die elektrische Ersatzschaltbilder für einen Wälzkörper im Schrägkugellager und Kegelrollenlager.
 Alle Wälzkörper eines Lagers sind elektrisch parallel geschaltet und der Kontakt zwischen Rollenstirn und Bord beim Kegelrollenlager muss berücksichtigt werden.
 % ----------------------------------------
@@ -260,7 +260,7 @@ Aufgrund dem großen Einfluss und der linearen Proportional von der $C_{Hertz}$ 
     \label{eq:kontaktkapazitaet_vereinfach}
 \end{align}
 %
-wobei $A_{Hertz}$ die Größe der Hertzschen Kontaktfläche, $h_0$ die zentrale Schmierfilmdicke, $\varepsilon_0$ die elektrische Feldkonstante ($\varepsilon_0 = 8,85 \cdot 10^{-15} As/Vm$) und $\varepsilon_r$ die relative Dielektrizitätskonstante ist.
+wobei $A_{Hertz}$ die Größe der Hertzschen Kontaktfläche, $h_0$ die zentrale Schmierfilmdicke, $\varepsilon_0$ die elektrische Feldkonstante ($\varepsilon_0 = 8,85 \cdot 10^{-15} \ \textrm{As/Vm}$) und $\varepsilon_r$ die relative Dielektrizitätskonstante ist.
 In der Gleichung \ref{eq:kontaktkapazitaet_vereinfach} definierte \textit{Barz} definierte einen Umrechnungsfaktor $k_C$, welcher die $C_{Einlauf}$ und die $C_{Auslauf}$ berücksichtigt.
 Er ist von den Betriebsbedingungen, dem Lager, dem Schmierstoff, der Laufzeit etc. abhängig.
 Selbst ist er von der Schmierfilmdicke abhängig, da das Verhältnis zwischen $C_{Einlauf}$ und $C_{Auslauf}$ bei der Änderung der Schmierfilmdicke nicht konstant bleibt.
@@ -312,9 +312,9 @@ Um den Schmierfilmaufbau in Axialzylinderrollenlagern unter der Annahme, dass di
 %
 
 In der neben einander Anordnung sollen die Schmierfilme in zwei Prüflagern eine Gesamtverschiebung von $x_{ges} = 4 h_0$ verursachen.
-Zur Messkette, die mit einem maximalen Messfehler von 0,9 $\mu m$ aufweist, gehören die drei hochauflösende induktiv Wegaufnehmer.
-Wird es auf den einzelnen Schmierspalt bezogen, reduziert sich der maximal mögliche Fehler auf 0,23 $\mu m$.
-Da die Erwärmung im Schmierspalt kann zum Messfehler verursachen, führte \textit{Walbeck} die Messungen bei relativ geringen Kontaktpressungen ($P_{max} \approx 419 \rightarrow 593 \ MPa$) durch.
+Zur Messkette, die mit einem maximalen Messfehler von \SI{0,9}{\micro\meter} aufweist, gehören die drei hochauflösende induktiv Wegaufnehmer.
+Wird es auf den einzelnen Schmierspalt bezogen, reduziert sich der maximal mögliche Fehler auf \SI{0,23}{\micro\meter}.
+Da die Erwärmung im Schmierspalt kann zum Messfehler verursachen, führte \textit{Walbeck} die Messungen bei relativ geringen Kontaktpressungen (\SIrange{419}{593}{\mega\pascal}) durch.
 Allerdings ist die Wärmeentwicklung durch Lagerreibung nicht vermeidbar und dadurch ist eine absolute Schmierfilmdickenmessung wegen Wärmedehnung in Bauteilen nicht möglich.
 Abhilfe zählt hier die Differenzmessung der Verschiebung zwischen Stillstand und Betriebsdrehzahl.
 Um die thermische Effekte auf die Messergebnisse gering zu halten, soll die Drehzahländerung innerhalb einer halbe Sekunde dauern.
@@ -334,7 +334,7 @@ Für das Kegelrollenlager muss Zusätzlich den Kontakt zwischen Rollenstirnfläc
 \end{figure}
 %
 
-Die Schmierfilmdickenmessungen wurden von \textit{Kuhlmann} während des Abbremsvorgangs von der Betriebsdrehzahl auf eine minimale Drehzahl von $n_0 = 0,5 \ min^{-1}$ innerhalb $1,5$ Sekunde durchgeführt (Abbildung \ref{fig:differenzmessung_kuhlmann}).
+Die Schmierfilmdickenmessungen wurden von \textit{Kuhlmann} während des Abbremsvorgangs von der Betriebsdrehzahl auf eine minimale Drehzahl von $n_0 = 0,5$ \si{\per\minute} innerhalb \SI{1.5}{\second} durchgeführt (Abbildung \ref{fig:differenzmessung_kuhlmann}).
 % ----------------------------------------
 % Fig: Kuhlmann Messung während des Abbremsvorgangs
 % ----------------------------------------
@@ -370,7 +370,7 @@ Diese Reflektion hängt von der Ultraschallfrequenz, den akustischen Eigenschaft
 Wenn die Wellenlänge des gesendeten Impulses viel größer als die Dicke der Flüssigkeitsschicht ist, wird die Antwort durch die Steifigkeit der Schicht bestimmt.
 Wenn die Wellenlänge ähnlich sowie die Schichtdicke ist, wird die Wechselwirkung vom Ultraschall mit der Flüssigkeit durch sein Resonanzverhalten gesteuert.
 Durch das Vergleich des Frequenzspektrums des reflektierten Impulses mit dem des gesendeten Impulses ermöglicht die Bestimmung der Schmierfilmdicke.
-Die Messmethode von \textit{Dwyer-Joyce} war in der Lage, Filme im Bereich von 50 bis 500 $nm$ zu messen.
+Die Messmethode von \textit{Dwyer-Joyce} war in der Lage, Filme im Bereich von \SIrange{50}{500}{\milli\meter} zu messen.
 Der schematischer Aufbau des Ultraschall-Prüfstands zur Schmierfilmdickenmessung ist in Abbildung \ref{fig:ultrashall_pruefstand_dwyer-joyce} zu nehmen.
 % ----------------------------------------
 % Fig: Dwyer-Joyce Ultrashall test rig
@@ -408,9 +408,9 @@ Diese Zugabe simuliert allgemeine Fehlermechanismen, die unter realen Bedingunge
 \subsection{Laserinduzierte Fluoreszenz}
 \label{sub:laserinduzierte_fluoreszenz}
 
-\textit{Jones et al.} beschrieb in seiner Arbeit \cite{jones_2001} die Kalibrierung einer Technik, die auf Basis der Laserinduzierten Fluoreszenz zur quantitativen Messungen von industriellen Beschichtungen mit einer Dicke von 10-20 $nm$ ermöglicht.
+\textit{Jones et al.} beschrieb in seiner Arbeit \cite{jones_2001} die Kalibrierung einer Technik, die auf Basis der Laserinduzierten Fluoreszenz zur quantitativen Messungen von industriellen Beschichtungen mit einer Dicke von \SIrange{10}{20}{\nano\meter} ermöglicht.
 Wachsfilme, die mit einem fluoreszierenden Rhodaminfarbstoff dotiert waren, wurden durch ein Elektrospray-Verfahren auf eine Seite der aluminiumbeschichteten Glasscheibe aufgebracht.
-Mit einem optischen Profilometer mittels Lasertriangulation wurden die Filmdicken von 220-450 $nm$ ermittelt.
+Mit einem optischen Profilometer mittels Lasertriangulation wurden die Filmdicken von \SIrange{220}{450}{\milli\meter} ermittelt.
 Die emittierte Fluoreszenz wurde unter der Verwendung einer fasergekoppelten Sonde mit Laseranregung und Spektraldetektion aufgenommen.
 Die Fluoreszenzemission wurde wegen der Aluminiumschicht um zehnfach reduziert.
 Die Kalibrierung lieferte gute Ergebnisse, die in Übereinstimmung mit den aus Volumenmessung im Beschichtungsprozess geschätzten Filmdicken sind.
