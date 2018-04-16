@@ -137,12 +137,12 @@ Diese Fähigkeit macht es zu einem geeigneten Werkzeug für die Untersuchung des
 \label{sec:elektrische_messung_der_ehd_schmierfilmdicke}
 
 Neben der optischen Messmethoden gibt es noch die elektrische Messmethode zur Untersuchung der EHD-Schmierung, wie zum Beispiel Widerstand, Kapazität, Entladespannung.
-Der Vorteil dieser Methode ist, dass sie direkt bei Maschinenelementen, welche aus Stahl sind, während Betrieb verwendet werden kann.
+Der Vorteil dieser Methode ist, dass sie direkt bei Maschinenelementen, welche aus Stahl sind, während des Betriebs verwendet werden kann.
 Allerdings gibt es auch Nachteile.
 Die Form des Kontakts, wo die große lokale Verformung stattfindet, ist nur vermutet und stark vereinfacht.
-Die hat den Einfluss auf die Widerstand-,Kapazität-Messergebnisse.
-Ein Faktor noch ist die Sauberkeit des Schmierstoffes, welche schwer zu kontrollieren ist.
-Generell liefern die elektrische Methode nur die mittlere Werte über den Kontaktbereich und gibt leider keine direkte Indikation der Form des Schmierfilms.
+Die hat Einfluss auf die Widerstand-,Kapazität-Messergebnisse.
+Ein anderer Faktor ist die Sauberkeit des Schmierstoffes, welche schwer zu kontrollieren ist.
+Generell liefern die elektrische Methode nur die mittleren Werte über den Kontaktbereich und gibt leider keine direkte Indikation der Form des Schmierfilms.
 
 Normalerweise werden die elektrische Methoden für folgende Anwendungen verwendet:
 \begin{itemize}
@@ -159,13 +159,13 @@ Normalerweise werden die elektrische Methoden für folgende Anwendungen verwende
 
 Die Widerstandmessmethode ist geeignet, um den Schmierungszustand qualitativ zu beschreiben.
 Der Widerstand ist eine Indikation der direkten Berührung der Rauheitspitzen der Kontaktpartner.
-Bei vollständiger Oberflächentrennung (Flüssigkeitschmierung) soll der Widerstand in theoretisch unendlich groß sein.
-Zum besseren Verständnis der elektrischen Vorgängen im EHD-Kontakt wurde eine Reihe Arbeiten an unterschiedlichen Modellprüfständen und Maschinenelementen durchgeführt.
+Bei vollständiger Oberflächentrennung (Flüssigkeitschmierung) soll der Widerstand theoretisch unendlich groß sein.
+Zum besseren Verständnis der elektrischen Vorgänge im EHD-Kontakt wurde eine Reihe Arbeiten an unterschiedlichen Modellprüfständen und Maschinenelementen durchgeführt.
 
 In einem System bestehend aus einer feststehenden Kugel und einem rotierenden Zylinder hat \textit{Furey} \cite{furey_1961} das Verhalten des elektrischen Widerstands untersucht.
 Die Ergebnisse (Abbildung \ref{fig:resistance_vs_time_furey}) zeigten eine große Streuung des Widerstands bei Mischreibung.
 Zum Beschreiben für einen isolierenden Schmierfilm definiert er einen Wert von \SI{10}{\kilo\ohm}.
-In Oszilloskop erkannt er, dass es zwei Zustände des Kontaktwiderstands gabt, hoch und niedrig.
+Im Oszilloskop erkannte er, dass es zwei Zustände des Kontaktwiderstands gab, hoch und niedrig.
 Das zeitliche Verhältnis zwischen den beiden Zuständen wird über Intervalle von \SI{10}{\milli\second} aufgenommen, ausgewertet und das Ergebnis als prozentualer Anteil des direkten Kontakt angegeben.
 Mit dieser Methode konnte er berechnen, wie groß der Anteil der Festkörperkontakte in jedem Reibungszustand ist.
 % ----------------------------------------
@@ -183,7 +183,7 @@ In seiner Arbeit \cite{kuhlmann_2009} verwendete \textit{Kuhlmann} zwei untersch
 Ein System basiert auf die \textit{Wheatstonsche} Brückenschaltung (Abbildung \ref{fig:ersatzschaltbild_messsysteme_kuhlmann} links), welche zur Vermeidung eines Tunneleffektes mit Wechselstrom gespeist wird.
 Der Zusammenhang zwischen dem Widerstand $R_L$ des Lagers und der gemessenen Brückenspannung $U_m$ wird durch eine aufwändige Kalibration über variable Referenzwiderstände hergestellt.
 Zur Vereinfachung der Messkettenkalibrierung und zur Verbesserung der Messempfindlichkeit bei $R_L$ mehr als \SI{1}{\kilo\ohm} setzte \textit{Kuhlmann} ein direkt messendes Trägerfrequenz-Messsystem ein (Abbildung \ref{fig:ersatzschaltbild_messsysteme_kuhlmann} rechts).
-Der Widerstandszwei wird an einer hochgenauen Wechselstromquelle \SI[separate-uncertainty]{1 +- 0.2}{\milli\ampere} angeschlossen.
+Der Widerstandszweig wird an einer hochgenauen Wechselstromquelle \SI[separate-uncertainty]{1 +- 0.2}{\milli\ampere} angeschlossen.
 Aus dem Spannungsabfall über den Gesamtwiderstand ($R_V$ und $R_P$ sind bekannt) konnte er den Lagerwiderstand bestimmen.
 % ----------------------------------------
 % Fig: Kuhlmann Messsysteme
@@ -260,7 +260,7 @@ Aufgrund dem großen Einfluss und der linearen Proportional von der $C_{Hertz}$ 
     \label{eq:kontaktkapazitaet_vereinfach}
 \end{align}
 %
-wobei $A_{Hertz}$ die Größe der Hertzschen Kontaktfläche, $h_0$ die zentrale Schmierfilmdicke, $\varepsilon_0$ die elektrische Feldkonstante ($\varepsilon_0 = 8,85 \cdot 10^{-15} \ \textrm{As/Vm}$) und $\varepsilon_r$ die relative Dielektrizitätskonstante ist.
+wobei $A_{Hertz}$ die Größe der Hertzschen Kontaktfläche, $h_0$ die zentrale Schmierfilmdicke, $\varepsilon_0$ die elektrische Feldkonstante ($\varepsilon_0 =$ \SI[bracket-unit-denominator=false, per-mode=symbol]{8,85e-15}{\ampere\second\per\volt\per\meter}) und $\varepsilon_r$ die relative Dielektrizitätskonstante ist.
 In der Gleichung \ref{eq:kontaktkapazitaet_vereinfach} definierte \textit{Barz} definierte einen Umrechnungsfaktor $k_C$, welcher die $C_{Einlauf}$ und die $C_{Auslauf}$ berücksichtigt.
 Er ist von den Betriebsbedingungen, dem Lager, dem Schmierstoff, der Laufzeit etc. abhängig.
 Selbst ist er von der Schmierfilmdicke abhängig, da das Verhältnis zwischen $C_{Einlauf}$ und $C_{Auslauf}$ bei der Änderung der Schmierfilmdicke nicht konstant bleibt.
