@@ -34,7 +34,7 @@ Aus diesem Grund soll im folgenden kurz auf die Themen Schmieröle, Reibung und 
 Viskosität, die auch als innere Reibung bezeichnet wird, ist die wichtigste Kenngröße eines Schmierstoffes.
 Sie beschreibt die Zähigkeit von Flüssigkeiten und Gasen.
 Je größer die Viskosität ist, desto dickflüssiger ist das Fluid und je niedriger die Viskosität, desto dünnflüssiger ist es.
-Ein Modell des Parallelplattenversuchs veranschaulicht das Fließverhalten des Schmierstoffes, Abbildung \ref{fig:geschwindigkeitsprofil_parallelplattenversuch}.
+Ein Modell des Parallelplattenversuchs veranschaulicht das Fließverhalten des Schmierstoffes (Abbildung \ref{fig:geschwindigkeitsprofil_parallelplattenversuch}).
 % ----------------------------------------
 % Fig: Geschwindigkeitsprofil in einem Parallelplattenversuch
 % ----------------------------------------
@@ -45,7 +45,8 @@ Ein Modell des Parallelplattenversuchs veranschaulicht das Fließverhalten des S
     \label{fig:geschwindigkeitsprofil_parallelplattenversuch}
 \end{figure}
 
-Für eine Newtonsche Flüssigkeit ist das Schergefälle $G = du/dz$ direkt proportional zur der Schubspannung $\tau$
+Für eine Newtonsche Flüssigkeit ist das Schergefälle $G = du/dz$ direkt proportional zur der Schubspannung $\tau$.
+Die Konstante $k$ beschreibt die Fluidität der Flüssigkeit.
 % ----------------------------------------
 % Eq: Schergefälle
 % ----------------------------------------
@@ -54,7 +55,7 @@ Für eine Newtonsche Flüssigkeit ist das Schergefälle $G = du/dz$ direkt propo
     \label{eq:schergefaelle}
 \end{equation}
 
-Die dynamische Viskosität (oder Viskosität) ist das Verhältnis von Schubspannung und Geschwindigkeitsgradient und ist der Kehrwert der Fluidität $k$ im Newtonschen Schubspannungsgesetz (\ref{eq:schergefaelle}).
+Die dynamische Viskosität (oder Viskosität) ist das Verhältnis von der Schubspannung $\tau$ und dem Schergefälle $G$ und ist der Kehrwert der Fluidität $k$.
 % ----------------------------------------
 % Eq: Dynamische Viskosität
 % ----------------------------------------
@@ -63,25 +64,35 @@ Die dynamische Viskosität (oder Viskosität) ist das Verhältnis von Schubspann
     \label{eq:dynamische_viskositaet}
 \end{equation}
 
-Die kinematische Viskosität ergibt sich aus der dynamischen Viskosität durch die Division mit der Dichte des Fluids.
+Mit $\gamma = u/z$ als der Geschwindigkeitsgradient über ein Element des Schmierfilms kann man die Schubspannung $\tau$ in der Abhängigkeit der Viskosität $\eta$ aus der Formel \ref{eq:dynamische_viskositaet} so geschrieben.
 % ----------------------------------------
-% Eq: Dynamische Viskosität
+% Eq: Schubspannung
+% ----------------------------------------
+\begin{equation}
+    \tau = \eta \cfrac{du}{dz} = \eta \dot{\gamma}
+    \label{eq:schubspannung}
+\end{equation}
+
+
+Die kinematische Viskosität $\nu$ ergibt sich aus der dynamischen Viskosität $\eta$ durch die Division mit der Dichte des Fluids $\rho$. Die wird zur Charakterisierung des Fließverhaltens der Schmieröle verwendet.
+% ----------------------------------------
+% Eq: Kinematische Viskosität
 % ----------------------------------------
 \begin{equation}
     \nu = \frac{\eta}{\rho}
     \label{eq:kinematische_viskotitaet}
 \end{equation}
 
-Im Si-Einheitensystem hat die dynamische Viskosität als Einheit \si{N.s/m^2} oder \si{\pascal.\s} und die kinematische Viskosität als Einheit \si{m^2/s}.
-Ein Stoff hat die Viskosität \SI{1}{N.s/m^2}, wenn er in zwischen zwei Platten, die Größe von \SI{1}{m^2} und einen Abstand von \SI{1}{m} haben, befindet und man braucht \SI{1}{N}, um die zwei Platten gegeneinander mit einer Geschwindigkeit von \SI{1}{m/s} zu verschieben.
+Im Si-Einheitensystem hat die dynamische Viskosität $\eta$ als Einheit \si{N.s/m^2} oder \si{\pascal.\s} und die kinematische Viskosität $\nu$ als Einheit \si{m^2/s}.
+Ein Stoff hat die Viskosität \SI{1}{N.s/m^2}, wenn er sich in zwischen zwei Platten, die die Größe von \SI{1}{m^2} und einen Abstand von einander \SI{1}{m} haben, befindet und man braucht \SI{1}{N}, um die zwei Platten gegeneinander mit einer Geschwindigkeit von \SI{1}{m/s} zu verschieben.
 
 \subsection*{Temperatureffekt}
 \label{sub:temperatureffekt}
 Die Temperatur hat eine große Effekt auf die Viskosität aller fließfähigen Stoffe.
 Mit steigender Temperatur sinkt die Viskosität der Flüssigkeiten ab.
-Diese Effekt kann experimentell mittel eines Viskosimeters und rechnerisch nach Cameron bestimmt werden.
+Diese Effekt kann experimentell mittels eines Viskosimeters und rechnerisch nach \textit{Crouch} und \textit{Cameron} \cite{crouch_1961} bestimmt werden.
 
-Die einfachste Gleichung nach Reynold lautet:
+Die einfachste Gleichung, die beschreibt die Temperatureffekt auf die Viskosität, nach Reynolds \cite{reynolds_1886} lautet:
 % ----------------------------------------
 % Eq: Dynamische Viskosität nach Reynold
 % ----------------------------------------
@@ -90,14 +101,7 @@ Die einfachste Gleichung nach Reynold lautet:
     \label{eq:dynamische_viskositaet_reynold}
 \end{equation}
 %
-wobei $\eta_{s}$ die Viskosität des Schmierstoffes bei der Temperatur $\phi_{s}$ ist, $\eta$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi$, $\Delta{\phi}$ ist die Temperaturdifferenz ($\eta = \eta_{s} + \Delta{\phi}$) und $\beta$ ist die thermoviskose Konstante.\improvement{check the formel}
-% ----------------------------------------
-% Eq: Dynamische Viskosität nach Cameron
-% ----------------------------------------
-\begin{equation}
-    \eta(\phi) = k_1  \ exp \left( k_2 / (\phi + 95) \right)
-    \label{eq:dynamische_viskositaet_cameron}
-\end{equation}
+wobei $\eta_{s}$ die Viskosität des Schmierstoffes bei der Temperatur $\phi_{s}$ ist, $\eta$ ist die Viskosität des Schmierstoffes bei der Temperatur $\phi$, $\Delta{\phi}$ ist die Temperaturdifferenz ($\phi = \phi_{s} + \Delta{\phi}$) und $\beta$ ist die thermoviskose Konstante.
 
 % ----------------------------------------
 % Subsec: Viskositätsindex
@@ -124,7 +128,7 @@ Die Linearisierung nach Walther (S\'{a}nchez-Rubio, et al.)\cite{sanchez-rubio} 
 % ----------------------------------------
 \begin{equation}
     \label{eq:kinematische_viskotitaet_walther}
-    \log \log(\nu + 0,7) = A + B \log T
+    \log \log(\nu + 0,7) = A + B \log(T)
 \end{equation}
 %
 % ----------------------------------------
