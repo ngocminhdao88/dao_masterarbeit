@@ -148,25 +148,26 @@ Die Linearisierung nach Walther (S\'{a}nchez-Rubio, et al.)\cite{sanchez-rubio} 
 \subsection*{Einfluss von Druck auf Viskosität}
 \label{sub:einfluss_von_druck_auf_viskositaet}
 Mit steigendem Druck nimmt die Viskosität aller Schmieröle zu.
+Allerdings verändert sich das Schmiermittel unter dem für die EHD-Kontakte enormen Druck schlagartig.
+Die Viskosität nimmt rapide zu und der Schmierstoff erreicht einem festen Zustand.
+Die Abbildung \ref{fig:dynamische_viskositaet_in_abhaengigkeit_vom_druck} zeigt, dass die Viskosität der FVA-Öle im Bereich von \SIrange{0}{200}{\mega\pascal} etwa hundertfach zunimmt.
 % ----------------------------------------
 % Fig: Viskosität - Druck - Verhalte
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/viskositaet_druck.pdf}
-    \caption{Dynamische Viskosität in Abhängigkeit vom Druck}
+    \caption{Dynamische Viskosität der FVA-Referenzöle bei \SI{50}{\degreeCelsius} in Abhängigkeit vom Druck \cite{schilling_1985}}
     \label{fig:dynamische_viskositaet_in_abhaengigkeit_vom_druck}
 \end{figure}
-\improvement[inline]{Figure quelle ???}
 %
-Allerdings verändert sich das Schmiermittel unter dem für die EHD-Kontakte enormen Druck schlagartig.
-Die Viskosität nimmt rapide zu und der Schmierstoff erreicht einem festen Zustand.
+
 Nach Barus kann die Viskosität mit der unteren Formel berechnet werden
 % ----------------------------------------
 % Eq: Viskositätsindex
 % ----------------------------------------
 \begin{equation}
-    \eta = \eta_0 \ exp(\alpha_p  p)
+    \eta = \eta_0 \ exp(\alpha p)
     \label{eq:dynamische_viskositaet_druck_barus}
 \end{equation}
 %
@@ -179,31 +180,56 @@ Für Mineralöle sind diese Parameter ungefähr
 \end{tabular}
 
 Leider liefert die Barus Gleichung einen zu großen Wert beim hohen Druck.
-Eine genauere Gleichung wurde von z.B Roelands\cite{roelands} vorgeschlagen
+Eine genauere Gleichung für die Viskosität bei der Temperatur $\theta$ wurde von Roelands\cite{roelands} vorgeschlagen:
 % ----------------------------------------
 % Eq: Roelands Gleichung
 % ----------------------------------------
 \begin{equation}
-    \eta(p, T) = \eta_0 \ exp \left[ (\ln{\eta_0} + 9,67)
-                              \left( \left( 1 + \frac{p}{p_r} \right) ^z 
-                              \left( \frac{T_0 - 138}{T - 138} \right)^{s_0} -1 \right) \right]
+    \eta_R = \eta_0 \ exp (\alpha^* p)
     \label{eq:dynamische_viskositaet_druck_roelands}
 \end{equation}
 %
 
-Der Druck-Viskositätskoeffizient $\alpha_p$ ist nicht eine Konstante, sondern eine Funktion der Temperatur.
-Diese Abhängigkeit wird in Abbildung~\ref{fig:druckkoeffizient_temperatur} für die Referenzöle der FVA gezeigt.
+Der \textit{Roelands} Druck-Viskositätskoeffizient $\alpha^*$ ist eine Funktion der Druck $p$ und die Temperatur $\theta$ und kann mit Formel \ref{eq:roelands_alpha} berechnet werden:
+% ----------------------------------------
+% Eq: Roelands Druck-Viskositätskoeffizient
+% ----------------------------------------
+\begin{equation}
+    \alpha^* p = [\ln(\eta_0) + 9.67]
+                 \left\{
+                 \left( \cfrac{\theta - 138}{\theta_0 - 138} \right ) ^{-S_0}
+                 \left[
+                     \left ( 1 + \cfrac{p}{p_0} \right ) ^ Z
+                     - 1 
+                 \right]
+                 \right\}
+    \label{eq:roelands_alpha}
+\end{equation}
+%
+wobei $\theta_0$ [\si{\kelvin}] der Raumtemperatur umd $p_0 =$ \SI{1.98e8}{\pascal} eine Konstante ist.
+$Z$ und $S_0$ sind die Konstante für alle Öle, unabhängig von Temperatur und Druck und können durch unteren Formeln \cite{gohar_1988} berechnet werden:
+% ----------------------------------------
+% Eq: Roelands Gleichung Parameters
+% ----------------------------------------
+\begin{align}
+    Z &= \cfrac{\alpha}{5.1 \times 10^9 (\ln(\eta_0) + 9.67)} \\
+    S_0 &= \cfrac{\beta (\theta_0 - 138)}{\ln(\eta_0) + 9.67}
+\end{align}
+%
+$\alpha$ und $\beta$ sind für bekannte Öle gegeben (siehe Tabelle \ref{tab:dynamic_viscosity_and_pressure_exponents_of_some_lubricants} für $\alpha$).
+Zum Berechnungszwecken wird $Z =$ \num{0.68} genommen.
+
+Der Viskositäts-Druck-Koeffizient $\alpha$ ist nicht eine Konstante, sondern eine Funktion der Temperatur.
+Die Abbildung \ref{fig:druckkoeffizient_temperatur} zeigt diese Abhängigkeit im Bereich von \SIrange{0}{2000}{\bar} (Index \num{2000}) mit der Temperatur für die Referenzöle der FVA an.
 % ----------------------------------------
 % Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/visko_druck_koeffizient.pdf}
-    \caption{Verhalten des Druckkoeffizienten in Abhängigkeit von der Temperatur}
+    \caption{Viskositäts-Druck-Koeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur \cite{schilling_1985}}
     \label{fig:druckkoeffizient_temperatur}
 \end{figure}
-\improvement[inline]{Figure quelle ???}
-%
 
 % ----------------------------------------
 % Subsec: Dichte
@@ -213,7 +239,7 @@ Diese Abhängigkeit wird in Abbildung~\ref{fig:druckkoeffizient_temperatur} für
 
 Für eine numerische Schmierfilmdickenmessung ist es notwendig zu wissen, wie sich die Dichte des Schmierstoffes unter verschiedenen Drucken verhält.
 Die Form des Schmierfilms kann nicht richtig berechnet werden, wenn diese Eigenschaft vernachlässigt wird.
-Die Kompressibilität eines Schmierstoffes $C$ ist nach Chu und Cameron mit folgender Formel zu berechnen:
+Die Kompressibilität eines Schmierstoffes $C$ kann nach \textit{Chu} und \textit{Cameron} \cite{chu_1962} so beschrieben werden:
 % ----------------------------------------
 % Eq: Die Kompressibilität eines Schmierstoffes
 % ----------------------------------------
@@ -224,7 +250,7 @@ Die Kompressibilität eines Schmierstoffes $C$ ist nach Chu und Cameron mit folg
 %
 wobei $V$ das Volumen und $dV$ die Änderung des Volumens ist.
 
-Die Dichte der Mineralöle ist nach Hirano\cite{hirano} mit folgender Formel zu berechnen
+Die Dichte der Mineralöle ist nach \textit{Dowson} und \textit{Higginson} \cite{dowson_1966} mit folgender Formel zu berechnen
 % ----------------------------------------
 % Eq: Dichte nach Hirano
 % ----------------------------------------
@@ -251,7 +277,7 @@ wobei $p$ [\si{GPa}] und $\rho_0$ die Dichte beim normalen Luftdruck (\SI{0,87}{
 \label{sub:brechungsindex}
 
 Für die Messverfahren, die auf optischen Interferometrie basieren, braucht man die Abhängigkeit zwischen der Dichte und dem Brechungsindex des Schmierstoffes.
-Nach Gohar wird das Verhältnis mit der Formel\ref{eq:dichte_brechnungsindex} beschrieben.
+Nach \textit{Gohar} \cite{gohar_1966} wird das Verhältnis mit der Formel\ref{eq:dichte_brechnungsindex} beschrieben.
 % ----------------------------------------
 % Eq: Dichte und Brechungsindex
 % ----------------------------------------
@@ -269,7 +295,7 @@ wobei $c$ ein Ölkonstante (zB: SAE30, $c = $ \num{0,33}) und der Brechungsindex
 \label{waermeleitfaehigkeit}
 
 Um die Temperaturerhöhung des Schmierstoffes unter Schubspannung zu schätzen, ist dessen Wärmeleitfähigkeit $k$ nötig.
-Nach Cameron\cite{cameron} kann diese Größe beim normalen Luftdruck mit folgender Formel berechnet werden.
+Nach \textit{Cameron} \cite{cameron} kann diese Größe beim normalen Luftdruck mit folgender Formel berechnet werden.
 % ----------------------------------------
 % Eq: Wärmeleitfähigkeit
 % ----------------------------------------
