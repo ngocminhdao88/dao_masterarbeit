@@ -1,35 +1,43 @@
 \chapter*{Nomenklatur}
 
 \begin{longtable}{>{$}l<{$}cp{12cm}}
-    \textbf{Symbol} & \textbf{Einheit} & \textbf{Bezeichnung}                                         \\
+    \textbf{Symbol}  & \textbf{Einheit}                         & \textbf{Bezeichnung}                                         \\
     \midrule
-    a               & \si{mm}          & Halbachse der Kontaktellipse senkrecht zur Bewegungsrichtung \\
-    b               & \si{mm}          & Halbachse der Kontaktellipse parallel zur Bewegungsrichtung  \\
-    E               & \si{N/mm^2}      & Elastizitätsmodul                                            \\
-    F               & \si{N}           & Normalkraft im Kontaktpunkt                                  \\
-    G               & -                & Werkstoffparameter                                           \\
-    H               & -                & Schmierfilmparameter                                         \\
-    P               & \si{N}           & Belastung im Kontakt                                         \\
-    p               & \si{Gpa}         & Druck im Kontaktpunkt                                        \\
-    p_{0}           & \si{Gpa}         & Maximaldruck im Kontaktpunkt                                 \\
-    r               & \si{mm}          & Krümmungsradius der Kontaktkörper                            \\
-    R               & \si{mm}          & Reziproker Krümmungsradius                                   \\
-    R_{x}           & \si{mm}          & Hauptkrümmungsradius in der Bewegungsebene                   \\
-    S               & -                & Schnittpunkt der Rotationsachsen                             \\
-    S_{B}           & \si{\percent}    & Bohrschlupf                                                  \\
-    U               & -                & Geschwindigkeitsparameter                                    \\
-    u               & \si{mm/s}        & Wälzgeschwindigkeit                                          \\
-    W               & -                & Belastungsparameter                                          \\
-    \alpha{_p}      & -                & Viskositäts-Druck-Koeffizient                                \\
-    \gamma{_1}      & \si{\degree}     & Neigungswinkel der Rotationsachse der Scheibe                \\
-    \gamma{_2}      & \si{\degree}     & Neigungswinkel der Rotationsachse der Kugel                  \\
-    \eta{_0}        & \si{mPa.s}       & Dynamische Viskosität im Kontakteintritt                     \\
-    \kappa          & -                & Verhältnis der Halbachsen der Kontaktellipsen                \\
-    \nu             & -                & Querkontraktionszahl                                         \\
-    \nu             & \si{mm^2/2}      & Kinematische Viskosität                                      \\
-    \rho            & \si{kg/m^3}      & Dichte                                                       \\
-    \varphi         & \si{\degree}     & Winkel zwischen den Hauptebenen                              \\
-    \omega{_b}      & \si{rad/s}       & Bohrwinkelgeschwindigkeit                                    \\
-    \omega{_w}      & \si{rad/s}       & Wälzwinkelgeschwindigkeit                                    \\
+    a                & \si{m}                                   & Halbachse der Kontaktellipse senkrecht zur Bewegungsrichtung \\
+    b                & \si{m}                                   & Halbachse der Kontaktellipse parallel zur Bewegungsrichtung  \\
+    C                & \si{\per\pascal}                         & Kompressibilität                                             \\
+    E                & \si{\newton\per\meter^2}                 & Elastizitätsmodul                                            \\
+    F                & \si{N}                                   & Normalkraft im Kontaktpunkt                                  \\
+    G                & -                                        & Werkstoffparameter                                           \\
+    H                & -                                        & Schmierfilmparameter                                         \\
+    h                & \si{\meter}                              & Schmierfilmdicke                                             \\
+    h_0              & \si{\meter}                              & Minimale Schmierfilmdicke (glatte Oberflächen)               \\
+    n                & -                                        & Brechungsindex                                               \\
+    P                & \si{N}                                   & Belastung im Kontakt                                         \\
+    p                & \si{\pascal}                             & Druck im Kontaktpunkt                                        \\
+    p_{0}            & \si{\pascal}                             & Maximaldruck im Kontaktpunkt                                 \\
+    r                & \si{\meter}                              & Krümmungsradius der Kontaktkörper                            \\
+    R                & \si{\meter}                              & Reziproker Krümmungsradius                                   \\
+    R_{x}            & \si{\meter}                              & Hauptkrümmungsradius in der Bewegungsebene                   \\
+    S                & -                                        & Schnittpunkt der Rotationsachsen                             \\
+    S_{B}            & \si{\percent}                            & Bohrschlupf                                                  \\
+    U                & -                                        & Geschwindigkeitsparameter                                    \\
+    u                & \si[per-mode=symbol]{\meter\per\second}  & Wälzgeschwindigkeit im Schmierfilm                           \\
+    W                & -                                        & Belastungsparameter                                          \\
+    \alpha, \alpha^* & \si{\per\pascal}                         & Druck-Viskosität-Koeffizient                                 \\
+    \beta            & \si{\per\kelvin}                         & Temperatur-Viskosität-Koeffizient                            \\
+    \gamma           & \si{\per\second}                         & Schergefälle                                                 \\
+    \gamma{_1}       & \si{\degree}                             & Neigungswinkel der Rotationsachse der Scheibe                \\
+    \gamma{_2}       & \si{\degree}                             & Neigungswinkel der Rotationsachse der Kugel                  \\
+    \eta             & \si{\pascal.\second}                     & Viskosität                                                   \\
+    \eta{_0}         & \si{\pascal.\second}                     & Viskosität im Kontakteintritt ($p =$ \num{0})                \\
+    \eta{_s}         & \si{\pascal.\second}                     & Viskosität beim Druck $p$ (Barus)                            \\
+    \kappa           & -                                        & Verhältnis der Halbachsen der Kontaktellipsen                \\
+    \nu              & -                                        & Querkontraktionszahl                                         \\
+    \nu              & \si{m^2/2}                               & Kinematische Viskosität                                      \\
+    \rho             & \si{kg/m^3}                              & Dichte                                                       \\
+    \varphi          & \si{\degree}                             & Winkel zwischen den Hauptebenen                              \\
+    \omega{_b}       & \si[per-mode=symbol]{\radian\per\second} & Bohrwinkelgeschwindigkeit                                    \\
+    \omega{_w}       & \si[per-mode=symbol]{\radian\per\second} & Wälzwinkelgeschwindigkeit                                    \\
 \end{longtable}%
 

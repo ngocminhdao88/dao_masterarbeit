@@ -45,33 +45,16 @@ Ein Modell des Parallelplattenversuchs veranschaulicht das Fließverhalten des S
     \label{fig:geschwindigkeitsprofil_parallelplattenversuch}
 \end{figure}
 
-Für eine Newtonsche Flüssigkeit ist das Schergefälle $G = du/dz$ direkt proportional zur der Schubspannung $\tau$.
-Die Konstante $k$ beschreibt die Fluidität der Flüssigkeit.
+Für eine Newtonsche Flüssigkeit wird die Viskosität $\eta$ in einer Beziehung mit der Schubspannung $\tau$ definiert:
 % ----------------------------------------
-% Eq: Schergefälle
-% ----------------------------------------
-\begin{equation}
-    G = k  \tau
-    \label{eq:schergefaelle}
-\end{equation}
-
-Die dynamische Viskosität (oder Viskosität) ist das Verhältnis von der Schubspannung $\tau$ und dem Schergefälle $G$ und ist der Kehrwert der Fluidität $k$.
-% ----------------------------------------
-% Eq: Dynamische Viskosität
+% Eq: Viskosität
 % ----------------------------------------
 \begin{equation}
-    \eta = \frac{1}{k} = \frac{\tau}{G} = \frac{\tau}{du/dz}
-    \label{eq:dynamische_viskositaet}
+    \tau = \eta \cfrac{\partial u}{\partial z} \quad \text{oder} \quad \tau = \eta \dot{\gamma}
+    \label{eq:viskositaet}
 \end{equation}
-
-Mit $\gamma = u/z$ als der Geschwindigkeitsgradient über ein Element des Schmierfilms kann man die Schubspannung $\tau$ in der Abhängigkeit der Viskosität $\eta$ aus der Formel \ref{eq:dynamische_viskositaet} so geschrieben.
-% ----------------------------------------
-% Eq: Schubspannung
-% ----------------------------------------
-\begin{equation}
-    \tau = \eta \cfrac{du}{dz} = \eta \dot{\gamma}
-    \label{eq:schubspannung}
-\end{equation}
+%
+wobei $u$ die Wälzgeschwindigkeit und $\gamma = u/z$ das Schergefälle ist.
 
 
 Die kinematische Viskosität $\nu$ ergibt sich aus der dynamischen Viskosität $\eta$ durch die Division mit der Dichte des Fluids $\rho$. Die wird zur Charakterisierung des Fließverhaltens der Schmieröle verwendet.
@@ -122,15 +105,19 @@ Aus dem Vergleich der kinematischen Viskosität eines zu beschreibenden Öls mit
 \end{equation}
 %
 In der VI-Definition ist angenommen, dass die Veränderung der Viskosität mit der Temperatur von drei Ölen linear ist.
-Die Linearisierung nach Walther (S\'{a}nchez-Rubio, et al.)\cite{sanchez-rubio} wird in der Abbildung~\ref{fig:variation_der_viskositaet_mit_temperatur} für Mineralöle dargestellt.
+Die Linearisierung der kinematischen Viskosität $\nu$ von der Temperatur $\theta$ nach Walther (S\'{a}nchez-Rubio, et al.)\cite{sanchez-rubio} lautet:
 % ----------------------------------------
 % Eq: kinematische Viskosität nach Walther
 % ----------------------------------------
 \begin{equation}
     \label{eq:kinematische_viskotitaet_walther}
-    \log \log(\nu + 0,7) = A + B \log(T)
+    \log \log(\nu + 0,7) = A + B \log(\theta)
 \end{equation}
 %
+
+Durch die Verwendung der doppeltlogarithmischen Koordinaten ergibt sich die Linearisierung für Mineralöle eine Gerade.
+Abbildung \ref{fig:variation_der_viskositaet_mit_temperatur} zeigt ein Beispiel für die SAE-Öle.
+Die Tabelle \ref{tab:esdu_oil_daten} zeigt die Viskosität von verschiedenen Öle bei unterschiedlichen Temperaturen.
 % ----------------------------------------
 % Fig: Naeherungsgleichung der Viskosität-Temperatur nach Walther
 % ----------------------------------------
@@ -140,7 +127,6 @@ Die Linearisierung nach Walther (S\'{a}nchez-Rubio, et al.)\cite{sanchez-rubio} 
     \caption{Variation der Viskosität mit Temperatur}
     \label{fig:variation_der_viskositaet_mit_temperatur}
 \end{figure}
-\improvement[inline]{Walther Linearisierung}
 
 % ----------------------------------------
 % Subsec: Einfluss von Druck auf Viskosität
@@ -252,21 +238,23 @@ wobei $V$ das Volumen und $dV$ die Änderung des Volumens ist.
 
 Die Dichte der Mineralöle ist nach \textit{Dowson} und \textit{Higginson} \cite{dowson_1966} mit folgender Formel zu berechnen
 % ----------------------------------------
-% Eq: Dichte nach Hirano
+% Eq: Dichte nach Dowson und Higginson
 % ----------------------------------------
 \begin{equation}
-    \label{eq:dichte_hirano}
+    \label{eq:dichte_dowson_higginson}
     \rho = \rho_0 \left( 1 + \frac{0,6  p}{1 + 1,7  p} \right)
 \end{equation}
 %
 wobei $p$ [\si{GPa}] und $\rho_0$ die Dichte beim normalen Luftdruck (\SI{0,87}{kg/m^3} bei \SI{20}{\degreeCelsius}) ist.
+Abbildung \ref{fig:variation_der_dichte_bei_verschiedenen_druecke} zeigt einen Plot der Gleichung \ref{eq:dichte_dowson_higginson} für ein Mineralöl, das eine Dichte $\rho_0$ von \num{0.85} bei \SI{40}{\degreeCelsius}.
+Die Punkte stammen aus Versuchen von \textit{Hirano et al} \cite{hirano}.
 % ----------------------------------------
 % Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[width=5cm]{./images/blank_img.jpg}
-    \caption{Variation der Dichte bei verschiedenen Drücke}
+    \caption{Variation der Dichte und des Brechungsindexs bei verschiedenen Drücken \cite{hirano}}
     \label{fig:variation_der_dichte_bei_verschiedenen_druecke}
 \end{figure}
 
@@ -301,10 +289,10 @@ Nach \textit{Cameron} \cite{cameron} kann diese Größe beim normalen Luftdruck 
 % ----------------------------------------
 \begin{equation}
     \label{eq:waermeleitfaehigkeit}
-    k = \frac{0,1173 - 6,33 \times 10^{-5} \ T}{\rho_0}
+    k = \frac{0,1173 - 6,33 \times 10^{-5} \ \theta}{\rho_0}
 \end{equation}
 %
-wobei $T$ [\si{\kelvin}] die absolute Temperatur und $\rho_0$ [\si{kg/m^3}] die Dichte ist.
+wobei $\theta$ [\si{\kelvin}] die absolute Temperatur und $\rho_0$ [\si{kg/m^3}] die Dichte ist.
 
 % ----------------------------------------
 % Subsec: Newtonsche Fluide
