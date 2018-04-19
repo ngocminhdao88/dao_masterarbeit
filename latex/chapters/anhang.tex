@@ -10,6 +10,99 @@
         \end{table}
 
     \chapter{PCS EHD-Prüfstand}
+    \section{Vorgehensweise für Schmierfilmdicken-Messungen}
+        \begin{enumerate}
+            \item PC, Monitor und Bildschirm einschalten
+            \item Ultra.exe starten
+            \item Elektronikeinheit und Lichtquelle einschalten
+            \item Positionen der Temperatursensoren überprüfen
+            \item Messtemperatur aktivieren und einstellen: \\
+                \textit{Control -> Temperature (Regelung auf Pot)}
+            \item gereinigte Kugel und Scheibe einsetzen und mit Rändelschraube sichern
+            \item Spritzschutzdeckel auf dem Topf positionieren
+            \item Linse des Mikroskops auf Verschmutzung überprüfen
+            \item Mikroskop zusammen mit der Lichtquelle montieren
+            \item Last aufbringen (\SI{20}{\newton})
+            \item grünen Kontaktpunkt im Lichtkreis scharf gestellt und zentriert auf den Spalt ausrichten
+            \item \textit{Live} aktivieren
+            \item Bild auf dem Bildschirm scharf stellen und dann ausrichten (Z-Achse)
+            \item wenn kein Schaden auf der Spur erkennbar ist den Messpunkt festlegen: \\
+                \textit{Set -> Trigger Point -> Set Trigger Here}
+            \item Messband festlegen: \textit{Set -> Averaging Band}
+            \item Testparameter eingeben: \textit{Set -> Test Parameter}
+            \item Maximum der 3. Ordnung an den linken Bildschirmrand bringen (Mikrometer ca. \num{0.15})
+            \item Mikrometereinstellung und Ordnung in die Software eingeben
+            \item \textit{Smooth, Peak Fit, Multiple} und \textit{Auto Add} aktivieren und \textit{Multiple} auf \num{3} Widerholung setzen
+            \item Geschwindigkeitsschritte auf \SI{20}{\percent} setzen: \textit{Control -> Speed}
+            \item \textit{Immed} drücken
+            \item Silikatschicht bestimmen: \textit{Set -> Zero Film}, angezeichten Wert notieren
+            \item Last entfernen
+            \item die Scheibe ein Stück weiterdrehen: \textit{Set -> Trigger Point -> Jog} (ca. 5x)
+            \item verminderte Last aufbringen (je nach Öl, ca. \SI{10}{\newton})
+            \item auf \SI[per-mode=symbol]{1.1}{\meter\per\second} beschleunigen und Öl \SI{15}{\minute} durchmischen lassen
+            \item Geschwindigkeit verringern und auf \SI[per-mode=symbol]{0.02}{\meter\per\second} einstellen
+            \item Last auf \SI{20}{\newton} erhöhen
+            \item mit \textit{Trigger} erste Messung beginnen
+            \item nach Ermittlung des ersten Wertes wird die Protokoll-Datei angelegt (Name und Speicherort wählen)
+            \item mit \textit{Trigger} von \SIrange[per-mode=symbol]{0.02}{4.77}{\meter\per\second} zügig weitere Messwerte ermitteln
+            \item erreicht die Ordnung die rechte Bildschirmseite, dann mit Hilfe des Mikrometers zurückschieben oder die nächste Ordnung wählen
+            \item übliche Bereich sind: \\
+                \begin{tabular}{ll}
+                    \SIrange{0}{100}{\nano\meter}       & 3. Ordnung, Mikrometer \num{0.15} \\
+                        \SIrange{100}{150}{\nano\meter} & 3. Ordnung, Mikrometer \num{0.16} \\
+                        ab \SI{150}{\nano\meter}        & 4. Ordnung, Mikrometer \num{0.14} \\
+                                                        & 4. Ordnung, Mikrometer \num{0.16} \\
+                                                        & 5. Ordnung, Mikrometer \num{0.15} \\
+                \end{tabular}
+            \item nach der letzen Messung Geschwindigkeit auf \SI[per-mode=symbol]{0}{\meter\per\second} bringen und Last entfernen
+            \item Scheibe zur Überprüfung des Messpunkts ausrichten: \\
+                \textit{Set Trigger Point -> Go To Trigger Point}
+            \item Last aufbringen (\SI{20}{\newton})
+            \item mit \textit{Immed} den Nullfilm bestimmen und den Wert notieren
+        \end{enumerate}
+
+    \section{Procedure for resetting the ball track micrometer}
+
+    The first requirement is to set the 'preset' position on the micrometer to \SI{39.000}{\milli\meter} (the ball track mid position). Do this as follows:
+
+    Ensure the micrometer is operating with the \si{\mm} scale, press the \si[per-mode=symbol]{\inch\per\mm} button if necessary.
+
+    Press and hold down the preset button, the display will change to show \num{000.000}.
+    Continue to hold down the button until the second digit begins to flash and then release the button.
+    Press and release the button repeatedly.
+    The second digit should count up one each time the button is pressed.
+    When the number \num{3} is reached, press and hold down the button until the third digit starts flashing.
+    Now repeatedly press and release the button until the number 9 is reached.
+    Press and hold down the preset button, so that the fourth, fifth and sixth digit flash in turn and then finally the letter $p$ at the top of the display begins to flash.
+    Now release the button, press and release briefly.
+    The micrometer should now read \SI{39.000}{\mm}.
+
+    The micrometer should now be adjusted to the ball track mid position.
+    To do this slacken the loading system lock and gently screw in the ball track micrometer until the ball carriage (bellows assembly) reaches its inner most position.
+    Note the reading on the micrometer.
+    Now fully unscrew the micrometer, pull out the load system locking bar to ensure the ball carriage is at its most outer position.
+    Tighten the loading system lock and gently screw in the ball track micrometer until it makes contact with the ball carriage slide.
+    Note the reading on the micrometer, it should be approximately \SI{10}{\mm} greater than the previous reading.
+    Now add the two readings together and divide by two, this value $X$ will correspond to the ball track mid position.
+    Adjust the micrometer until it reads $X$.
+    Press and hold down the preset button until \num{039.000} appears with the $p$ flashing.
+    Release the button, press again and release.
+
+    The micrometer should now be reading \SI{39.000}{\mm} in the ball track mid position.
+    This completes the setting of the micrometer.
+    \improvement[inline]{image of the micrometer}
+    % ----------------------------------------
+    % Fig: PCS Micrometer
+    % ----------------------------------------
+    \begin{figure}[htb]
+        \centering
+        \includegraphics[width=4cm]{./images/blank_img.jpg}
+        \caption{Micrometer to set ball assembly's position}
+        \label{fig:micrometer_ball_assembly_position}
+    \end{figure}
+
+
+    \section{PCS EHD-Prüfstand Spezifikationen}
         % ----------------------------------------
         % Table: EHL Prüfstand Spezifikationen
         % ----------------------------------------
