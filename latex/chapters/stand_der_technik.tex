@@ -45,7 +45,7 @@ Ein Modell des Parallelplattenversuchs veranschaulicht das Fließverhalten des S
     \label{fig:geschwindigkeitsprofil_parallelplattenversuch}
 \end{figure}
 
-Für eine Newtonsche Flüssigkeit wird die Viskosität $\eta$ in einer Beziehung mit der Schubspannung $\tau$ definiert:
+Für eine Newtonsche Flüssigkeit wird die Viskosität $\eta$ in einer Beziehung mit der Schubspannung $\tau$ definiert \cite{viscosity_wiki}:
 % ----------------------------------------
 % Eq: Viskosität
 % ----------------------------------------
@@ -67,7 +67,7 @@ Die kinematische Viskosität $\nu$ ergibt sich aus der dynamischen Viskosität $
 \end{equation}
 
 Im Si-Einheitensystem hat die dynamische Viskosität $\eta$ als Einheit \si{N.s/m^2} oder \si{\pascal.\s} und die kinematische Viskosität $\nu$ als Einheit \si{m^2/s}.
-Ein Stoff hat die Viskosität \SI{1}{N.s/m^2}, wenn er sich in zwischen zwei Platten, die die Größe von \SI{1}{m^2} und einen Abstand von einander \SI{1}{m} haben, befindet und man braucht \SI{1}{N}, um die zwei Platten gegeneinander mit einer Geschwindigkeit von \SI{1}{m/s} zu verschieben.
+Ein Stoff hat die Viskosität \SI{1}{N.s/m^2}, wenn er sich in zwischen zwei Platten, die die Größe von \SI{1}{m^2} und einen Abstand von einander \SI{1}{m} haben, befindet und man braucht \SI{1}{N}, um die zwei Platten gegeneinander mit einer Geschwindigkeit von \SI{1}{m/s} zu verschieben \cite{viscosity_wiki}.
 
 \subsection*{Temperatureffekt}
 \label{sub:temperatureffekt}
@@ -75,7 +75,7 @@ Die Temperatur hat eine große Effekt auf die Viskosität aller fließfähigen S
 Mit steigender Temperatur sinkt die Viskosität der Flüssigkeiten ab.
 Diese Effekt kann experimentell mittels eines Viskosimeters und rechnerisch nach \textit{Crouch} und \textit{Cameron} \cite{crouch_1961} bestimmt werden.
 
-Die einfachste Gleichung, die beschreibt die Temperatureffekt auf die Viskosität, nach Reynolds \cite{reynolds_1886} lautet:
+Die einfachste Gleichung, die beschreibt die Temperatureffekt auf die Viskosität, nach \textit{Reynolds} \cite{reynolds_1886} lautet:
 % ----------------------------------------
 % Eq: Dynamische Viskosität nach Reynold
 % ----------------------------------------
@@ -105,7 +105,7 @@ Aus dem Vergleich der kinematischen Viskosität eines zu beschreibenden Öls mit
 \end{equation}
 %
 In der VI-Definition ist angenommen, dass die Veränderung der Viskosität mit der Temperatur von drei Ölen linear ist.
-Die Linearisierung der kinematischen Viskosität $\nu$ von der Temperatur $\theta$ nach Walther (S\'{a}nchez-Rubio, et al.)\cite{sanchez-rubio} lautet:
+Die Linearisierung der kinematischen Viskosität $\nu$ von der Temperatur $\theta$ nach \textit{Walther (S\'{a}nchez-Rubio, et al.)} \cite{sanchez-rubio} lautet:
 % ----------------------------------------
 % Eq: kinematische Viskosität nach Walther
 % ----------------------------------------
@@ -119,12 +119,12 @@ Durch die Verwendung der doppeltlogarithmischen Koordinaten ergibt sich die Line
 Abbildung \ref{fig:variation_der_viskositaet_mit_temperatur} zeigt ein Beispiel für die SAE-Öle.
 Die Tabelle \ref{tab:esdu_oil_daten} zeigt die Viskosität von verschiedenen Öle bei unterschiedlichen Temperaturen.
 % ----------------------------------------
-% Fig: Naeherungsgleichung der Viskosität-Temperatur nach Walther
+% Fig: Variation der Viskosität mit der Temperatur
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=5cm]{./images/blank_img.jpg}
-    \caption{Variation der Viskosität mit Temperatur}
+    \includegraphics[]{./images/visko_temperatur.pdf}
+    \caption{Variation der Viskosität mit Temperatur \cite{gohar_1988}}
     \label{fig:variation_der_viskositaet_mit_temperatur}
 \end{figure}
 
@@ -148,7 +148,7 @@ Die Abbildung \ref{fig:dynamische_viskositaet_in_abhaengigkeit_vom_druck} zeigt,
 \end{figure}
 %
 
-Nach Barus kann die Viskosität mit der unteren Formel berechnet werden
+Nach \textit{Barus} \cite{cameron_1966} kann die Viskosität mit der unteren Formel berechnet werden
 % ----------------------------------------
 % Eq: Viskositätsindex
 % ----------------------------------------
@@ -157,16 +157,16 @@ Nach Barus kann die Viskosität mit der unteren Formel berechnet werden
     \label{eq:dynamische_viskositaet_druck_barus}
 \end{equation}
 %
-wobei $\eta_0$ die Viskosität beim Atmosphärendruck und $\alpha_p$ der Druck-Viskositätskoeffizient  ist.
+wobei $\eta_0$ die Viskosität beim Atmosphärendruck ($p =  0$) und $\alpha_p$ der Druck-Viskosität-Koeffizient  ist.
 Für Mineralöle sind diese Parameter ungefähr
 
 \begin{tabular}{lll}
     \num{0,001} $\rightarrow$ \num{0,1} & für & $\eta_0$ [\si{\pascal.\second}] \\
-    \num{0} $\rightarrow$ \num{2.0e-8}  & für & $\alpha_p$ [\si{\per\pascal}]
+    \num{0} $\rightarrow$ \num{2.0e-8}  & für & $\alpha$ [\si{\per\pascal}]
 \end{tabular}
 
-Leider liefert die Barus Gleichung einen zu großen Wert beim hohen Druck.
-Eine genauere Gleichung für die Viskosität bei der Temperatur $\theta$ wurde von Roelands\cite{roelands} vorgeschlagen:
+Leider liefert die Gleichung von \textit{Barus} einen zu großen Wert beim hohen Druck.
+Eine genauere Gleichung für die Viskosität bei der Temperatur $\theta$ wurde von \textit{Roelands} \cite{roelands} vorgeschlagen:
 % ----------------------------------------
 % Eq: Roelands Gleichung
 % ----------------------------------------
@@ -198,8 +198,8 @@ $Z$ und $S_0$ sind die Konstante für alle Öle, unabhängig von Temperatur und 
 % Eq: Roelands Gleichung Parameters
 % ----------------------------------------
 \begin{align}
-    Z &= \cfrac{\alpha}{5.1 \times 10^9 (\ln(\eta_0) + 9.67)} \\
-    S_0 &= \cfrac{\beta (\theta_0 - 138)}{\ln(\eta_0) + 9.67}
+    Z &= \cfrac{\alpha}{5.1 \times 10^9 (\log(\eta_0) + 9.67)} \\
+    S_0 &= \cfrac{\beta (\theta_0 - 138)}{\log(\eta_0) + 9.67}
 \end{align}
 %
 $\alpha$ und $\beta$ sind für bekannte Öle gegeben (siehe Tabelle \ref{tab:esdu_oil_daten} für $\alpha$).
@@ -246,15 +246,15 @@ Die Dichte der Mineralöle ist nach \textit{Dowson} und \textit{Higginson} \cite
 \end{equation}
 %
 wobei $p$ [\si{GPa}] und $\rho_0$ die Dichte beim normalen Luftdruck (\SI{0,87}{kg/m^3} bei \SI{20}{\degreeCelsius}) ist.
-Abbildung \ref{fig:variation_der_dichte_bei_verschiedenen_druecke} zeigt einen Plot der Gleichung \ref{eq:dichte_dowson_higginson} für ein Mineralöl, das eine Dichte $\rho_0$ von \num{0.85} bei \SI{40}{\degreeCelsius}.
-Die Punkte stammen aus Versuchen von \textit{Hirano et al} \cite{hirano}.
+Abbildung \ref{fig:variation_der_dichte_bei_verschiedenen_druecke} zeigt einen Plot der Gleichung \ref{eq:dichte_dowson_higginson} für ein Mineralöl, das eine Dichte $\rho_0$ von \num{0.85} bei \SI{40}{\degreeCelsius} hat.
+Die Messpunkte $\triangle$ stammen aus Versuchen von \textit{Hirano et al} \cite{hirano}.
 % ----------------------------------------
 % Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=5cm]{./images/blank_img.jpg}
-    \caption{Variation der Dichte und des Brechungsindexs bei verschiedenen Drücken \cite{hirano}}
+    \includegraphics[]{./images/dichte_brechungsindex_temperatur.pdf}
+    \caption{Variation der Dichte und des Brechungsindexs bei verschiedenen Drücken \cite{gohar_1988}}
     \label{fig:variation_der_dichte_bei_verschiedenen_druecke}
 \end{figure}
 
@@ -271,10 +271,12 @@ Nach \textit{Gohar} \cite{gohar_1966} wird das Verhältnis mit der Formel\ref{eq
 % ----------------------------------------
 \begin{equation}
     \label{eq:dichte_brechnungsindex}
-    c  p = \frac{n^2 - 1}{n^2 + 2}
+    c\rho = \frac{n^2 - 1}{n^2 + 2}
 \end{equation}
 %
-wobei $c$ ein Ölkonstante (zB: SAE30, $c = $ \num{0,33}) und der Brechungsindex für die meisten Mineralöle bei normalen Luftdruck c.a \num{1.51} ist.
+wobei $c$ ein Ölkonstante (zB: SAE-30, $c = $ \num{0.33}) ist.
+Der Brechungsindex beträgt für die meisten Mineralöle bei normalen Luftdruck c.a \num{1.51} ist.
+Die Abhängigkeit des Brechungsindexs von dem Druck für das Öl SAE-30 wird auch in die Abbildung \ref{fig:variation_der_dichte_bei_verschiedenen_druecke} angezeigt.
 
 % ----------------------------------------
 % Subsec: Wärmeleitfähigkeit
@@ -283,7 +285,7 @@ wobei $c$ ein Ölkonstante (zB: SAE30, $c = $ \num{0,33}) und der Brechungsindex
 \label{waermeleitfaehigkeit}
 
 Um die Temperaturerhöhung des Schmierstoffes unter Schubspannung zu schätzen, ist dessen Wärmeleitfähigkeit $k$ nötig.
-Nach \textit{Cameron} \cite{cameron} kann diese Größe beim normalen Luftdruck mit folgender Formel berechnet werden.
+Nach \textit{Cameron} \cite{cameron_1966} kann diese Größe beim normalen Luftdruck mit folgender Formel berechnet werden.
 % ----------------------------------------
 % Eq: Wärmeleitfähigkeit
 % ----------------------------------------
@@ -492,7 +494,7 @@ Abbildung~\ref{fig:konforme_kontraforme_kontakte} zeigt die Beispiele konforme u
 %
 Gegenteil zu den konformen Kontakten, wo die Pressungen in der Größenordnung von \SI{10}{\mega\pascal} auftreten, können in zwischen den Laufflächen nichtkonformer Kontakt die Druckspannungen \SI{0.5}{\giga\pascal} und höher betragen.
 Durch die enorme, konzentrierte Belastung werden die Flächen an dem Kontaktpunkt elastisch verformt und vergrößert.
-Im Folgenden soll der Wälzkontakt nach Wisniewski\cite{wisniewski} näher betrachtet werden.
+Im Folgenden soll der Wälzkontakt nach \textit{Wisniewski} \cite{wisniewski} näher betrachtet werden.
 
 \subsection{Kontakt von beliebig gekrümmten Elementen}
 \label{sub:kontakt_von_beliebig_gekruemmten_elementen}
@@ -598,8 +600,8 @@ Für ein Kugel-Scheibe-Modell gilt
 \section{Schmierfilmdicke nach Hamrock und Dowson}
 \label{sec:schmierfilmdicke_nach_hamrock_und_dowson}
 
-Die Berechnung der Schmierfilmhöhe bei EHD-Schmierung wurde von vielen Autoren behandelt und ihre Ergebnisse wurden von Dowson und Higginson mit numerischer Unterstützung bestätigt.
-Nach Dowson und Higginson kann die Schmierfilmdicke durch vier dimensionslose Größe ermittelt werden.
+Die Berechnung der Schmierfilmhöhe bei EHD-Schmierung wurde von vielen Autoren behandelt und ihre Ergebnisse wurden von \textit{Dowson und Higginson} mit numerischer Unterstützung bestätigt.
+Nach \textit{Dowson und Higginson} kann die Schmierfilmdicke durch vier dimensionslose Größe ermittelt werden.
 % ----------------------------------------
 % Eq: Allgemein Schmierfilmdicke
 % ----------------------------------------
@@ -608,7 +610,7 @@ Nach Dowson und Higginson kann die Schmierfilmdicke durch vier dimensionslose Gr
     H = k G^{\alpha} U^{\beta} W^{\gamma}
 \end{equation}
 %
-wobei
+mit:
 
 % ----------------------------------------
 % List: Parameter zur Berechnung der Schmierfilmdicke
