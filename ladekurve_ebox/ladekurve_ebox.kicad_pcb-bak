@@ -113,7 +113,7 @@
     (descr "Through hole angled pin header, 1x05, 3.81mm pitch, 6mm pin length, single row")
     (tags "Through hole angled pin header THT 1x05 3.81mm single row")
     (path /5ACE6220)
-    (fp_text reference J1 (at 4.385 -2.54) (layer F.SilkS)
+    (fp_text reference J1 (at -4.445 -0.635) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value NI_Connector (at 4.385 19.05) (layer F.Fab)
