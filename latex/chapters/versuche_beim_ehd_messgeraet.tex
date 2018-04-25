@@ -4,33 +4,7 @@
 \chapter{Versuche auf dem EHD-Messgerät}
 \label{chap:versuche_auf_dem_ehd_messgeraet}
 
-% ----------------------------------------
-% Sec: Versuchte Öle
-% ----------------------------------------
-\section{Versuchte Öle}
-\label{sec:versuchte_oele}
-
-Um die Funktionsfähigkeit des neuen Messsystem zu überprüfen, wird es mit verschiedenen Schmierstoffe getestet.
-
-\paragraph{Schmierstoff 1}
-\label{par:schmierstoff_1}
-
-\begin{itemize}
-    \item Firma
-    \item Grund für das Öl
-    \item Anwendungsbereiche
-    \item technische Daten, kinematische Viskosität bei 40 und 100 Grad Celsius
-\end{itemize}
-
-\paragraph{Schmierstoff 2}
-\label{par:schmierstoff_2}
-
-\begin{itemize}
-    \item Firma
-    \item Grund für das Öl
-    \item Anwendungsbereiche
-    \item technische Daten, kinematische Viskosität bei 40 und 100 Grad Celsius
-\end{itemize}
+\improvement[inline]{Sagen, dass die Schmierfilmdickenmessung auch mit optisch ausgeführt wird.}
 
 % ----------------------------------------
 % Sec: Kapazitive Messgeräte zur Schmierfilmdickenbestimmung
@@ -156,13 +130,48 @@ Abbildung \ref{fig:messprobe_eines_mit_dem_lcr_meter} zeigt das Messergebnis bei
     \label{fig:messprobe_eines_mit_dem_lcr_meter}
 \end{figure}
 
-\improvement[inline]{Update the figure}
+\improvement[inline]{Update the measurements LCR-Meter}
+
+% ----------------------------------------
+% Sec: Versuchte Öle
+% ----------------------------------------
+\section{Versuchte Öle}
+\label{sec:versuchte_oele}
+
+Um die Funktionsfähigkeit des neuen Messsystem zu überprüfen, wird es mit das Referenzöl \textit{FVA3} getestet.
+
+\paragraph{Schmierstoff 1}
+\label{par:schmierstoff_1}
+
+\begin{itemize}
+    \item Firma
+    \item Grund für das Öl
+    \item Anwendungsbereiche
+    \item technische Daten, kinematische Viskosität bei 40 und 100 Grad Celsius
+\end{itemize}
+
+\paragraph{Schmierstoff 2}
+\label{par:schmierstoff_2}
+
+\begin{itemize}
+    \item Firma
+    \item Grund für das Öl
+    \item Anwendungsbereiche
+    \item technische Daten, kinematische Viskosität bei 40 und 100 Grad Celsius
+\end{itemize}
 
 % ----------------------------------------
 % Sec: Versuchdurchführung
 % ----------------------------------------
 \section{Versuchdurchführung}
 \label{sec:versuchdurchfuehrung}
+
+Da die Auswertung der Schmierfilmdicke in dieser Arbeit optisch und elektrisch geschieht wird, ist die Sauberkeit vor dem Beginn einer Messung besonders wichtig zu achten.
+Die Glasscheibe, die Kugel, das Kugelsupport und das Ölreservoir müssen vor jeder Messung mit Waschbenzin oder Isopropanol gereinigt werden und dürfen keine Schlieren aufweisen.
+
+Zur Messung bei Öl-Vollschmierung wird das Ölreservoir bis zur Hälfte der Kugel (ca. \SI{120}{\ml}) gefüllt.
+Das Ölbad wird vor jeder Messreihe während des Heizvorgangs für ca. \SI{10}{\minute} durchmischt, um eine homogene Temperatur im Ölbad beim Versuch zu herrschen.
+Das genaue Vorgehen einer solchen Messung wurde von \textit{Surborg} in seiner Arbeit \cite{surborg_2007} beschrieben und ist im Anhang zu finden.
 
 Kapazitätsmessung der Messkette (Kabel -> Kugel, Scheibe) mit LCR-Meter
 
@@ -175,8 +184,19 @@ Test parameters für den LCR-Meter
 Test parameters für den EHD-Prüfstand (Geschwindigkeit, Last, Temperatur).
 Berechnung der Pressung im Kontakt
 
-Ziel des Versuchs?
 \begin{itemize}
     \item Korrelation zwischen optischer und kapazitiver Messmethode
     \item Einfluß von Temperatur, Geschwindigkeit und Schlupf auf die Messwerte
 \end{itemize}
+
+Die Last von \SI{20}{\newton} wird in Anlehnung an vorherigen Arbeiten gewählt.
+Nach dem Abschnitt \ref{sec:betrachtung_des_ehd_kontaktes} lässt es sich für den hier betrachteten Fall eines Kugel-Scheibe-Modells eine maximale Pressung im Kontakt $p_0 =$ \SI{505}{\mega\pascal} berechnen.
+Damit liegt der Kontakt im unteren Bereich der EHD-Schmierung.
+Diese geringe Last ist gut, somit wird die Gefahr von Beschädigung auf der Scheibe bzw. der Silikatschicht gering gehalten.
+
+Die Versuchparameter aller Messungen in dieser Arbeit werden in der Tabelle \ref{tab:ehd_test_params} zusammengefasst.
+% ----------------------------------------
+% Tab: Versuchsparameters am EHD-Prüfstand
+% ----------------------------------------
+\input{./tables/ehd_test_params.tex}
+
