@@ -1,0 +1,10 @@
+Nr  Temp Load Oil  Note
+001 40   20   FVA3
+002 60   20   FVA3
+003 40   20   FVA3
+004 40   10   FVA3
+005 40   20   SHC320
+006 23   20   FVA3
+007 23   20   FVA3
+008 40   20   FVA3 optical
+009 80   20   FVA3
