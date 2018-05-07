@@ -137,29 +137,46 @@ Abbildung \ref{fig:messprobe_eines_mit_dem_lcr_meter} zeigt das Messergebnis bei
 % ----------------------------------------
 \section{Versuchdurchführung}
 \label{sec:versuchdurchfuehrung}
+\improvement[inline]{Schreiben der Versuchdurchführung}
 
-\begin{itemize}
-    \item Kapazitätsmessung der Messkette (Kabel -> Kugel, Scheibe) mit LCR-Meter.
-        Hintergrund-Kapazitätsmessung, um die Störung von anderen elektronischen Geräten zu bestimmen.
-    \item Test parameters für das Ladekurve-System.
-        Test parameters für den LCR-Meter
-    \item Test parameters für den EHD-Prüfstand (Geschwindigkeit, Last, Temperatur).
-        Berechnung der Pressung im Kontakt
-    \item Ziel??? Korrelation zwischen optischer und kapazitiver Messmethode.
-        Einfluß von Temperatur, Geschwindigkeit und Schlupf auf die Messwerte
-\end{itemize}
+In dieser Arbeit werden die Versuche mit dem Versuchsöl \textit{FVA3} wie folgt geplant:
+% ----------------------------------------
+% Enum: Versuchsplan
+% ----------------------------------------
+\begin{enumerate}
+    \item Vergleichsmessungen von neu modifizierten Bauteilen (Kugel, Support, Glasscheibe) mit den von \textit{PCS}
+    \item Schmierfilmdickenmessung am EHD-Gerät (optisch)
+    \item Schmierfilmdickenmessung mit dem mobilen Messsystem von IMKT (elektrisch)
+    \item Vergleich der theoretischen Schmierfilmdickenbestimmung mit 2. und 3. zur Überprüfung des Messverfahrens
+\end{enumerate}
 
 Da die Auswertung der Schmierfilmdicke in dieser Arbeit optisch und elektrisch geschieht wird, ist die Sauberkeit vor dem Beginn einer Messung besonders wichtig zu achten.
 Die Glasscheibe, die Kugel, das Kugelsupport und das Ölreservoir müssen vor jeder Messung mit Waschbenzin oder Isopropanol gereinigt werden und dürfen keine Schlieren aufweisen.
+Nach der Reinigung können das Support und die Kugel in das Gerät eingesetzt werden.
+Die Führung der Kugel wird zuerst in die Ausgangswelle des zweiten Motors eingesteckt und dann auf das Support aufgelegt.
+Die Kabel sollen Abstand von den Wände des Reservoirs und der Motorwelle gehalten werden, um ein Unfall (Kurzschluss der Kugel, Verfangen des Kabels) während des Betriebs zu vermeiden.
+Die Abbildung \ref{fig:ehd_topf_mit_kugel_und_support} zeigt den Blick von oben des EHD-Prüftopfs mit montierten Support und aufgelegter Kugel bereits für den Versuch.
+% ----------------------------------------
+% Fig: EHD-Prüftopf mit montierten Support und Modifizierter Kugelführung
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{./images/ehd_topf_mit_kugel_und_support.jpg}
+    \caption{Topf des EHD-Geräts mit montierten neuen Kugelsupport und der Modifizierter Kugelführung}
+    \label{fig:ehd_topf_mit_kugel_und_support}
+\end{figure}
 
-Zur Messung bei Öl-Vollschmierung wird das Ölreservoir bis zur Hälfte der Kugel (ca. \SI{120}{\ml}) gefüllt.
-Das Ölbad wird vor jeder Messreihe während des Heizvorgangs für ca. \SI{10}{\minute} durchmischt, um eine homogene Temperatur im Ölbad beim Versuch zu herrschen.
-Das genaue Vorgehen einer solchen Messung wurde von \textit{Surborg} in seiner Arbeit \cite{surborg_2007} beschrieben und ist im Anhang zu finden.
+Der Widerstand der gesamten Messkette (Kabel -> Scheibe -> Kugel -> Kabel) wird vor jedem Versuch im Stillstand unter einer Last von \SI{20}{\newton} vermessen und er betrug zwischen \SIrange{17}{18}{\ohm}.
+Neben dem Widerstand wird die Hintergrund-Kapazität des Prüfstands auch gemessen, weil dieser Wert als Störkapazität bezeichnet wird und soll von der Ergebnissen beseitigt werden.
 
 Die Last von \SI{20}{\newton} wird in Anlehnung an vorherigen Arbeiten gewählt.
 Nach dem Abschnitt \ref{sec:betrachtung_des_ehd_kontaktes} lässt es sich für den hier betrachteten Fall eines Kugel-Scheibe-Modells eine maximale Pressung im Kontakt $p_0 =$ \SI{505}{\mega\pascal} berechnen.
 Damit liegt der Kontakt im unteren Bereich der EHD-Schmierung.
 Diese geringe Last ist gut, somit wird die Gefahr von Beschädigung auf der Scheibe bzw. der Silikatschicht gering gehalten.
+
+Zur Messung bei Öl-Vollschmierung wird das Ölreservoir bis zur Hälfte der Kugel (ca. \SI{120}{\ml}) gefüllt.
+Das Ölbad wird vor jeder Messreihe während des Heizvorgangs (bei \SI{40}{\degreeCelsius}, \SI{60}{\degreeCelsius} und \SI{80}{\degreeCelsius}) für ca. \SI{10}{\minute} durchmischt, um eine homogene Temperatur im Ölbad beim Versuch zu herrschen.
+Das genaue Vorgehen einer solchen Messung wurde von \textit{Surborg} in seiner Arbeit \cite{surborg_2007} beschrieben und ist im Anhang zu finden.
 
 Die Versuchparameter aller Messungen in dieser Arbeit werden in der Tabelle \ref{tab:ehd_test_params} zusammengefasst.
 % ----------------------------------------
