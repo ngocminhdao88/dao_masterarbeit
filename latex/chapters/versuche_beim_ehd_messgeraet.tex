@@ -119,18 +119,16 @@ Unterschiedliche Werte für $R_1$ und $C_1$ wurden verwendet, um deren Einfluß 
 Ein Erhöhung des Widerstandswertes führt zu einer signifikanten Abnahme der Messergebnisse und umgekehrt.
 Dieses Phänomen kann durch die Abnahme bzw. Zunahme des Stromflusses durch den EHD-Kontakt erklärt werden.
 Die Werte $R_1 = 2$ \si{\kilo\ohm} und $C_1 = 24$ \si{\pico\farad} wurden durch Experiment für weitere Messungen in dieser Arbeit gewählt.
-Abbildung \ref{fig:messprobe_eines_mit_dem_lcr_meter} zeigt das Messergebnis beim Referenz-Kondensator (\SI{3.3}{\nano\F}) mit dem LCR-Messgerät bei verschiedenen Frequenzen.
+Abbildung \ref{fig:lcr_ebox_capacitance} zeigt die Kapazitätsmessung des E-Box (offen) mit dem LCR-Messgerät bei verschiedenen Frequenzen.
 % ----------------------------------------
 % Fig: Messprobe mit 24 pF mit dem LCR-Meter
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[]{./images/messprobe_mit_lcr_meter.pdf}
-    \caption{Messergebnis eines Referenz-Kondensators mit dem LCR-Messgerät}
-    \label{fig:messprobe_eines_mit_dem_lcr_meter}
+    \includegraphics[width=0.5\linewidth]{./images/lcr_ebox_capacitance.jpg}
+    \caption{Kapazitätsmessung des E-Box mit dem LCR-Messgerät}
+    \label{fig:lcr_ebox_capacitance}
 \end{figure}
-
-\improvement[inline]{Update the measurements LCR-Meter}
 
 % ----------------------------------------
 % Sec: Versuchdurchführung
@@ -152,6 +150,7 @@ In dieser Arbeit werden die Versuche mit dem Versuchsöl \textit{FVA3} wie folgt
 
 Da die Auswertung der Schmierfilmdicke in dieser Arbeit optisch und elektrisch geschieht wird, ist die Sauberkeit vor dem Beginn einer Messung besonders wichtig zu achten.
 Die Glasscheibe, die Kugel, das Kugelsupport und das Ölreservoir müssen vor jeder Messung mit Waschbenzin oder Isopropanol gereinigt werden und dürfen keine Schlieren aufweisen.
+
 Nach der Reinigung können das Support und die Kugel in das Gerät eingesetzt werden.
 Die Führung der Kugel wird zuerst in die Ausgangswelle des zweiten Motors eingesteckt und dann auf das Support aufgelegt.
 Die Kabel sollen Abstand von den Wände des Reservoirs und der Motorwelle gehalten werden, um ein Unfall (Kurzschluss der Kugel, Verfangen des Kabels) während des Betriebs zu vermeiden.
@@ -166,17 +165,50 @@ Die Abbildung \ref{fig:ehd_topf_mit_kugel_und_support} zeigt den Blick von oben 
     \label{fig:ehd_topf_mit_kugel_und_support}
 \end{figure}
 
-Der Widerstand der gesamten Messkette (Kabel -> Scheibe -> Kugel -> Kabel) wird vor jedem Versuch im Stillstand unter einer Last von \SI{20}{\newton} vermessen und er betrug zwischen \SIrange{17}{18}{\ohm}.
-Neben dem Widerstand wird die Hintergrund-Kapazität des Prüfstands auch gemessen, weil dieser Wert als Störkapazität bezeichnet wird und soll von der Ergebnissen beseitigt werden.
+Die Bestimmung des Messpunkts für die optische Messung erfolgt zuerst auf der nicht beschichteten Seite der Scheibe.
+Da nach wird die Scheibe \SI{180}{\degree} auf der Cr-Seite gedreht, um der Widerstand der gesamten Messkette (Kabel -> Scheibe -> Kugel -> Kabel) unter einer Last von \SI{20}{\newton} zu vermessen.
+Er ist von dem Radius der Fahrspur abhängig und beträgt ungefähr \SIrange{17}{18}{\ohm}.
+Die Suche nach dem Messpunkt passiert beim leeren Reservoir, weil ein sauberer Kontakt zwischen Scheibe und Kugel für die Bestimmung der Höhe des Spacer-Layers nötig ist.
+Außerdem darf man nur das Spurwechseln beim leeren Zustand machen, weil das Verlaufen des Öles über die Lasteinheit in mechanischen Baukasten zum Schaden führen kann.
+Man sollte die Spur von außen nach innen wechseln, um die Entstehung der Insel, die elektronisch zu den Elektroden (Kupferstreifen) isoliert sind, zu vermeiden.
+Danach kann man das Öl mit der Hilfe einem Trichter befüllen und den Prüftopf mit dem Deckel zu machen.
+Abbildung \ref{fig:ehd_kontakt} zeigt den gut auswertbaren und schlechten EHD-Kontakte an.
+% ----------------------------------------
+% Fig: Bestimmung des Messpunkts
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{./images/ehd_kontakt.jpg}
+    \caption{EHD-Kontakt: gut auswertbarer Kontakt (rechts); schlechter Kontakt (links)}
+    \label{fig:ehd_kontakt}
+\end{figure}
+
+Zur Messung bei Öl-Vollschmierung wird das Ölreservoir bis zur Hälfte der Kugel (ca. \SI{120}{\ml}) gefüllt.
+Das Ölbad wird vor jeder Messreihe während des Heizvorgangs (bei \SI{40}{\degreeCelsius}, \SI{60}{\degreeCelsius} und \SI{80}{\degreeCelsius}) für ca. \SI{10}{\minute} durchmischt, um eine homogene Temperatur im Ölbad beim Versuch zu herrschen.
+Das genaue Vorgehen einer solchen Messung wurde von \textit{Surborg} in seiner Arbeit \cite{surborg_2007} beschrieben und ist im Anhang zu finden.
+
+Neben dem Widerstand des Kontakts wird die Hintergrund-Kapazität des Prüfstands auch gemessen.
+Dieser Wert wird als Störkapazität bezeichnet und soll von der Ergebnissen beseitigt werden.
 
 Die Last von \SI{20}{\newton} wird in Anlehnung an vorherigen Arbeiten gewählt.
 Nach dem Abschnitt \ref{sec:betrachtung_des_ehd_kontaktes} lässt es sich für den hier betrachteten Fall eines Kugel-Scheibe-Modells eine maximale Pressung im Kontakt $p_0 =$ \SI{505}{\mega\pascal} berechnen.
 Damit liegt der Kontakt im unteren Bereich der EHD-Schmierung.
 Diese geringe Last ist gut, somit wird die Gefahr von Beschädigung auf der Scheibe bzw. der Silikatschicht gering gehalten.
 
-Zur Messung bei Öl-Vollschmierung wird das Ölreservoir bis zur Hälfte der Kugel (ca. \SI{120}{\ml}) gefüllt.
-Das Ölbad wird vor jeder Messreihe während des Heizvorgangs (bei \SI{40}{\degreeCelsius}, \SI{60}{\degreeCelsius} und \SI{80}{\degreeCelsius}) für ca. \SI{10}{\minute} durchmischt, um eine homogene Temperatur im Ölbad beim Versuch zu herrschen.
-Das genaue Vorgehen einer solchen Messung wurde von \textit{Surborg} in seiner Arbeit \cite{surborg_2007} beschrieben und ist im Anhang zu finden.
+Nachdem die Höhe des Spacer-Layers bestimmt wurde, wird die Scheibe ein Stück weiter gedreht und auf etwa \SI[per-mode=symbol]{100}{\mm\per\second} beschleunigt.
+Während dieser Einlaufphase wird ständig das Live Bild auf dem SW-Monitor beobachtet.
+Sobald sich ein klarer, gut messbarer Verlauf abzeichnet (siehe Abbildung \ref{fig:ehd_live_bild}), kann man mit der Messung begonnen werden.
+Wichtig ist, dass man die Messungen zügig machen soll, um die Beschädigung der Chromschicht und Silikatschicht zu vermeiden.
+% ----------------------------------------
+% Fig: Schlechtes und gutes Live Bild
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{./images/ehd_live_bild.jpg}
+    \caption{Live Bild: nicht verwertbarer Verlauf (links); guter Verlauf (rechts)}
+    \label{fig:ehd_live_bild}
+\end{figure}
+
 
 Die Versuchparameter aller Messungen in dieser Arbeit werden in der Tabelle \ref{tab:ehd_test_params} zusammengefasst.
 % ----------------------------------------

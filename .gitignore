@@ -58,3 +58,6 @@
 
 ## Media files
 *.mp[0-9]*
+
+# Big file
+*.cag
