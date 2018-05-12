@@ -1,5 +1,8 @@
 \begin{appendices}
     \chapter{Öldaten}
+    % ----------------------------------------
+    % Chap: Oil daten
+    % ----------------------------------------
         % ----------------------------------------
         % Table: Oil daten
         % ----------------------------------------
@@ -10,7 +13,14 @@
         \end{table}
 
     \chapter{PCS EHD-Prüfstand}
+    % ----------------------------------------
+    % Chap: PCS EHD-Prüfstand
+    % ----------------------------------------
+
     \section{Vorgehensweise für Schmierfilmdicken-Messungen \cite{surborg_2007}}
+    % ----------------------------------------
+    % Sec: Schmierfilmdickemessung procedure
+    % ----------------------------------------
         \begin{enumerate}
             \item PC, Monitor und Bildschirm einschalten
             \item Ultra.exe starten
@@ -62,7 +72,9 @@
         \end{enumerate}
 
     \section{Procedure for resetting the ball track micrometer}
-
+    % ----------------------------------------
+    % Sec: Set ball track
+    % ----------------------------------------
     The first requirement is to set the 'preset' position on the micrometer to \SI{39.000}{\milli\meter} (the ball track mid position). Do this as follows:
 
     Ensure the micrometer is operating with the \si{\mm} scale, press the \si[per-mode=symbol]{\inch\per\mm} button if necessary.
@@ -101,11 +113,38 @@
     \end{figure}
 
 
+    \section{Rauheitsmessung der halben beschichteten Glasscheibe}
+    % ----------------------------------------
+    % Sec: Rauheitsmessung der halben beschichteten Glasscheibe
+    % ----------------------------------------
+    \begin{minipage}[c]{0.5\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{./images/rauheitsmessung.pdf}
+        \captionof{figure}{Messstelle zur Rauheitsbestimmung}
+        \label{fig:messstelle_zur_rauheitsbestimmung}
+    \end{minipage}
+    %
+    \begin{minipage}[c]{0.5\linewidth}
+        \input{./tables/rauheitsmessung.tex}
+        \captionof{table}{Rauheit der Scheibe}
+    \end{minipage}
+
+    % ----------------------------------------
+    % Fig: Rauheitsmessung über die Risse auf der beschichteten Seite
+    % ----------------------------------------
+    \begin{figure}[htb]
+        \centering
+        \includegraphics[width=\linewidth]{./images/rauheit_messung_21_plot.jpg}
+        \caption{Rauheitsmessung über die Risse zur Bestimmung der Dicke der Cr-Beschichtung}
+        \label{fig:rauheitsmessung_ueber_der_risse}
+    \end{figure}
+
     \section{PCS EHD-Prüfstand Spezifikationen}
-        % ----------------------------------------
-        % Table: EHL Prüfstand Spezifikationen
-        % ----------------------------------------
-        \input{./tables/ehl_bench_specs.tex}
+    % ----------------------------------------
+    % Sec: EHL Prüfstand Spezifikationen
+    % ----------------------------------------
+    \input{./tables/ehl_bench_specs.tex}
 
     \chapter{Zeichnungen}
+
 \end{appendices}
