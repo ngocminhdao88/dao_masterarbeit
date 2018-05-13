@@ -7,6 +7,44 @@
 \improvement[inline]{Sagen, dass die Schmierfilmdickenmessung auch mit optisch ausgeführt wird.}
 
 % ----------------------------------------
+% Sec: Bestimmung der Dielektrizitätskonstante
+% ----------------------------------------
+\section{Dielektrizitätskonstante des Schmierstoffes}
+\label{sec:dielektrizitaetskonstate_des_schmierstoffes}
+
+Um die Schmierfilmdicke im EHD-Komtakt mittels elektrischen Verfahrens zu bestimmen, braucht man die Kenntnis der dielektrischen Eigenschaften des Schmierstoffes, deren Abhängigkeit von der Temperatur, dem Druck.
+
+Die Bestimmung der Dielektrizitätskonstante des Versuchsöls \textit{FVA 3} wurde an einem Kondensator, welcher durch zwei Messingscheiben mit einem Durchmesser von \SI{20}{\mm} gebildet wird, durchgeführt.
+Dei Platten des Kondensators sind an den Backen einer Bügelmessschraube befestigt, so dass der Spalt zwischen der Platten genau eingestellt werden könnte.
+Die zwei Platten sind mit einem Impedanz-Analyse-Gerät verbunden.
+Das Gerät ist in der Lage, die Kapazität bei verschiedenen Frequenz von \SI{20}{\Hz} bis \SI{50}{\mega\Hz} zu messen.
+Die Kapazität des Systems wird zuerst mit Luft als Dielektrikum und dann mit dem \textit{FVA 3} bewertet.
+Aus der Gleichung der Kapazität (\ref{eq:kapazitaet}) des Plattenkondensator kann man die Dielektrizitätskonstante des Schmierstoffes bestimmt werden.
+% ----------------------------------------
+% Eq: Kapazität
+% ----------------------------------------
+\begin{equation}
+    C = \epsilon_0 \epsilon_r \cfrac{A}{d}
+    \label{eq:kapazitaet}
+\end{equation}
+%
+wobei $\epsilon_0$ die Dielektrizitätskonstante der Luft ist, $\epsilon_r$ ist die relative statische Dielektrizitätskonstante des Öl zwischen zwei Platten, $A$ und $d$ sind die Fläche und der Abstand der Platten.
+
+
+Abbildung \ref{fig:aufbau_zur_bestimmung_der_dielektrizitaetskonstante} zeigt den Aufbau des Systems zum Messen der Dielektrizitätskonstante des Öls \textit{FVA 3}.
+% ----------------------------------------
+% Fig: Schematischer Aufbau des Platten-Kondensatorr
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \caption{Schematischer Aufbau des Experiments zur Bestimmung der Dielektrizitätskonstante des Schmierstoffes}
+    \label{fig:aufbau_zur_bestimmung_der_dielektrizitaetskonstante}
+\end{figure}
+
+\improvement[inline]{write on how to measure dielectri permittivity of the oil}
+
+% ----------------------------------------
 % Sec: Kapazitive Messgeräte zur Schmierfilmdickenbestimmung
 % ----------------------------------------
 \section{Kapazitive Messgeräte zur Schmierfilmdickenbestimmung}
@@ -135,8 +173,6 @@ Abbildung \ref{fig:lcr_ebox_capacitance} zeigt die Kapazitätsmessung des E-Box 
 % ----------------------------------------
 \section{Versuchdurchführung}
 \label{sec:versuchdurchfuehrung}
-\improvement[inline]{Schreiben der Versuchdurchführung}
-
 
 Da die Auswertung der Schmierfilmdicke in dieser Arbeit optisch und elektrisch geschieht wird, ist die Sauberkeit vor dem Beginn einer Messung besonders wichtig zu achten.
 Die Glasscheibe, die Kugel, das Kugelsupport und das Ölreservoir müssen vor jeder Messung mit Waschbenzin oder Isopropanol gereinigt werden und dürfen keine Schlieren aufweisen.
@@ -181,7 +217,7 @@ Neben dem Widerstand des Kontakts wird die Hintergrund-Kapazität des Prüfstand
 Dieser Wert wird als Störkapazität bezeichnet und soll von der Ergebnissen beseitigt werden.
 
 Die Last von \SI{20}{\newton} wird in Anlehnung an vorherigen Arbeiten gewählt.
-Nach dem Abschnitt \ref{sec:betrachtung_des_ehd_kontaktes} lässt es sich für den hier betrachteten Fall eines Kugel-Scheibe-Modells eine maximale Pressung im Kontakt $p_0 =$ \SI{505}{\mega\pascal} berechnen.
+Nach dem Abschnitt \ref{sec:betrachtung_des_ehd_kontaktes} lässt es sich für den hier betrachteten Fall eines Kugel-Scheibe-Modells eine maximale Pressung im Kontakt $p_0 =$ \SI{509}{\mega\pascal} berechnen.
 Damit liegt der Kontakt im unteren Bereich der EHD-Schmierung.
 Diese geringe Last ist gut, somit wird die Gefahr von Beschädigung auf der Scheibe bzw. der Silikatschicht gering gehalten.
 
