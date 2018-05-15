@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Cursor
+import codecs
 
 def save_data(file_name, curve_nr, curve, header):
     """ Save data of the curve in to th temp file
@@ -106,7 +107,8 @@ def main(argv):
         elif opt == "--saveimage":
             pass # option to save an image
 
-    f = open(work_file, 'r', encoding='utf-8', errors='ignore') # open to read working file
+    #f = codecs.open(work_file, 'r', 'latin-1')
+    f = open(work_file, 'r', encoding='latin-1', errors='ignore') # open to read working file
 
     # read the header
     header = [] # a list to store header
@@ -118,9 +120,14 @@ def main(argv):
     header = header[:-2] # remove two last item in the header
 
     info = get_info(header) # this should be title of the plot
+    info = info + '\n' + work_file # append the file name in plot
 
     curve = [] # a list to hold data of the curve
     curve_nr = 0
+    
+    # create the x-axis (time)
+    time_axis = np.arange(0, 2500)
+    time_axis = time_axis / 250000.0
 
     # setup the plot
     plt.close('all') # close all the previous figures
@@ -142,10 +149,10 @@ def main(argv):
         else:
             # the 'Kurve' is there, the last curve should end
             plt.clf()
-            plt.plot(curve) # plot the curve
+            plt.plot(time_axis, curve, linewidth=0.5) # plot the curve
             ax = plt.gca()
             ax.set_title(info) # title
-            ax.set_xlim(0,2500) # limit x axis from 0 to 2500
+            ax.set_xlim(0,0.01) # limit x axis from 0 to 10 ms
             ax.set_ylim(0,0.22) # limit y axis from 0 to 0.22
             cursor = Cursor(ax, useblit=True, color='red')
             plt.draw() # draw the curve on the open figure
@@ -171,10 +178,10 @@ def main(argv):
 
     # plot out the last curve
     plt.clf()
-    plt.plot(curve) # plot the curve
+    plt.plot(time_axis, curve, linewidth=0.5) # plot the curve
     ax = plt.gca()
     ax.set_title(info) # title
-    ax.set_xlim(0,2500) # limit x axis from 0 to 2500
+    ax.set_xlim(0, 0.01) # limit x axis from 0 to 2500
     ax.set_ylim(0,0.22) # limit y axis from 0 to 0.22
     cursor = Cursor(ax, useblit=True, color='red')
     plt.draw() # draw the curve on the open figure
