@@ -198,6 +198,17 @@ Abbildung \ref{fig:lcr_ebox_capacitance} zeigt die Kapazitätsmessung des E-Box 
 \section{Versuchdurchführung}
 \label{sec:versuchdurchfuehrung}
 
+Die Versuche mit dem \textit{FVA 3} Öl in dieser Arbeit werden wie folgt geplant und durchgeführt:
+% ----------------------------------------
+% Enum: Versuchsplan
+% ----------------------------------------
+\begin{enumerate}
+    \item Vergleichsmessungen von neu modifizierten Bauteilen (Kugel, Support, Glasscheibe) mit den von \textit{PCS}
+    \item Schmierfilmdickenmessung am EHD-Gerät (optisch)
+    \item Schmierfilmdickenmessung mit dem mobilen Messsystem von IMKT (elektrisch)
+    \item Vergleich der theoretischen Schmierfilmdickenbestimmung mit 2. und 3. zur Überprüfung des Messverfahrens
+\end{enumerate}
+
 Da die Auswertung der Schmierfilmdicke in dieser Arbeit optisch und elektrisch geschieht wird, ist die Sauberkeit vor dem Beginn einer Messung besonders wichtig zu achten.
 Die Glasscheibe, die Kugel, das Kugelsupport und das Ölreservoir müssen vor jeder Messung mit Waschbenzin oder Isopropanol gereinigt werden und dürfen keine Schlieren aufweisen.
 
@@ -219,18 +230,18 @@ Die Bestimmung des Messpunkts für die optische Messung erfolgt zuerst auf der n
 Da nach wird die Scheibe \SI{180}{\degree} auf der Cr-Seite gedreht, um der Widerstand der gesamten Messkette (Kabel -> Scheibe -> Kugel -> Kabel) unter einer Last von \SI{20}{\newton} zu vermessen.
 Er ist von dem Radius der Fahrspur abhängig und beträgt ungefähr \SIrange{17}{18}{\ohm}.
 Die Suche nach dem Messpunkt passiert beim leeren Reservoir, weil ein sauberer Kontakt zwischen Scheibe und Kugel für die Bestimmung der Höhe des Spacer-Layers nötig ist.
-Außerdem darf man nur das Spurwechseln beim leeren Zustand machen, weil das Verlaufen des Öles über die Lasteinheit in mechanischen Baukasten zum Schaden führen kann.
+Außerdem darf man das Spurwechseln nur beim leeren Zustand machen, weil das Verlaufen des Öles über die Lasteinheit in mechanischen Baukasten zum Schaden führen kann.
 Man sollte die Spur von außen nach innen wechseln, um die Entstehung der Insel, die elektronisch zu den Elektroden (Kupferstreifen) isoliert sind, zu vermeiden.
 Danach kann man das Öl mit der Hilfe einem Trichter befüllen und den Prüftopf mit dem Deckel zu machen.
-Abbildung \ref{fig:ehd_kontakt} zeigt den gut auswertbaren und schlechten EHD-Kontakte an.
+Abbildung \ref{fig:suche_nach_ehd_kontakt} zeigt die Suche nach einem guten EHD-Kontakt an.
 % ----------------------------------------
 % Fig: Bestimmung des Messpunkts
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.7\linewidth]{./images/ehd_kontakt.jpg}
-    \caption{EHD-Kontakt: gut auswertbarer Kontakt (links); schlechter Kontakt (rechts) \cite{mach_2008}}
-    \label{fig:ehd_kontakt}
+    \includegraphics[]{./images/suche_nach_ehd_kontakt.pdf}
+    \caption{Die Suche nach einem gut auswertbaren EHD-Kontakt}
+    \label{fig:suche_nach_ehd_kontakt}
 \end{figure}
 
 Zur Messung bei Öl-Vollschmierung wird das Ölreservoir bis zur Hälfte der Kugel (ca. \SI{120}{\ml}) gefüllt.
@@ -259,16 +270,7 @@ Wichtig ist, dass man die Messungen zügig machen soll, um die Beschädigung der
     \label{fig:ehd_live_bild}
 \end{figure}
 
-Die Versuche in dieser Arbeit werden mit den Versuchsparameter (Tabelle \ref{tab:ehd_test_params}) und den Einstellungen des mobilen Messsystems von IMKT (Tabelle \ref{tab:einstellungen_des_ladekurve_messsystems}) wie folgt geplant und durchgeführt:
-% ----------------------------------------
-% Enum: Versuchsplan
-% ----------------------------------------
-\begin{enumerate}
-    \item Vergleichsmessungen von neu modifizierten Bauteilen (Kugel, Support, Glasscheibe) mit den von \textit{PCS}
-    \item Schmierfilmdickenmessung am EHD-Gerät (optisch)
-    \item Schmierfilmdickenmessung mit dem mobilen Messsystem von IMKT (elektrisch)
-    \item Vergleich der theoretischen Schmierfilmdickenbestimmung mit 2. und 3. zur Überprüfung des Messverfahrens
-\end{enumerate}
+Tabelle \ref{tab:ehd_test_params} und \ref{tab:einstellungen_des_ladekurve_messsystems} fassen die Versuchsparameter und die Einstellungen für das mobile Messsysten von IMKT zur Schmierfilmdickemessung in dieser Arbeit zu.
 
 % ----------------------------------------
 % Tab: Versuchsparameters am EHD-Prüfstand
