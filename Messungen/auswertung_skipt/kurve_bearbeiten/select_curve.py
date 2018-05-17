@@ -1,8 +1,18 @@
+"""
+Plot curve and ask user to keep or delete the curve in new file.
+
+Usage:
+    python select_curve.py -i <file_name>
+"""
+
 import sys, getopt, os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Cursor
+
+def usage():
+    print(__doc__)
 
 def save_data(file_name, curve_nr, curve, header):
     """ Save data of the curve in to th temp file
@@ -91,22 +101,20 @@ def main(argv):
     """
     # get the commandline options
     try:
-        opts, args = getopt.getopt(argv, "h", ["help", "input=", "saveimg="])
+        opts, args = getopt.getopt(argv, "hi:", ["help", "input="])
     except getopt.GetoptError:
-        print('select_curve.py --input=<inputfile> --saveimage=<b>')
         sys.exit(2)
 
     # parse the options and arguments
     for opt, arg in opts:
         if opt in ("-h", "--help"):
-            print('select_curve.py --input=<inputfile> --saveimage=<b>')
+            usage()
             sys.exit()
-        elif opt == "--input":
+        elif opt in ("-i", "--input"):
             work_file = arg # name of working file
-        elif opt == "--saveimage":
-            pass # option to save an image
+        else:
+            assert False, "wrong option"
 
-    #f = codecs.open(work_file, 'r', 'latin-1')
     f = open(work_file, 'r', encoding='latin-1', errors='ignore') # open to read working file
 
     # read the header
