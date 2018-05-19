@@ -41,7 +41,7 @@ def getCapacitance(tau):
     Output:
         c (float): capacitance
     """
-    r_v = 1012700 # charge resistor [Ohm]
+    r_v = 1015000 # charge resistor [Ohm]
     c = tau * (1 / r_v) # capacitance
 
     return c

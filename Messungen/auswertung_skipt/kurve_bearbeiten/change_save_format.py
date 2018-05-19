@@ -38,8 +38,6 @@ def save_data(file_name, dataframe, header):
     # write the header before the 1st curve
     for data in header:
         f.write("%s" % data)
-
-    f.write('\n') # new row
     f.close()
 
     # write the data of the dataframe in to the existing file
@@ -73,7 +71,7 @@ def main(argv):
     while 'Kurve' not in temp_line:
         temp_line = f.readline()
         header.append(temp_line) # add header's info into the list
-    header = header[:-2] # remove two last item in the header
+    header = header[:-1] # remove last item in the header
 
     curve = [] # a list to hold data of the curve
     curves_df = pd.DataFrame() # dataframe of all the curves
