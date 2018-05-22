@@ -82,11 +82,10 @@ Die Messergebnisse für das Öl \textit{FVA 3} bei verschiedenen Temperatur \SIr
 
 Im IMKT gibt es ein mobiles Messsystem zur Schmierfilmdickenmessung mittels kapazitiven Messverfahren.
 Das System besteht aus einem Laptop, der mit \textit{Laderkurve-Software} installiert, und einer Messkarte (Typ USB-6211) von der Firma National Instrument (NI).
-
-Bei kapazitiver Messmethode wird der EHD-Kontakt als ein Kondensator ($C_K$) betrachtet.
-Die Auflade des Kondensators erfolgt durch eine Ladespannung $U_L$ (\SIrange{0,2}{0,5}{\volt}) und einen Vorwiderstand $R_V$ (\SI{1012.7}{\kilo\ohm}).
-Eine unendliche Erhöhung der Ladespannung ist aber unerwünscht, weil die zur Ionisierung des Schmierstoffes bei hohen Spannung verursacht und das kann die Messergebnisse verfälschen.
-Abbildung \ref{fig:Schematischer_aufbau_des_mobilen_messsystems} zeigt das Prinzip des mobilen Messsystems zur Schmierfilmdickenmessung bei IMKT an.
+Hier wird der EHD-Kontakt als ein Kondensator $C_K$ betrachtet.
+Die Auflade des Kondensators erfolgt durch eine Ladespannung $U_L =$ \SI{0,2}{\volt} und einen Vorwiderstand $R_V =$ \SI{1012.7}{\kilo\ohm}.
+Mit dieser Konfiguration hat das Gerät eine höchste Auflösung von \SI{0.788}{\pico\farad} (siehe \ref{sec:aufloesung_des_mobilen_messsystems} für die Berechnung).
+Abbildung~\ref{fig:schematischer_aufbau_des_mobilen_messsystems} zeigt den schematischen Aufbau des mobilen Messsystems.
 % ----------------------------------------
 % Fig: Schematischer Aufbau des mobilen Messsystems
 % ----------------------------------------
@@ -94,11 +93,49 @@ Abbildung \ref{fig:Schematischer_aufbau_des_mobilen_messsystems} zeigt das Prinz
     \centering
     \includegraphics[]{./images/schematischer_aufbau_des_mobilen_messsystem.pdf}
     \caption{Schematischer Aufbau des mobilen Messsystems}
-    \label{fig:Schematischer_aufbau_des_mobilen_messsystems}
+    \label{fig:schematischer_aufbau_des_mobilen_messsystems}
+\end{figure}
+
+Der Ladevorgang des Kondensators wird durch eine Zeitkonstante $\tau$ charakterisiert und in die Abbildung~\ref{fig:ladevorgang_eines_kondensators} dargestellt.
+Zur Bestimmung der Zeitkonstante $\tau$ kann man durch die Anpassung der Ladekurve mit der Formel~\ref{eq:kondensator_e_funktion} oder im einen Zeitintervall $\Delta t$ zwischen den beiden definierten Spannungsgrenzen $U_1$ und $U_2$ (Formel~\ref{eq:bestimmung_der_zeitkonstante}) während des Ladevorgangs ermittelt.
+Bei der Auswertung der Zeitkonstante mit der Formel~\ref{eg:kondensator_zeitkonstate} erhält man die Kapazität des EHD-Kontakts.
+
+% ----------------------------------------
+% Eq: Bestimmung der Zeitkonstante tau
+% ----------------------------------------
+\begin{minipage}[b]{0.3\textwidth}
+    \begin{equation}
+        U_C = U_L (1 - e ^ {-t/\tau})
+        \label{eq:kondensator_e_funktion}
+    \end{equation}
+\end{minipage}
+%
+\begin{minipage}[b]{0.3\textwidth}
+    \begin{equation}
+        \tau = \cfrac{\Delta t}{\ln \cfrac{U_2 / U_L}{U_1 / U_L}}
+        \label{eq:bestimmung_der_zeitkonstante}
+    \end{equation}
+\end{minipage}
+%
+\begin{minipage}[b]{0.3\textwidth}
+    \begin{equation}
+        C = \tau / R_V
+        \label{eg:kondensator_zeitkonstate}
+    \end{equation}
+\end{minipage}
+
+% ----------------------------------------
+% Fig: Ladevorgang des Kondensators
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[]{./images/kondensator_ladevorgang.pdf}
+    \caption{Der von Zeitkonstante $\tau$ charakterisierte Ladevorgang eines Kondensators}
+    \label{fig:ladevorgang_eines_kondensators}
 \end{figure}
 
 Das ganze Messsystem wird von der \textit{Laderkurve-Software} gesteuert.
-Sie miss nicht direkt die Kapazität, sondern nimmt sie die Antwort bzw. Ladekurve des ``Kondensators'' auf, danach wird die Auswertung mit einem Matlab-Skript ausgeführt.
+Sie miss nicht direkt die Kapazität, sondern nimmt sie die Antwort bzw. Ladekurve des ``Kondensators'' auf.
 Die Software kann die Ladekurve in zwei Modi: \emph{Anzahl der Messwerte} oder \emph{Messung nach Zeit} aufnehmen.
 Im Rahmen dieser Arbeit werden alle Messungen mit dem ersten Modus gemacht.
 Abbildung \ref{fig:gui_der_laderkurve_software} zeigt die Benutzeroberfläche der Ladekurve-Software bei einer Testmessung mit einem Referenz-Kondensator (\SI{3.3}{\nano\farad}) an.
@@ -112,7 +149,7 @@ Abbildung \ref{fig:gui_der_laderkurve_software} zeigt die Benutzeroberfläche de
     \label{fig:gui_der_laderkurve_software}
 \end{figure}
 
-Die Software ist relative einfach zu bedienen, allerdings gibt es folgende Punkte, auf die man beachten muss.
+Die Software ist relativ einfach zu bedienen, allerdings gibt es folgende Punkte, auf die man beachten muss.
 \begin{description}
     \item[1. Anzahl der Messwerte] ist die Auflösung der Messung.
         Zu niedriger Wert kann zum Messfehler führen und zu hohen Wert kann es schnell den Speicher voll machen, außerdem ist sie auch von der Abtastrate der Messkarte beschränkt.
@@ -193,12 +230,44 @@ Abbildung \ref{fig:lcr_ebox_capacitance} zeigt die Kapazitätsmessung des E-Box 
 \end{figure}
 
 % ----------------------------------------
-% Sec: Versuchdurchführung
+% Sec: Versuchsplan
 % ----------------------------------------
-\section{Versuchdurchführung}
-\label{sec:versuchdurchfuehrung}
+\section{Versuchsplanung}
+\label{sec:versuchsplanung}
 
-Die Versuche mit dem \textit{FVA 3} Öl in dieser Arbeit werden wie folgt geplant und durchgeführt:
+Bevor die Messung an dem PCS-Messgerät losgeht, wird zuerst der Zusammenhang zwischen der Filmdicke und der Kapazität im EHD-Kontakt bzw. deren Verhalten unter den Einfluß von der Geschwindigkeit, der Temperatur, der Last und dem Öl theoretisch analysiert.
+Anhand dieser Informationen kann man die Testbedingungen, mit den gute Ergebnisse produziert werden, besser auswählen.
+
+Die Schmierfilmdicke kann nach \textit{Hamrock} und \textit{Dowson} (Abschnitt~\ref{sec:schmierfilmdicke_nach_hamrock_und_dowson}) bestimmt werden.
+Die Kapazität in dem EHD-Kontakt wird nach dem Modell eines Plattenkondensators (Abschnitt~\ref{sub:kapazitatmessung}) ermittelt.
+
+In Abbildung~\ref{fig:filmdicke_kapazitaet_geschwindigkeit} wird die Schmierfilmdicke und die Kapazität des Öls \textit{SHC320} in Abhängigkeit mit der Geschwindigkeit.
+Man kann deutlich sehen, während die Filmdicke bei steigender Wälzgeschwindigkeit zunimmt, sinkt die Kapazität in dem Kontakt.
+Aus diesem Grund ist die kapazitive Messmethode zur Bestimmung eines dickeren Schmierfilm nicht geeignet.
+Bei niedriger Geschwindigkeit bekommt man besser Auflösung, aber gibt es auch die Gefahr, durch die Berührung von Rauheitsspitzen das Messergebnis verfälscht wird.
+% ----------------------------------------
+% Fig: Der Zusammenhang zwischen Filmdicke und Kapazität nach Geschwindigkeit
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \caption{Der Zusammenhang zwischen Schmierfilmdicke und Kapazität mit der Geschwindigkeit von dem \textit{SHC320} bei \SI{40}{\degreeCelsius} und \SI{20}{\N}}
+    \label{fig:filmdicke_kapazitaet_geschwindigkeit}
+\end{figure}
+
+Die Temperatur hat relativ große Wirkung auf die Filmdicke und die Kapazität (siehe Abbildung~\ref{fig:filmdicke_kapazitaet_temperatur}).
+Bei hohen Temperatur sinkt die Viskosität des Öls ab, was infolge negative Wirkung auf die Filmdicke hat und dadurch wird die Kapazität erhöht.
+% ----------------------------------------
+% Fig: Auswirkung der Temperatur auf Filmdicke und Kapazität
+% ----------------------------------------
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=4cm]{./images/blank_img.jpg}
+    \caption{Auswirkung der Temperatur auf die Filmdicke und die Kapazität}
+    \label{fig:filmdicke_kapazitaet_temperatur}
+\end{figure}
+
+Die Versuche in dieser Arbeit werden wie folgt geplant und durchgeführt:
 % ----------------------------------------
 % Enum: Versuchsplan
 % ----------------------------------------
@@ -208,6 +277,12 @@ Die Versuche mit dem \textit{FVA 3} Öl in dieser Arbeit werden wie folgt geplan
     \item Schmierfilmdickenmessung mit dem mobilen Messsystem von IMKT (elektrisch)
     \item Vergleich der theoretischen Schmierfilmdickenbestimmung mit 2. und 3. zur Überprüfung des Messverfahrens
 \end{enumerate}
+
+% ----------------------------------------
+% Sec: Versuchdurchführung
+% ----------------------------------------
+\section{Versuchdurchführung}
+\label{sec:versuchdurchfuehrung}
 
 Da die Auswertung der Schmierfilmdicke in dieser Arbeit optisch und elektrisch geschieht wird, ist die Sauberkeit vor dem Beginn einer Messung besonders wichtig zu achten.
 Die Glasscheibe, die Kugel, das Kugelsupport und das Ölreservoir müssen vor jeder Messung mit Waschbenzin oder Isopropanol gereinigt werden und dürfen keine Schlieren aufweisen.
