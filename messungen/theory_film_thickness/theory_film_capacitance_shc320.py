@@ -199,3 +199,24 @@ for geschw in geschwindigkeiten:
 
 # group data after temp and load
 data_grouped = data.groupby(['Temp', 'Load'])
+
+data_40C_20N = data.loc[(data["Temp"] == 40) & (data["Load"] == 20)]
+data_80C_40N = data.loc[(data["Temp"] == 80) & (data["Load"] == 40)]
+
+# setup the plot film thickness, capacitace vs speed at 80C and 40N
+fig, ax1 = plt.subplots(figsize=[5, 3.125])
+ax1.plot(data_80C_40N["Speed"], data_80C_40N["Film"], "b-")
+ax1.set_xlabel("Speed [m/s]")
+# ax1.set_title("Film and Cap vs Speed at 80C and 40N")
+# make the y-axis label, ticks and tick labels match the some color
+ax1.set_ylabel("Film [m]", color='b')
+ax1.tick_params(axis='y', colors='b')
+
+ax2 = ax1.twinx()
+ax2.plot(data_80C_40N["Speed"], data_80C_40N["Cap"], "r-")
+ax2.set_ylabel("Cap [F]", color='r')
+ax2.tick_params(axis='y', colors='r')
+
+fig.tight_layout()
+# fig.savefig("film_cap_speed_80C_20N.pdf", bbox_inches="tight", pad_inches=0)
+plt.show()

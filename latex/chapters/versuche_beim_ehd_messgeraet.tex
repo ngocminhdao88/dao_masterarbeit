@@ -53,7 +53,7 @@ Die Messergebnisse für das Öl \textit{FVA 3} bei verschiedenen Temperatur \SIr
 \begin{minipage}[b]{0.55\linewidth}
     \centering
     \input{./tables/permittivitaet_fva3.tex}
-    \captionof{table}{relative Permittivität von \textit{FVA 3} bei unterschiedlichen Temperaturen}
+    \captionof{table}{relative Permittivität von \textit{FVA3} bei unterschiedlichen Temperaturen}
     \label{tab:relative_permittivitaet_fva3}
 \end{minipage}
 \hspace{0.5cm}
@@ -241,30 +241,31 @@ Anhand dieser Informationen kann man die Testbedingungen, mit den gute Ergebniss
 Die Schmierfilmdicke kann nach \textit{Hamrock} und \textit{Dowson} (Abschnitt~\ref{sec:schmierfilmdicke_nach_hamrock_und_dowson}) bestimmt werden.
 Die Kapazität in dem EHD-Kontakt wird nach dem Modell eines Plattenkondensators (Abschnitt~\ref{sub:kapazitatmessung}) ermittelt.
 
-In Abbildung~\ref{fig:filmdicke_kapazitaet_geschwindigkeit} wird die Schmierfilmdicke und die Kapazität des Öls \textit{SHC320} in Abhängigkeit mit der Geschwindigkeit.
+In Abbildung~\ref{fig:filmdicke_kapazitaet_geschwindigkeit} wird die Schmierfilmdicke und die Kapazität des Öls \textit{FVA3} in Abhängigkeit mit der Geschwindigkeit dargestellt.
 Man kann deutlich sehen, während die Filmdicke bei steigender Wälzgeschwindigkeit zunimmt, sinkt die Kapazität in dem Kontakt.
 Aus diesem Grund ist die kapazitive Messmethode zur Bestimmung eines dickeren Schmierfilm nicht geeignet.
-Bei niedriger Geschwindigkeit bekommt man besser Auflösung, aber gibt es auch die Gefahr, durch die Berührung von Rauheitsspitzen das Messergebnis verfälscht wird.
+Bei niedriger Geschwindigkeit hat man besser Auflösung, allerdings besteht es die Gefahr, durch die Berührung von Rauheitsspitzen der Oberfläche der Kugel und der Scheibe das Messergebnis verfälscht wird.
 % ----------------------------------------
 % Fig: Der Zusammenhang zwischen Filmdicke und Kapazität nach Geschwindigkeit
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=4cm]{./images/blank_img.jpg}
-    \caption{Der Zusammenhang zwischen Schmierfilmdicke und Kapazität mit der Geschwindigkeit von dem \textit{SHC320} bei \SI{40}{\degreeCelsius} und \SI{20}{\N}}
+    \includegraphics[]{./images/film_cap_speed_80C_40N_fva3.pdf}
+    \caption{Der Zusammenhang zwischen Schmierfilmdicke und Kapazität mit der Geschwindigkeit von dem \textit{FVA3} bei \SI{80}{\degreeCelsius} und \SI{40}{\N}}
     \label{fig:filmdicke_kapazitaet_geschwindigkeit}
 \end{figure}
 
-Die Temperatur hat relativ große Wirkung auf die Filmdicke und die Kapazität (siehe Abbildung~\ref{fig:filmdicke_kapazitaet_temperatur}).
+Abbildung~\ref{fig:film_cap_with_dif_temp_and_load} zeigt, dass die Temperatur und die Last relativ große Wirkung auf die Filmdicke und die Kapazität haben.
 Bei hohen Temperatur sinkt die Viskosität des Öls ab, was infolge negative Wirkung auf die Filmdicke hat und dadurch wird die Kapazität erhöht.
+Analog kann man für steigende Last sagen, allerdings hat die Last zum Vergleich mit der Temperatur wenigeren Einfluß.
 % ----------------------------------------
 % Fig: Auswirkung der Temperatur auf Filmdicke und Kapazität
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=4cm]{./images/blank_img.jpg}
-    \caption{Auswirkung der Temperatur auf die Filmdicke und die Kapazität}
-    \label{fig:filmdicke_kapazitaet_temperatur}
+    \includegraphics[]{./images/film_cap_with_dif_temp_and_load_fva3.pdf}
+    \caption{Zusammenhang zwischen der Kapazität und der Filmdicke bei verschiedenen Temperaturen und Lasten des Öl \textit{FVA3}}
+    \label{fig:film_cap_with_dif_temp_and_load}
 \end{figure}
 
 Die Versuche in dieser Arbeit werden wie folgt geplant und durchgeführt:
