@@ -31,10 +31,12 @@ Aus diesem Grund soll im folgenden kurz auf die Themen Schmieröle, Reibung und 
 % ----------------------------------------
 \subsection*{Viskosität}
 \label{sub:viskositaet}
+
 Viskosität, die auch als innere Reibung bezeichnet wird, ist die wichtigste Kenngröße eines Schmierstoffes.
 Sie beschreibt die Zähigkeit von Flüssigkeiten und Gasen.
-Je größer die Viskosität ist, desto dickflüssiger ist das Fluid und je niedriger die Viskosität, desto dünnflüssiger ist es.
+Je größer die Viskosität ist, desto dickflüssiger ist das Fluid und umgekehrt.
 Ein Modell des Parallelplattenversuchs veranschaulicht das Fließverhalten des Schmierstoffes (Abbildung \ref{fig:geschwindigkeitsprofil_parallelplattenversuch}).
+
 % ----------------------------------------
 % Fig: Geschwindigkeitsprofil in einem Parallelplattenversuch
 % ----------------------------------------
@@ -45,7 +47,7 @@ Ein Modell des Parallelplattenversuchs veranschaulicht das Fließverhalten des S
     \label{fig:geschwindigkeitsprofil_parallelplattenversuch}
 \end{figure}
 
-Für eine Newtonsche Flüssigkeit wird die Viskosität $\eta$ in einer Beziehung mit der Schubspannung $\tau$ definiert \cite{viscosity_wiki}:
+Für die Newtonsche Flüssigkeit wird die Viskosität $\eta$ in Beziehung zu der Schubspannung $\tau$ definiert \cite{viscosity_wiki}:
 % ----------------------------------------
 % Eq: Viskosität
 % ----------------------------------------
@@ -56,8 +58,8 @@ Für eine Newtonsche Flüssigkeit wird die Viskosität $\eta$ in einer Beziehung
 %
 wobei $u$ die Wälzgeschwindigkeit und $\gamma = u/z$ das Schergefälle ist.
 
-
-Die kinematische Viskosität $\nu$ ergibt sich aus der dynamischen Viskosität $\eta$ durch die Division mit der Dichte des Fluids $\rho$. Die wird zur Charakterisierung des Fließverhaltens der Schmieröle verwendet.
+Die kinematische Viskosität $\nu$ ergibt sich aus der dynamischen Viskosität $\eta$ durch die Division mit der Dichte des Fluids $\rho$.
+Diese wird zur Charakterisierung des Fließverhaltens der Schmieröle verwendet.
 % ----------------------------------------
 % Eq: Kinematische Viskosität
 % ----------------------------------------
@@ -66,16 +68,17 @@ Die kinematische Viskosität $\nu$ ergibt sich aus der dynamischen Viskosität $
     \label{eq:kinematische_viskotitaet}
 \end{equation}
 
-Im Si-Einheitensystem hat die dynamische Viskosität $\eta$ als Einheit \si{N.s/m^2} oder \si{\pascal.\s} und die kinematische Viskosität $\nu$ als Einheit \si{m^2/s}.
-Ein Stoff hat die Viskosität \SI{1}{N.s/m^2}, wenn er sich in zwischen zwei Platten, die die Größe von \SI{1}{m^2} und einen Abstand von einander \SI{1}{m} haben, befindet und man braucht \SI{1}{N}, um die zwei Platten gegeneinander mit einer Geschwindigkeit von \SI{1}{m/s} zu verschieben \cite{viscosity_wiki}.
+Im Si-Einheitensystem hat die dynamische Viskosität $\eta$ die Einheit \si{N.s/m^2} oder \si{\pascal.\s} und die kinematische Viskosität $\nu$ die Einheit \si{m^2/s}.
+Ein Stoff hat die Viskosität \SI{1}{N.s/m^2}, wenn er sich zwischen zwei Platten, die die Größe von \SI{1}{m^2} und einen Abstand von einander \SI{1}{m} haben, befindet und man \SI{1}{N} braucht, um die zwei Platten gegeneinander mit einer Geschwindigkeit von \SI{1}{m/s} zu verschieben \cite{viscosity_wiki}.
 
 \subsection*{Temperatureffekt}
 \label{sub:temperatureffekt}
-Die Temperatur hat eine große Effekt auf die Viskosität aller fließfähigen Stoffe.
-Mit steigender Temperatur sinkt die Viskosität der Flüssigkeiten ab.
-Diese Effekt kann experimentell mittels eines Viskosimeters und rechnerisch nach \textit{Crouch} und \textit{Cameron} \cite{crouch_1961} bestimmt werden.
 
-Die einfachste Gleichung, die beschreibt die Temperatureffekt auf die Viskosität, nach \textit{Reynolds} \cite{reynolds_1886} lautet:
+Die Temperatur hat große Auswirkungen auf die Viskosität aller fließfähigen Stoffe.
+Mit steigender Temperatur sinkt die Viskosität der Flüssigkeiten ab.
+Dieser Effekt kann experimentell mittels eines Viskosimeters und rechnerisch nach \textit{Crouch} und \textit{Cameron} \cite{crouch_1961} bestimmt werden.
+
+Die einfachste Gleichung, die den Temperatureffekt auf die Viskosität, nach \textit{Reynolds} \cite{reynolds_1886} beschreibt:
 % ----------------------------------------
 % Eq: Dynamische Viskosität nach Reynold
 % ----------------------------------------
@@ -91,9 +94,10 @@ wobei $\eta_{s}$ die Viskosität des Schmierstoffes bei der Temperatur $\phi_{s}
 % ----------------------------------------
 \subsection*{Viskositätsindex}
 \label{sub:Viskositaetsindex}
-Die Temperaturabhängigkeit der kinematischen Viskosität eines Schmieröls wird von dem Viskositätsindex (VI oder KVI) beschrieben.
-Der Viskositätsindex basiert auf einem Skala, in der zwei unterschiedliche Öltypen mit deutlich abweichenden Viskositätstemperaturverhalten zugeordnet wurden.
-Das Öl, das starke Veränderung der Viskosität zeigt, wird mit \num{0} oder \si{LVI} (low viscosity index) indiziert.
+
+Die Temperaturabhängigkeit der kinematischen Viskosität eines Schmieröls wird mit dem Viskositätsindex (VI oder KVI) beschrieben.
+Der Viskositätsindex basiert auf einer Skala, in der zwei unterschiedliche Öltypen mit deutlich abweichenden Viskositätstemperaturverhalten zugeordnet werden.
+Das Öl, das starke Veränderungen der Viskosität zeigt, wird mit \num{0} oder \si{LVI} (low viscosity index) indiziert.
 Das andere Öl wird mit \num{100} oder \si{HVI} (high viscosity index) gekennzeichnet.
 Aus dem Vergleich der kinematischen Viskosität eines zu beschreibenden Öls mit diesen beiden Referenzölen bei \SI{100}{\degreeCelsius}  ergibt sich dessen Viskositätsindex nach Formel \ref{eq:viskositaetsindex}.
 % ----------------------------------------
@@ -103,7 +107,7 @@ Aus dem Vergleich der kinematischen Viskosität eines zu beschreibenden Öls mit
     VI~(oder KVI) = \frac{\nu_0 - \nu}{\nu_0 - \nu_{100}}
     \label{eq:viskositaetsindex}
 \end{equation}
-%
+
 In der VI-Definition ist angenommen, dass die Veränderung der Viskosität mit der Temperatur von drei Ölen linear ist.
 Die Linearisierung der kinematischen Viskosität $\nu$ von der Temperatur $\theta$ nach \textit{Walther (S\'{a}nchez-Rubio, et al.)} \cite{sanchez-rubio} lautet:
 % ----------------------------------------
@@ -113,11 +117,11 @@ Die Linearisierung der kinematischen Viskosität $\nu$ von der Temperatur $\thet
     \label{eq:kinematische_viskotitaet_walther}
     \log \log(\nu + 0,7) = A + B \log(\theta)
 \end{equation}
-%
 
-Durch die Verwendung der doppeltlogarithmischen Koordinaten ergibt sich die Linearisierung für Mineralöle eine Gerade.
+Durch die Verwendung der doppeltlogarithmischen Koordinaten ergibt die Linearisierung für Mineralöle eine Gerade.
 Abbildung \ref{fig:variation_der_viskositaet_mit_temperatur} zeigt ein Beispiel für die SAE-Öle.
-Die Tabelle \ref{tab:esdu_oil_daten} und \ref{fig:fva_kin_viskositaet_temperatur} zeigen die Viskosität von verschiedenen Öle bei unterschiedlichen Temperaturen.
+Die Tabelle \ref{tab:esdu_oil_daten} und \ref{fig:fva_kin_viskositaet_temperatur} zeigen die Viskosität von verschiedenen Ölen bei unterschiedlichen Temperaturen.
+
 % ----------------------------------------
 % Fig: Variation der Viskosität mit der Temperatur
 % ----------------------------------------
@@ -133,10 +137,12 @@ Die Tabelle \ref{tab:esdu_oil_daten} und \ref{fig:fva_kin_viskositaet_temperatur
 % ----------------------------------------
 \subsection*{Einfluss von Druck auf Viskosität}
 \label{sub:einfluss_von_druck_auf_viskositaet}
+
 Mit steigendem Druck nimmt die Viskosität aller Schmieröle zu.
 Allerdings verändert sich das Schmiermittel unter dem für die EHD-Kontakte enormen Druck schlagartig.
 Die Viskosität nimmt rapide zu und der Schmierstoff erreicht einem festen Zustand.
 Die Abbildung \ref{fig:dynamische_viskositaet_in_abhaengigkeit_vom_druck} zeigt, dass die Viskosität der FVA-Öle im Bereich von \SIrange{0}{200}{\mega\pascal} etwa hundertfach zunimmt.
+
 % ----------------------------------------
 % Fig: Viskosität - Druck - Verhalte
 % ----------------------------------------
@@ -148,7 +154,7 @@ Die Abbildung \ref{fig:dynamische_viskositaet_in_abhaengigkeit_vom_druck} zeigt,
 \end{figure}
 %
 
-Nach \textit{Barus} \cite{cameron_1966} kann die Viskosität mit der unteren Formel berechnet werden
+Nach \textit{Barus} \cite{cameron_1966} kann die Viskosität mit der unteren Formel berechnet werden,
 % ----------------------------------------
 % Eq: Viskositätsindex
 % ----------------------------------------
@@ -165,7 +171,7 @@ Für Mineralöle sind diese Parameter ungefähr \cite{wisniewski_2000}:
     \num{0} $\rightarrow$ \num{2.0e-8}  & für & $\alpha$ [\si{\per\pascal}]
 \end{tabular}
 
-Leider liefert die Gleichung von \textit{Barus} einen zu großen Wert beim hohen Druck.
+Leider liefert die Gleichung von \textit{Barus} einen zu großen Wert bei hohem Druck.
 Eine genauere Gleichung für die Viskosität bei der Temperatur $\theta$ wurde von \textit{Roelands} \cite{roelands} vorgeschlagen:
 % ----------------------------------------
 % Eq: Roelands Gleichung
@@ -176,7 +182,7 @@ Eine genauere Gleichung für die Viskosität bei der Temperatur $\theta$ wurde v
 \end{equation}
 %
 
-Der \textit{Roelands} Druck-Viskositätskoeffizient $\alpha^*$ ist eine Funktion der Druck $p$ und die Temperatur $\theta$ und kann mit Formel \ref{eq:roelands_alpha} berechnet werden:
+Der \textit{Roelands} Druck-Viskositätskoeffizient $\alpha^*$ ist eine Funktion des Drucks $p$ und der Temperatur $\theta$ und kann mit Formel \ref{eq:roelands_alpha} berechnet werden:
 % ----------------------------------------
 % Eq: Roelands Druck-Viskositätskoeffizient
 % ----------------------------------------
@@ -192,8 +198,8 @@ Der \textit{Roelands} Druck-Viskositätskoeffizient $\alpha^*$ ist eine Funktion
     \label{eq:roelands_alpha}
 \end{equation}
 %
-wobei $\theta_0$ [\si{\kelvin}] der Raumtemperatur umd $p_0 =$ \SI{1.98e8}{\pascal} eine Konstante ist.
-$Z$ und $S_0$ sind die Konstante für alle Öle, unabhängig von Temperatur und Druck und können durch unteren Formeln \cite{gohar_1988} berechnet werden:
+wobei $\theta_0$ [\si{\kelvin}] die Raumtemperatur umd $p_0 =$ \SI{1.98e8}{\pascal} eine Konstante ist.
+Die $Z$ und $S_0$ sind die Konstanten für alle Öle, unabhängig von Temperatur und Druck und können durch die unteren Formeln \cite{gohar_1988} berechnet werden:
 % ----------------------------------------
 % Eq: Roelands Gleichung Parameters
 % ----------------------------------------
@@ -205,8 +211,9 @@ $Z$ und $S_0$ sind die Konstante für alle Öle, unabhängig von Temperatur und 
 $\alpha$ und $\beta$ sind für bekannte Öle gegeben (siehe Tabelle \ref{tab:esdu_oil_daten} für $\alpha$).
 Zum Berechnungszwecken wird $Z =$ \num{0.68} genommen.
 
-Der Viskositäts-Druck-Koeffizient $\alpha$ ist nicht eine Konstante, sondern eine Funktion der Temperatur.
+Der Viskositäts-Druck-Koeffizient $\alpha$ ist keine Konstante, sondern eine Funktion der Temperatur.
 Die Abbildung \ref{fig:druckkoeffizient_temperatur} zeigt diese Abhängigkeit im Bereich von \SIrange{0}{2000}{\bar} (Index \num{2000}) mit der Temperatur für die Referenzöle der FVA an.
+
 % ----------------------------------------
 % Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
 % ----------------------------------------
@@ -223,7 +230,7 @@ Die Abbildung \ref{fig:druckkoeffizient_temperatur} zeigt diese Abhängigkeit im
 \subsection*{Dichte}
 \label{sub:dichte}
 
-Für eine numerische Schmierfilmdickenmessung ist es notwendig zu wissen, wie sich die Dichte des Schmierstoffes unter verschiedenen Drucken verhält.
+Für eine numerische Schmierfilmdickenmessung ist es notwendig zu wissen, wie sich die Dichte des Schmierstoffes unter variierendem Drucken verhält.
 Die Form des Schmierfilms kann nicht richtig berechnet werden, wenn diese Eigenschaft vernachlässigt wird.
 Die Kompressibilität eines Schmierstoffes $C$ kann nach \textit{Chu} und \textit{Cameron} \cite{chu_1962} so beschrieben werden:
 % ----------------------------------------
@@ -236,7 +243,7 @@ Die Kompressibilität eines Schmierstoffes $C$ kann nach \textit{Chu} und \texti
 %
 wobei $V$ das Volumen und $dV$ die Änderung des Volumens ist.
 
-Die Dichte der Mineralöle ist nach \textit{Dowson} und \textit{Higginson} \cite{dowson_1966} mit folgender Formel zu berechnen
+Die Dichte der Mineralöle ist nach \textit{Dowson} und \textit{Higginson} \cite{dowson_1966} mit folgender Formel zu berechnen:
 % ----------------------------------------
 % Eq: Dichte nach Dowson und Higginson
 % ----------------------------------------
@@ -245,16 +252,17 @@ Die Dichte der Mineralöle ist nach \textit{Dowson} und \textit{Higginson} \cite
     \rho = \rho_0 \left( 1 + \frac{0,6  p}{1 + 1,7  p} \right)
 \end{equation}
 %
-wobei $p$ [\si{GPa}] und $\rho_0$ die Dichte beim normalen Luftdruck (\SI{0,87}{kg/m^3} bei \SI{20}{\degreeCelsius}) ist.
+wobei $p$ der Druck und $\rho_0$ die Dichte bei normalem Luftdruck (\SI{0,87}{kg/m^3} bei \SI{20}{\degreeCelsius}) ist.
 Abbildung \ref{fig:variation_der_dichte_bei_verschiedenen_druecke} zeigt einen Plot der Gleichung \ref{eq:dichte_dowson_higginson} für ein Mineralöl, das eine Dichte $\rho_0$ von \num{0.85} bei \SI{40}{\degreeCelsius} hat.
 Die Messpunkte $\triangle$ stammen aus Versuchen von \textit{Hirano et al} \cite{hirano}.
+
 % ----------------------------------------
 % Fig: Druckkoeffizient der FVA-Referenzöle in Abhängigkeit von der Temperatur
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/dichte_brechungsindex_temperatur.pdf}
-    \caption{Variation der Dichte und des Brechungsindexs bei verschiedenen Drücken \cite{gohar_1988}}
+    \caption{Variation der Dichte und des Brechungsindexs bei unterschiedlichem Drücken \cite{gohar_1988}}
     \label{fig:variation_der_dichte_bei_verschiedenen_druecke}
 \end{figure}
 
@@ -265,7 +273,7 @@ Die Messpunkte $\triangle$ stammen aus Versuchen von \textit{Hirano et al} \cite
 \label{sub:brechungsindex}
 
 Für die Messverfahren, die auf optischen Interferometrie basieren, braucht man die Abhängigkeit zwischen der Dichte und dem Brechungsindex des Schmierstoffes.
-Nach \textit{Gohar} \cite{gohar_1966} wird das Verhältnis mit der Formel\ref{eq:dichte_brechnungsindex} beschrieben.
+Nach \textit{Gohar} \cite{gohar_1966} wird das Verhältnis mit der Formel~\ref{eq:dichte_brechnungsindex} beschrieben:
 % ----------------------------------------
 % Eq: Dichte und Brechungsindex
 % ----------------------------------------
@@ -275,7 +283,7 @@ Nach \textit{Gohar} \cite{gohar_1966} wird das Verhältnis mit der Formel\ref{eq
 \end{equation}
 %
 wobei $c$ ein Ölkonstante (zB: SAE-30, $c = $ \num{0.33}) ist.
-Der Brechungsindex beträgt für die meisten Mineralöle bei normalen Luftdruck c.a \num{1.51} ist.
+Der Brechungsindex beträgt für die meisten Mineralöle bei normalen Luftdruck ca. \num{1.51}.
 Die Abhängigkeit des Brechungsindexs von dem Druck für das Öl SAE-30 wird auch in die Abbildung \ref{fig:variation_der_dichte_bei_verschiedenen_druecke} angezeigt.
 
 % ----------------------------------------
@@ -285,7 +293,7 @@ Die Abhängigkeit des Brechungsindexs von dem Druck für das Öl SAE-30 wird auc
 \label{waermeleitfaehigkeit}
 
 Um die Temperaturerhöhung des Schmierstoffes unter Schubspannung zu schätzen, ist dessen Wärmeleitfähigkeit $k$ nötig.
-Nach \textit{Cameron} \cite{cameron_1966} kann diese Größe beim normalen Luftdruck mit folgender Formel berechnet werden.
+Nach \textit{Cameron} \cite{cameron_1966} kann diese Größe bei normalem Luftdruck mit folgender Formel berechnet werden.
 % ----------------------------------------
 % Eq: Wärmeleitfähigkeit
 % ----------------------------------------
@@ -302,12 +310,13 @@ wobei $\theta$ [\si{\kelvin}] die absolute Temperatur und $\rho_0$ [\si{kg/m^3}]
 \subsection*{Newtonsche Fluide}
 \label{sub:newtonsche_fluide}
 
-Wenn die Viskosität eines Fluids von der Schubspannung unabhängig ist, wird das Fluid als newtonsches Fluid bezeichnet - Abbildung\ref{fig:newtonsche_fluide}.
-Flüssigkeiten, deren Viskosität mit steigender Schubspannung zunimmt, nennt man dilatant.
-Solches Verhalten zeigt häufig Suspensionen, die sind nicht als Schmierstoff geeignet.
+Wenn die Viskosität eines Fluids von der Schubspannung unabhängig ist, wird das Fluid als newtonsches Fluid bezeichnet (siehe Abbildung\ref{fig:newtonsche_fluide}).
+Flüssigkeiten, deren Viskosität mit steigenden Schubspannungen zunimmt, nennt man dilatant.
+Solches Verhalten zeigt häufig Suspensionen an, die nicht als Schmierstoff sich eigen.
 Strukturviskose Fluide sind die Umkehr der Dilatanz.
 Strukturviskosität tritt bei synthetischen Fluiden auf.
 Für die Bestimmung der Schmierfilmdicke werden alle Fluide in Rahmen dieser Arbeit als Newtonsche Fluide angenommen.
+
 % ----------------------------------------
 % Fig: Newtonsche und nicht newtonsche Fluide
 % ----------------------------------------
@@ -338,7 +347,7 @@ Man unterscheidet zwischen innerer und äußerer Reibung.
 Von innerer Reibung spricht man, wenn die sich berührenden Stoffbereiche einem Körper angehören, z.B im Schmierstoff.
 
 Im Gegensatz zur Bewebungsreibung tritt die Haftreibung auf, wo es keine relative Bewegung zwischen den Reibpartnern gibt.
-In diesem Fall ist angreifende Kraft nicht ausreichend, um die Körper in Bewegung zu bringen.
+In diesem Fall ist die angreifende Kraft nicht ausreichend, um die Körper in Bewegung zu bringen.
 
 Reibung wird durch den Reibwert $\mu$ charakterisiert.
 Er beschreibt das Verhältnis von der Reibungskraft $F_R$ und der Normalkraft $F_N$ \cite{reibung}:
@@ -351,7 +360,7 @@ Er beschreibt das Verhältnis von der Reibungskraft $F_R$ und der Normalkraft $F
 \end{equation}
 %
 
-Die Bewegungsreibung kann man in drei Kategorien Gleitreibung, Rollreibung und Bohrreibung einteilen (Abbildung \ref{fig:arten_der_bewegungsreibung}).
+Die Bewegungsreibung kann man zu drei Kategorien --- Gleitreibung, Rollreibung und Bohrreibung --- einteilen (siehe Abbildung \ref{fig:arten_der_bewegungsreibung}).
 In der Praxis treten meist Kombinationen dieser drei Reibungsarten auf.
 Die wichtigste ist hier die sogenante Wälzreibung, eine Kombination aus Rollen und Gleiten.
 % ----------------------------------------
@@ -366,46 +375,46 @@ Die wichtigste ist hier die sogenante Wälzreibung, eine Kombination aus Rollen 
 %
 
 % ----------------------------------------
-% Subsec: Reibungszustände
+% Subsec: Reibungszustände und Schmierfilmaufbau
 % ----------------------------------------
-\subsection{Reibungszustände}
-\label{sub:reibungszustaende}
+\subsection{Reibungszustände und Schmierfilmaufbau}
+\label{sub:reibungszustaende_und_schmierfilmaufbau}
 
 Die Reibungszustände werden durch den Kontaktzustand der beteiligten Reibpartner beschrieben.
 Man spricht hier von Festkörper-, Grenz-, Misch-, Flüssigkeits- und Gasreibung.
-Da die Gasreibung für diese Arbeit unrelevant ist, wird kurz auf die einzelnen Reibungszustände außer Gasreibung eingegangen.
+Da die Gasreibung für diese Arbeit unrelevant ist, wird kurz auf die einzelnen Reibungszustände ohne Gasreibung eingegangen.
 
 % ----------------------------------------
 % Par: Festkörperreibung
 % ----------------------------------------
-\paragraph{Festkörperreibung}
+\paragraph{Festkörperreibung:}
 \label{par:festkoerperreibung}
 %
 \begin{wrapfigure}{R}{0.25\textwidth}
     \includegraphics[trim={0 1cm 0 1cm}]{./images/festkoerperreibung.pdf}
 \end{wrapfigure}
 
-Von Festkörperreibung spricht man, wenn kein Schmierstoff sich im Reibkontakt befindet.
-Dabei besteht die Gefahr bei hohen Flächenpressungen, dass die beiden Körper aneinander haften, verschleißen und es zum Fressen kommen kann.
+Von Festkörperreibung spricht man, wenn sich kein Schmierstoff im Reibkontakt befindet.
+Dabei besteht bei hohen Flächenpressungen die Gefahr , dass die beiden Körper aneinander haften, verschleißen und es zum Festfressen kommen kann.
 
 % ----------------------------------------
 % Par: Grenzreibung
 % ----------------------------------------
-\paragraph{Grenzreibung}
+\paragraph{Grenzreibung:}
 \label{par:grenzreibung}
 %
 \begin{wrapfigure}{R}{0.25\textwidth}
     \includegraphics[trim={0 0.5cm 0 0.5cm}]{./images/grenzreibung.pdf}
 \end{wrapfigure}
 
-Grenzreibung ist von der Festkörperreibung schon sehr ähnlich.
+Grenzreibung ist der Festkörperreibung recht ähnlich.
 Allerdings werden die Oberflächen der Reibpartner von einer Schicht getrennt und befinden sich nicht direkt in Berührung.
 Diese Schicht kann zum Beispiel durch Oxidation, Adsorption oder chemische Reaktionen entstanden sein und vermindert die Reibung im Verleich zur Festkörperreibung schon eheblich.
 
 % ----------------------------------------
 % Par: Mischreibung
 % ----------------------------------------
-\paragraph{Mischreibung}
+\paragraph{Mischreibung:}
 \label{par:mischreibung}
 %
 \begin{wrapfigure}{R}{0.25\textwidth}
@@ -413,14 +422,14 @@ Diese Schicht kann zum Beispiel durch Oxidation, Adsorption oder chemische Reakt
 \end{wrapfigure}
 
 Bei Mischreibung gibt es schon im Reibkontakt ein bisschen Schmierstoff und die Laufflächen werden zum Teil durch einen Schmierfilm getrennt.
-Leider ist der nicht hoch genug, um ein vollständiges Trennen der beiden Körpern zu erreichen.
-Es kommt immer noch die Berührung der Rauheitsspitzen der Laufflächen.
+Leider ist dieser nicht hoch genug, um ein vollständiges Trennen der beiden Körpern zu erreichen.
+Es kommt immer noch zu einer Berührung der Rauheitsspitzen der Laufflächen.
 Die Reibung bei der Mischreibung ist deutlich geringer als die der Grenzreibung. Allerdings bleibt immer noch der Verschleiß im Reibkontakt.
 
 % ----------------------------------------
 % Par: Flüssigkeitsreibung
 % ----------------------------------------
-\paragraph{Flüssigkeitsreibung}
+\paragraph{Flüssigkeitsreibung:}
 \label{par:fluessigkeitsreibung}
 %
 \begin{wrapfigure}{R}{0.25\textwidth}
@@ -429,17 +438,17 @@ Die Reibung bei der Mischreibung ist deutlich geringer als die der Grenzreibung.
 
 Bei Flüssigkeitsreibung handelt sich um eine vollständige Trennung der Laufflächen.
 Selbst die Rauheitsspitzen berühren sich hierbei nicht mehr.
-Die äußere Reibung ist weg, bleibt nur noch die innere Reibung, welche durch die Scherbeanspruchung des Schmierstoffs hervorgerufen wird.
+Die äußere Reibung ist weg, so dass nur noch die innere Reibung bleibt, die durch die Scherbeanspruchung des Schmierstoffs hervorgerufen wird.
 
 Der Aufbau des Schmierfilms erfolgt hydrodynamisch, elastohydrodynamisch oder hydrostatisch.
-Hydrostatisch aufgebaute Schmierfilme werden durch externe Aggregate wie zum Beispiel eine Pumpe aufgebaut.
+Hydrostatisch aufgebaute Schmierfilme werden durch externe Aggregate, wie zum Beispiel eine Pumpe, aufgebaut.
 Bei der hydrodynamischen Schmierung wird der Schmierfilm durch die Relativbewegung der Reibpartner aufgebaut.
 Die hydrodynamische Schmierung tritt im Allgemein nur bei konformen Kontaktpaarungen auf.
-Mit konformen Kontaktpaarungen spricht man von Kontaktkörpern, die sich auf eine Fläche berühren.
+Bei konformen Kontaktpaarungen spricht man von Kontaktkörpern, die sich auf einer Fläche berühren.
 Eine Verformung der Oberflächen spielt hier keine wichtige Rolle, da die Pressungen aufgrund der großen Kontaktflächen vergleichsweise gering sind.
 Im Gegenteil dazu ist bei der elastohydrodynamischen Schmierung die Flächenpressung ein entscheidender Faktor zum Aufbau einer tragenden Schicht.
 Die Kontaktpaarungen bei dieser Schmierung sind im Allgemein kontraform.
-Ihre Flächen berühren sich nur in einem Punkt oder einer Linie.
+Ihre Flächen berühren sich nur in einem Punkt oder in einer Linie.
 Dadurch treten deutlich höhere Flächenpressungen als bei konformen Kontakten auf, was zu einer lokalen Verformung der Oberflächen führt.
 Durch dieses Phänomen und die Zunahme der Viskosität des Schmierstoffes unter hohem Druck wird der Schmierfilm im Kontaktbereich bei elastohydrodynamischen Schmierung aufgebaut.
 

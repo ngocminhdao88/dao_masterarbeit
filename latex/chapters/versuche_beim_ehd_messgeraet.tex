@@ -83,8 +83,8 @@ Die Messergebnisse für das Öl \textit{FVA 3} bei verschiedenen Temperatur \SIr
 Im IMKT gibt es ein mobiles Messsystem zur Schmierfilmdickenmessung mittels kapazitiven Messverfahren.
 Das System besteht aus einem Laptop, der mit \textit{Laderkurve-Software} installiert, und einer Messkarte (Typ USB-6211) von der Firma National Instrument (NI).
 Hier wird der EHD-Kontakt als ein Kondensator $C_K$ betrachtet.
-Die Auflade des Kondensators erfolgt durch eine Ladespannung $U_L =$ \SI{0,2}{\volt} und einen Vorwiderstand $R_V =$ \SI{1012.7}{\kilo\ohm}.
-Mit dieser Konfiguration hat das Gerät eine höchste Auflösung von \SI{0.788}{\pico\farad} (siehe \ref{sec:aufloesung_des_mobilen_messsystems} für die Berechnung).
+Die Auflade des Kondensators erfolgt durch eine Ladespannung $U_L =$ \SI{0,2}{\volt} und einen Vorwiderstand $R_V =$ \SI{10}{\mega\ohm}.
+Mit dieser Konfiguration hat das Gerät eine höchste Auflösung von \SI{0.078}{\pico\farad} (siehe \ref{sec:aufloesung_des_mobilen_messsystems} für die Berechnung).
 Abbildung~\ref{fig:schematischer_aufbau_des_mobilen_messsystems} zeigt den schematischen Aufbau des mobilen Messsystems.
 % ----------------------------------------
 % Fig: Schematischer Aufbau des mobilen Messsystems
@@ -241,7 +241,7 @@ Anhand dieser Informationen kann man die Testbedingungen, mit den gute Ergebniss
 Die Schmierfilmdicke kann nach \textit{Hamrock} und \textit{Dowson} (Abschnitt~\ref{sec:schmierfilmdicke_nach_hamrock_und_dowson}) bestimmt werden.
 Die Kapazität in dem EHD-Kontakt wird nach dem Modell eines Plattenkondensators (Abschnitt~\ref{sub:kapazitatmessung}) ermittelt.
 
-In Abbildung~\ref{fig:filmdicke_kapazitaet_geschwindigkeit} wird die Schmierfilmdicke und die Kapazität des Öls \textit{FVA3} in Abhängigkeit mit der Geschwindigkeit dargestellt.
+In Abbildung~\ref{fig:filmdicke_kapazitaet_geschwindigkeit} wird die Schmierfilmdicke und die Kapazität des Öls \textit{SHC320} in Abhängigkeit mit der Geschwindigkeit dargestellt.
 Man kann deutlich sehen, während die Filmdicke bei steigender Wälzgeschwindigkeit zunimmt, sinkt die Kapazität in dem Kontakt.
 Aus diesem Grund ist die kapazitive Messmethode zur Bestimmung eines dickeren Schmierfilm nicht geeignet.
 Bei niedriger Geschwindigkeit hat man besser Auflösung, allerdings besteht es die Gefahr, durch die Berührung von Rauheitsspitzen der Oberfläche der Kugel und der Scheibe das Messergebnis verfälscht wird.
@@ -250,8 +250,8 @@ Bei niedriger Geschwindigkeit hat man besser Auflösung, allerdings besteht es d
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[]{./images/film_cap_speed_80C_40N_fva3.pdf}
-    \caption{Der Zusammenhang zwischen Schmierfilmdicke und Kapazität mit der Geschwindigkeit von dem \textit{FVA3} bei \SI{80}{\degreeCelsius} und \SI{40}{\N}}
+    \includegraphics[]{./images/film_cap_speed_80C_20N_SHC320.pdf}
+    \caption{Der Zusammenhang zwischen Schmierfilmdicke und Kapazität mit der Geschwindigkeit von dem \textit{SHC320} bei \SI{80}{\degreeCelsius} und \SI{40}{\N}}
     \label{fig:filmdicke_kapazitaet_geschwindigkeit}
 \end{figure}
 
@@ -267,6 +267,7 @@ Analog kann man für steigende Last sagen, allerdings hat die Last zum Vergleich
     \caption{Zusammenhang zwischen der Kapazität und der Filmdicke bei verschiedenen Temperaturen und Lasten des Öl \textit{FVA3}}
     \label{fig:film_cap_with_dif_temp_and_load}
 \end{figure}
+\improvement[inline]{fig of cap vs film with dif temp and load}
 
 Die Versuche in dieser Arbeit werden wie folgt geplant und durchgeführt:
 % ----------------------------------------
