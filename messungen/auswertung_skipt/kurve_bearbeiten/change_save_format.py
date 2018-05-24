@@ -1,22 +1,28 @@
 """
 Change the format of the save datas from the program Ladekurve_mobil.
-Old format is one column all all the curve, new format is all the curves in tab seperate columns
+Old format is one column all all the curve, new format is all the curves in
+tab seperate columns.
 The new files will be saved in the new_format folder
 
 Usage:
     python change_save_format.py --input=<file_name>
 """
-import sys, getopt, os
+import sys
+import getopt
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+
 
 def usage():
     """
     Print out the help message
     """
+    print(__doc__)
 
-def save_data(file_name, dataframe, header):
+
+def saveData(file_name, dataframe, header):
     """ Save data of the dataframe in to the new file
 
         Input:
@@ -33,7 +39,7 @@ def save_data(file_name, dataframe, header):
     # build the path
     file_name = './new_format/' + file_name
 
-    f = open(file_name, 'w') # create tmp file to hold data
+    f = open(file_name, 'w')  # create tmp file to hold data
 
     # write the header before the 1st curve
     for data in header:
@@ -45,12 +51,11 @@ def save_data(file_name, dataframe, header):
 
 
 def main(argv):
-
     # get the commandline options
     try:
         opts, args = getopt.getopt(argv, "hi:", ["help", "input="])
     except getopt.GetoptError:
-        print('change_save_format.py -i <inputfile>')
+        usage()
         sys.exit(2)
 
     # parse the options and arguments
@@ -59,25 +64,26 @@ def main(argv):
             usage()
             sys.exit(2)
         elif opt in ("-i", "--input"):
-            work_file = arg # name of working file
+            work_file = arg  # name of working file
         else:
             assert False, 'error when parsing the input options'
 
-    f = open(work_file, 'r', encoding='utf-8', errors='ignore') # open to read working file
+    # open to read working file
+    f = open(work_file, 'r', encoding='utf-8', errors='ignore')
 
     # read the header
-    header = [] # a list to store header
+    header = []  # a list to store header
     temp_line = ''
     while 'Kurve' not in temp_line:
         temp_line = f.readline()
-        header.append(temp_line) # add header's info into the list
-    header = header[:-1] # remove last item in the header
+        header.append(temp_line)  # add header's info into the list
+    header = header[:-1]  # remove last item in the header
 
-    curve = [] # a list to hold data of the curve
-    curves_df = pd.DataFrame() # dataframe of all the curves
+    curve = []  # a list to hold data of the curve
+    curves_df = pd.DataFrame()  # dataframe of all the curves
     curve_nr = 0
 
-    for line in f: # read all the lines in file
+    for line in f:  # read all the lines in file
         if 'Kurve' not in line:
             try:
                 number = float(line)
@@ -85,27 +91,36 @@ def main(argv):
             except ValueError:
                 pass
 
-        else: # the 'Kurve' is there, the last curve should end
+        else:  # the 'Kurve' is there, the last curve should end
             curve_nr += 1
-            header_nr = 'Kurve_%i' % curve_nr # create the header
-            temp_df = pd.DataFrame(curve, columns=[header_nr]) # save curve in dataframe
-            curves_df = pd.concat([curves_df, temp_df], axis=1) # join the temp_df to the final dataframe
+            header_nr = 'Kurve_%i' % curve_nr  # create the header
 
-            curve.clear() # empty the curve
+            # save curve in dataframe
+            temp_df = pd.DataFrame(curve, columns=[header_nr])
+            # join the temp_df to the final dataframe, side by side
+            curves_df = pd.concat([curves_df, temp_df], axis=1)
+
+            curve.clear()  # empty the curve
+
+    f.close()  # close the file
 
     # plot out the last curve
     curve_nr += 1
+
     # save the last curve in dataframe
-    header_nr = 'Kurve_%i' % curve_nr # create the header
-    temp_df = pd.DataFrame(curve, columns=[header_nr]) # save curve in dataframe
+    header_nr = 'Kurve_%i' % curve_nr  # create the header
+    # save curve in dataframe
+    temp_df = pd.DataFrame(curve, columns=[header_nr])
+    # join the temp_df to the final dataframe, side by side
     curves_df = pd.concat([curves_df, temp_df], axis=1)
 
-    curve.clear() # empty the curve
-
-    f.close() # close the file
+    curve.clear()  # empty the curve
 
     print(curves_df.describe())
-    save_data(work_file, curves_df, header) # save dataframe in new file
+
+    # save dataframe in new file
+    saveData(work_file, curves_df, header)
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])

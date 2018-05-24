@@ -10,7 +10,7 @@
 \section{Optische Messung der EHD Schmierfilmdicke}
 \label{sec:optische_messung_der_ehd_schmierfilmdicke}
 
-Viele lichtspezifische Phänomene so wie Spiegelung, Refraktion, Interferenz, etc. kann durch die Wellentheorie erklärt werden.
+Viele lichtspezifische Phänomene wie Spiegelung, Refraktion, Interferenz etc. können durch die Wellentheorie erklärt werden.
 Einige dieser Phänomene mach Licht zu einem sehr nützlichen Werkzeug in zahlreichen Forschungsbereichen.
 In diesem Kapitel werden einige Begriffe und Konzepte für die physikalische Optik kurz definiert.
 
@@ -30,9 +30,9 @@ Eine Lichtwelle, die eine Amplitude von $A$, eine Wellenlänge von $\lambda$ hat
 \end{equation}
 %
 
-Das Term $x - v t$ in der Gleichung \ref{eq:lichtwelle} ist die Phase der Lichtwelle, die die Wellenposition beim Zeitpunkt $t$ angibt.
+Der Term $(x - v t)$ in der Gleichung~\ref{eq:lichtwelle} ist die Phase der Lichtwelle, die die Wellenposition beim Zeitpunkt $t$ angibt.
 Was in der Praxis wichtig ist, ist die Phasendifferenz von zwei Lichtquellen an der gesuchten Stelle zu finden.
-Wenn Licht in unterschiedlichen Medien durchdringt, wird dessen Geschwindigkeit entsprechend dem Brechungsindex der Medien verändert.
+Wenn Licht unterschiedliche Medien durchdringt, wird dessen Geschwindigkeit entsprechend dem Brechungsindex der Medien verändert.
 Diese Geschwindigkeitsabweichung verursacht einen Pfadunterschied $\Delta$, der in Folge zur Phasenabweichung $\delta$ führt.
 % ----------------------------------------
 % Eq: Licht Phasenabweichung
@@ -44,27 +44,28 @@ Diese Geschwindigkeitsabweichung verursacht einen Pfadunterschied $\Delta$, der 
 %
 
 Immer wenn ein Lichtstrahl, der durch ein Medium mit einem bestimmten Brechungsindex läuft, mit einem anderen Medium mit einem anderen Brechungsindex an der Grenze ankommt, wird er teilweise reflektiert und teilweise transmittiert.
-Rein nur die Reflektion allein an der Grenze resultiert auch eine Phasenverschiebung zwischen dem originalen und dem reflektierten Lichtstrahl.
+Allein durch die Reflektion an der Grenze resultiert eine Phasenverschiebung zwischen dem originalen und dem reflektierten Lichtstrahl.
 
-Wenn zwei Lichtstrahle, die gleiche Wellenlänge sind, an einem Punkt erreichen, tritt dort das Phänomen Interferenz auf.
-Durch die Überlagerung der beiden Strahlen führt es zu einer Veränderung der Amplitude bzw. Intensität des resultierenden Licht.
-Wo die Intensität stärken wird, nennt man dort konstruktive Interferenz, wo die Intensität schwächen wird, nennt man destruktive Interferenz.
+Wenn zwei Lichtstrahlen, die die gleiche Wellenlänge haben, an einem Punkt zusammentreffen, tritt dort das Phänomen Interferenz auf.
+Durch die Überlagerung der beiden Strahlen kommt es zu einer Veränderung der Amplitude bzw. Intensität des resultierenden Lichts.
+Wo die Intensität stärker wird, nennt man das konstruktive Interferenz, wo die Intensität schwächer wird, nennt man dieses destruktive Interferenz.
 
-Diese Phänomene sind in einem Beispiel (Abbildung \ref{fig:pfadabweichung_des_lichtstrahls}), wo ein Lichtstrahl in der Luft in eine Glasscheibe mit einem Winkel $\theta$ angeht, dargestellt.
-Der Brechungsindex der Luft ist $n_1$ und von der Glasscheibe ist $n_2$.
-Hier wird der Lichtstrahl an der Grenze der Glasscheibe am Punkt $A$ teilweise zurück reflektiert (Pfad $ADF$) und teilweise durchgelassen (Pfad $AB$).
-An der Unterseite der Glasscheibe wird er noch mal am Punkt $B$ zurück gespiegelt und am Punkt $C$ in die Luft durchdringt (Pfad $BCF'$).
-Von einem Lichtstrahl gibt es jetzt zwei Lichtstrahle, die gleiche Wellenlänge sowie der originale aber wegen dem Pfaddifferenz ($ABCF' > ADF$) verschiedene Phasen haben.
+Diese Phänomene sind in einem Beispiel (siehe Abbildung~\ref{fig:pfadabweichung_des_lichtstrahls}), wo ein Lichtstrahl in der Luft auf eine Glasscheibe mit einem Winkel von $\theta$ trifft, dargestellt.
+Der Brechungsindex der Luft ist $n_1$ und der der Glasscheibe ist $n_2$.
+Hier wird der Lichtstrahl an der Grenze der Glasscheibe am Punkt $A$ teilweise reflektiert (Pfad $ADF$) und teilweise durchgelassen (Pfad $AB$).
+An der Unterseite der Glasscheibe wird er noch einmal am Punkt $B$ gespiegelt und durchdringt am Punkt $C$ die Luft (Pfad $BCF'$).
+Aus einem Lichtstrahl werden nun zwei Lichtstrahlen, welche die gleiche Wellenlänge sowie originale aber wegen der Pfaddifferenz ($ABCF' > ADF$) verschiedene Phasen haben.
+
 % ----------------------------------------
 % Fig: Licht Reflektion und Transmittion
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/licht_interferenz_furtuna.pdf}
-    \caption{Pfaddifferenz eines Lichstrahles \cite{furtuna_2011}}
+    \caption{Pfaddifferenz eines Lichstrahles~\cite{furtuna_2011}}
     \label{fig:pfadabweichung_des_lichtstrahls}
 \end{figure}
-%
+
 
 % ----------------------------------------
 % Sub: Schmierfilmdickenmessungen mittels Lichtinterferenz
@@ -72,8 +73,9 @@ Von einem Lichtstrahl gibt es jetzt zwei Lichtstrahle, die gleiche Wellenlänge 
 \subsection{Schmierfilmdickenmessungen mittels Lichtinterferenz}
 \label{sub:schmierfilmdickenmessung_mittels_lichtinterferenz}
 
-Diese Methode wurde in den frühen sechziger Jahren auf der Basis der Lichtinterferenz entwickelt und verwendet eine flache, transparente Scheibe (Glas, Saphir), die gegen eine glänzende Stahlkugel oder -rolle geladen ist (Abbildung \ref{fig:ehd_pruefsprinzip_furtuna}).
-Die berührende Fläche der Scheibe ist mit einer halbdurchsichtigen Schicht (Chrom) beschichtet, so dass ein auf den Kontakt auftreffende Licht (monochrom) zweimal reflektiert wird, erstens an der Glas-Metallschicht-Grenzfläche und zweitens an der Kugel-, Rolleroberfläche.
+Diese Methode wurde in den frühen sechziger Jahren auf der Basis der Lichtinterferenz entwickelt und verwendet eine flache, transparente Scheibe (Glas, Saphir), die gegen eine glänzende Stahlkugel oder -rolle gerichtet ist (siehe Abbildung~\ref{fig:ehd_pruefsprinzip_furtuna}).
+Die berührende Fläche der Scheibe ist mit einer halbdurchsichtigen Schicht (Chrom) beschichtet, so dass ein auf den Kontakt auftreffendes Licht (monochrom) zweimal reflektiert wird, erstens an der Glas-Metallschicht-Grenzfläche und zweitens an der Kugel-, Rolleroberfläche.
+
 % ----------------------------------------
 % Fig: EHD Prüfsprinzip Furtuna
 % ----------------------------------------
@@ -83,12 +85,12 @@ Die berührende Fläche der Scheibe ist mit einer halbdurchsichtigen Schicht (Ch
     \caption{Prinzip der optischen Schmierfilmdickenmessung \cite{furtuna_2011}}
     \label{fig:ehd_pruefsprinzip_furtuna}
 \end{figure}
-%
 
 Bei Rekombinaiton führt die Pfaddifferenz zwischen den reflektierten Strahlen entweder zu einer konstruktiven oder zu einer destruktiven Interferenz.
-Diese Interferenzmuster hängt von der Dicke der Chromschicht und der Schmierfilmdicke ab.
+Dieses Interferenzmuster hängt von der Dicke der Chromschicht und der Schmierfilmdicke ab.
 Bei der bekanten Chromschichtdicke und durch entsprechende Kalibrierung lässt sich daraus die Schmierfilmdicke bestimmen.
-Leider ist die Auflösung dieser Methode nicht so hoch, nur der Schmierfilm, der dicker als ein Viertel der Wellenlänge der Lichtquelle ist, ist messbar.
+Leider ist die Auflösung dieser Methode nicht so hoch.
+Nur der Schmierfilm, der dicker als ein Viertel der Wellenlänge der Lichtquelle ist, ist messbar.
 
 % ----------------------------------------
 % Sub: Variante der optischen Messmethoden
@@ -96,11 +98,13 @@ Leider ist die Auflösung dieser Methode nicht so hoch, nur der Schmierfilm, der
 \subsection{Variante der optischen Messmethoden}
 \label{sub:variante_der_optischen_messmethoden}
 
-\textit{Johnston et al} \cite{johnston_1991} versucht die geringe Auflösung der klassischen Methode zu überwinden.
-Sein Ansatz bestand darin, eine Abstandsschicht aus Silikat mit fixierter Dicke zu verwenden, die auf der $20 nm$ Chromschicht abgelagert wurde.
-Die Silikatschicht hat einen Brechungsindex, der ähnlich so wie von Mineralölen ist und wirkt als "`festes Öl"'. Sie soll die Trennung zwischen den Kontaktflächen erhöhen und dadurch ermöglicht es die Messungen von Filmen theoretisch beliebiger Dicke.
-Die Vorteile der Spacer-Schicht-Methode wurden in der \textit{Ultra-Dünnfilm-Interferometrie-Methode} (UTFI) voll ausgenutzt, die weißes Licht und ein Spektrometer verwendet, um das Licht in seine Wellenlängenkomponenten zu teilen (Abbildung \ref{fig:ehd_spacer_layer_johnston}).
+\textit{Johnston et al}~\cite{johnston_1991} versuchte die geringe Auflösung der klassischen Methode zu überwinden.
+Sein Ansatz bestand darin, eine Abstandsschicht aus Silikat mit fixierter Dicke zu verwenden, die auf der $20 nm$ Chromschicht abgelagert wird.
+Die Silikatschicht hat einen Brechungsindex, der ähnlich dem von Mineralölen ist und als ``festes Öl'' wirkt .
+Sie soll die Trennung zwischen den Kontaktflächen erhöhen und ermöglicht dadurch die Messungen von Filmen theoretisch beliebiger Dicke.
+Die Vorteile der Spacer-Schicht-Methode wurden in der \textit{Ultra-Dünnfilm-Interferometrie-Methode} (UTFI) voll ausgenutzt, die weißes Licht und ein Spektrometer verwendet, um das Licht in seine Wellenlängenkomponenten zu teilen (siehe Abbildung~\ref{fig:ehd_spacer_layer_johnston}).
 Die Auflösung dierser Technik liegt in der Größenordnung von Nanometern.
+
 % ----------------------------------------
 % Fig: EHD Spacer Layer Prüfsprinzip
 % ----------------------------------------
@@ -110,10 +114,10 @@ Die Auflösung dierser Technik liegt in der Größenordnung von Nanometern.
     \caption{Spacer-Layer-Methode \cite{johnston_1991}}
     \label{fig:ehd_spacer_layer_johnston}
 \end{figure}
-%
 
-Eine Beschränkung der Technik der Spacer-Layer besteht darin, dass nur eine Messung von der Mitte des Kontakts aufgenommen wird.
-\textit{Cann et al.} \cite{cann_1996} beschrieb die Entwicklung einer neuen Technik, die die Abbildungsfähigkeiten des klassischen optischen Verfahrens mit der UTFI-Methode kombiniert, das \textit{Spacer-Layer-Imaging-Verfahren} (SLIM) (Abbildung \ref{fig:ehd_slim_methode}).
+Eine Beschränkung der Technik der Spacer-Layer-Methode besteht darin, dass nur eine Messung von der Mitte des Kontakts aufgenommen wird.
+\textit{Cann et al.}~\cite{cann_1996} beschrieb die Entwicklung einer neuen Technik, die die Abbildungsfähigkeiten des klassischen optischen Verfahrens mit der UTFI-Methode kombiniert: das \textit{Spacer-Layer-Imaging-Verfahren} (SLIM) (siehe Abbildung~\ref{fig:ehd_slim_methode}).
+
 % ----------------------------------------
 % Fig: EHD SLIM Methode
 % ----------------------------------------
@@ -123,12 +127,11 @@ Eine Beschränkung der Technik der Spacer-Layer besteht darin, dass nur eine Mes
     \caption{SLIM Methode \cite{ehl_broshure}}
     \label{fig:ehd_slim_methode}
 \end{figure}
-%
 
 Anstatt ein Spektrometer zu verwenden, um die Wellenlänge des vom Bild eines EHD-Kontakts zurückgeworfenen Lichts zu bestimmen, benutzt SLIM eine hochauflösende RGB-CCD-Farbkamera, um ein Bild des gesamten Kontakts aufzunehmen.
 Das SLIM-Softwarepaket passt die Farben im Bild anhand einer vorher festgelegten Farbraumkalibrierung an die Schmierfilmdicke an.
 Das System erzeugt somit in wenigen Sekunden eine Filmdickenkarte des gesamten EHD-Kontakts.
-Diese Fähigkeit macht es zu einem geeigneten Werkzeug für die Untersuchung des EHD-Kontakts in verschiedenen Bedingungen, wie zum Beispiel Fettschmierung, rauhe Oberflächen, mangelte Schmierung oder additive Grenzschichtbildung.
+Diese Fähigkeit macht es zu einem geeigneten Werkzeug für die Untersuchung des EHD-Kontakts unter verschiedenen Bedingungen wie zum Beispiel bei Fettschmierung, rauher Oberfläche, mangelnder Schmierung oder additiver Grenzschichtbildung.
 
 % ----------------------------------------
 % Sec: Elektrische Methode
@@ -136,15 +139,20 @@ Diese Fähigkeit macht es zu einem geeigneten Werkzeug für die Untersuchung des
 \section{Elektrische Messung der EHD Schmierfilmdicke}
 \label{sec:elektrische_messung_der_ehd_schmierfilmdicke}
 
-Neben der optischen Messmethoden gibt es noch die elektrische Messmethode zur Untersuchung der EHD-Schmierung, wie zum Beispiel Widerstand, Kapazität, Entladespannung.
+Neben der optischen Messmethode gibt es noch die elektrische Messmethode zur Untersuchung der EHD-Schmierung, wie zum Beispiel mit Hilfe der Messunge von Widerstand, Kapazität und Entladespannung.
 Der Vorteil dieser Methode ist, dass sie direkt bei Maschinenelementen, welche aus Stahl sind, während des Betriebs verwendet werden kann.
-Allerdings gibt es auch Nachteile.
-Die Form des Kontakts, wo die große lokale Verformung stattfindet, ist nur vermutet und stark vereinfacht.
-Die hat Einfluss auf die Widerstand-,Kapazität-Messergebnisse.
+Allerdings gibt es auch Nachteile:
+Die Form des Kontakts, an dem die große lokale Verformung stattfindet, ist nur angenommen und stark vereinfacht.
+Dieses hat Einfluss auf die Widerstands-, Kapazität-Messergebnisse.
 Ein anderer Faktor ist die Sauberkeit des Schmierstoffes, welche schwer zu kontrollieren ist.
-Generell liefern die elektrische Methode nur die mittleren Werte über den Kontaktbereich und gibt leider keine direkte Indikation der Form des Schmierfilms.
+Generell liefert die elektrische Methode nur mittlere Werte über den gesamten Kontaktbereich und gibt leider keine direkte Indikation der Form des Schmierfilms.
 
-Normalerweise werden die elektrische Methoden für folgende Anwendungen verwendet:
+Normalerweise wird die elektrische Methode für folgende Anwendungen verwendet:
+
+
+% ----------------------------------------
+% Itemize: Anwendungen für elektrische Messmethode
+% ----------------------------------------
 \begin{itemize}
     \item Schmierfilmdickenmessung bei bekannten Schmierstoffen
     \item Detektion des Voll-Schmierfilaufbaus im Kontakt der rauhen Öberflächen
@@ -162,54 +170,54 @@ Der Widerstand ist eine Indikation der direkten Berührung der Rauheitspitzen de
 Bei vollständiger Oberflächentrennung (Flüssigkeitschmierung) soll der Widerstand theoretisch unendlich groß sein.
 Zum besseren Verständnis der elektrischen Vorgänge im EHD-Kontakt wurde eine Reihe Arbeiten an unterschiedlichen Modellprüfständen und Maschinenelementen durchgeführt.
 
-In einem System bestehend aus einer feststehenden Kugel und einem rotierenden Zylinder hat \textit{Furey} \cite{furey_1961} das Verhalten des elektrischen Widerstands untersucht.
-Die Ergebnisse (Abbildung \ref{fig:resistance_vs_time_furey}) zeigten eine große Streuung des Widerstands bei Mischreibung.
-Zum Beschreiben für einen isolierenden Schmierfilm definiert er einen Wert von \SI{10}{\kilo\ohm}.
-Im Oszilloskop erkannte er, dass es zwei Zustände des Kontaktwiderstands gab, hoch und niedrig.
-Das zeitliche Verhältnis zwischen den beiden Zuständen wird über Intervalle von \SI{10}{\milli\second} aufgenommen, ausgewertet und das Ergebnis als prozentualer Anteil des direkten Kontakt angegeben.
-Mit dieser Methode konnte er berechnen, wie groß der Anteil der Festkörperkontakte in jedem Reibungszustand ist.
+In einem System bestehend aus einer feststehenden Kugel und einem rotierenden Zylinder, hat \textit{Furey}~\cite{furey_1961} das Verhalten des elektrischen Widerstands untersucht.
+Die Ergebnisse zeigten eine große Streuung des Widerstands bei Mischreibung (siehe Abbildung~\ref{fig:resistance_vs_time_furey}).
+Zum Beschreiben für einen isolierenden Schmierfilm definierte er einen Wert von \SI{10}{\kilo\ohm}.
+Im Oszilloskop erkannte er, dass es zwei Zustände des Kontaktwiderstands gab: hoch und niedrig.
+Das zeitliche Verhältnis zwischen den beiden Zuständen wurde über Intervalle von \SI{10}{\milli\second} aufgenommen, ausgewertet und das Ergebnis als prozentualer Anteil des direkten Kontakts angegeben.
+Mit dieser Methode konnte er berechnen, wie groß der Anteil der Festkörperkontakte bebei jedem Reibungszustand ist.
+
 % ----------------------------------------
 % Fig: Widerstand - Zeit Furey
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/resistance_vs_time_furey.pdf}
-    \caption{Der prozentuale Anteil von metallischen Kontakt \cite{furey_1961}}
+    \caption{Der prozentuale Anteil von metallischen Kontakt~\cite{furey_1961}}
     \label{fig:resistance_vs_time_furey}
 \end{figure}
-%
 
-In seiner Arbeit \cite{kuhlmann_2009} verwendete \textit{Kuhlmann} zwei unterschiedliche Systeme zur Widerstandmessung.
-Ein System basiert auf die \textit{Wheatstonsche} Brückenschaltung (Abbildung \ref{fig:ersatzschaltbild_messsysteme_kuhlmann} links), welche zur Vermeidung eines Tunneleffektes mit Wechselstrom gespeist wird.
+In seiner Arbeit~\cite{kuhlmann_2009} verwendete \textit{Kuhlmann} zwei unterschiedliche Systeme zur Widerstandmessung:
+Ein System basiert auf der Wheatstonsche Brückenschaltung (siehe Abbildung~\ref{fig:ersatzschaltbild_messsysteme_kuhlmann} links), welche zur Vermeidung eines Tunneleffektes mit Wechselstrom gespeist wird.
 Der Zusammenhang zwischen dem Widerstand $R_L$ des Lagers und der gemessenen Brückenspannung $U_m$ wird durch eine aufwändige Kalibration über variable Referenzwiderstände hergestellt.
-Zur Vereinfachung der Messkettenkalibrierung und zur Verbesserung der Messempfindlichkeit bei $R_L$ mehr als \SI{1}{\kilo\ohm} setzte \textit{Kuhlmann} ein direkt messendes Trägerfrequenz-Messsystem ein (Abbildung \ref{fig:ersatzschaltbild_messsysteme_kuhlmann} rechts).
+Zur Vereinfachung der Messkettenkalibrierung und zur Verbesserung der Messempfindlichkeit von $R_L$ bei mehr als \SI{1}{\kilo\ohm} setzte \textit{Kuhlmann} ein direkt messendes Trägerfrequenz-Messsystem ein (siehe Abbildung~\ref{fig:ersatzschaltbild_messsysteme_kuhlmann} rechts).
 Der Widerstandszweig wird an einer hochgenauen Wechselstromquelle \SI[separate-uncertainty]{1 +- 0.2}{\milli\ampere} angeschlossen.
-Aus dem Spannungsabfall über den Gesamtwiderstand ($R_V$ und $R_P$ sind bekannt) konnte er den Lagerwiderstand bestimmen.
+Da $R_V$ und $R_P$ bekannt sind, konnte er aus dem Spannungsabfall über den Gesamtwiderstand den Lagerwiderstand bestimmen.
+
 % ----------------------------------------
 % Fig: Kuhlmann Messsysteme
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/ersatzschaltbild_kuhlmann.pdf}
-    \caption{Ersatzschaltbild für die Messsysteme \cite{kuhlmann_2009}}
+    \caption{Ersatzschaltbild für die Messsysteme~\cite{kuhlmann_2009}}
     \label{fig:ersatzschaltbild_messsysteme_kuhlmann}
 \end{figure}
-%
 
-Beide obengenannte Messsysteme wurden von \textit{Kuhlmann} bei Fettuntersuchung mit Schrägkugellagern und Kegelrollenlagern bei niedrigen Betriebstemperatur eingesetzt (Abbildung \ref{fig:schema_schraerikula_kerola_kuhlmann}).
-Durch eine \SI{0.4}{\milli\meter} dicke Keramikbeschicht zwischen der Lagersitze und der Welle konnte er den Widerstand für beide Lager separat messen.
-Abbildung \ref{fig:schema_schraerikula_kerola_kuhlmann} zeigt die elektrische Ersatzschaltbilder für einen Wälzkörper im Schrägkugellager und Kegelrollenlager.
+Beide obengenannten Messsysteme wurden von \textit{Kuhlmann} bei Fettuntersuchungen mit Schrägkugellagern und Kegelrollenlagern bei niedrigen Betriebstemperatur eingesetzt (siehe Abbildung~\ref{fig:schema_schraerikula_kerola_kuhlmann}).
+Durch eine \SI{0.4}{\milli\meter} dicke Keramikbeschichtung zwischen der Lagersitze und der Welle konnte er den Widerstand für beide Lager separat messen.
+Abbildung~\ref{fig:schema_schraerikula_kerola_kuhlmann} zeigt die elektrischen Ersatzschaltbilder für einen Wälzkörper im Schrägkugellager und Kegelrollenlager.
 Alle Wälzkörper eines Lagers sind elektrisch parallel geschaltet und der Kontakt zwischen Rollenstirn und Bord beim Kegelrollenlager muss berücksichtigt werden.
+
 % ----------------------------------------
 % Fig: Kuhlmann Test Lager
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/schema_schraegrikula_kerola_kuhlmann.pdf}
-    \caption{Schema des Schrägkugellager- und Kegelrollenlager-Einzelkontaktes \cite{kuhlmann_2009}}
+    \caption{Schema des Schrägkugellager- und Kegelrollenlager-Einzelkontaktes~\cite{kuhlmann_2009}}
     \label{fig:schema_schraerikula_kerola_kuhlmann}
 \end{figure}
-%
 
 % ----------------------------------------
 % Sub: Kapazitätmessung
@@ -218,42 +226,48 @@ Alle Wälzkörper eines Lagers sind elektrisch parallel geschaltet und der Konta
 \label{sub:kapazitatmessung}
 
 Der Vorteil bei der Kapazitätmessung ist wie bei der Widerstandsmessung die einfache Anwendung im Maschinenelement.
-Es ist auch möglich bei dieser Methode quantitative Schmierfilmdickenmessung durchzuführen, welche bei resistiver Methode schwer oder unmöglich ist.
+Es ist auch möglich, bei dieser Methode eine quantitative Schmierfilmdickenmessung durchzuführen, welche bei der resistiven Methode schwer oder unmöglich ist.
 
-Auf Basis der Konstantstromladung hat \textit{Barz} \cite{barz_1996} ein System zur kapazitiven Schmierfilmdickenmessung im Wälzlager entwickelt.
+Auf Basis der Konstantstromladung hat \textit{Barz}~\cite{barz_1996} ein System zur kapazitiven Schmierfilmdickenmessung im Wälzlager entwickelt.
 Hier werden die Oberflächen zwischen Wälzkörpern, Außenring und Innenring bei einem trennenden Schmierfilm als Kondensator betrachtet.
-Die Kapazität des einzelnen EHD-Kontaktes wird nach dem Modell von \textit{Brüser} \cite{brueser_1972} beschrieben.
+Die Kapazität des einzelnen EHD-Kontaktes wird nach dem Modell von \textit{Brüser}~\cite{brueser_1972} beschrieben:
+
 % ----------------------------------------
 % Fig: Brüser Modell des EHD-Kontaktes
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/kapazitaet_schmierfilmdicke_modell.pdf}
-    \caption{Kapazitives Modell eines EHD-Kontaktes \cite{barz_1996}}
+    \caption{Kapazitives Modell eines EHD-Kontaktes~\cite{barz_1996}}
     \label{fig:kapazitives_modell_eines_ehd_kontaktes}
 \end{figure}
-%
 
-Im Modell von \textit{Barz} wird der EHD-Kontakt in drei Bereiche \textit{Einlaufbereich}, \textit{Hertzscher Kontaktbereich} und \textit{Auslaufbereich} geteilt und unter folgenden Annahmen betrachtet:
-%
+Im Modell von \textit{Barz} wird der EHD-Kontakt in drei Bereiche --- \textit{Einlaufbereich}, \textit{Hertzscher Kontaktbereich} und \textit{Auslaufbereich} --- geteilt und unter folgenden Annahmen betrachtet:
+% ----------------------------------------
+% Eunumerate: Brüser Modell des EHD-Kontaktes
+% ----------------------------------------
 \begin{enumerate}
-    \item Der Einlaufbereich ist vollständig mit Schmierstoff gefüllt
-    \item Im Hertzschen Kontaktbereich herrscht es eine konstante Schmierfilmdicke $h_0$
-    \item Die Einschnürung vor dem Auslaufbereich wird vernachlässigt
-    \item Im Auslaufbereich haftet der Schmierstoff gleichmäßig an den Kontaktpartner an
-    \item Das elektrische Feld im Hertzschen Bereich ist homogen
+    \item Der Einlaufbereich ist vollständig mit Schmierstoff gefüllt.
+    \item Im Hertzschen Kontaktbereich herrscht es eine konstante Schmierfilmdicke $h_0$.
+    \item Die Einschnürung vor dem Auslaufbereich wird vernachlässigt.
+    \item Im Auslaufbereich haftet der Schmierstoff gleichmäßig an den Kontaktpartner an.
+    \item Das elektrische Feld im Hertzschen Bereich ist homogen.
 \end{enumerate}
-%
 
-Mit dieser Annahmen kann man die Kontaktkapazität so berechnen:
-%
+Mit diesen Annahmen kann man die Kontaktkapazität so berechnen:
+% ----------------------------------------
+% Eq: Summe der Kapazität im Kontakt
+% ----------------------------------------
 \begin{equation}
     C_K = C_{Einlauf} + C_{Hertz} + C_{Auslauf}
     \label{eq:kontaktkapazitaet}
 \end{equation}
-%
-Aufgrund dem großen Einfluss und der linearen Proportional von der $C_{Hertz}$ mit der $C_K$ vereinfachte \textit{Barz} die Kontaktkapazität als:
-%
+
+Aufgrund des großen Einflusses und der linearen Propotionalität von der $C_{Hertz}$ mit der $C_K$ vereinfachte \textit{Barz} die Kontaktkapazität als:
+
+% ----------------------------------------
+% Eq: Summe der Kapazität im Kontakt
+% ----------------------------------------
 \begin{align}
     C_K = f(C_{Hertz}) = k_C C_{Hertz} \\
     C_{Hertz} = \varepsilon_0 \varepsilon_r \cfrac{A_{Hertz}}{h_0}
@@ -261,21 +275,27 @@ Aufgrund dem großen Einfluss und der linearen Proportional von der $C_{Hertz}$ 
 \end{align}
 %
 wobei $A_{Hertz}$ die Größe der Hertzschen Kontaktfläche, $h_0$ die zentrale Schmierfilmdicke, $\varepsilon_0$ die elektrische Feldkonstante ($\varepsilon_0 =$ \SI[bracket-unit-denominator=false, per-mode=symbol]{8,85e-12}{\ampere\second\per\volt\per\meter}) und $\varepsilon_r$ die relative Dielektrizitätskonstante ist.
-In der Gleichung~\ref{eq:kontaktkapazitaet_vereinfach} definierte \textit{Barz} definierte einen Umrechnungsfaktor $k_C$, welcher die $C_{Einlauf}$ und die $C_{Auslauf}$ berücksichtigt.
-Er ist von den Betriebsbedingungen, dem Lager, dem Schmierstoff, der Laufzeit etc. abhängig.
-Selbst ist er von der Schmierfilmdicke abhängig, da das Verhältnis zwischen $C_{Einlauf}$ und $C_{Auslauf}$ bei der Änderung der Schmierfilmdicke nicht konstant bleibt.
-Für den betrachten Fall mit axial belasteten Spindellagern hat \textit{Barz} mit dem Wert $k_C = 3,5$ bestimmt.
+In der Gleichung~\ref{eq:kontaktkapazitaet_vereinfach} definierte \textit{Barz} einen Umrechnungsfaktor $k_C$, welcher die $C_{Einlauf}$ und die $C_{Auslauf}$ berücksichtigt.
+Er ist von den Betriebsbedingungen, dem Lager, dem Schmierstoff, der Laufzeit etc., abhängig.
+Da das Verhältnis zwischen $C_{Einlauf}$ und $C_{Auslauf}$ bei der Änderung der Schmierfilmdicke nicht konstant bleibt, varriert der Faktor $k_C$ bei unterschiedlichen Filmdicken.
+Für den betrachteten Fall mit axial belasteten Spindellagern hat \textit{Barz} den Wert $k_C = 3,5$ bestimmt.
 
-Da die Kontakte zwischen den Wälzkörpern mit dem Außenring und dem Innenring nicht gleich sind, führte \textit{Barz} weiterhin einen Faktor $k_h$ zur individuellen Bestimmung der Schmierfilmdicke an der beiden Ringen ein.
-Der ist das Verhältnis von den nach EHD-Theorie berechneten Schmierfilmdicken am Innenring $h_{EHD,i}$ und am Außenring $h_{EHD,a}$ und berechnet sich unter einer Annahme, dass die Schmierungbedingungen am Innenring und Außenring gleich sind, zu
-%
+Da die Kontakte zwischen den Wälzkörpern mit dem Außenring und dem Innenring nicht gleich sind, führte \textit{Barz} weiterhin einen Faktor $k_h$ zur individuellen Bestimmung der Schmierfilmdicke an den beiden Ringen ein.
+Dieser ist das Verhältnis von den nach der EHD-Theorie berechneten Schmierfilmdicken am Innenring $h_{EHD,i}$ und am Außenring $h_{EHD,a}$ und berechnet sich unter der Annahme, dass die Schmierungbedingungen am Innenring und Außenring gleich sind, zu:
+
+% ----------------------------------------
+% Eq: Verhältnis der Filmdicke am Außenring und Innenring
+% ----------------------------------------
 \begin{equation}
     k_h = \cfrac{h_a}{h_i} = \cfrac{h_{mess,a}}{h_{mess,i}} = \cfrac{h_{EHD,a}}{h_{EHD,i}}
     \label{eq:kh_faktor}
 \end{equation}
-%
-Schließlich berechnen sich die Schmierfilmdicken am Innenring bzw. am Außenring aus der gemessenen Gesamtkapazität $C_{ges}$ eines Lagers mit einer Wälzkörperanzahl $Z$ zu
-%
+
+Schließlich berechnen sich die Schmierfilmdicken am Innenring bzw. am Außenring aus der gemessenen Gesamtkapazität $C_{ges}$ eines Lagers mit einer Wälzkörperanzahl $Z$ zu:
+
+% ----------------------------------------
+% Eq: Verhältnis der Filmdicke am Außenring und Innenring
+% ----------------------------------------
 \begin{align}
     h_{mess,i} &= 2 Z k_C \varepsilon_0 
                 \cfrac{(\varepsilon_{r,i} A_{Hertz,i}) \left( \varepsilon_{r,a} \cfrac{A_{Hertz,a}}{k_h} \right) }
@@ -284,8 +304,6 @@ Schließlich berechnen sich die Schmierfilmdicken am Innenring bzw. am Außenrin
     %
     h_{mess,a} &= k_h h_{mess,i}
 \end{align}
-%
-
 
 % ----------------------------------------
 % Sec: Alternative Methoden
@@ -299,65 +317,66 @@ Schließlich berechnen sich die Schmierfilmdicken am Innenring bzw. am Außenrin
 \subsection{Taktile}
 \label{sub:taktil}
 
-Um den Schmierfilmaufbau in Axialzylinderrollenlagern unter der Annahme, dass die zentrale Schmierfilmdicke $h_0$ eine gleiche Verschiebung zwischen Wälzkörpern und Lagerringen verursacht, zu untersuchen, hat \textit{Walbeck} in seiner Arbeit \cite{Walbeck_2004} einen modifizierten FE8-Prüfkopf (FE8-SDM) benutzt (Abbildung \ref{fig:fe8_sdm_walbeck}).
+Um den Schmierfilmaufbau in Axialzylinderrollenlagern unter der Annahme, dass die zentrale Schmierfilmdicke $h_0$ eine gleiche Verschiebung zwischen Wälzkörpern und Lagerringen verursacht, zu untersuchen, benutzte \textit{Walbeck} in seiner Arbeit~\cite{Walbeck_2004} einen modifizierten FE8-Prüfkopf (FE8-SDM) benutzt (siehe Abbildung~\ref{fig:fe8_sdm_walbeck}).
+
 % ----------------------------------------
 % Fig: Walbeck FE8 Prüfkopf
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/fe8_sdm_walbeck.pdf}
-    \caption{FE8-SDM Prüfkopf \cite{Walbeck_2004}}
+    \caption{FE8-SDM Prüfkopf~\cite{Walbeck_2004}}
     \label{fig:fe8_sdm_walbeck}
 \end{figure}
-%
 
-In der neben einander Anordnung sollen die Schmierfilme in zwei Prüflagern eine Gesamtverschiebung von $x_{ges} = 4  h_0$ verursachen.
-Zur Messkette, die mit einem maximalen Messfehler von \SI{0,9}{\micro\meter} aufweist, gehören die drei hochauflösende induktiv Wegaufnehmer.
-Wird es auf den einzelnen Schmierspalt bezogen, reduziert sich der maximal mögliche Fehler auf \SI{0,23}{\micro\meter}.
-Da die Erwärmung im Schmierspalt kann zum Messfehler verursachen, führte \textit{Walbeck} die Messungen bei relativ geringen Kontaktpressungen (\SIrange{419}{593}{\mega\pascal}) durch.
-Allerdings ist die Wärmeentwicklung durch Lagerreibung nicht vermeidbar und dadurch ist eine absolute Schmierfilmdickenmessung wegen Wärmedehnung in Bauteilen nicht möglich.
-Abhilfe zählt hier die Differenzmessung der Verschiebung zwischen Stillstand und Betriebsdrehzahl.
-Um die thermische Effekte auf die Messergebnisse gering zu halten, soll die Drehzahländerung innerhalb einer halbe Sekunde dauern.
-Zusätzlich wurde die Wegmessungen von Winkelstellung der Welle getriggert, um der Fehler wegen Formtoleranzen der Lagerscheiben zu vermeiden.
+In der Anordnung, die nebeneinander aufgebaut ist, sollen die Schmierfilme in zwei Prüflagern eine Gesamtverschiebung von $x_{ges} = 4  h_0$ verursachen.
+Zur Messkette, die einen maximalen Messfehler von \SI{0,9}{\micro\meter} aufweist, gehören die drei hochauflösenden induktiven Wegaufnehmer.
+Wird jener auf den einzelnen Schmierspalt bezogen, reduziert sich der maximal mögliche Fehler auf \SI{0,23}{\micro\meter}.
+Da die Erwärmung im Schmierspalt Messfehler verursachen kann, führte \textit{Walbeck} die Messungen bei relativ geringen Kontaktpressungen (\SIrange{419}{593}{\mega\pascal}) durch.
+Allerdings ist die Wärmeentwicklung durch die Lagerreibung nicht vermeidbar und dadurch ist eine absolute Schmierfilmdickenmessung wegen Wärmedehnung in den Bauteilen nicht möglich.
+Abhilfe schafft hier die Differenzmessung der Verschiebung zwischen Stillstand und Betriebsdrehzahl.
+Um die thermischen Effekte auf die Messergebnisse gering zu halten, soll die Drehzahländerung innerhalb einer halben Sekunde stattfinden.
+Zusätzlich wurde die Wegmessungen von Winkelstellung der Welle getriggert, um durch Formtoleranzen von Lagerscheiben hervorgerufene Fehler zu vermeiden.
 
-Ein ähnliches System wurde von \textit{Kuhlmann} \cite{kuhlmann_2009} zur Schmierfilmdickenmessung in Schrägkugel- und Kegelrollenlagern eingesetzt.
-Wegen der Geometriedifferenz zwischen zwei Lagerbauarten und dem Axialzylinderrollenlager ist die axial Verschiebung in diesem Fall eine Funktion von dem Druckwinkel $\alpha$.
-Für das Kegelrollenlager muss Zusätzlich den Kontakt zwischen Rollenstirnfläche und Innenringbord berücksichtigt werden.
+Ein ähnliches System wurde von \textit{Kuhlmann}~\cite{kuhlmann_2009} zur Schmierfilmdickenmessung in Schrägkugel- und Kegelrollenlagern eingesetzt.
+Wegen der Geometriedifferenz zwischen zwei Lagerbauarten und dem Axialzylinderrollenlager ist die axial Verschiebung in diesem Fall eine Funktion des Druckwinkels $\alpha$.
+Für das Kegelrollenlager muss zusätzlich der Kontakt zwischen Rollenstirnfläche und Innenringbord berücksichtigt werden.
+
 % ----------------------------------------
 % Fig: Kuhlmann FE8
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/kerola_kuhlmann.pdf}
-    \caption{Schmierfilme im Kegelrollenlager \cite{kuhlmann_2009}}
+    \caption{Schmierfilme im Kegelrollenlager~\cite{kuhlmann_2009}}
     \label{fig:kerola_kuhlmann}
 \end{figure}
-%
 
-Die Schmierfilmdickenmessungen wurden von \textit{Kuhlmann} während des Abbremsvorgangs von der Betriebsdrehzahl auf eine minimale Drehzahl von $n_0 =$ \SI{0.5}{\per\minute} innerhalb \SI{1.5}{\second} durchgeführt (Abbildung \ref{fig:differenzmessung_kuhlmann}).
+Die Schmierfilmdickenmessungen wurden von \textit{Kuhlmann} während des Abbremsvorgangs von der Betriebsdrehzahl auf eine minimale Drehzahl von $n_0 =$ \SI{0.5}{\per\minute} innerhalb \SI{1.5}{\second} durchgeführt (siehe Abbildung~\ref{fig:differenzmessung_kuhlmann}).
+
 % ----------------------------------------
 % Fig: Kuhlmann Messung während des Abbremsvorgangs
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/differenzmessung_kuhlmann.pdf}
-    \caption{Messung während eines Abbremsvorgangs \cite{kuhlmann_2009}}
+    \caption{Messung während eines Abbremsvorgangs~\cite{kuhlmann_2009}}
     \label{fig:differenzmessung_kuhlmann}
 \end{figure}
-%
 
-Anstatt von der Winkelstellung der Welle getriggert wurde vor jedem Versuch eine Kalibrierkurve der Wegsensoren, in die die gemittelten Planlaufabweichungen zwischen den Lagern und der Prüfwelle in Abhängigkeit mit der Wellenstellung dargestellt werden, bei der Drehzahl $n_0$ aufgenommen (Abbildung \ref{fig:kalibrierkurve_kuhlmann}).
-Bei der Auswertung der Schmierfilmdicke bei einer Betriebsdrehzahl findet eine Korrektur der gemessenen Verschiebung an der jeweiligen Wellenposition anhand der Kalibrierkurve statt.
+Anstatt von der Winkelstellung der Welle getriggert zu sein, wurde vor jedem Versuch eine Kalibrierkurve aufgenommen.
+Diese Kurve stellt die gemittelten Planlaufabweichungen zwischen den Lagern und der Prüfwelle in Abhängigkeit von der Wellenstellung dar (siehe Abbildung~\ref{fig:kalibrierkurve_kuhlmann}).
+Bei der Auswertung der Schmierfilmdicke findet eine Korrektur der gemessenen Verschiebung an der jeweiligen Wellenposition anhand der Kalibrierkurve statt.
+
 % ----------------------------------------
 % Fig: Kuhlmann Kalibrierkurve
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/kalibrierkurve_kuhlmann.pdf}
-    \caption{Kalibrierkurve \cite{kuhlmann_2009}}
+    \caption{Kalibrierkurve~\cite{kuhlmann_2009}}
     \label{fig:kalibrierkurve_kuhlmann}
 \end{figure}
-%
 
 % ----------------------------------------
 % Sub: Ultrashall Messung
@@ -365,42 +384,42 @@ Bei der Auswertung der Schmierfilmdicke bei einer Betriebsdrehzahl findet eine K
 \subsection{Ultraschall}
 \label{sub:ultraschall}
 
-\textit{Dwyer-Joyce et al.} \cite{dwyer-joyce_2011} beschrieben ein neues Verfahren zur Dickenmessung einer zwischen einer Stahlkugel und einer Stahlscheibe liegende Flüssigkeitsschicht mittels der Reflektion des Ultrashalls.
+\textit{Dwyer-Joyce et al.}~\cite{dwyer-joyce_2011} beschrieben ein neues Verfahren zur Dickenmessung einer zwischen einer Stahlkugel und einer Stahlscheibe liegende Flüssigkeitsschicht mittels der Reflektion des Ultrashalls.
 Diese Reflektion hängt von der Ultraschallfrequenz, den akustischen Eigenschaften der Flüssigkeit bzw. der Festkörper und der Schichtdicke ab.
-Wenn die Wellenlänge des gesendeten Impulses viel größer als die Dicke der Flüssigkeitsschicht ist, wird die Antwort durch die Steifigkeit der Schicht bestimmt.
-Wenn die Wellenlänge ähnlich sowie die Schichtdicke ist, wird die Wechselwirkung vom Ultraschall mit der Flüssigkeit durch sein Resonanzverhalten gesteuert.
-Durch das Vergleich des Frequenzspektrums des reflektierten Impulses mit dem des gesendeten Impulses ermöglicht die Bestimmung der Schmierfilmdicke.
+Wenn die Wellenlänge des gesendeten Impulses viel größer als die Dicke der Flüssigkeitsschicht ist, wird die Antwort durch die Steife der Schicht bestimmt.
+Wenn die Wellenlänge ähnlich der Schichtdicke ist, wird die Wechselwirkung vom Ultraschall mit der Flüssigkeit durch das Resonanzverhalten gesteuert.
+Durch den Vergleich des Frequenzspektrums des reflektierten Impulses mit dem des gesendeten Impulses wird die Bestimmung der Schmierfilmdicke ermöglicht.
 Die Messmethode von \textit{Dwyer-Joyce} war in der Lage, Filme im Bereich von \SIrange{50}{500}{\milli\meter} zu messen.
-Der schematischer Aufbau des Ultraschall-Prüfstands zur Schmierfilmdickenmessung ist in Abbildung \ref{fig:ultrashall_pruefstand_dwyer-joyce} zu nehmen.
+Der schematischer Aufbau des Ultraschall-Prüfstands zur Schmierfilmdickenmessung ist in Abbildung~\ref{fig:ultrashall_pruefstand_dwyer-joyce} zu sehen.
+
 % ----------------------------------------
 % Fig: Dwyer-Joyce Ultrashall test rig
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/ultrashall_pruefstand_dwyer-joyce.pdf}
-    \caption{Schematischer Aufbau der Ultraschall-Prüfstand \cite{dwyer-joyce_2011}}
+    \caption{Schematischer Aufbau der Ultraschall-Prüfstand~\cite{dwyer-joyce_2011}}
     \label{fig:ultrashall_pruefstand_dwyer-joyce}
 \end{figure}
-%
 
-Ein Schmierfilm-Überwachungssystem an einem Rillenkugellager mittels Ultraschall wurde von \textit{Zhang et at.} in seine Arbeit \cite{zhang_2006} beschrieben (Abbildung \ref{fig:ultrashall_rikula_zhang}).
+Ein Schmierfilm-Überwachungssystem an einem Rillenkugellager mittels Ultraschall wurde von \textit{Zhang et at.} in seine Arbeit~\cite{zhang_2006} beschrieben (siehe Abbildung~\ref{fig:ultrashall_rikula_zhang}).
 Eine Hochfrequenz-Ultraschallsonde ist am statischen Außenring des Lagers montiert.
-Die Sonde ist auf die Kugel-Laufbahn fokussiert und wird verwendet, um die Reflektion-Koeffizienten des Schmierstoffes in der Kontaktellipse wischen Lagerkomponenten zu messen.
-Der Reflektion-Koeffizient kennzeichnet den Schmierfilm und kann daraus seine Dicke berechnet werden.
+Die Sonde ist auf die Kugel-Laufbahn ausgerichtet und wird verwendet, um den Reflektions-Koeffizienten des Schmierstoffes in der Kontaktellipse zwischen den Lagerkomponenten zu messen.
+Der Reflektions-Koeffizient kennzeichnet den Schmierfilm, daraus kann seine Dicke berechnet werden.
 Ein optisches Triggersystem ermöglicht mehrere Messungen, wenn jeder geschmierte Kontakt sich an der Messstelle vorbeibewegt.
-Drei Verunreinigungsmaterialien (Aceton, Wasser und Sand) wurden separat zu dem Schmiermittel gegeben, um das Versagen des Lagers zu initiieren.
+Drei Verunreinigungsmaterialien (Aceton, Wasser und Sand) wurden separat zu dem Schmiermittel hinzu gegeben, um das Versagen des Lagers zu initiieren.
 Diese Zugabe simuliert allgemeine Fehlermechanismen, die unter realen Bedingungen auftreten können.
-    Alle Ergebnisse, wie zum Beispiel die Schwingung, die Temperatur, die Ultraschall-Reflektion-Koeffizienten wurden unter diesen drei Fehlerszenarien aufgenommen und die lieferten wertvolle diagnostische Informationen über die Fehler sowie Frühschadenmeldung.
+Alle Ergebnisse, wie zum Beispiel die Schwingung, die Temperatur, die Ultraschall-Reflektions-Koeffizienten wurden unter diesen drei Fehlerszenarien aufgenommen und lieferten wertvolle diagnostische Informationen über die Fehler sowie Frühschadenmeldung.
+
 % ----------------------------------------
 % Fig: Zhang Ultraschall Versuch am Rikul 6016
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/ultrashall_rikula_zhang.pdf}
-    \caption{Schmierfilm-Überwachungssystem mittels Ultraschall \cite{zhang_2006}}
+    \caption{Schmierfilm-Überwachungssystem mittels Ultraschall~\cite{zhang_2006}}
     \label{fig:ultrashall_rikula_zhang}
 \end{figure}
-%
 
 % ----------------------------------------
 % Sub: Laserinduzierte Messung

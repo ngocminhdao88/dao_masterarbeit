@@ -31,7 +31,7 @@ import pandas as pd
 # plt.rcParams.update(pgf_with_latex) # update the setting for matplotlib
 
 
-def getCapacitance(a_hertz, h0, e0=8.85e-15, er=2.07):
+def getCapacitance(a_hertz, h0, e0=8.85e-12, er=2.07):
     """
     Calculate the capacitace in a ehl contact
 
@@ -130,7 +130,7 @@ beta_a = 1.0
 beta_b = 1.0
 
 # Test parameters
-geschwindigkeiten = np.array(getSpeeds(0.001, 20, 20))  # Wälzgeschwindigkeit [m/s]
+geschwindigkeiten = np.array(getSpeeds(0.1, 20, 18))  # Wälzgeschwindigkeit [m/s]
 temperaturen = np.array([40, 60, 80])  # Versuchstemperatur [C]
 lasten = np.array([20, 30, 40])  # Last [N]
 
@@ -200,23 +200,55 @@ for geschw in geschwindigkeiten:
 # group data after temp and load
 data_grouped = data.groupby(['Temp', 'Load'])
 
-data_40C_20N = data.loc[(data["Temp"] == 40) & (data["Load"] == 20)]
+data_40C_40N = data.loc[(data["Temp"] == 40) & (data["Load"] == 40)]
+data_60C_40N = data.loc[(data["Temp"] == 60) & (data["Load"] == 40)]
+data_80C_40N = data.loc[(data["Temp"] == 80) & (data["Load"] == 40)]
+data_80C_20N = data.loc[(data["Temp"] == 80) & (data["Load"] == 20)]
+data_80C_30N = data.loc[(data["Temp"] == 80) & (data["Load"] == 30)]
 data_80C_40N = data.loc[(data["Temp"] == 80) & (data["Load"] == 40)]
 
 # setup the plot film thickness, capacitace vs speed at 80C and 40N
 fig, ax1 = plt.subplots(figsize=[5, 3.125])
-ax1.plot(data_80C_40N["Speed"], data_80C_40N["Film"], "b-")
+
+ax1.plot(data_80C_40N["Speed"], data_80C_40N["Film"] * 1e9, "b-")
 ax1.set_xlabel("Speed [m/s]")
-# ax1.set_title("Film and Cap vs Speed at 80C and 40N")
+
 # make the y-axis label, ticks and tick labels match the some color
-ax1.set_ylabel("Film [m]", color='b')
+ax1.set_ylabel("Film [nm]", color='b')
 ax1.tick_params(axis='y', colors='b')
 
 ax2 = ax1.twinx()
-ax2.plot(data_80C_40N["Speed"], data_80C_40N["Cap"], "r-")
-ax2.set_ylabel("Cap [F]", color='r')
+ax2.plot(data_80C_40N["Speed"], data_80C_40N["Cap"] * 1e12, "r-")
+ax2.set_ylabel("Cap [pF]", color='r')
 ax2.tick_params(axis='y', colors='r')
 
 fig.tight_layout()
-# fig.savefig("film_cap_speed_80C_20N.pdf", bbox_inches="tight", pad_inches=0)
+# fig.savefig("film_cap_speed_80C_20N_SHC320.pdf",
+#             bbox_inches="tight", pad_inches=0)
+
+# setup the plot capacitace vs film with different temp and load
+min_film = data["Film"].min()
+max_film = data["Film"].max()
+group_length = len(data) / (len(lasten) * len(temperaturen))
+film_ax = np.linspace(min_film, max_film, group_length) * 1e9  # scale to nm
+
+fig2, axs = plt.subplots(1, 2, sharey=True,
+                         tight_layout=True, figsize=[6.5, 3.125])
+l1, = axs[0].plot(film_ax, data_40C_40N["Cap"] * 1e12, label="40C,40N")
+l2, = axs[0].plot(film_ax, data_60C_40N["Cap"] * 1e12, label="60C,40N")
+l3, = axs[0].plot(film_ax, data_80C_40N["Cap"] * 1e12, label="80C,40N")
+axs[0].legend()
+l4, = axs[1].plot(film_ax, data_80C_20N["Cap"] * 1e12, label="80C,20N")
+l5, = axs[1].plot(film_ax, data_80C_30N["Cap"] * 1e12, label="80C,30N")
+l6, = axs[1].plot(film_ax, data_80C_40N["Cap"] * 1e12, label="80C,40N")
+axs[1].legend()
+
+axs[0].set_ylabel("Cap [pF]")
+axs[0].set_xlabel("Film [nm]")
+axs[1].set_xlabel("Film [nm]")
+axs[0].ticklabel_format(style="sci", axis="both")
+axs[1].ticklabel_format(style="sci", axis="both")
+# fig2.savefig("film_cap_with_dif_temp_and_load_shc320.pdf",
+#              bbox_inches="tight", pad_inches=0)
+
 plt.show()
