@@ -81,11 +81,14 @@ Die Messergebnisse für das Öl \textit{FVA 3} bei verschiedenen Temperatur \SIr
 \label{sub:stromladekurve_messgeraet}
 
 Im IMKT gibt es ein mobiles Messsystem zur Schmierfilmdickenmessung mittels kapazitiven Messverfahren.
-Das System besteht aus einem Laptop, der mit \textit{Laderkurve-Software} installiert, und einer Messkarte (Typ USB-6211) von der Firma National Instrument (NI).
-Hier wird der EHD-Kontakt als ein Kondensator $C_K$ betrachtet.
-Die Auflade des Kondensators erfolgt durch eine Ladespannung $U_L =$ \SI{0,2}{\volt} und einen Vorwiderstand $R_V =$ \SI{10}{\mega\ohm}.
-Mit dieser Konfiguration hat das Gerät eine höchste Auflösung von \SI{0.078}{\pico\farad} (siehe \ref{sec:aufloesung_des_mobilen_messsystems} für die Berechnung).
-Abbildung~\ref{fig:schematischer_aufbau_des_mobilen_messsystems} zeigt den schematischen Aufbau des mobilen Messsystems.
+Das System besteht aus einem Laptop, der mit \textit{Laderkurve-Software} installiert ist, und einer Messkarte (Typ USB-6211) von der Firma National Instrument (NI).
+Bei der kapazitiven Messmethode wird der EHD-Kontakt als ein Kondensator $C_K$ betrachtet.
+Die Aufladung des Kondensators erfolgt durch eine Ladespannung $U_L =$ \SI{0,2}{\volt} und einen Vorwiderstand $R_V =$ \SI{10}{\mega\ohm}.
+Eine hohe Ladespannung ist unerwünscht, weil dieses zur Ionisierung des Schmierstoffes führt.
+Das kann die Messergebnisse durch den Durchschlag des Kondensators verfälschen.
+Mit dieser Konfiguration hat das Gerät eine höchste Auflösung von \SI{0.078}{\pico\farad} (siehe \ref{sec:aufloesung_des_mobilen_messsystems} im Anhang für die Berechnung).
+Den schematischen Aufbau des mobilen Messsystems wird in Abbildung~\ref{fig:schematischer_aufbau_des_mobilen_messsystems} dargestellt.
+
 % ----------------------------------------
 % Fig: Schematischer Aufbau des mobilen Messsystems
 % ----------------------------------------
@@ -135,10 +138,12 @@ Bei der Auswertung der Zeitkonstante mit der Formel~\ref{eg:kondensator_zeitkons
 \end{figure}
 
 Das ganze Messsystem wird von der \textit{Laderkurve-Software} gesteuert.
-Sie miss nicht direkt die Kapazität, sondern nimmt sie die Antwort bzw. Ladekurve des ``Kondensators'' auf.
-Die Software kann die Ladekurve in zwei Modi: \emph{Anzahl der Messwerte} oder \emph{Messung nach Zeit} aufnehmen.
-Im Rahmen dieser Arbeit werden alle Messungen mit dem ersten Modus gemacht.
-Abbildung \ref{fig:gui_der_laderkurve_software} zeigt die Benutzeroberfläche der Ladekurve-Software bei einer Testmessung mit einem Referenz-Kondensator (\SI{3.3}{\nano\farad}) an.
+Sie misst nicht direkt die Kapazität, sondern sie nimmt die Antwort bzw. Ladekurve des ``Kondensators'' auf.
+Die Auswertung für die Kapazität bzw. Filmdicke wird später mit einem Skript ausgeführt.
+Die Software kann die Ladekurve in zwei Modi --- \emph{Anzahl der Messwerte} oder \emph{Messung nach Zeit} --- aufnehmen.
+Im Rahmen dieser Arbeit werden alle Messungen mit dem ersten Modus durchgeführt.
+Abbildung~\ref{fig:gui_der_laderkurve_software} zeigt die Benutzeroberfläche und die Einstellungen der Ladekurve-Software bei einer Testmessung mit einem Referenz-Kondensator (\SI{3.3}{\nano\farad}) an.
+
 % ----------------------------------------
 % Fig: GUI der Ladekurve-Software
 % ----------------------------------------
@@ -149,38 +154,40 @@ Abbildung \ref{fig:gui_der_laderkurve_software} zeigt die Benutzeroberfläche de
     \label{fig:gui_der_laderkurve_software}
 \end{figure}
 
-Die Software ist relativ einfach zu bedienen, allerdings gibt es folgende Punkte, auf die man beachten muss.
+Die Software ist relativ einfach zu bedienen, allerdings gibt es folgende Punkte, auf die man beachten muss:
+% ----------------------------------------
+% List: Optionen der Ladekurve Software
+% ----------------------------------------
 \begin{description}
-    \item[1. Anzahl der Messwerte] ist die Auflösung der Messung.
-        Zu niedriger Wert kann zum Messfehler führen und zu hohen Wert kann es schnell den Speicher voll machen, außerdem ist sie auch von der Abtastrate der Messkarte beschränkt.
+    \item[1. Die Anzahl der Messwerte] ist die Auflösung der Messungen.
+        Zu niedrige Werte können zu Messfehlern führen und zu hohe Werte kann es schnell den Speicher füllen.
         Der Standardwert ist \num{2500}.
 
-    \item[2. Anzahl der Ladekurven] ist die Anzahl der Messungen, die nach einander durchgeführt werden. ist die Anzahl der Messungen, die nach einander durchgeführt werden.
+    \item[2. Die Anzahl der Ladekurven] ist die Anzahl der Messungen, die nach einander durchgeführt werden.
         Der Standardwert ist \num{10}.
 
-    \item[3. Abtastrate] ist die Anzahl der Messwerte, die Messkarte pro Sekunde messen kann.
-        Die USB-6211 Messkarte von NI kann maximal \SI[per-mode=symbol]{250}{\kilo\sample\per\second}, das entspricht \num{2500} Messwerte in einem Zeitraum von \SI{10}{\milli\second}.
+    \item[3. Die Abtastrate] ist die Anzahl der Messwerte, die die Messkarte pro Sekunde messen kann.
+        Die USB-6211 Messkarte von NI kann maximal \SI[per-mode=symbol]{250}{\kilo\sample\per\second}, das entspricht \num{2500} Messwerte in einem Zeitraum von \SI{10}{\milli\second}, messen.
 
-    \item[4. Ladespannung] ist die Spannung zwischen zwei Terminal des Kondensators.
+    \item[4. Die Ladespannung] ist die Spannung zwischen zwei Terminals des Kondensators.
         Der Wert sollte im Bereich von \SIrange{0.2}{0.5}{\volt} liegen.
 
-    \item[5. Verzögerung] ist die Wartezeit, die die Software warten muss, bevor sie eine Messung ausführt.
+    \item[5. Die Verzögerung] ist die Wartezeit, die die Software benötigt, bevor sie eine Messung ausführen kann.
         Der Standardwert ist \SI{1}{\ms}.
 
-    \item[6. Entladezeit] ist die Zeit zwischen zwei Messungen.
-        Sie ist notwendig, um der Kondensator komplette leer bevor jeder neuen Messung zu entladen.
+    \item[6. Die Entladezeit] ist die Zeit zwischen zwei Messungen.
+        Sie ist notwendig, um der Kondensator vollständig vor jeder neuen Messung zu entladen.
         Der Standardwert ist \SI{100}{\ms}.
 
-    \item[7. Störkapazität] ist die externe Störung, wie zum Beispiel von Messkabel oder statische Kapazität zwischen Messkörpern.
+    \item[7. Die Störkapazität] ist die externe Störung, wie zum Beispiel von Messkabeln oder statischer Kapazität zwischen Messkörpern.
+        Dieser Wert wird bei der Auswertung der Kontaktkapazität abgezogen.
 
-    \item[8. Ladewiderstand] ist der Wert des Vorwiderstands.
-        Er ist nur für den Dokumentationszweck und wird in der Messdatei geschrieben.
-        Dieser Wert wird für die spätere Auswertung verwendet.
+    \item[8. Der Ladewiderstand] ist der Wert des Vorwiderstands.
+        Er ist nur für den Dokumentationszweck bestimmt und wird in der Messdatei geschrieben.
 
-    \item[9. Austecken des Netzteils] ist notwendig, um die Störungen von anderen elektronischen Geräte zu vermeiden.
+    \item[9. Das Austecken des Netzteils] ist notwendig, um die Störungen von anderen elektronischen Geräte zu vermeiden.
 \end{description}
 
-%
 % ----------------------------------------
 % Sub: LCR Messgerät
 % ----------------------------------------
@@ -190,16 +197,20 @@ Die Software ist relativ einfach zu bedienen, allerdings gibt es folgende Punkte
 In der Praxis kann jede Flüssigkeit und jeder Feststoff Strom durchlassen.
 Wenn das Material von einem Wechselstrom gespeist wird, wird das Verhältnis zwischen der Spannung und dem Strom als Impedanz bezeichnet.
 Die Veränderung der gemessenen Impedanz durch die Variation der Stromfrequenz ist von der Eigenschaft des Materials abhängig.
-Das kann auf die physikalische Struktur des Werkstoffes, auf die innere chemische Prozesse oder eine Kombination von beiden zurückführen.
-Der Zusammenhang zwischen der Impedanz, der Frequenz und der Kapazität von einem mit Wechselstrom angelegten Kondensators wird in der Formel \ref{eq:impedanz_kondensator} \cite{impedance} dargestellt.
-%
+Das kann auf die physikalische Struktur des Werkstoffes, auf innere chemische Prozesse oder eine Kombination von beiden zurückgeführt werden.
+Der Zusammenhang zwischen der Impedanz, der Frequenz und der Kapazität von einem mit Wechselstrom angelegten Kondensator wird in der Formel \ref{eq:impedanz_kondensator}~\cite{impedance} dargestellt.
+
+% ----------------------------------------
+% Eq: Impedanz eines Kondensators
+% ----------------------------------------
 \begin{equation}
     Z_{C} = \cfrac{v_C(t)}{i_C(t)} = \cfrac{1}{j \omega C}
     \label{eq:impedanz_kondensator}
 \end{equation}
 
-Im Gegenteil zum mobilen Ladekurve-Messsystem, welches die Kapazität über die Antwort einer Ladespannung interpretiert, bietet das LCR-Messgerät ST2826 der Firma Sourcetronic die Möglichkeit, die Kapazität eines EHD-Kontakts direkt zu messen.
-Abbildung \ref{fig:versuchsaufbau_zur_kapazitaetsmessung_mit_lcr_meter} zeigt den Aufbau des Messsystems mit dem LCR-Messgerät.
+Im Gegenteil zum mobilen Ladekurven-Messsystem, welches die Kapazität über die Antwort einer Ladespannung interpretiert, bietet das LCR-Messgerät ST2826 der Firma Sourcetronic die Möglichkeit, die Kapazität eines EHD-Kontakts direkt zu messen.
+Abbildung~\ref{fig:versuchsaufbau_zur_kapazitaetsmessung_mit_lcr_meter} zeigt den Aufbau des Messsystems mit dem LCR-Messgerät.
+
 % ----------------------------------------
 % Fig: Schematischer Aufbau des Messsystems mit LCR-Meter
 % ----------------------------------------
@@ -213,12 +224,13 @@ Abbildung \ref{fig:versuchsaufbau_zur_kapazitaetsmessung_mit_lcr_meter} zeigt de
 Das LCR-Messgerät bietet einen breiten Frequenzbereich von \SI{20}{\Hz} bis \SI{50}{\MHz}.
 Dank der Kelvin-Messproben (4-Punkt Messung) hat das Gerät eine sehr gute Genauigkeit von \SI{0.1}{\percent} und ermöglicht die Messung auch bei kleinsten Änderung des Systems.
 Mit einer Sinuskorrelationstechnik bietet das Gerät eine rauschfreie Analyse.
-Die Addition des Widerstands $R_1$ und des Kondensators $C_1$ sind benötigt, um zu sehen, ob der Strom tatsächlich durch den EHD-Kontakt fließt oder in irgeneiner Verbindung verloren geht.
-Unterschiedliche Werte für $R_1$ und $C_1$ wurden verwendet, um deren Einfluß auf die gemessene Kapazität zu untersuchen.
+Die Addition des Widerstands $R_1$ und des Kondensators $C_1$ ist nötig, um zu sehen, ob der Strom tatsächlich durch den EHD-Kontakt fließt oder in irgeneiner Verbindung verloren geht.
+Unterschiedliche Werte für $R_1$ und $C_1$ werden verwendet, um deren Einfluß auf die gemessene Kapazität zu untersuchen.
 Ein Erhöhung des Widerstandswertes führt zu einer signifikanten Abnahme der Messergebnisse und umgekehrt.
 Dieses Phänomen kann durch die Abnahme bzw. Zunahme des Stromflusses durch den EHD-Kontakt erklärt werden.
-Die Werte $R_1 = 2$ \si{\kilo\ohm} und $C_1 = 24$ \si{\pico\farad} wurden durch Experiment für weitere Messungen in dieser Arbeit gewählt.
-Abbildung \ref{fig:lcr_ebox_capacitance} zeigt die Kapazitätsmessung des E-Box (offen) mit dem LCR-Messgerät bei verschiedenen Frequenzen.
+Die Werte $R_1 = 2$ \si{\kilo\ohm} und $C_1 = 24$ \si{\pico\farad} wurden durch Experimente für die Messungen in dieser Arbeit gewählt.
+Abbildung~\ref{fig:lcr_ebox_capacitance} zeigt die Kapazitätsmessung des E-Box (offen) mit dem LCR-Messgerät bei verschiedenen Frequenzen an.
+
 % ----------------------------------------
 % Fig: Messprobe mit 24 pF mit dem LCR-Meter
 % ----------------------------------------
@@ -286,31 +298,33 @@ Die Versuche in dieser Arbeit werden wie folgt geplant und durchgeführt:
 \section{Versuchdurchführung}
 \label{sec:versuchdurchfuehrung}
 
-Da die Auswertung der Schmierfilmdicke in dieser Arbeit optisch und elektrisch geschieht wird, ist die Sauberkeit vor dem Beginn einer Messung besonders wichtig zu achten.
+Da die Auswertung der Schmierfilmdicke in dieser Arbeit optisch und elektrisch geschieht, ist die Sauberkeit vor dem Beginn einer Messung besonders wichtig.
 Die Glasscheibe, die Kugel, das Kugelsupport und das Ölreservoir müssen vor jeder Messung mit Waschbenzin oder Isopropanol gereinigt werden und dürfen keine Schlieren aufweisen.
 
 Nach der Reinigung können das Support und die Kugel in das Gerät eingesetzt werden.
 Die Führung der Kugel wird zuerst in die Ausgangswelle des zweiten Motors eingesteckt und dann auf das Support aufgelegt.
-Die Kabel sollen Abstand von den Wände des Reservoirs und der Motorwelle gehalten werden, um ein Unfall (Kurzschluss der Kugel, Verfangen des Kabels) während des Betriebs zu vermeiden.
-Die Abbildung \ref{fig:ehd_topf_mit_kugel_und_support} zeigt den Blick von oben des EHD-Prüftopfs mit montierten Support und aufgelegter Kugel bereits für den Versuch.
+Die Kabel sollten Abstand von den Wänden des Reservoirs und der Motorwelle halten, um ein Unfall (Kurzschluss der Kugel, Verfangen des Kabels) während des Betriebs zu vermeiden.
+Abbildung~\ref{fig:ehd_topf_mit_kugel_und_support} zeigt den Blick von oben auf den EHD-Prüftopf mit montiertem Support und aufgelegter Kugel bereits für den Versuch vorbereitet.
+
 % ----------------------------------------
 % Fig: EHD-Prüftopf mit montierten Support und Modifizierter Kugelführung
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.7\linewidth]{./images/ehd_topf_mit_kugel_und_support.jpg}
-    \caption{Topf des EHD-Geräts mit montierten neuen Kugelsupport und der Modifizierter Kugelführung}
+    \caption{Topf des EHD-Geräts mit montiertem neuen Kugelsupport und der modifizierten Kugelführung}
     \label{fig:ehd_topf_mit_kugel_und_support}
 \end{figure}
 
 Die Bestimmung des Messpunkts für die optische Messung erfolgt zuerst auf der nicht beschichteten Seite der Scheibe.
-Da nach wird die Scheibe \SI{180}{\degree} auf der Cr-Seite gedreht, um der Widerstand der gesamten Messkette (Kabel -> Scheibe -> Kugel -> Kabel) unter einer Last von \SI{20}{\newton} zu vermessen.
-Er ist von dem Radius der Fahrspur abhängig und beträgt ungefähr \SIrange{17}{18}{\ohm}.
-Die Suche nach dem Messpunkt passiert beim leeren Reservoir, weil ein sauberer Kontakt zwischen Scheibe und Kugel für die Bestimmung der Höhe des Spacer-Layers nötig ist.
-Außerdem darf man das Spurwechseln nur beim leeren Zustand machen, weil das Verlaufen des Öles über die Lasteinheit in mechanischen Baukasten zum Schaden führen kann.
-Man sollte die Spur von außen nach innen wechseln, um die Entstehung der Insel, die elektronisch zu den Elektroden (Kupferstreifen) isoliert sind, zu vermeiden.
-Danach kann man das Öl mit der Hilfe einem Trichter befüllen und den Prüftopf mit dem Deckel zu machen.
-Abbildung \ref{fig:suche_nach_ehd_kontakt} zeigt die Suche nach einem guten EHD-Kontakt an.
+Da nach wird die Scheibe um \SI{180}{\degree} auf der Cr-Seite gedreht, um den Widerstand der gesamten Messkette (Kabel -> Scheibe -> Kugel -> Kabel) unter einer Last von \SI{20}{\newton} zu messen.
+Der Widerstand ist von dem Radius der Fahrspur abhängig und beträgt ungefähr \SIrange{17}{18}{\ohm}.
+Die Suche nach dem Messpunkt findet beim leeren Reservoir statt, weil ein sauberer Kontakt zwischen Scheibe und Kugel für die Bestimmung der Höhe des Spacer-Layers nötig ist.
+Außerdem darf man das Spurwechseln nur beim leeren Zustand machen, weil das Verlaufen des Öles über die Lasteinheit im mechanischen Baukasten zu Schäden führen kann.
+Man sollte die Spur von außen nach innen wechseln, um die Entstehung von Inseln, die elektronisch zu den Elektroden (Kupferstreifen) isoliert sind, zu vermeiden.
+Danach kann man das Öl mit der Hilfe eines Trichters befüllen und den Prüftopf mit dem Deckel schließen.
+Abbildung~\ref{fig:suche_nach_ehd_kontakt} zeigt die Suche nach einem guten EHD-Kontakt an.
+
 % ----------------------------------------
 % Fig: Bestimmung des Messpunkts
 % ----------------------------------------
@@ -321,33 +335,34 @@ Abbildung \ref{fig:suche_nach_ehd_kontakt} zeigt die Suche nach einem guten EHD-
     \label{fig:suche_nach_ehd_kontakt}
 \end{figure}
 
-Zur Messung bei Öl-Vollschmierung wird das Ölreservoir bis zur Hälfte der Kugel (ca. \SI{120}{\ml}) gefüllt.
-Das Ölbad wird vor jeder Messreihe während des Heizvorgangs (bei \SI{40}{\degreeCelsius}, \SI{60}{\degreeCelsius} und \SI{80}{\degreeCelsius}) für ca. \SI{10}{\minute} durchmischt, um eine homogene Temperatur im Ölbad beim Versuch zu herrschen.
-Das genaue Vorgehen einer solchen Messung wurde von \textit{Surborg} in seiner Arbeit \cite{surborg_2007} beschrieben und ist im Anhang zu finden.
+Zur Messung bei der Öl-Vollschmierung wird das Ölreservoir bis zur Hälfte der Kugel (ca. \SI{120}{\ml}) gefüllt.
+Das Ölbad wird vor jeder Messreihe während des Heizvorgangs (bei \SI{40}{\degreeCelsius}, \SI{60}{\degreeCelsius} und \SI{80}{\degreeCelsius}) für ca. \SI{10}{\minute} durchmischt, damit beim Versuch eine homogene Temperatur im Ölbad herrscht.
+Das genaue Vorgehen einer solchen Messung wurde von \textit{Surborg} in seiner Arbeit~\cite{surborg_2007} beschrieben und ist im Anhang zu finden.
 
-Neben dem Widerstand des Kontakts wird die Hintergrund-Kapazität des Prüfstands auch gemessen.
-Dieser Wert wird als Störkapazität bezeichnet und soll von der Ergebnissen beseitigt werden.
+Neben dem Widerstand des Kontakts wird auch die Hintergrund-Kapazität des Prüfstands gemessen.
+Dieser Wert wird als Störkapazität bezeichnet und soll von der Ergebnissen abgezogen werden.
 
-Die Last von \SI{20}{\newton} wird in Anlehnung an vorherigen Arbeiten gewählt.
-Nach dem Abschnitt \ref{sec:betrachtung_des_ehd_kontaktes} lässt es sich für den hier betrachteten Fall eines Kugel-Scheibe-Modells eine maximale Pressung im Kontakt $p_0 =$ \SI{509}{\mega\pascal} berechnen.
+Die Last von \SI{20}{\newton} wird in Anlehnung an vorherige Arbeiten gewählt.
+Nach dem Abschnitt~\ref{sec:betrachtung_des_ehd_kontaktes} lässt sich für den hier betrachteten Fall eines Kugel-Scheibe-Modells eine maximale Pressung im Kontakt $p_0 =$ \SI{509}{\mega\pascal} berechnen.
 Damit liegt der Kontakt im unteren Bereich der EHD-Schmierung.
-Diese geringe Last ist gut, somit wird die Gefahr von Beschädigung auf der Scheibe bzw. der Silikatschicht gering gehalten.
+Diese geringe Last ist gut, somit wird die Gefahr von Beschädigungen auf der Scheibe bzw. der Silikatschicht gering gehalten.
 
 Nachdem die Höhe des Spacer-Layers bestimmt wurde, wird die Scheibe ein Stück weiter gedreht und auf etwa \SI[per-mode=symbol]{100}{\mm\per\second} beschleunigt.
-Während dieser Einlaufphase wird ständig das Live Bild auf dem SW-Monitor beobachtet.
-Sobald sich ein klarer, gut messbarer Verlauf abzeichnet (siehe Abbildung \ref{fig:ehd_live_bild}), kann man mit der Messung begonnen werden.
-Wichtig ist, dass man die Messungen zügig machen soll, um die Beschädigung der Chromschicht und Silikatschicht zu vermeiden.
+Während dieser Einlaufphase wird das Live Bild ständig auf dem SW-Monitor beobachtet.
+Sobald sich ein klarer, gut messbarer Verlauf abzeichnet, kann man mit der Messung begonnen werden (siehe Abbildung~\ref{fig:ehd_live_bild}).
+Wichtig ist, dass man die Messungen zügig macht, um die Beschädigung der Chromschicht und Silikatschicht zu vermeiden.
+
 % ----------------------------------------
 % Fig: Schlechtes und gutes Live Bild
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.8\linewidth]{./images/ehd_live_bild.jpg}
-    \caption{Live Bild: nicht verwertbarer Verlauf (links); guter Verlauf (rechts) \cite{mach_2008}}
+    \caption{Live Bild: nicht verwertbarer Verlauf (links); guter Verlauf (rechts)~\cite{mach_2008}}
     \label{fig:ehd_live_bild}
 \end{figure}
 
-Tabelle \ref{tab:ehd_test_params} und \ref{tab:einstellungen_des_ladekurve_messsystems} fassen die Versuchsparameter und die Einstellungen für das mobile Messsysten von IMKT zur Schmierfilmdickemessung in dieser Arbeit zu.
+Tabelle~\ref{tab:ehd_test_params} und~\ref{tab:einstellungen_des_ladekurve_messsystems} fassen die Versuchsparameter und die Einstellungen für das mobile Messsysten von IMKT zur Schmierfilmdickemessung in dieser Arbeit zu.
 
 % ----------------------------------------
 % Tab: Versuchsparameters am EHD-Prüfstand
