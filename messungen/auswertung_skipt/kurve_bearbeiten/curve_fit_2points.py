@@ -11,8 +11,73 @@ import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.optimize import curve_fit
 from matplotlib.widgets import RectangleSelector
+
+
+class MeasurementData:
+    """
+    Class to hold data of the measurement
+    """
+    def __init__(self):
+        self.data_list = []
+        self.data_temp = 0
+        self.work_file = ""
+        self.info = ""
+
+    def addTempData(self, value):
+        self.data_temp = value
+
+    def addData(self):
+        self.data_list.append(self.data_temp)
+
+    def getData(self):
+        return self.data_list
+
+    def setWorkFile(self, work_file):
+        self.work_file = work_file
+
+    def getWorkFile(self):
+        return self.work_file
+
+    def setInfo(self, info):
+        self.info = info
+
+    def getInfo(self):
+        return self.info
+
+
+def saveData(my_data):
+    """
+    Save the capacitance from fitted curve in to a file
+    """
+    # create a data folder to hold the new files there
+    if not os.path.isdir("data"):
+        print("data folder is not found. Create it\n")
+        os.mkdir("data")
+
+    # get the name and it's extension of work file
+    file_name, file_ext = os.path.splitext(my_data.getWorkFile())
+
+    # build new file name
+    work_file = "./data/" + file_name + "_data" + file_ext
+
+    # get the test informaiton
+    info = my_data.getInfo()
+
+    # open the work file
+    f = open(work_file, 'w')
+
+    # write down the filename and test's information
+    f.write(file_name + file_ext + '\n')
+    f.write(info + '\n')
+    f.write("Capacitance\n")
+
+    # write down the capacitance from fitted curve in the file
+    for data in my_data.getData():
+        f.write(str(data) + '\n')
+
+    # close the work file
+    f.close()
 
 
 def chargeFuntion(t, tau):
@@ -106,7 +171,7 @@ def getInfoFromHeader(work_file):
     return info
 
 
-def line_select_callback(eclick, erelease, fig, ax):
+def line_select_callback(eclick, erelease, fig, ax, my_data):
     """
     Processing the event when the user drag and select a region on the plot
     """
@@ -142,6 +207,9 @@ def line_select_callback(eclick, erelease, fig, ax):
         tau, time_offset = getTau(x_masked, y_masked)
         cap = getCapacitance(tau)
 
+        # add temporary data in to the storage
+        my_data.addTempData(cap)
+
         # time, where the charging function begin
         time_start = x_masked[0] + time_offset
 
@@ -162,7 +230,19 @@ def line_select_callback(eclick, erelease, fig, ax):
         text.set_text(tx)
         text.set_position((xmax, ymax))
 
+        # draw the fitted curve and text on screen
         fig.canvas.draw_idle()
+
+
+def pressEventHandler(event, my_data):
+    """
+    Handle the event when user press a key on plot.
+    Save the capacitance from the fitted curve to process later
+    """
+
+    if event.key == 'y':
+        my_data.addData()
+        print(my_data.getData())
 
 
 def main(argv):
@@ -182,12 +262,21 @@ def main(argv):
         else:
             assert False, "wrong option"
 
+    # the the information for measurement file
     info = getInfoFromHeader(work_file)
+
     # read data from the tenth line and use first col as index
     data = pd.read_csv(work_file, sep='\t', skiprows=10, index_col=0)
+
+    # build the time axis
     num_elements = len(data.iloc[:, 0])
     time_ax = np.arange(0, num_elements)
     time_ax = time_ax * 4e-6  # [s]; 4us per sample
+
+    # all the test information are stored in here
+    my_data = MeasurementData()
+    my_data.setWorkFile(work_file)
+    my_data.setInfo(info)
 
     for curve in data.columns.values:
         # setup the plot figure and axis
@@ -203,14 +292,26 @@ def main(argv):
         point, = ax.plot([], [], marker="o", color="crimson")
         text = ax.text(0, 0, "")
 
+        # connecting the event handler with key press
+        fig.canvas.mpl_connect('key_press_event',
+                               lambda event, my_data=my_data:
+                               pressEventHandler(event, my_data))
+
+        # fig window at top left corner
+        fig.canvas.manager.window.move(0,0)
+
         # connecting the event handler with the draw rectangle event on the plot
-        rs = RectangleSelector(ax, lambda eclick, erelease, fig=fig, ax=ax:
-                               line_select_callback(eclick, erelease, fig, ax),
-                               drawtype='box', useblit=False, button=[1], 
-                               minspanx=5, minspany=5, spancoords='pixels', 
+        rs = RectangleSelector(ax, lambda eclick, erelease, fig=fig, ax=ax, my_data=my_data:
+                               line_select_callback(eclick, erelease, fig, ax, my_data),
+                               drawtype='box', useblit=False, button=[1],
+                               minspanx=5, minspany=5, spancoords='pixels',
                                interactive=True)
 
         plt.show()
+
+    # save the processed data in to the file
+    if len(my_data.getData()) > 0:
+        saveData(my_data)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
