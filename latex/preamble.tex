@@ -2,6 +2,15 @@
 \documentclass[12pt,a4paper, ngerman, bibliography=totocnumbered]{scrreprt}
 \usepackage{scrlayer-scrpage}
 \pagestyle{scrheadings}
+\automark{chapter}
+\automark*{section}
+\clearpairofpagestyles
+\ohead{\leftmark}
+\ofoot{\pagemark}
+\renewcommand*{\chapterpagestyle}{empty}
+\renewcommand*{\sectionmarkformat}{}
+\renewcommand*{\chaptermarkformat}{}
+
 
 \usepackage[toc,page]{appendix}
 

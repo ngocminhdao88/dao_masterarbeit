@@ -4,7 +4,7 @@
 \chapter{Versuche auf dem EHD-Messgerät}
 \label{chap:versuche_auf_dem_ehd_messgeraet}
 
-Um die Schmierfilmdicke im EHD-Komtakt mittels elektrischen Verfahrens zu bestimmen, braucht man die Kenntnis der dielektrischen Eigenschaften des Schmierstoffes, deren Abhängigkeit von der Temperatur, dem Druck.
+Um die Schmierfilmdicke im EHD-Komtakt mittels des elektrischen Verfahrens zu bestimmen, braucht man Kenntnis von den dielektrischen Eigenschaften des Schmierstoffes: deren Abhängigkeit von der Temperatur und dem Druck.
 
 % ----------------------------------------
 % Sec: Bestimmung der Dielektrizitätskonstante
@@ -12,9 +12,8 @@ Um die Schmierfilmdicke im EHD-Komtakt mittels elektrischen Verfahrens zu bestim
 \section{Dielektrizitätskonstante des Schmierstoffes}
 \label{sec:dielektrizitaetskonstate_des_schmierstoffes}
 
-
-Die Bestimmung der Dielektrizitätskonstante des Öls \textit{FVA 3} wurde an einem kapazitiven Wegmessgerät durchgeführt.
-Das Messgerät besteht aus zwei Stahlbacken, die auf einem Gestell aufgehängt werden, einem Zylinder und der elektronischen Einheit (siehe Abbildung \ref{fig:das_kapazitive_wegmessgeraet}).
+Die Bestimmung der Dielektrizitätskonstante der Ölen \textit{FVA 3} und \textit{SHC320} wurde an einem kapazitiven Wegmessgerät durchgeführt.
+Das Messgerät besteht aus zwei Stahlbacken, die auf einem Gestell aufgehängt werden, einem Zylinder und der elektronischen Einheit (siehe Abbildung~\ref{fig:das_kapazitive_wegmessgeraet}).
 
 % ----------------------------------------
 % Fig: Kapazitiv Wegmessgerät beim IMKT
@@ -26,11 +25,11 @@ Das Messgerät besteht aus zwei Stahlbacken, die auf einem Gestell aufgehängt w
     \label{fig:das_kapazitive_wegmessgeraet}
 \end{figure}
 
-Abbildung \ref{fig:wegmessgeraet_pruefkopf} zeigt den Prüfkopf des Wegmessgeräts im abgebauten Zustand.
-An einem Backen befindet sich den Wegsensor, welcher bündig mit der Innenseite des Backen sitzt.
-Bei dem anderen Backen wurde eine Nut auf der inneren Oberfläche gebracht, so dass, wenn beide Backen zusammen verschraubt werden, bildet sich einen Spalt in zwischen.
-Der Zylinder wird an der unteren Seite den Backen angeflanscht.
-Durch das Drehen der Mutter wird den Kolben nach oben gedrückt, damit wird das Öl in den Spalt gepumpt.
+Abbildung~\ref{fig:wegmessgeraet_pruefkopf} zeigt den Prüfkopf des Wegmessgeräts im abgebauten Zustand.
+An einem Backen befindet sich der Wegsensor, welcher bündig mit der Innenseite des Backens sitzt.
+Bei dem anderen Backen wurde eine Nut auf der inneren Oberfläche angebracht, sodass, wenn beide Backen zusammen verschraubt werden, sich dazwischen ein Spalt bildet.
+Der Zylinder wird an der unteren Seite des Backens angeflanscht.
+Durch das Drehen der Mutter wird der Kolben nach oben gedrückt, damit wird das Öl in den Spalt gepumpt.
 
 % ----------------------------------------
 % Fig: Funktionsprinzip des Prüfkopfs des Messgeräts
@@ -42,10 +41,10 @@ Durch das Drehen der Mutter wird den Kolben nach oben gedrückt, damit wird das 
     \label{fig:wegmessgeraet_pruefkopf}
 \end{figure}
 
-Die Messung der Höhe des Spalts zwischen den Backen erfolgt durch die Betrachtung ihn als ein Plattenkondensator, welcher die Luft als Dielektrikum hat (Abbildung \ref{fig:plattenkondensator}).
-Bei dem Einfordern des Öls in den Spalt ändert sich das Dielektrikum von Luft zu Luft + Öl, damit verändert sich seine Kapazität bzw. der Messwert, obwohl der Abstand im Spalt konstant bleibt.
-Durch dies Phänomen wird die Dielektrizitätskonstante des Öls als das Verhältnis zwischen den Messwegen bei Luft und beim Öl berechnet.
-Die Messergebnisse für das Öl \textit{FVA 3} bei verschiedenen Temperatur \SIrange{20}{80}{\degreeCelsius} werden in der Tabelle \ref{tab:relative_permittivitaet_fva3} dargestellt.
+Die Messung der Höhe des Spalts zwischen den Backen erfolgt durch dessen Betrachtung als Plattenkondensator, welcher die Luft als Dielektrikum hat (siehe Abbildung~\ref{fig:plattenkondensator}).
+Beim Befördern des Öls in den Spalt ändert sich das Dielektrikum von Luft zu Luft + Öl, damit verändert sich seine Kapazität bzw. der Messwert, obwohl der Abstand im Spalt konstant bleibt.
+Durch dieses Phänomen wird die Dielektrizitätskonstante des Öls als das Verhältnis zwischen den Messwegen bei Luft und beim Öl berechnet.
+Die Messergebnisse für Öle \textit{FVA3} und \textit{SHC320} bei verschiedenen Temperaturen --- \SIrange{40}{80}{\degreeCelsius} --- werden in Tabelle~\ref{tab:relative_permittivitaet_fva3} dargestellt.
 
 % ----------------------------------------
 % Tab: Permittivität des FVA 3 Ols
@@ -53,7 +52,7 @@ Die Messergebnisse für das Öl \textit{FVA 3} bei verschiedenen Temperatur \SIr
 \begin{minipage}[b]{0.55\linewidth}
     \centering
     \input{./tables/permittivitaet_fva3.tex}
-    \captionof{table}{relative Permittivität von \textit{FVA3} bei unterschiedlichen Temperaturen}
+    \captionof{table}{relative Permittivität von Ölen bei unterschiedlichen Temperaturen}
     \label{tab:relative_permittivitaet_fva3}
 \end{minipage}
 \hspace{0.5cm}
@@ -115,7 +114,7 @@ Bei der Auswertung der Zeitkonstante mit der Formel~\ref{eg:kondensator_zeitkons
 %
 \begin{minipage}[b]{0.3\textwidth}
     \begin{equation}
-        \tau = \cfrac{\Delta t}{\ln \cfrac{U_2 / U_L}{U_1 / U_L}}
+        \tau = \cfrac{\Delta t}{\ln \cfrac{U_L - U_1}{U_L - U_2}}
         \label{eq:bestimmung_der_zeitkonstante}
     \end{equation}
 \end{minipage}

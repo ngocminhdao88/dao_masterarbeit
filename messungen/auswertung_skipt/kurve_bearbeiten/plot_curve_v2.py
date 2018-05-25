@@ -70,7 +70,7 @@ def getTau(x_array, y_array):
     u_2 = max(y_array)  # end voltage [V]
 
     # time constant of the charging capacitor
-    tau = delta_t / np.log((u_2 / u_0) / (u_1 / u_0))
+    tau = delta_t / np.log((u_0 - u_1) / (u_0 - u_2))
 
     return tau
 
@@ -128,12 +128,12 @@ def line_select_callback(eclick, erelease, fig, ax):
     x_masked = x_data[mask]
     y_masked = y_data[mask]
 
-    # offset the time and the charging voltate (y axis)
-    x_masked_offset = x_masked - x_masked[0]
-    y_masked_offset = y_masked - y_masked[0]
-
     # processing the data if in drew rectangle
     if len(x_masked) > 0:
+        # offset the time and the charging voltate (y axis)
+        x_masked_offset = x_masked - x_masked[0]
+        y_masked_offset = y_masked - y_masked[0]
+
         # positon to draw the text (at maximum)
         xmax = x_masked[np.argmax(y_masked)]
         ymax = y_masked.max()
@@ -147,7 +147,6 @@ def line_select_callback(eclick, erelease, fig, ax):
 
         # build the text
         tx = "tau = %e\nc = %e" % (tau, cap)
-        print(np.sqrt(np.diag(pcov)))
 
         point.set_data([xmax], [ymax])
         text.set_text(tx)
