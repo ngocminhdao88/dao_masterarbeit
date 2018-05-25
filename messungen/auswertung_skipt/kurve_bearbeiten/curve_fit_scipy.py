@@ -75,6 +75,26 @@ def getTau(x_array, y_array):
     return tau
 
 
+def getTimeOffset(x_array, y_array, tau):
+    """
+    Calculate the tau from a capacitor charge curve
+
+    Input:
+        x_array (array): time
+        y_array (array): voltage
+
+    Output:
+        time_offset (float): an offset to trace back the start of a function
+    """
+    u_0 = 0.2  # charge voltage [V]
+    u_1 = min(y_array)  # start voltage [V]
+
+    # time offset to the start of function
+    time_offset = tau * np.log((u_0 - u_1) / u_0)
+
+    return time_offset
+
+
 def getInfoFromHeader(work_file):
     """
     Read the header from test file and extract it's information.
@@ -130,6 +150,8 @@ def line_select_callback(eclick, erelease, fig, ax):
 
     # processing the data if in drew rectangle
     if len(x_masked) > 0:
+        # TODO: try better to fit a function
+
         # offset the time and the charging voltate (y axis)
         x_masked_offset = x_masked - x_masked[0]
         y_masked_offset = y_masked - y_masked[0]
@@ -145,17 +167,30 @@ def line_select_callback(eclick, erelease, fig, ax):
         tau = popt[0]
         cap = getCapacitance(tau)
 
+        # time, where the charging function begin
+        time_offset = getTimeOffset(x_data, y_data, tau)
+        time_start = x_masked[0] + time_offset
+        print("time offset: ", time_offset)
+        print("time start: ", time_start)
+
+        # time data to calculate the charing function
+        new_mask = x_data > time_start
+        time = x_data[new_mask]
+        time = np.arange(0, len(time)) * 4e-6
+
+        # calculate data for fitted curve
+        y_fited = chargeFuntion(time, tau)
+
+
+        # plot the fitted curve at its root
+        line_fit.set_data(time + time_start, y_fited)
+
         # build the text
         tx = "tau = %e\nc = %e" % (tau, cap)
-        print(np.sqrt(np.diag(pcov)))
 
         point.set_data([xmax], [ymax])
         text.set_text(tx)
         text.set_position((xmax, ymax))
-
-        # plot the fited curve
-        y_fited = chargeFuntion(x_masked_offset, tau) + y_masked[0]
-        line_fit.set_data(x_masked, y_fited)
 
         fig.canvas.draw_idle()
 
@@ -188,7 +223,12 @@ def main(argv):
         # setup the plot figure and axis
         fig, ax = plt.subplots()
         ax.set_title(info + '\n' + str(curve) + '\n' + work_file)
-        line, = ax.plot(time_ax, data[curve], linewidth="0.5", label="data")
+        ax.set_xlabel("Time [s]")
+        ax.set_ylabel("Voltage [V]")
+        ax.set_ylim(0, 0.22)
+
+        # place holder for datas in plot
+        line, = ax.plot(time_ax, data[curve], linewidth="0.5")
         line_fit, = ax.plot([], [], "r-", linewidth="0.5")
         point, = ax.plot([], [], marker="o", color="crimson")
         text = ax.text(0, 0, "")
@@ -199,9 +239,7 @@ def main(argv):
                                drawtype='box', useblit=False, button=[1], 
                                minspanx=5, minspany=5, spancoords='pixels', 
                                interactive=True)
-        plt.xlabel("Time [s]")
-        plt.ylabel("Spannung [V]")
-        plt.legend()
+
         plt.show()
 
 if __name__ == "__main__":

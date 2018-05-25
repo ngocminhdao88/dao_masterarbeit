@@ -63,6 +63,7 @@ def getTau(x_array, y_array):
 
     Output:
         tau (float): time constant of the charging capacitor
+        time_offset (float): an offset to trace back the start of a function
     """
     u_0 = 0.2  # charge voltage [V]
     delta_t = max(x_array) - min(x_array)  # time [s]
@@ -72,7 +73,10 @@ def getTau(x_array, y_array):
     # time constant of the charging capacitor
     tau = delta_t / np.log((u_0 - u_1) / (u_0 - u_2))
 
-    return tau
+    # time offset to the start of function
+    time_offset = tau * np.log((u_0 - u_1) / u_0)
+
+    return (tau, time_offset)
 
 
 def getInfoFromHeader(work_file):
@@ -134,9 +138,23 @@ def line_select_callback(eclick, erelease, fig, ax):
         xmax = x_masked[np.argmax(y_masked)]
         ymax = y_masked.max()
 
-        # calculate the time constant
-        tau = getTau(x_masked, y_masked)
+        # calculate the time constant und the capacitance
+        tau, time_offset = getTau(x_masked, y_masked)
         cap = getCapacitance(tau)
+
+        # time, where the charging function begin
+        time_start = x_masked[0] + time_offset
+
+        # time data to calculate the charing function
+        new_mask = x_data > time_start
+        time = x_data[new_mask]
+        time = np.arange(0, len(time)) * 4e-6
+
+        # calculate data for fitted curve
+        y_fited = chargeFuntion(time, tau)
+
+        # plot the fitted curve at its root
+        line_fit.set_data(time + time_start, y_fited)
 
         # print the information at maximum
         tx = "tau = %e\nc = %e" % (tau, cap)
@@ -177,6 +195,9 @@ def main(argv):
         ax.set_title(info + '\n' + str(curve) + '\n' + work_file)
         ax.set_xlabel("Time [s]")
         ax.set_ylabel("Voltage [V]")
+        ax.set_ylim(0, 0.22)
+
+        # place holder for datas in plot
         line, = ax.plot(time_ax, data[curve], linewidth="0.5")
         line_fit, = ax.plot([], [], "r-", linewidth="0.5")
         point, = ax.plot([], [], marker="o", color="crimson")
