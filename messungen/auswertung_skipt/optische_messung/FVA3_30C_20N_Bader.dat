@@ -6,7 +6,7 @@ Spacer type	Silica
 Ball diameter	.01905
 Disc track radius	.03
 Trigger point	509
-Comments	FVA3, T = 30, F = 20
+Comments	T=30
 Number of logged data points	44
 Disc Speed	Ball Speed	Slide/Roll	Pot Temp	Lube Temp	Load	Film
 2.125341E-02	0	200	37.01007	33.99787	19.94425	55.26963

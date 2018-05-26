@@ -228,17 +228,28 @@ Unterschiedliche Werte für $R_1$ und $C_1$ werden verwendet, um deren Einfluß 
 Ein Erhöhung des Widerstandswertes führt zu einer signifikanten Abnahme der Messergebnisse und umgekehrt.
 Dieses Phänomen kann durch die Abnahme bzw. Zunahme des Stromflusses durch den EHD-Kontakt erklärt werden.
 Die Werte $R_1 = 2$ \si{\kilo\ohm} und $C_1 = 24$ \si{\pico\farad} wurden durch Experimente für die Messungen in dieser Arbeit gewählt.
-Abbildung~\ref{fig:lcr_ebox_capacitance} zeigt die Kapazitätsmessung des E-Box (offen) mit dem LCR-Messgerät bei verschiedenen Frequenzen an.
+Abbildung~\ref{fig:ebox_pcb} zeigt die Platine des E-Box und seine Kapazitätsmessung beim offenen Zustand mit dem LCR-Messgerät bei verschiedenen Frequenzen an (siehe Abbildung\ref{fig:lcr_ebox_capacitance}).
 
 % ----------------------------------------
-% Fig: Messprobe mit 24 pF mit dem LCR-Meter
+% Fig: Ebox PCB
 % ----------------------------------------
-\begin{figure}[htb]
+\begin{minipage}[b]{0.4\linewidth}
     \centering
-    \includegraphics[width=0.5\linewidth]{./images/lcr_ebox_capacitance.jpg}
-    \caption{Kapazitätsmessung des E-Box mit dem LCR-Messgerät}
+    \includegraphics[width=\textwidth]{./images/lcr_ebox.jpg}
+    \captionof{figure}{E-Box Plattine}
+    \label{fig:ebox_pcb}
+\end{minipage}
+\hspace{0.5cm}
+%
+% ----------------------------------------
+% Fig: Ebox Kapazitätsmessung
+% ----------------------------------------
+\begin{minipage}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=\textwidth]{./images/lcr_ebox_capacitance.jpg}
+    \captionof{figure}{Kapazitätsmessung des E-Box}
     \label{fig:lcr_ebox_capacitance}
-\end{figure}
+\end{minipage}
 
 % ----------------------------------------
 % Sec: Versuchsplan
@@ -276,8 +287,8 @@ Analoges kann man auch für die steigende Last sagen, allerdings hat die Last zu
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
-    \includegraphics[]{./images/film_cap_with_dif_temp_and_load_fva3.pdf}
-    \caption{Zusammenhang zwischen der Kapazität und der Filmdicke bei verschiedenen Temperaturen und Lasten des Öl \textit{FVA 3}}
+    \includegraphics[]{./images/film_cap_with_dif_temp_and_load_shc320.pdf}
+    \caption{Zusammenhang zwischen der Kapazität und der Filmdicke bei verschiedenen Temperaturen und Lasten des Öl \textit{SHC 320} (nicht maßstabgetreu)}
     \label{fig:film_cap_with_dif_temp_and_load}
 \end{figure}
 \improvement[inline]{fig of cap vs film with dif temp and load}
