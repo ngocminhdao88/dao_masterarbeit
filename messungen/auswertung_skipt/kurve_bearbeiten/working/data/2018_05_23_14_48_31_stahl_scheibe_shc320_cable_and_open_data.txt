@@ -1,5 +1,13 @@
-2018_05_23_14_48_31_stahl_scheibe_shc320_cable_and_open.txt
-T40, F20N, 1.78
+Ladekurvenmessung
+Zeit: 2018_05_23 14.40.56
+Info: SHC320, cable's capacitance
+Ladewiderstand[Ohm]: 10000000
+Strkapazitt[pF]: 100.000000
+Entladezeit[ms]: 100
+Abtastrate[Hz]: 250000
+Anzahl der Messwerte: 3000.000000
+Verzgerung[ms]: 1
+Ladespannung[V]: 0.200000
 Capacitance
 5.573536060543773e-11
 6.08410947397248e-11

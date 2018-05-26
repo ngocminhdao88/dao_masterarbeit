@@ -4,7 +4,7 @@
 \chapter{Versuche auf dem EHD-Messgerät}
 \label{chap:versuche_auf_dem_ehd_messgeraet}
 
-Um die Schmierfilmdicke im EHD-Komtakt mittels des elektrischen Verfahrens zu bestimmen, braucht man Kenntnis von den dielektrischen Eigenschaften des Schmierstoffes: deren Abhängigkeit von der Temperatur und dem Druck.
+Um die Schmierfilmdicke im EHD-Komtakt mittels des elektrischen Verfahrens zu bestimmen, braucht man Kenntnis von den dielektrischen Eigenschaften des Schmierstoffes und dessen Abhängigkeit von der Temperatur und dem Druck.
 
 % ----------------------------------------
 % Sec: Bestimmung der Dielektrizitätskonstante
@@ -12,7 +12,7 @@ Um die Schmierfilmdicke im EHD-Komtakt mittels des elektrischen Verfahrens zu be
 \section{Dielektrizitätskonstante des Schmierstoffes}
 \label{sec:dielektrizitaetskonstate_des_schmierstoffes}
 
-Die Bestimmung der Dielektrizitätskonstante der Ölen \textit{FVA 3} und \textit{SHC320} wurde an einem kapazitiven Wegmessgerät durchgeführt.
+Die Bestimmung der Dielektrizitätskonstante der Öle \textit{FVA 3} und \textit{SHC 320} wurde an einem kapazitiven Wegmessgerät durchgeführt.
 Das Messgerät besteht aus zwei Stahlbacken, die auf einem Gestell aufgehängt werden, einem Zylinder und der elektronischen Einheit (siehe Abbildung~\ref{fig:das_kapazitive_wegmessgeraet}).
 
 % ----------------------------------------
@@ -44,7 +44,7 @@ Durch das Drehen der Mutter wird der Kolben nach oben gedrückt, damit wird das 
 Die Messung der Höhe des Spalts zwischen den Backen erfolgt durch dessen Betrachtung als Plattenkondensator, welcher die Luft als Dielektrikum hat (siehe Abbildung~\ref{fig:plattenkondensator}).
 Beim Befördern des Öls in den Spalt ändert sich das Dielektrikum von Luft zu Luft + Öl, damit verändert sich seine Kapazität bzw. der Messwert, obwohl der Abstand im Spalt konstant bleibt.
 Durch dieses Phänomen wird die Dielektrizitätskonstante des Öls als das Verhältnis zwischen den Messwegen bei Luft und beim Öl berechnet.
-Die Messergebnisse für Öle \textit{FVA3} und \textit{SHC320} bei verschiedenen Temperaturen --- \SIrange{40}{80}{\degreeCelsius} --- werden in Tabelle~\ref{tab:relative_permittivitaet_fva3} dargestellt.
+Die Messergebnisse für Öle \textit{FVA 3} und \textit{SHC 320} bei verschiedenen Temperaturen --- \SIrange{40}{80}{\degreeCelsius} --- werden in Tabelle~\ref{tab:relative_permittivitaet_fva3} dargestellt.
 
 % ----------------------------------------
 % Tab: Permittivität des FVA 3 Ols
@@ -86,7 +86,7 @@ Die Aufladung des Kondensators erfolgt durch eine Ladespannung $U_L =$ \SI{0,2}{
 Eine hohe Ladespannung ist unerwünscht, weil dieses zur Ionisierung des Schmierstoffes führt.
 Das kann die Messergebnisse durch den Durchschlag des Kondensators verfälschen.
 Mit dieser Konfiguration hat das Gerät eine höchste Auflösung von \SI{0.078}{\pico\farad} (siehe \ref{sec:aufloesung_des_mobilen_messsystems} im Anhang für die Berechnung).
-Den schematischen Aufbau des mobilen Messsystems wird in Abbildung~\ref{fig:schematischer_aufbau_des_mobilen_messsystems} dargestellt.
+Der schematische Aufbau des mobilen Messsystems wird in Abbildung~\ref{fig:schematischer_aufbau_des_mobilen_messsystems} dargestellt.
 
 % ----------------------------------------
 % Fig: Schematischer Aufbau des mobilen Messsystems
@@ -99,7 +99,7 @@ Den schematischen Aufbau des mobilen Messsystems wird in Abbildung~\ref{fig:sche
 \end{figure}
 
 Der Ladevorgang des Kondensators wird durch eine Zeitkonstante $\tau$ charakterisiert und in die Abbildung~\ref{fig:ladevorgang_eines_kondensators} dargestellt.
-Zur Bestimmung der Zeitkonstante $\tau$ kann man durch die Anpassung der Ladekurve mit der Formel~\ref{eq:kondensator_e_funktion} oder im einen Zeitintervall $\Delta t$ zwischen den beiden definierten Spannungsgrenzen $U_1$ und $U_2$ (Formel~\ref{eq:bestimmung_der_zeitkonstante}) während des Ladevorgangs ermittelt.
+Zur Bestimmung der Zeitkonstante $\tau$ kann man durch die Anpassung der Ladekurve mit der Formel~\ref{eq:kondensator_e_funktion} oder im einen Zeitintervall $\Delta t$ zwischen den beiden definierten Spannungsgrenzen $U_1$ und $U_2$ während des Ladevorgangs mit der Formel~\ref{eq:bestimmung_der_zeitkonstante} ermitteln .
 Bei der Auswertung der Zeitkonstante mit der Formel~\ref{eg:kondensator_zeitkonstate} erhält man die Kapazität des EHD-Kontakts.
 
 % ----------------------------------------
@@ -153,20 +153,20 @@ Abbildung~\ref{fig:gui_der_laderkurve_software} zeigt die Benutzeroberfläche un
     \label{fig:gui_der_laderkurve_software}
 \end{figure}
 
-Die Software ist relativ einfach zu bedienen, allerdings gibt es folgende Punkte, auf die man beachten muss:
+Die Software ist relativ einfach zu bedienen, allerdings gibt es folgende Punkte, auf die man achten muss:
 % ----------------------------------------
 % List: Optionen der Ladekurve Software
 % ----------------------------------------
 \begin{description}
     \item[1. Die Anzahl der Messwerte] ist die Auflösung der Messungen.
-        Zu niedrige Werte können zu Messfehlern führen und zu hohe Werte kann es schnell den Speicher füllen.
+        Zu niedrige Werte können zu Messfehlern führen und zu hohe Werte können schnell den Speicher füllen.
         Der Standardwert ist \num{2500}.
 
     \item[2. Die Anzahl der Ladekurven] ist die Anzahl der Messungen, die nach einander durchgeführt werden.
         Der Standardwert ist \num{10}.
 
     \item[3. Die Abtastrate] ist die Anzahl der Messwerte, die die Messkarte pro Sekunde messen kann.
-        Die USB-6211 Messkarte von NI kann maximal \SI[per-mode=symbol]{250}{\kilo\sample\per\second}, das entspricht \num{2500} Messwerte in einem Zeitraum von \SI{10}{\milli\second}, messen.
+        Die USB-6211 Messkarte von NI kann maximal \SI[per-mode=symbol]{250}{\kilo\sample\per\second}, das entspricht \num{2500} Messwerte in einem Zeitraum von \SI{10}{\milli\second} messen.
 
     \item[4. Die Ladespannung] ist die Spannung zwischen zwei Terminals des Kondensators.
         Der Wert sollte im Bereich von \SIrange{0.2}{0.5}{\volt} liegen.
@@ -182,7 +182,7 @@ Die Software ist relativ einfach zu bedienen, allerdings gibt es folgende Punkte
         Dieser Wert wird bei der Auswertung der Kontaktkapazität abgezogen.
 
     \item[8. Der Ladewiderstand] ist der Wert des Vorwiderstands.
-        Er ist nur für den Dokumentationszweck bestimmt und wird in der Messdatei geschrieben.
+        Er ist nur für den Dokumentationszweck bestimmt und wird in die Messdatei geschrieben.
 
     \item[9. Das Austecken des Netzteils] ist notwendig, um die Störungen von anderen elektronischen Geräte zu vermeiden.
 \end{description}
@@ -246,36 +246,38 @@ Abbildung~\ref{fig:lcr_ebox_capacitance} zeigt die Kapazitätsmessung des E-Box 
 \section{Versuchsplanung}
 \label{sec:versuchsplanung}
 
-Bevor die Messung an dem PCS-Messgerät losgeht, wird zuerst der Zusammenhang zwischen der Filmdicke und der Kapazität im EHD-Kontakt bzw. deren Verhalten unter den Einfluß von der Geschwindigkeit, der Temperatur, der Last und dem Öl theoretisch analysiert.
-Anhand dieser Informationen kann man die Testbedingungen, mit den gute Ergebnisse produziert werden, besser auswählen.
+Bevor die Messung an dem PCS-Messgerät beginnt, wird zuerst der Zusammenhang zwischen der Filmdicke und der Kapazität im EHD-Kontakt bzw. deren Verhalten unter dem Einfluß von der Geschwindigkeit, der Temperatur, der Last und dem Öl theoretisch analysiert.
+Anhand dieser Informationen kann man die Testbedingungen, mit denen gute Ergebnisse produziert werden, besser auswählen.
 
 Die Schmierfilmdicke kann nach \textit{Hamrock} und \textit{Dowson} (Abschnitt~\ref{sec:schmierfilmdicke_nach_hamrock_und_dowson}) bestimmt werden.
 Die Kapazität in dem EHD-Kontakt wird nach dem Modell eines Plattenkondensators (Abschnitt~\ref{sub:kapazitatmessung}) ermittelt.
 
 In Abbildung~\ref{fig:filmdicke_kapazitaet_geschwindigkeit} wird die Schmierfilmdicke und die Kapazität des Öls \textit{SHC320} in Abhängigkeit mit der Geschwindigkeit dargestellt.
-Man kann deutlich sehen, während die Filmdicke bei steigender Wälzgeschwindigkeit zunimmt, sinkt die Kapazität in dem Kontakt.
+Man kann deutlich sehen, dass während die Filmdicke bei steigender Wälzgeschwindigkeit zunimmt, die Kapazität in dem Kontakt sinkt.
 Aus diesem Grund ist die kapazitive Messmethode zur Bestimmung eines dickeren Schmierfilm nicht geeignet.
-Bei niedriger Geschwindigkeit hat man besser Auflösung, allerdings besteht es die Gefahr, durch die Berührung von Rauheitsspitzen der Oberfläche der Kugel und der Scheibe das Messergebnis verfälscht wird.
+Bei niedriger Geschwindigkeit hat man eine besser Auflösung, allerdings besteht die Gefahr, durch die Berührung von Rauheitsspitzen der Oberfläche der Kugel und der Scheibe das Messergebnis verfälscht wird.
+
 % ----------------------------------------
 % Fig: Der Zusammenhang zwischen Filmdicke und Kapazität nach Geschwindigkeit
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/film_cap_speed_80C_20N_SHC320.pdf}
-    \caption{Der Zusammenhang zwischen Schmierfilmdicke und Kapazität mit der Geschwindigkeit von dem \textit{SHC320} bei \SI{80}{\degreeCelsius} und \SI{40}{\N}}
+    \caption{Der Zusammenhang zwischen Schmierfilmdicke und Kapazität mit der Geschwindigkeit von dem \textit{SHC 320} bei \SI{80}{\degreeCelsius} und \SI{40}{\N}}
     \label{fig:filmdicke_kapazitaet_geschwindigkeit}
 \end{figure}
 
 Abbildung~\ref{fig:film_cap_with_dif_temp_and_load} zeigt, dass die Temperatur und die Last relativ große Wirkung auf die Filmdicke und die Kapazität haben.
-Bei hohen Temperatur sinkt die Viskosität des Öls ab, was infolge negative Wirkung auf die Filmdicke hat und dadurch wird die Kapazität erhöht.
-Analog kann man für steigende Last sagen, allerdings hat die Last zum Vergleich mit der Temperatur wenigeren Einfluß.
+Bei hohen Temperaturen sinkt die Viskosität des Öls ab, was infolge eine negative Wirkung auf die Filmdicke hat.
+Dadurch wird die Kapazität erhöht.
+Analoges kann man auch für die steigende Last sagen, allerdings hat die Last zum Vergleich mit der Temperatur weniger Einfluß.
 % ----------------------------------------
 % Fig: Auswirkung der Temperatur auf Filmdicke und Kapazität
 % ----------------------------------------
 \begin{figure}[htb]
     \centering
     \includegraphics[]{./images/film_cap_with_dif_temp_and_load_fva3.pdf}
-    \caption{Zusammenhang zwischen der Kapazität und der Filmdicke bei verschiedenen Temperaturen und Lasten des Öl \textit{FVA3}}
+    \caption{Zusammenhang zwischen der Kapazität und der Filmdicke bei verschiedenen Temperaturen und Lasten des Öl \textit{FVA 3}}
     \label{fig:film_cap_with_dif_temp_and_load}
 \end{figure}
 \improvement[inline]{fig of cap vs film with dif temp and load}
@@ -285,7 +287,7 @@ Die Versuche in dieser Arbeit werden wie folgt geplant und durchgeführt:
 % Enum: Versuchsplan
 % ----------------------------------------
 \begin{enumerate}
-    \item Vergleichsmessungen von neu modifizierten Bauteilen (Kugel, Support, Glasscheibe) mit den von \textit{PCS}
+    \item Vergleichsmessungen von neu modifizierten Bauteilen (Kugel, Support, Glasscheibe) mit den von \textit{PCS Instruments}
     \item Schmierfilmdickenmessung am EHD-Gerät (optisch)
     \item Schmierfilmdickenmessung mit dem mobilen Messsystem von IMKT (elektrisch)
     \item Vergleich der theoretischen Schmierfilmdickenbestimmung mit 2. und 3. zur Überprüfung des Messverfahrens
@@ -302,7 +304,7 @@ Die Glasscheibe, die Kugel, das Kugelsupport und das Ölreservoir müssen vor je
 
 Nach der Reinigung können das Support und die Kugel in das Gerät eingesetzt werden.
 Die Führung der Kugel wird zuerst in die Ausgangswelle des zweiten Motors eingesteckt und dann auf das Support aufgelegt.
-Die Kabel sollten Abstand von den Wänden des Reservoirs und der Motorwelle halten, um ein Unfall (Kurzschluss der Kugel, Verfangen des Kabels) während des Betriebs zu vermeiden.
+Die Kabel sollten Abstand von den Wänden des Reservoirs und der Motorwelle halten, um einen Unfall (Kurzschluss, Verfangen des Kabels) während des Betriebs zu vermeiden.
 Abbildung~\ref{fig:ehd_topf_mit_kugel_und_support} zeigt den Blick von oben auf den EHD-Prüftopf mit montiertem Support und aufgelegter Kugel bereits für den Versuch vorbereitet.
 
 % ----------------------------------------
@@ -316,7 +318,7 @@ Abbildung~\ref{fig:ehd_topf_mit_kugel_und_support} zeigt den Blick von oben auf 
 \end{figure}
 
 Die Bestimmung des Messpunkts für die optische Messung erfolgt zuerst auf der nicht beschichteten Seite der Scheibe.
-Da nach wird die Scheibe um \SI{180}{\degree} auf der Cr-Seite gedreht, um den Widerstand der gesamten Messkette (Kabel -> Scheibe -> Kugel -> Kabel) unter einer Last von \SI{20}{\newton} zu messen.
+Danach wird die Scheibe um \SI{180}{\degree} auf der Cr-Seite gedreht, um den Widerstand der gesamten Messkette (Kabel -> Scheibe -> Kugel -> Kabel) unter einer Last von \SI{20}{\newton} zu messen.
 Der Widerstand ist von dem Radius der Fahrspur abhängig und beträgt ungefähr \SIrange{17}{18}{\ohm}.
 Die Suche nach dem Messpunkt findet beim leeren Reservoir statt, weil ein sauberer Kontakt zwischen Scheibe und Kugel für die Bestimmung der Höhe des Spacer-Layers nötig ist.
 Außerdem darf man das Spurwechseln nur beim leeren Zustand machen, weil das Verlaufen des Öles über die Lasteinheit im mechanischen Baukasten zu Schäden führen kann.
@@ -339,7 +341,7 @@ Das Ölbad wird vor jeder Messreihe während des Heizvorgangs (bei \SI{40}{\degr
 Das genaue Vorgehen einer solchen Messung wurde von \textit{Surborg} in seiner Arbeit~\cite{surborg_2007} beschrieben und ist im Anhang zu finden.
 
 Neben dem Widerstand des Kontakts wird auch die Hintergrund-Kapazität des Prüfstands gemessen.
-Dieser Wert wird als Störkapazität bezeichnet und soll von der Ergebnissen abgezogen werden.
+Dieser Wert wird als Störkapazität bezeichnet und soll von den Ergebnissen abgezogen werden.
 
 Die Last von \SI{20}{\newton} wird in Anlehnung an vorherige Arbeiten gewählt.
 Nach dem Abschnitt~\ref{sec:betrachtung_des_ehd_kontaktes} lässt sich für den hier betrachteten Fall eines Kugel-Scheibe-Modells eine maximale Pressung im Kontakt $p_0 =$ \SI{509}{\mega\pascal} berechnen.
@@ -347,8 +349,8 @@ Damit liegt der Kontakt im unteren Bereich der EHD-Schmierung.
 Diese geringe Last ist gut, somit wird die Gefahr von Beschädigungen auf der Scheibe bzw. der Silikatschicht gering gehalten.
 
 Nachdem die Höhe des Spacer-Layers bestimmt wurde, wird die Scheibe ein Stück weiter gedreht und auf etwa \SI[per-mode=symbol]{100}{\mm\per\second} beschleunigt.
-Während dieser Einlaufphase wird das Live Bild ständig auf dem SW-Monitor beobachtet.
-Sobald sich ein klarer, gut messbarer Verlauf abzeichnet, kann man mit der Messung begonnen werden (siehe Abbildung~\ref{fig:ehd_live_bild}).
+Während dieser Einlaufphase wird das Live-Bild ständig auf dem SW-Monitor beobachtet.
+Sobald sich ein klarer, gut messbarer Verlauf abzeichnet, kann mit der Messung begonnen werden (siehe Abbildung~\ref{fig:ehd_live_bild}).
 Wichtig ist, dass man die Messungen zügig macht, um die Beschädigung der Chromschicht und Silikatschicht zu vermeiden.
 
 % ----------------------------------------
@@ -357,7 +359,7 @@ Wichtig ist, dass man die Messungen zügig macht, um die Beschädigung der Chrom
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.8\linewidth]{./images/ehd_live_bild.jpg}
-    \caption{Live Bild: nicht verwertbarer Verlauf (links); guter Verlauf (rechts)~\cite{mach_2008}}
+    \caption{Live-Bild: nicht verwertbarer Verlauf (links); guter Verlauf (rechts)~\cite{mach_2008}}
     \label{fig:ehd_live_bild}
 \end{figure}
 

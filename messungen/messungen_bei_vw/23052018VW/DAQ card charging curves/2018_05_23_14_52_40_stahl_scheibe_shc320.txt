@@ -1,6 +1,6 @@
 Ladekurvenmessung
 Zeit: 2018_05_23 14.52.40
-Info: T40, F27N, 0.595
+Info: T80, F27N, 0.595
 Ladewiderstand[Ohm]: 10000000
 Strkapazitt[pF]: 100.000000
 Entladezeit[ms]: 100
