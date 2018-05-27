@@ -31,7 +31,7 @@ import pandas as pd
 # plt.rcParams.update(pgf_with_latex) # update the setting for matplotlib
 
 
-def getCapacitance(a_hertz, h0, e0=8.85e-12, er=2.07):
+def getCapacitance(a_hertz, h0, e0=8.85e-12, er=2.43):
     """
     Calculate the capacitace in a ehl contact
 
@@ -139,9 +139,9 @@ r_kruemmung = r_kugel / 2
 
 # reduzierter E-Modul [N/m^2]
 # stahl - glas
-# e_reduz = 1 / (1/2 * ((1 - nu_stahl ** 2)/e_stahl + (1 - nu_glas ** 2)/e_glas))
+e_reduz = 1 / (1/2 * ((1 - nu_stahl ** 2)/e_stahl + (1 - nu_glas ** 2)/e_glas))
 # stahl - stahl
-e_reduz = 1 / (1 / 2 * ((1 - nu_stahl ** 2) / e_stahl + (1 - nu_stahl ** 2) / e_stahl))
+# e_reduz = 1 / (1 / 2 * ((1 - nu_stahl ** 2) / e_stahl + (1 - nu_stahl ** 2) / e_stahl))
 
 # Halbachsen der Kontaktellipse [m]
 a = beta_a * np.cbrt((3 * lasten * r_kruemmung) / e_reduz)
@@ -154,10 +154,10 @@ a_hertz = np.pi * a * b
 p_0 = (3 * lasten) / (2 * np.pi * a * b)
 
 # print out the ehl contact information
-for i, last in enumerate(lasten):
-    print("EHL contact at %.2f N: a=%f m, b=%f m, p_0=%e N/m^2, A_hertz=%e m^2" %
-          (last, a[i], b[i], p_0[i], a_hertz[i]))
-    print("------------------------------------------------------------")
+# for i, last in enumerate(lasten):
+#     print("EHL contact at %.2f N: a=%f m, b=%f m, p_0=%e N/m^2, A_hertz=%e m^2" %
+#           (last, a[i], b[i], p_0[i], a_hertz[i]))
+#     print("------------------------------------------------------------")
 
 # Versuchsöl SHC320
 # Dichte bei 40, 60 und 80 C [kg/m^3]
@@ -207,6 +207,11 @@ data_80C_20N = data.loc[(data["Temp"] == 80) & (data["Load"] == 20)]
 data_80C_30N = data.loc[(data["Temp"] == 80) & (data["Load"] == 30)]
 data_80C_40N = data.loc[(data["Temp"] == 80) & (data["Load"] == 40)]
 
+data_40C_20N = data.loc[(data["Temp"] == 40) & (data["Load"] == 20)]
+
+data_40C_20N.to_csv("data_40C_20N_shc320.csv", sep='\t', index=False)
+data_80C_20N.to_csv("data_80C_20N_shc320.csv", sep='\t', index=False)
+
 # setup the plot film thickness, capacitace vs speed at 80C and 40N
 fig, ax1 = plt.subplots(figsize=[5, 3.125])
 
@@ -234,21 +239,34 @@ film_ax = np.linspace(min_film, max_film, group_length) * 1e9  # scale to nm
 
 fig2, axs = plt.subplots(1, 2, sharey=True,
                          tight_layout=True, figsize=[6.5, 3.125])
-l1, = axs[0].plot(film_ax, data_40C_40N["Cap"] * 1e12, label="40C,40N")
-l2, = axs[0].plot(film_ax, data_60C_40N["Cap"] * 1e12, label="60C,40N")
-l3, = axs[0].plot(film_ax, data_80C_40N["Cap"] * 1e12, label="80C,40N")
+# l1, = axs[0].plot(film_ax, data_40C_40N["Cap"] * 1e12, label="40C,40N")
+# l2, = axs[0].plot(film_ax, data_60C_40N["Cap"] * 1e12, label="60C,40N")
+# l3, = axs[0].plot(film_ax, data_80C_40N["Cap"] * 1e12, label="80C,40N")
+# axs[0].legend()
+# l4, = axs[1].plot(film_ax, data_80C_20N["Cap"] * 1e12, label="80C,20N")
+# l5, = axs[1].plot(film_ax, data_80C_30N["Cap"] * 1e12, label="80C,30N")
+# l6, = axs[1].plot(film_ax, data_80C_40N["Cap"] * 1e12, label="80C,40N")
+# axs[1].legend()
+
+l1, = axs[0].plot(data_40C_40N["Speed"], data_40C_40N["Cap"] * 1e12,
+                  label="40C,40N")
+l2, = axs[0].plot(data_60C_40N["Speed"], data_60C_40N["Cap"] * 1e12,
+                  label="60C,40N")
+l3, = axs[0].plot(data_80C_40N["Speed"], data_80C_40N["Cap"] * 1e12,
+                  label="80C,40N")
 axs[0].legend()
-l4, = axs[1].plot(film_ax, data_80C_20N["Cap"] * 1e12, label="80C,20N")
-l5, = axs[1].plot(film_ax, data_80C_30N["Cap"] * 1e12, label="80C,30N")
-l6, = axs[1].plot(film_ax, data_80C_40N["Cap"] * 1e12, label="80C,40N")
+l4, = axs[1].plot(data_80C_20N["Speed"], data_80C_20N["Cap"] * 1e12,
+                  label="80C,20N")
+l5, = axs[1].plot(data_80C_30N["Speed"], data_80C_30N["Cap"] * 1e12,
+                  label="80C,30N")
+l6, = axs[1].plot(data_80C_40N["Speed"], data_80C_40N["Cap"] * 1e12,
+                  label="80C,40N")
 axs[1].legend()
 
 axs[0].set_ylabel("Cap [pF]")
-axs[0].set_xlabel("Film [nm]")
-axs[1].set_xlabel("Film [nm]")
-axs[0].ticklabel_format(style="sci", axis="both")
-axs[1].ticklabel_format(style="sci", axis="both")
-# fig2.savefig("film_cap_with_dif_temp_and_load_shc320.pdf",
+axs[0].set_xlabel("Speed [m/s]")
+axs[1].set_xlabel("Speed[m/s]")
+# fig2.savefig("cap_with_dif_temp_and_load_shc320.pdf",
 #              bbox_inches="tight", pad_inches=0)
 
-plt.show()
+# plt.show()

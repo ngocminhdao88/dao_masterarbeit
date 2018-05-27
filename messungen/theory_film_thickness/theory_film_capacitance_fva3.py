@@ -130,7 +130,7 @@ beta_a = 1.0
 beta_b = 1.0
 
 # Test parameters
-geschwindigkeiten = np.array(getSpeeds(0.001, 20, 25))  # Wälzgeschwindigkeit [m/s]
+geschwindigkeiten = np.array(getSpeeds(0.1, 20, 18))  # Wälzgeschwindigkeit [m/s]
 temperaturen = np.array([40, 60, 80])  # Versuchstemperatur [C]
 lasten = np.array([20, 30, 40])  # Last [N]
 
@@ -139,9 +139,9 @@ r_kruemmung = r_kugel / 2
 
 # reduzierter E-Modul [N/m^2]
 # stahl - glas
-# e_reduz = 1 / (1/2 * ((1 - nu_stahl ** 2)/e_stahl + (1 - nu_glas ** 2)/e_glas))
+e_reduz = 1 / (1/2 * ((1 - nu_stahl ** 2)/e_stahl + (1 - nu_glas ** 2)/e_glas))
 # stahl - stahl
-e_reduz = 1 / (1 / 2 * ((1 - nu_stahl ** 2) / e_stahl + (1 - nu_stahl ** 2) / e_stahl))
+# e_reduz = 1 / (1 / 2 * ((1 - nu_stahl ** 2) / e_stahl + (1 - nu_stahl ** 2) / e_stahl))
 
 # Halbachsen der Kontaktellipse [m]
 a = beta_a * np.cbrt((3 * lasten * r_kruemmung) / e_reduz)
@@ -206,6 +206,13 @@ data_80C_40N = data.loc[(data["Temp"] == 80) & (data["Load"] == 40)]
 data_80C_20N = data.loc[(data["Temp"] == 80) & (data["Load"] == 20)]
 data_80C_30N = data.loc[(data["Temp"] == 80) & (data["Load"] == 30)]
 data_80C_40N = data.loc[(data["Temp"] == 80) & (data["Load"] == 40)]
+
+data_40C_20N = data.loc[(data["Temp"] == 40) & (data["Load"] == 20)]
+data_60C_20N = data.loc[(data["Temp"] == 60) & (data["Load"] == 20)]
+
+data_40C_20N.to_csv("data_40C_20N_fva3.csv", sep='\t', index=False)
+data_60C_20N.to_csv("data_60C_20N_fva3.csv", sep='\t', index=False)
+data_80C_20N.to_csv("data_80C_20N_fva3.csv", sep='\t', index=False)
 
 # setup the plot film thickness, capacitace vs speed at 80C and 40N
 fig, ax1 = plt.subplots(figsize=[5, 3.125])
