@@ -1,0 +1,13 @@
+Ladekurvenmessung
+Zeit: 2018_05_02 10.57.40
+Info: Messung der gesamten Kapazität des System (Mit Kugel, Scheibe im Prüfkopf, ohne Last) auf der sauberen Seite (45 Grad gegen Cr Seite)
+Ladewiderstand[Ohm]: 1012700
+Störkapazität[nF]: 0.000000
+Entladezeit[ms]: 100
+Abtastrate[Hz]: 250000
+Anzahl der Messwerte: 2500
+Verzögerung [ms]: 1
+Ladespannung[V]: 0.200000
+Capacitance
+8.941787355142331e-11
+8.734238359909734e-11

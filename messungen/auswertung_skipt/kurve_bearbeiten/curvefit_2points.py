@@ -276,7 +276,7 @@ def line_select_callback(eclick, erelease, fig, ax, my_data):
         tx = "tau = %e\nc = %e" % (tau, cap)
         point.set_data([xmax], [ymax])
         text.set_text(tx)
-        text.set_position((xmax, ymax))
+        text.set_position((xmax + 8e-4, ymax))
 
         # draw the fitted curve and text on screen
         fig.canvas.draw_idle()

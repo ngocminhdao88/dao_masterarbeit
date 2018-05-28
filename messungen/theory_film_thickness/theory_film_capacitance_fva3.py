@@ -31,7 +31,7 @@ import pandas as pd
 # plt.rcParams.update(pgf_with_latex) # update the setting for matplotlib
 
 
-def getCapacitance(a_hertz, h0, e0=8.85e-15, er=2.07):
+def getCapacitance(a_hertz, h0, e0=8.85e-12, er=2.07):
     """
     Calculate the capacitace in a ehl contact
 
@@ -210,9 +210,9 @@ data_80C_40N = data.loc[(data["Temp"] == 80) & (data["Load"] == 40)]
 data_40C_20N = data.loc[(data["Temp"] == 40) & (data["Load"] == 20)]
 data_60C_20N = data.loc[(data["Temp"] == 60) & (data["Load"] == 20)]
 
-data_40C_20N.to_csv("data_40C_20N_fva3.csv", sep='\t', index=False)
-data_60C_20N.to_csv("data_60C_20N_fva3.csv", sep='\t', index=False)
-data_80C_20N.to_csv("data_80C_20N_fva3.csv", sep='\t', index=False)
+# data_40C_20N.to_csv("data_40C_20N_fva3.csv", sep='\t', index=False)
+# data_60C_20N.to_csv("data_60C_20N_fva3.csv", sep='\t', index=False)
+# data_80C_20N.to_csv("data_80C_20N_fva3.csv", sep='\t', index=False)
 
 # setup the plot film thickness, capacitace vs speed at 80C and 40N
 fig, ax1 = plt.subplots(figsize=[5, 3.125])

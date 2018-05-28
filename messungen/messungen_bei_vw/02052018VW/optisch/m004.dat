@@ -1,17 +1,17 @@
-Software version             	 2.1
-Lubricant name               	 FVA3
-Viscosity                    	 96
-Oil refractive index         	 1.4
-Spacer type                  	 Silica
-Ball diameter                	 .01905
-Disc track radius            	 .042994
-Trigger point                	 158
-Comments                     	 FVA3, T = 40, F = 10
-Number of logged data points 	 6
-Disc Speed                   	 Ball Speed 	 Slide/Roll 	 Pot Temp 	 Lube Temp 	 Load     	 Film
-.1007664                     	 0          	 200        	 40.00756 	 39.0885   	 10.01711 	 95.81608
-.2723665                     	 0          	 200        	 40.00628 	 39.05548  	 10.07856 	 204.8173
-.3811371                     	 0          	 200        	 39.99864 	 39.04914  	 10.2085  	 212.38
-.3814827                     	 0          	 200        	 39.99482 	 39.02501  	 10.02215 	 200.367
-.3813094                     	 0          	 200        	 39.99737 	 39.02628  	 10.15209 	 386.9891
-.3816063                     	 0          	 200        	 40.00501 	 39.04152  	 9.976821 	 198.9253
+Software version	2.1
+Lubricant name	FVA3
+Viscosity	96
+Oil refractive index	1.4
+Spacer type	Silica
+Ball diameter	.01905
+Disc track radius	.042994
+Trigger point	158
+Comments	FVA3, T = 40, F = 10
+Number of logged data points	6
+Disc Speed	Ball Speed	Slide/Roll	Pot Temp	Lube Temp	Load	Film
+.1007664	0	200	40.00756	39.0885	10.01711	95.81608
+.2723665	0	200	40.00628	39.05548	10.07856	204.8173
+.3811371	0	200	39.99864	39.04914	10.2085	212.38
+.3814827	0	200	39.99482	39.02501	10.02215	200.367
+.3813094	0	200	39.99737	39.02628	10.15209	386.9891
+.3816063	0	200	40.00501	39.04152	9.976821	198.9253
