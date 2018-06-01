@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Copyright 2017 mathsisfun.com -->
+<svg xmlns="http://www.w3.org/2000/svg" width="259" height="178" version="1.1">
+<defs>
+<marker id="id1" style="overflow:visible;" orient="auto">
+<path transform="matrix(-0.4,0,0,-0.4,-4,0)" style="stroke:black; stroke-width:1pt;" d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"/>
+</marker>
+<marker id="id2" style="overflow:visible;" orient="auto">
+<path transform="matrix(-0.4,0,0,-0.4,-4,0)" style="fill:#005c94; stroke:#005c94; stroke-width:1pt;" d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"/>
+</marker>
+</defs>
+<g transform="translate(180.95098,-939.85498)">
+<text x="-160.6" y="1098.7" style="font-family:'Comic Sans MS'; text-align:end; text-anchor:end; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  -1
+    </text>
+<text x="-160.6" y="1074.1" style="font-family:'Comic Sans MS'; text-align:end; text-anchor:end; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  -0.5
+    </text>
+<text x="-160.6" y="1049.6" style="font-family:'Comic Sans MS'; text-align:end; text-anchor:end; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  0
+    </text>
+<text x="-160.6" y="1025" style="font-family:'Comic Sans MS'; text-align:end; text-anchor:end; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  0.5
+    </text>
+<text x="-160.6" y="1000.1" style="font-family:'Comic Sans MS'; text-align:end; text-anchor:end; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  1
+    </text>
+<path style="color:#808080; fill:none; stroke:#808080; stroke-width:0.31;" d="M -109,1104.5 V 971"/>
+<path style="color:#808080; fill:none; stroke:#808080; stroke-width:0.31;" d="M -74.6,1104.5 V 971"/>
+<path style="color:#808080; fill:none; stroke:#808080; stroke-width:0.31;" d="M -41.5,1104.8 V 971.4"/>
+<path style="color:#808080; fill:none; stroke:#808080; stroke-width:0.31;" d="M -7.6,1104.8 V 970.6"/>
+<text x="-141.7" y="1117.2" style="font-family:'Comic Sans MS'; text-align:center; text-anchor:middle; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  0
+    </text>
+<path style="color:#808080; fill:none; stroke:#808080; stroke-width:0.31;" d="M 26.3,1104.8 V 971.4"/>
+<text x="-108.4" y="1117.2" style="font-family:'Comic Sans MS'; text-align:center; text-anchor:middle; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  π/2
+      
+    </text>
+<text x="-74.6" y="1117.2" style="font-family:'Comic Sans MS'; text-align:center; text-anchor:middle; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  π
+    </text>
+<text x="-41.4" y="1117.2" style="font-family:'Comic Sans MS'; text-align:center; text-anchor:middle; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  3π/2
+    </text>
+<path style="color:#008000; overflow:visible; fill:none; stroke:#19aeff; stroke-width:1.35; stroke-dasharray:8.1, 1.3;" d="m -153,1070.1 c 11.2,-21.7 18,-45.7 32.3,-65.8 5,-9.4 18.4,-10.6 24,-1.1 13.9,18.4 20.4,40.8 30.5,61.3 5.5,10.8 10.4,23.7 21.6,29.7 11.6,2.8 17.8,-10 22.8,-18.2 12.9,-23.5 20,-49.9 35.4,-72 5.6,-9.7 19.1,-9.9 24.6,0"/>
+<text x="-7.6" y="1117.5" style="font-family:'Comic Sans MS'; text-align:center; text-anchor:middle; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  2π
+    </text>
+<g transform="matrix(0.30725988,0,0,0.20787924,-229.35052,960.6939)">
+<path style="stroke-width:1.22;" d="M 286,692 286,50"/>
+</g>
+<text x="26.7" y="1117.3" style="font-family:'Comic Sans MS'; text-align:center; text-anchor:middle; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  5π/2
+    </text>
+<path style="marker-end:url(#id1); fill:#2e3436; fill-opacity:0.75; stroke:#2e3436; stroke-width:0.79;" d="m -153,1045.5 207.4,0"/>
+<text x="-154.4" y="965.9" style="font-family:'Comic Sans MS'; font-weight:bold; font-style:italic; overflow:visible; fill:black; stroke-width:1px;">y</text>
+<path style="color:#808080; fill:none; stroke:#808080; stroke-width:0.29;" d="M -153,1094.7 H 47.5"/>
+<path style="color:#808080; fill:none; stroke:#808080; stroke-width:0.29;" d="M -153,1070.1 H 47.5"/>
+<g transform="matrix(0.211931,0,0,0.30726,-190.468,931.566)">
+<path style="stroke-width:1.15;" d="m 177,371 h 946"/>
+</g>
+<path style="color:#808080; fill:none; stroke:#808080; stroke-width:0.29;" d="M -153,1021 H 47.5"/>
+<path style="color:#808080; fill:none; stroke:#808080; stroke-width:0.29;" d="M -153,996.1 H 47.5"/>
+<path style="color:#808080; fill:none; stroke:#808080; stroke-width:0.29;" d="M -153,970.9 H 47.5"/>
+<path style="marker-end:url(#id1); fill:#2e3436; fill-opacity:0.75; stroke:#2e3436; stroke-width:0.92;" d="m -141.7,1105.2 0,-154.1"/>
+<text x="-160.6" y="974.9" style="font-family:'Comic Sans MS'; text-align:end; text-anchor:end; font-size:11.1px; color:black; fill:black;">
+ &#160; &#160;  1.5
+    </text>
+<path style="color:#008000; overflow:visible; fill:none; stroke:#005c94; stroke-width:1.35;" d="m -161.4,1064.6 c 5.5,10.8 10.4,23.7 21.6,29.7 11.6,2.8 17.8,-10 22.8,-18.2 12.9,-23.5 20,-49.9 35.4,-72 5.6,-9.7 19.1,-9.9 24.6,0 18,25.1 24.2,56.5 41.8,81.9 4.7,9.1 18,12.2 23.9,2.6 12.8,-16.1 18.9,-36 27.6,-54.3 1.8,-4.3 4.3,-9.5 6.2,-13.3"/>
+<text x="-111.1" y="952.1" style="font-family:'Comic Sans MS'; color:black; overflow:visible; fill:#005c94; stroke-width:1px;">Phase Shift</text>
+<path style="color:black; marker-end:url(#id2); overflow:visible; fill:#009100; stroke:#005c94; stroke-width:1.65;" d="m -108.1,964.8 33.9,0"/>
+<path style="fill:none; stroke:black; stroke-width:0.49px;" d="m -109.3,990 0,-32"/>
+<path style="fill:none; stroke:black; stroke-width:0.49px;" d="m -70,990 0,-32"/>
+<text x="38.8" y="1060.8" style="font-family:'Comic Sans MS'; font-weight:bold; font-style:italic; overflow:visible; fill:black; stroke-width:1px;">x</text>
+</g>
+</svg>
